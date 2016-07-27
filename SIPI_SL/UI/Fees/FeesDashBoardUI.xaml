@@ -1,0 +1,25 @@
+﻿<Window x:Class="SIPI_SL.UI.Fees.FeesDashBoardUI"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Student Fees Collection" Height="520" Width="894" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <Menu Height="56" Name="feesMenu" VerticalAlignment="Top" >
+            <MenuItem Header="Fees Configuration" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="mnuRoleBasedAccessSetup" >
+                <MenuItem Header="Fees Details " Name="mnuFeesDetailsSetup"  Click="mnuFeesDetailsSetup_Click" />
+                <MenuItem Header="Assign Fees" Name="mnuAssignFeesSetup" Click="mnuAssignFeesSetup_Click"/>
+                <MenuItem Header=" Fees Discount" Name="DiscountFees" Click="DiscountFees_Click"/>
+            </MenuItem>
+
+            <MenuItem Header="Fees Collection" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="mnuEmployee" >
+                <MenuItem Header="Student " Name="feesCollection" Click="feesCollection_Click"  />
+            </MenuItem>
+
+            <MenuItem Header="Report" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="mnuReport" >
+                <MenuItem Header="Collection History " Name="collectionHistory"  Click="collectionHistory_Click" />
+            </MenuItem>
+
+
+        </Menu>
+    </Grid>
+</Window>
+

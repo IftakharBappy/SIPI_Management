@@ -1,0 +1,23 @@
+﻿<Window x:Class="SIPI_SL.UI.InventoryManagement.InventoryReportUI"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Inventory Report UI" Height="244.879" Width="850.098" WindowStartupLocation="CenterScreen" WindowState="Normal" Background="{StaticResource GrayWhite}" ShowInTaskbar="False">
+    <Grid>
+        <Menu Height="56" Name="InventoryMenu" VerticalAlignment="Top" >
+            <MenuItem Header="Stock Report" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="courseRoleBasedAccessSetup" >
+                <MenuItem Header="Stock Status" Name="stockStatusReport"  Click="stockStatusReport_Click"/>
+
+            </MenuItem>
+            <MenuItem Header="Inventory" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="inventorySubManu" >
+                <MenuItem Header="Inventory Entry" Name="inventoryEntry" />
+            </MenuItem>
+            <MenuItem Header="Repost" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="repostBooks" >
+                <MenuItem Header="All " Name="allBook" />
+               
+
+            </MenuItem>
+
+
+        </Menu>
+    </Grid>
+</Window>

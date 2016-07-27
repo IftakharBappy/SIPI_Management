@@ -1,0 +1,28 @@
+﻿<Window x:Class="SIPI_SL.UI.PIS.PISDashBoardUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HR/Payroll Module" Height="520" Width="894" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <Menu Height="56" Name="pisMenu" VerticalAlignment="Top" >
+            <MenuItem Header="PIS Configuration" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="mnuRoleBasedAccessSetup" >
+                <MenuItem Header="Category " Name="mnuCategorySetup"  Click="mnuCategorySetup_Click" />
+                <MenuItem Header="Category Employee " Name="mnuCategoryEmpSetup" Click="mnuCategoryEmpSetup_Click"/>
+                <MenuItem Header="Category Salary " Name="mnuCategorySalarySetup"  Click="mnuCategorySalarySetup_Click"/>
+                <MenuItem Header="Section " Name="mnuSectionSetup"  Click="mnuSectionSetup_Click"/>
+                <MenuItem Header="Department " Name="mnuDepartmentSetup" Click="mnuDepartmentSetup_Click"  />
+                <MenuItem Header="Grade " Name="mnuGradeSetup"  Click="mnuGradeSetup_Click" />
+
+                
+
+            </MenuItem>
+
+            <MenuItem Header="Employee" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="mnuEmployee" >
+                <MenuItem Header="Employee " Name="mnuEmp"  Click="mnuEmp_Click"/>
+                 
+
+            </MenuItem>
+
+            
+        </Menu>
+    </Grid>
+</Window>

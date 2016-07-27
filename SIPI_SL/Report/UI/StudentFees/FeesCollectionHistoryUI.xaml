@@ -1,0 +1,54 @@
+﻿<Window x:Class="SIPI_SL.Report.UI.StudentFees.FeesCollectionHistoryUI"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Fees Collection UI" Height="569.996" Width="990.439" ShowInTaskbar="False" Background="{StaticResource GrayWhite}" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <GroupBox Header="Fees Colletion History" HorizontalAlignment="Left" Margin="36,10,0,0" VerticalAlignment="Top" Height="71" Width="902"  FontWeight="Bold">
+            <Grid >
+                <ComboBox HorizontalAlignment="Left" Margin="576,8,0,0" VerticalAlignment="Top" Width="172" Name="CampusComboBox"  Style="{StaticResource ComboBoxBGYellowGreen}" Height="29"/>
+
+                <Label Content="From Date" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="86"/>
+
+                <Label Content="To Date" HorizontalAlignment="Left" Margin="293,10,0,0" VerticalAlignment="Top" Width="64" Height="24"/>
+                <Button Content="Search" HorizontalAlignment="Left" Margin="753,10,0,0" VerticalAlignment="Top" Width="83" Height="24" x:Name="getStudentPopupButton" Click="getStudentPopupButton_Click"/>
+                <DatePicker HorizontalAlignment="Left" Margin="85,12,0,0" VerticalAlignment="Top" Width="203" Name="startDateDatepicker"/>
+                <DatePicker HorizontalAlignment="Left" Margin="357,11,0,0" VerticalAlignment="Top" Width="214" Name="endDateDatepicker"/>
+
+            </Grid>
+
+
+
+
+
+        </GroupBox>
+        <GroupBox Header="Fees Collection List" HorizontalAlignment="Left" Margin="36,86,0,0" VerticalAlignment="Top" Height="401" Width="902">
+            <ListView
+                        Margin="2,6,-2,0" 
+                        Name="feesCollectionlistView" Grid.Column="1" HorizontalAlignment="Left" Width="890" 
+                          ItemContainerStyle="{StaticResource alternatingListViewItemStyle}" Height="369" VerticalAlignment="Top" >
+                <ListView.ContextMenu>
+                    <ContextMenu Name="ZoneIformationList" StaysOpen="true" Background="WhiteSmoke">
+                        <ContextMenu.BitmapEffect>
+                            <BitmapEffectGroup/>
+                        </ContextMenu.BitmapEffect>
+                        <MenuItem Header="Preview" Name="EditThanaContextMenu" Click="EditThanaContextMenu_Click"   />
+                        <!--<MenuItem Header="Remove" Name="RemoveThanaContextMenu"   />-->
+                    </ContextMenu>
+                </ListView.ContextMenu>
+                <ListView.View>
+                    <GridView AllowsColumnReorder="True">
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Id}" Header="" Width="0"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=StudentName}" Header="StudentName" Width="200"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Department}" Header="Department Name" Width="280"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Semester}" Header="Semester" Width="100"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=CollectionDate}" Header="Date" Width="100"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=ReceiveAmount}" Header="Receive Amount" Width="150"/>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </GroupBox>
+        <Button Content="Preview" HorizontalAlignment="Left" Margin="863,492,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+
+    </Grid>
+</Window>

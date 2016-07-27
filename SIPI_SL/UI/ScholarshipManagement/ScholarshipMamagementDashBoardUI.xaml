@@ -1,0 +1,27 @@
+﻿<Window x:Class="SIPI_SL.UI.ScholarshipManagement.ScholarshipMamagementDashBoardUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Scholarship Mamagement DashBoard UI" Height="520" Width="894" WindowState="Maximized" WindowStartupLocation="CenterScreen" Background="{StaticResource GrayWhite}" ShowInTaskbar="False">
+<Grid>
+        <Menu Height="56" Name="ScholarshipMenu" VerticalAlignment="Top" >
+            <MenuItem Header="Scholarship Application" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="courseRoleBasedAccessSetup" >
+                <MenuItem Header="Accademic Scholarship" Name="accademicScholarshipForm" Click="accademicScholarshipForm_Click"/>
+                <MenuItem Header="Other's Scholarship" Name="OthersScholarshipForm" Click="OthersScholarshipForm_Click"/>
+            </MenuItem>
+
+            <MenuItem Header="Scholarship" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="repostBooks" >
+                <MenuItem Header="Scholarship Criteria" Name="scholarshipCriteria" Click="scholarshipCriteria_Click" />
+                <MenuItem Header="Scholarship Score" Name="scholarshipScore" >
+                    <MenuItem Header="Accademic Scholarship Score" Name="accademicscholarshipScore" Click="accademicscholarshipScore_Click"/>
+                    <MenuItem Header="Other's Scholarship Score" Name="OthersScholarshipScore" Click="OthersScholarshipScore_Click"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Scholarship List" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="ScholarshipList" >
+                <MenuItem Header="Selected Scholars List" Name="selectedScholarsList" Click="selectedScholarsList_Click"/>
+                <MenuItem Header="Precvious Scholars List" Name="precviousScholarsList" Click="precviousScholarsList_Click"/>
+            </MenuItem>
+            <MenuItem Header="Report" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="ScholarshipReoprt" >
+            </MenuItem>
+        </Menu>
+</Grid>
+</Window>

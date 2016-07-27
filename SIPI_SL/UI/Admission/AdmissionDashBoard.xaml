@@ -1,0 +1,42 @@
+﻿<Window x:Class="SIPI_SL.UI.Admission.AdmissionDashBoard"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Student Admission" Height="520" Width="894" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="{StaticResource GrayWhite}" ShowInTaskbar="False">
+    <Grid >
+        <Menu Height="56" Name="AdmissionMainMenu" VerticalAlignment="Top"  >
+
+            <MenuItem Header="Pre setup" Name="PreSetupAdmissionMenu" VerticalAlignment="Top" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" >
+                <MenuItem Header="Program" Click="MenuItem_Click_4" Name="PreSetupProgram"/>
+                <MenuItem Header="Department" Click="MenuItem_Click_5" Name="PreSetupDepartment"/>
+                <MenuItem Header="Course" Click="MenuItem_Click" Name="PreSetupCourse"/>
+                <MenuItem Header="Batch" Click="MenuItem_Click_6" Name="PreSetupBatch"/>
+                <MenuItem Header="Campus" Click="MenuItem_Click_7" Name="PreSetupCampus"/>
+                <MenuItem Header="Office" Click="MenuItem_Click_8" Name="PreSetupOffice"/>
+                <MenuItem Header="Religion" Click="MenuItem_Click_9" Name="PreSetupReligion"/>
+                <MenuItem Header="Blood Group" Click="MenuItem_Click_10" Name="PreSetupBloodGroup"/>
+             </MenuItem>
+
+
+            <MenuItem Header="Address set" Name="AddressSetAdmissionMenu" VerticalAlignment="Top" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold">
+                <MenuItem Header="Post" Click="MenuItem_Click_1" Name="PostAdmission"/>
+                <MenuItem Header="Thana" Click="MenuItem_Click_2" Name="ThanaAdmission"/>
+                <MenuItem Header="District" Click="MenuItem_Click_3" Name="DistrictAdmission"/>
+            </MenuItem>
+
+
+            <MenuItem Header="Admission" Name="Admission" VerticalAlignment="Top" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold">
+                <MenuItem Header="Student's Entry" Name="StudentEntry" Click="MenuItem_OnClick"/>
+           </MenuItem>
+
+
+            <MenuItem Header="Report" VerticalAlignment="Top" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold">
+                <MenuItem Header="Reporting" Click="MenuItem_Reporting_Click" Name="ReportingAdmission" />
+                <MenuItem Header="Board Report" Click="MenuItem_Click_12" Name="BoardReportAdmission" />
+           </MenuItem>
+            
+
+        </Menu>
+    </Grid>
+</Window>
+
+

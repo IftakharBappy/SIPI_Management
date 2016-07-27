@@ -1,0 +1,1692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SIPIDBModelStoreContainer" CdmEntityContainer="SIPIDBEntities">
+    <FunctionImportMapping FunctionImportName="SP_ACCOUNT_STATEMENT" FunctionName="SIPIDBModel.Store.SP_ACCOUNT_STATEMENT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_ACCOUNT_STATEMENT_Result">
+          <ScalarProperty Name="COA_NAME" ColumnName="COA_NAME" />
+          <ScalarProperty Name="COA_ID" ColumnName="COA_ID" />
+          <ScalarProperty Name="COA_CODE" ColumnName="COA_CODE" />
+          <ScalarProperty Name="OP_DR" ColumnName="OP_DR" />
+          <ScalarProperty Name="OP_CR" ColumnName="OP_CR" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="JV_ID" ColumnName="JV_ID" />
+          <ScalarProperty Name="JV_ACCOUNT_ID" ColumnName="JV_ACCOUNT_ID" />
+          <ScalarProperty Name="JV_ACCOUNT_CODE" ColumnName="JV_ACCOUNT_CODE" />
+          <ScalarProperty Name="JV_ACCOUNT_NAME" ColumnName="JV_ACCOUNT_NAME" />
+          <ScalarProperty Name="JV_DEBIT_AMOUNT" ColumnName="JV_DEBIT_AMOUNT" />
+          <ScalarProperty Name="JV_CREDIT_AMOUNT" ColumnName="JV_CREDIT_AMOUNT" />
+          <ScalarProperty Name="JV_DATE" ColumnName="JV_DATE" />
+          <ScalarProperty Name="JV_NOTES" ColumnName="JV_NOTES" />
+          <ScalarProperty Name="JV_CHEQUE_NO" ColumnName="JV_CHEQUE_NO" />
+          <ScalarProperty Name="JV_CHEQUE_DATE" ColumnName="JV_CHEQUE_DATE" />
+          <ScalarProperty Name="JV_BANK_REMARK" ColumnName="JV_BANK_REMARK" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SIPIDBModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="SP_BANK_STATEMENT" FunctionName="SIPIDBModel.Store.SP_BANK_STATEMENT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_BANK_STATEMENT_Result">
+          <ScalarProperty Name="COA_NAME" ColumnName="COA_NAME" />
+          <ScalarProperty Name="COA_ID" ColumnName="COA_ID" />
+          <ScalarProperty Name="COA_CODE" ColumnName="COA_CODE" />
+          <ScalarProperty Name="OP_DR" ColumnName="OP_DR" />
+          <ScalarProperty Name="OP_CR" ColumnName="OP_CR" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="JV_ID" ColumnName="JV_ID" />
+          <ScalarProperty Name="JV_ACCOUNT_ID" ColumnName="JV_ACCOUNT_ID" />
+          <ScalarProperty Name="JV_ACCOUNT_CODE" ColumnName="JV_ACCOUNT_CODE" />
+          <ScalarProperty Name="JV_ACCOUNT_NAME" ColumnName="JV_ACCOUNT_NAME" />
+          <ScalarProperty Name="JV_DEBIT_AMOUNT" ColumnName="JV_DEBIT_AMOUNT" />
+          <ScalarProperty Name="JV_CREDIT_AMOUNT" ColumnName="JV_CREDIT_AMOUNT" />
+          <ScalarProperty Name="JV_DATE" ColumnName="JV_DATE" />
+          <ScalarProperty Name="JV_NOTES" ColumnName="JV_NOTES" />
+          <ScalarProperty Name="JV_CHEQUE_NO" ColumnName="JV_CHEQUE_NO" />
+          <ScalarProperty Name="JV_CHEQUE_DATE" ColumnName="JV_CHEQUE_DATE" />
+          <ScalarProperty Name="JV_BANK_REMARK" ColumnName="JV_BANK_REMARK" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CHART_OF_ACCOUNT_UPDATE" FunctionName="SIPIDBModel.Store.SP_CHART_OF_ACCOUNT_UPDATE" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SIPIDBModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="SP_CURRENT_BALANCE" FunctionName="SIPIDBModel.Store.SP_CURRENT_BALANCE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_CURRENT_BALANCE_Result">
+          <ScalarProperty Name="COA_NAME" ColumnName="COA_NAME" />
+          <ScalarProperty Name="COA_ID" ColumnName="COA_ID" />
+          <ScalarProperty Name="COA_CODE" ColumnName="COA_CODE" />
+          <ScalarProperty Name="OP_DR" ColumnName="OP_DR" />
+          <ScalarProperty Name="OP_CR" ColumnName="OP_CR" />
+          <ScalarProperty Name="JV_ID" ColumnName="JV_ID" />
+          <ScalarProperty Name="JV_ACCOUNT_NAME" ColumnName="JV_ACCOUNT_NAME" />
+          <ScalarProperty Name="JV_DEBIT_AMOUNT" ColumnName="JV_DEBIT_AMOUNT" />
+          <ScalarProperty Name="JV_CREDIT_AMOUNT" ColumnName="JV_CREDIT_AMOUNT" />
+          <ScalarProperty Name="JV_DATE" ColumnName="JV_DATE" />
+          <ScalarProperty Name="JV_NOTES" ColumnName="JV_NOTES" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CURRENT_BALANCE_REVENUE_EXPENSE" FunctionName="SIPIDBModel.Store.SP_CURRENT_BALANCE_REVENUE_EXPENSE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_CURRENT_BALANCE_REVENUE_EXPENSE_Result">
+          <ScalarProperty Name="COA_NAME" ColumnName="COA_NAME" />
+          <ScalarProperty Name="COA_ID" ColumnName="COA_ID" />
+          <ScalarProperty Name="COA_CODE" ColumnName="COA_CODE" />
+          <ScalarProperty Name="OP_DR" ColumnName="OP_DR" />
+          <ScalarProperty Name="OP_CR" ColumnName="OP_CR" />
+          <ScalarProperty Name="JV_ID" ColumnName="JV_ID" />
+          <ScalarProperty Name="JV_ACCOUNT_NAME" ColumnName="JV_ACCOUNT_NAME" />
+          <ScalarProperty Name="JV_DEBIT_AMOUNT" ColumnName="JV_DEBIT_AMOUNT" />
+          <ScalarProperty Name="JV_CREDIT_AMOUNT" ColumnName="JV_CREDIT_AMOUNT" />
+          <ScalarProperty Name="JV_DATE" ColumnName="JV_DATE" />
+          <ScalarProperty Name="JV_NOTES" ColumnName="JV_NOTES" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CURRENT_DEBIT_CREDIT" FunctionName="SIPIDBModel.Store.SP_CURRENT_DEBIT_CREDIT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_CURRENT_DEBIT_CREDIT_Result">
+          <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+          <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CURRENT_DEBIT_CREDIT_DEPRICIATION" FunctionName="SIPIDBModel.Store.SP_CURRENT_DEBIT_CREDIT_DEPRICIATION">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_CURRENT_DEBIT_CREDIT_DEPRICIATION_Result">
+          <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+          <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_DEBIT_CREDIT_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" FunctionName="SIPIDBModel.Store.SP_DEBIT_CREDIT_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_DEBIT_CREDIT_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE_Result">
+          <ScalarProperty Name="TOTAL_DEBIT" ColumnName="TOTAL_DEBIT" />
+          <ScalarProperty Name="TOTAL_CREDIT" ColumnName="TOTAL_CREDIT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_DEBIT_CREDIT_VOUCHER_FOR_DAY_BOOK_BY_DATE" FunctionName="SIPIDBModel.Store.SP_DEBIT_CREDIT_VOUCHER_FOR_DAY_BOOK_BY_DATE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_DEBIT_CREDIT_VOUCHER_FOR_DAY_BOOK_BY_DATE_Result">
+          <ScalarProperty Name="TOTAL_DEBIT" ColumnName="TOTAL_DEBIT" />
+          <ScalarProperty Name="TOTAL_CREDIT" ColumnName="TOTAL_CREDIT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_DELETE_DEPRICIATION" FunctionName="SIPIDBModel.Store.SP_DELETE_DEPRICIATION" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SIPIDBModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_DEPRICIATION" FunctionName="SIPIDBModel.Store.SP_GET_ALL_DEPRICIATION">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_GET_ALL_DEPRICIATION_Result">
+          <ScalarProperty Name="ACCESS_BY" ColumnName="ACCESS_BY" />
+          <ScalarProperty Name="ACCESS_DATE" ColumnName="ACCESS_DATE" />
+          <ScalarProperty Name="ACCOUNT_ID" ColumnName="ACCOUNT_ID" />
+          <ScalarProperty Name="ORIGINAL_COST" ColumnName="ORIGINAL_COST" />
+          <ScalarProperty Name="DEP_VALUE" ColumnName="DEP_VALUE" />
+          <ScalarProperty Name="NEW_ORIGINAL_COST" ColumnName="NEW_ORIGINAL_COST" />
+          <ScalarProperty Name="JOURNAL_ID" ColumnName="JOURNAL_ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_DEPRICIATION_ALL" FunctionName="SIPIDBModel.Store.SP_GET_DEPRICIATION_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_GET_DEPRICIATION_ALL_Result">
+          <ScalarProperty Name="ACCESS_BY" ColumnName="ACCESS_BY" />
+          <ScalarProperty Name="ACCESS_DATE" ColumnName="ACCESS_DATE" />
+          <ScalarProperty Name="ACCOUNT_ID" ColumnName="ACCOUNT_ID" />
+          <ScalarProperty Name="ORIGINAL_COST" ColumnName="ORIGINAL_COST" />
+          <ScalarProperty Name="DEP_VALUE" ColumnName="DEP_VALUE" />
+          <ScalarProperty Name="NEW_ORIGINAL_COST" ColumnName="NEW_ORIGINAL_COST" />
+          <ScalarProperty Name="JOURNAL_ID" ColumnName="JOURNAL_ID" />
+          <ScalarProperty Name="DEP_PERCENTAGE" ColumnName="DEP_PERCENTAGE" />
+          <ScalarProperty Name="ACCOUNT_NAME" ColumnName="ACCOUNT_NAME" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_DEPRICIATION_DATE_WISE" FunctionName="SIPIDBModel.Store.SP_GET_DEPRICIATION_DATE_WISE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_GET_DEPRICIATION_DATE_WISE_Result">
+          <ScalarProperty Name="ACCESS_BY" ColumnName="ACCESS_BY" />
+          <ScalarProperty Name="ACCESS_DATE" ColumnName="ACCESS_DATE" />
+          <ScalarProperty Name="ACCOUNT_ID" ColumnName="ACCOUNT_ID" />
+          <ScalarProperty Name="DEBIT_ACC_ID" ColumnName="DEBIT_ACC_ID" />
+          <ScalarProperty Name="ORIGINAL_COST" ColumnName="ORIGINAL_COST" />
+          <ScalarProperty Name="DEP_VALUE" ColumnName="DEP_VALUE" />
+          <ScalarProperty Name="NEW_ORIGINAL_COST" ColumnName="NEW_ORIGINAL_COST" />
+          <ScalarProperty Name="JOURNAL_ID" ColumnName="JOURNAL_ID" />
+          <ScalarProperty Name="DEP_PERCENTAGE" ColumnName="DEP_PERCENTAGE" />
+          <ScalarProperty Name="ACCOUNT_NAME" ColumnName="ACCOUNT_NAME" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_JVID_WITHOUT_BANK" FunctionName="SIPIDBModel.Store.SP_GET_JVID_WITHOUT_BANK" />
+    <FunctionImportMapping FunctionImportName="SP_GET_NET_INCOME_LOSS" FunctionName="SIPIDBModel.Store.SP_GET_NET_INCOME_LOSS" />
+    <FunctionImportMapping FunctionImportName="SP_HEADER_ACC_NAME" FunctionName="SIPIDBModel.Store.SP_HEADER_ACC_NAME">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_HEADER_ACC_NAME_Result">
+          <ScalarProperty Name="JV_ACCOUNT_NAME" ColumnName="JV_ACCOUNT_NAME" />
+          <ScalarProperty Name="JV_ACCOUNT_ID" ColumnName="JV_ACCOUNT_ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_HEADER_STATEMENT" FunctionName="SIPIDBModel.Store.SP_HEADER_STATEMENT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_HEADER_STATEMENT_Result">
+          <ScalarProperty Name="COA_NAME" ColumnName="COA_NAME" />
+          <ScalarProperty Name="COA_ID" ColumnName="COA_ID" />
+          <ScalarProperty Name="COA_CODE" ColumnName="COA_CODE" />
+          <ScalarProperty Name="OP_DR" ColumnName="OP_DR" />
+          <ScalarProperty Name="OP_CR" ColumnName="OP_CR" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="JV_ID" ColumnName="JV_ID" />
+          <ScalarProperty Name="JV_ACCOUNT_ID" ColumnName="JV_ACCOUNT_ID" />
+          <ScalarProperty Name="JV_ACCOUNT_CODE" ColumnName="JV_ACCOUNT_CODE" />
+          <ScalarProperty Name="JV_ACCOUNT_NAME" ColumnName="JV_ACCOUNT_NAME" />
+          <ScalarProperty Name="JV_DEBIT_AMOUNT" ColumnName="JV_DEBIT_AMOUNT" />
+          <ScalarProperty Name="JV_CREDIT_AMOUNT" ColumnName="JV_CREDIT_AMOUNT" />
+          <ScalarProperty Name="JV_DATE" ColumnName="JV_DATE" />
+          <ScalarProperty Name="JV_NOTES" ColumnName="JV_NOTES" />
+          <ScalarProperty Name="JV_CHEQUE_NO" ColumnName="JV_CHEQUE_NO" />
+          <ScalarProperty Name="JV_CHEQUE_DATE" ColumnName="JV_CHEQUE_DATE" />
+          <ScalarProperty Name="JV_BANK_REMARK" ColumnName="JV_BANK_REMARK" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SIPIDBModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SIPIDBModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_INCOME_STATEMENT_FINAL" FunctionName="SIPIDBModel.Store.SP_INCOME_STATEMENT_FINAL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_INCOME_STATEMENT_FINAL_Result">
+          <ScalarProperty Name="ACCOUNT_TITLE" ColumnName="ACCOUNT_TITLE" />
+          <ScalarProperty Name="ACC_ID" ColumnName="ACC_ID" />
+          <ScalarProperty Name="ACC_CODE" ColumnName="ACC_CODE" />
+          <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+          <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+          <ScalarProperty Name="CHART_ACC_PARENT_TYPE" ColumnName="CHART_ACC_PARENT_TYPE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_JOURNAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" FunctionName="SIPIDBModel.Store.SP_JOURNAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_JOURNAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE_Result">
+          <ScalarProperty Name="TOTAL_JOURNAL" ColumnName="TOTAL_JOURNAL" />
+          <ScalarProperty Name="TOTAL_CONTRA" ColumnName="TOTAL_CONTRA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_JOURNAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BY_DATE" FunctionName="SIPIDBModel.Store.SP_JOURNAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BY_DATE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_JOURNAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BY_DATE_Result">
+          <ScalarProperty Name="TOTAL_JOURNAL" ColumnName="TOTAL_JOURNAL" />
+          <ScalarProperty Name="TOTAL_CONTRA" ColumnName="TOTAL_CONTRA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_JOURNAL_VOUCHAR_LAST_ID" FunctionName="SIPIDBModel.Store.SP_JOURNAL_VOUCHAR_LAST_ID" />
+    <FunctionImportMapping FunctionImportName="SP_RECEIVE_PAYMENT" FunctionName="SIPIDBModel.Store.SP_RECEIVE_PAYMENT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_RECEIVE_PAYMENT_Result">
+          <ScalarProperty Name="JV_ACCOUNT_ID" ColumnName="JV_ACCOUNT_ID" />
+          <ScalarProperty Name="Debit" ColumnName="Debit" />
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SIPIDBModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="SP_TOTAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" FunctionName="SIPIDBModel.Store.SP_TOTAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" />
+    <FunctionImportMapping FunctionImportName="SP_TOTAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BY_DATE" FunctionName="SIPIDBModel.Store.SP_TOTAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BY_DATE" />
+    <FunctionImportMapping FunctionImportName="SP_TOTAL_DEPOSIT_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" FunctionName="SIPIDBModel.Store.SP_TOTAL_DEPOSIT_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" />
+    <FunctionImportMapping FunctionImportName="SP_TOTAL_DEPOSIT_VOUCHER_FOR_DAY_BOOK_BY_DATE" FunctionName="SIPIDBModel.Store.SP_TOTAL_DEPOSIT_VOUCHER_FOR_DAY_BOOK_BY_DATE" />
+    <FunctionImportMapping FunctionImportName="SP_TOTAL_JOURNAL_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" FunctionName="SIPIDBModel.Store.SP_TOTAL_JOURNAL_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" />
+    <FunctionImportMapping FunctionImportName="SP_TOTAL_JOURNAL_VOUCHER_FOR_DAY_BOOK_BY_DATE" FunctionName="SIPIDBModel.Store.SP_TOTAL_JOURNAL_VOUCHER_FOR_DAY_BOOK_BY_DATE" />
+    <FunctionImportMapping FunctionImportName="SP_TOTAL_PAYMENT_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" FunctionName="SIPIDBModel.Store.SP_TOTAL_PAYMENT_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" />
+    <FunctionImportMapping FunctionImportName="SP_TOTAL_PAYMENT_VOUCHER_FOR_DAY_BOOK_BY_DATE" FunctionName="SIPIDBModel.Store.SP_TOTAL_PAYMENT_VOUCHER_FOR_DAY_BOOK_BY_DATE" />
+    <FunctionImportMapping FunctionImportName="SP_TRIAL_BALANCE" FunctionName="SIPIDBModel.Store.SP_TRIAL_BALANCE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.SP_TRIAL_BALANCE_Result">
+          <ScalarProperty Name="ACCOUNT_TITLE" ColumnName="ACCOUNT_TITLE" />
+          <ScalarProperty Name="ACCOUNT_ID" ColumnName="ACCOUNT_ID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+          <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SIPIDBModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="Student_Money_Receipt_Report" FunctionName="SIPIDBModel.Store.Student_Money_Receipt_Report">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIPIDBModel.Student_Money_Receipt_Report_Result">
+          <ScalarProperty Name="CampusName" ColumnName="CampusName" />
+          <ScalarProperty Name="CampusAddress" ColumnName="CampusAddress" />
+          <ScalarProperty Name="ApplicantName" ColumnName="ApplicantName" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="SemesterNo" ColumnName="SemesterNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ReceiveAmount" ColumnName="ReceiveAmount" />
+          <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+          <ScalarProperty Name="AccadamicInfo_RollNo" ColumnName="AccadamicInfo_RollNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UpdateStudentPaymentAmount" FunctionName="SIPIDBModel.Store.UpdateStudentPaymentAmount" />
+    <EntitySetMapping Name="ACCOUNT_TYPE">
+      <EntityTypeMapping TypeName="SIPIDBModel.ACCOUNT_TYPE">
+        <MappingFragment StoreEntitySet="ACCOUNT_TYPE">
+          <ScalarProperty Name="ACC_NAME" ColumnName="ACC_NAME" />
+          <ScalarProperty Name="ACC_TYPE_ID" ColumnName="ACC_TYPE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADD_STUDENT">
+      <EntityTypeMapping TypeName="SIPIDBModel.ADD_STUDENT">
+        <MappingFragment StoreEntitySet="ADD_STUDENT">
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="BanglaGuardianDistrict" ColumnName="BanglaGuardianDistrict" />
+          <ScalarProperty Name="BanglaGuardianThana" ColumnName="BanglaGuardianThana" />
+          <ScalarProperty Name="BanglaGuardianPost" ColumnName="BanglaGuardianPost" />
+          <ScalarProperty Name="BanglaGuardianSector" ColumnName="BanglaGuardianSector" />
+          <ScalarProperty Name="BanglaGuardianBlock" ColumnName="BanglaGuardianBlock" />
+          <ScalarProperty Name="BanglaGuardianRoadNo" ColumnName="BanglaGuardianRoadNo" />
+          <ScalarProperty Name="BanglaGuardianHouserNo" ColumnName="BanglaGuardianHouserNo" />
+          <ScalarProperty Name="BanglaGuardianName" ColumnName="BanglaGuardianName" />
+          <ScalarProperty Name="GuardianDistrictId" ColumnName="GuardianDistrictId" />
+          <ScalarProperty Name="GuardianThanaId" ColumnName="GuardianThanaId" />
+          <ScalarProperty Name="GuardianPostId" ColumnName="GuardianPostId" />
+          <ScalarProperty Name="GuardianSector" ColumnName="GuardianSector" />
+          <ScalarProperty Name="GuardianBlock" ColumnName="GuardianBlock" />
+          <ScalarProperty Name="GuardianRoadNo" ColumnName="GuardianRoadNo" />
+          <ScalarProperty Name="GuardianHouserNo" ColumnName="GuardianHouserNo" />
+          <ScalarProperty Name="GuardianEmail" ColumnName="GuardianEmail" />
+          <ScalarProperty Name="GuardianMobileNo" ColumnName="GuardianMobileNo" />
+          <ScalarProperty Name="GuardianName" ColumnName="GuardianName" />
+          <ScalarProperty Name="BanglaPresentDistrict" ColumnName="BanglaPresentDistrict" />
+          <ScalarProperty Name="BanglaPresentThana" ColumnName="BanglaPresentThana" />
+          <ScalarProperty Name="BanglaPresentPost" ColumnName="BanglaPresentPost" />
+          <ScalarProperty Name="BanglaPresentSector" ColumnName="BanglaPresentSector" />
+          <ScalarProperty Name="BanglaPresentBlock" ColumnName="BanglaPresentBlock" />
+          <ScalarProperty Name="BanglaPresentRoadNo" ColumnName="BanglaPresentRoadNo" />
+          <ScalarProperty Name="BanglaPresentHouserNo" ColumnName="BanglaPresentHouserNo" />
+          <ScalarProperty Name="BanglaPermanentDistrict" ColumnName="BanglaPermanentDistrict" />
+          <ScalarProperty Name="BanglaPermanentThana" ColumnName="BanglaPermanentThana" />
+          <ScalarProperty Name="BanglaPermanentPost" ColumnName="BanglaPermanentPost" />
+          <ScalarProperty Name="BanglaPermanentSector" ColumnName="BanglaPermanentSector" />
+          <ScalarProperty Name="BanglaPermanentBlock" ColumnName="BanglaPermanentBlock" />
+          <ScalarProperty Name="BanglaPermanentRoadNo" ColumnName="BanglaPermanentRoadNo" />
+          <ScalarProperty Name="BanglaPermanentHouserNo" ColumnName="BanglaPermanentHouserNo" />
+          <ScalarProperty Name="BanglaTribal" ColumnName="BanglaTribal" />
+          <ScalarProperty Name="BanglaFreedomFighter" ColumnName="BanglaFreedomFighter" />
+          <ScalarProperty Name="BanglaMotherName" ColumnName="BanglaMotherName" />
+          <ScalarProperty Name="BanglaFatherName" ColumnName="BanglaFatherName" />
+          <ScalarProperty Name="PresentDistrictId" ColumnName="PresentDistrictId" />
+          <ScalarProperty Name="PresentThanaId" ColumnName="PresentThanaId" />
+          <ScalarProperty Name="PresentPostId" ColumnName="PresentPostId" />
+          <ScalarProperty Name="PresentSector" ColumnName="PresentSector" />
+          <ScalarProperty Name="PresentBlock" ColumnName="PresentBlock" />
+          <ScalarProperty Name="PresentRoadNo" ColumnName="PresentRoadNo" />
+          <ScalarProperty Name="PresentHouserNo" ColumnName="PresentHouserNo" />
+          <ScalarProperty Name="PermanentDistrictid" ColumnName="PermanentDistrictid" />
+          <ScalarProperty Name="PermanentThanaId" ColumnName="PermanentThanaId" />
+          <ScalarProperty Name="PermanentPostId" ColumnName="PermanentPostId" />
+          <ScalarProperty Name="PermanentSector" ColumnName="PermanentSector" />
+          <ScalarProperty Name="PermanentBlock" ColumnName="PermanentBlock" />
+          <ScalarProperty Name="PermanentRoadNo" ColumnName="PermanentRoadNo" />
+          <ScalarProperty Name="PermanentHouserNo" ColumnName="PermanentHouserNo" />
+          <ScalarProperty Name="TelephoneNo" ColumnName="TelephoneNo" />
+          <ScalarProperty Name="MothersMobileNo" ColumnName="MothersMobileNo" />
+          <ScalarProperty Name="FathersMobileNo" ColumnName="FathersMobileNo" />
+          <ScalarProperty Name="Tribal" ColumnName="Tribal" />
+          <ScalarProperty Name="FreedomFighter" ColumnName="FreedomFighter" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="BanglaOthersInfo" ColumnName="BanglaOthersInfo" />
+          <ScalarProperty Name="BanglaInterest" ColumnName="BanglaInterest" />
+          <ScalarProperty Name="BanglaHobby" ColumnName="BanglaHobby" />
+          <ScalarProperty Name="BanglaReligion" ColumnName="BanglaReligion" />
+          <ScalarProperty Name="BanglaNationality" ColumnName="BanglaNationality" />
+          <ScalarProperty Name="BanglaGender" ColumnName="BanglaGender" />
+          <ScalarProperty Name="BanglaApplicantName" ColumnName="BanglaApplicantName" />
+          <ScalarProperty Name="OthersInfo" ColumnName="OthersInfo" />
+          <ScalarProperty Name="Interest" ColumnName="Interest" />
+          <ScalarProperty Name="ReligionId" ColumnName="ReligionId" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="ApplicantName" ColumnName="ApplicantName" />
+          <ScalarProperty Name="BanglaBatch" ColumnName="BanglaBatch" />
+          <ScalarProperty Name="BanglaAccadamicYear" ColumnName="BanglaAccadamicYear" />
+          <ScalarProperty Name="BanglaSession" ColumnName="BanglaSession" />
+          <ScalarProperty Name="BanglaCampas" ColumnName="BanglaCampas" />
+          <ScalarProperty Name="BangDepartment" ColumnName="BangDepartment" />
+          <ScalarProperty Name="BanglaProgram" ColumnName="BanglaProgram" />
+          <ScalarProperty Name="BatchId" ColumnName="BatchId" />
+          <ScalarProperty Name="AccadamicYear" ColumnName="AccadamicYear" />
+          <ScalarProperty Name="Session" ColumnName="Session" />
+          <ScalarProperty Name="CampusId" ColumnName="CampusId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMISSIONINFOes">
+      <EntityTypeMapping TypeName="SIPIDBModel.ADMISSIONINFO">
+        <MappingFragment StoreEntitySet="ADMISSIONINFO">
+          <ScalarProperty Name="BoardRegistrationNo" ColumnName="BoardRegistrationNo" />
+          <ScalarProperty Name="BoardRollNo" ColumnName="BoardRollNo" />
+          <ScalarProperty Name="CurrentSemester" ColumnName="CurrentSemester" />
+          <ScalarProperty Name="AccadamicInfo_GPA" ColumnName="AccadamicInfo_GPA" />
+          <ScalarProperty Name="AccadamicInfo_PassingYear" ColumnName="AccadamicInfo_PassingYear" />
+          <ScalarProperty Name="AccadamicInfo_RegistrationNo" ColumnName="AccadamicInfo_RegistrationNo" />
+          <ScalarProperty Name="AccadamicInfo_RollNo" ColumnName="AccadamicInfo_RollNo" />
+          <ScalarProperty Name="AccadamicInfo_SchoolName" ColumnName="AccadamicInfo_SchoolName" />
+          <ScalarProperty Name="AccadamicInfo_Board" ColumnName="AccadamicInfo_Board" />
+          <ScalarProperty Name="AccadamicInfo_Group" ColumnName="AccadamicInfo_Group" />
+          <ScalarProperty Name="AccadamicInfo_ExamNme" ColumnName="AccadamicInfo_ExamNme" />
+          <ScalarProperty Name="Student_Signature" ColumnName="Student_Signature" />
+          <ScalarProperty Name="Student_Photo" ColumnName="Student_Photo" />
+          <ScalarProperty Name="BanglaGuardianDistrict" ColumnName="BanglaGuardianDistrict" />
+          <ScalarProperty Name="BanglaGuardianThana" ColumnName="BanglaGuardianThana" />
+          <ScalarProperty Name="BanglaGuardianPost" ColumnName="BanglaGuardianPost" />
+          <ScalarProperty Name="BanglaGuardianSector" ColumnName="BanglaGuardianSector" />
+          <ScalarProperty Name="BanglaGuardianBlock" ColumnName="BanglaGuardianBlock" />
+          <ScalarProperty Name="BanglaGuardianRoadNo" ColumnName="BanglaGuardianRoadNo" />
+          <ScalarProperty Name="BanglaGuardianHouserNo" ColumnName="BanglaGuardianHouserNo" />
+          <ScalarProperty Name="BanglaGuardianName" ColumnName="BanglaGuardianName" />
+          <ScalarProperty Name="GuardianDistrictId" ColumnName="GuardianDistrictId" />
+          <ScalarProperty Name="GuardianThanaId" ColumnName="GuardianThanaId" />
+          <ScalarProperty Name="GuardianPostId" ColumnName="GuardianPostId" />
+          <ScalarProperty Name="GuardianSector" ColumnName="GuardianSector" />
+          <ScalarProperty Name="GuardianBlock" ColumnName="GuardianBlock" />
+          <ScalarProperty Name="GuardianRoadNo" ColumnName="GuardianRoadNo" />
+          <ScalarProperty Name="GuardianHouserNo" ColumnName="GuardianHouserNo" />
+          <ScalarProperty Name="GuardianEmail" ColumnName="GuardianEmail" />
+          <ScalarProperty Name="GuardianMobileNo" ColumnName="GuardianMobileNo" />
+          <ScalarProperty Name="GuardianName" ColumnName="GuardianName" />
+          <ScalarProperty Name="BanglaPresentDistrict" ColumnName="BanglaPresentDistrict" />
+          <ScalarProperty Name="BanglaPresentThana" ColumnName="BanglaPresentThana" />
+          <ScalarProperty Name="BanglaPresentPost" ColumnName="BanglaPresentPost" />
+          <ScalarProperty Name="BanglaPresentSector" ColumnName="BanglaPresentSector" />
+          <ScalarProperty Name="BanglaPresentBlock" ColumnName="BanglaPresentBlock" />
+          <ScalarProperty Name="BanglaPresentRoadNo" ColumnName="BanglaPresentRoadNo" />
+          <ScalarProperty Name="BanglaPresentHouserNo" ColumnName="BanglaPresentHouserNo" />
+          <ScalarProperty Name="BanglaPermanentDistrict" ColumnName="BanglaPermanentDistrict" />
+          <ScalarProperty Name="BanglaPermanentThana" ColumnName="BanglaPermanentThana" />
+          <ScalarProperty Name="BanglaPermanentPost" ColumnName="BanglaPermanentPost" />
+          <ScalarProperty Name="BanglaPermanentSector" ColumnName="BanglaPermanentSector" />
+          <ScalarProperty Name="BanglaPermanentBlock" ColumnName="BanglaPermanentBlock" />
+          <ScalarProperty Name="BanglaPermanentRoadNo" ColumnName="BanglaPermanentRoadNo" />
+          <ScalarProperty Name="BanglaPermanentHouserNo" ColumnName="BanglaPermanentHouserNo" />
+          <ScalarProperty Name="BanglaTribal" ColumnName="BanglaTribal" />
+          <ScalarProperty Name="BanglaFreedomFighter" ColumnName="BanglaFreedomFighter" />
+          <ScalarProperty Name="BanglaMotherName" ColumnName="BanglaMotherName" />
+          <ScalarProperty Name="BanglaFatherName" ColumnName="BanglaFatherName" />
+          <ScalarProperty Name="PresentDistrictId" ColumnName="PresentDistrictId" />
+          <ScalarProperty Name="PresentThanaId" ColumnName="PresentThanaId" />
+          <ScalarProperty Name="PresentPostId" ColumnName="PresentPostId" />
+          <ScalarProperty Name="PresentSector" ColumnName="PresentSector" />
+          <ScalarProperty Name="PresentBlock" ColumnName="PresentBlock" />
+          <ScalarProperty Name="PresentRoadNo" ColumnName="PresentRoadNo" />
+          <ScalarProperty Name="PresentHouserNo" ColumnName="PresentHouserNo" />
+          <ScalarProperty Name="PermanentDistrictid" ColumnName="PermanentDistrictid" />
+          <ScalarProperty Name="PermanentThanaId" ColumnName="PermanentThanaId" />
+          <ScalarProperty Name="PermanentPostId" ColumnName="PermanentPostId" />
+          <ScalarProperty Name="PermanentSector" ColumnName="PermanentSector" />
+          <ScalarProperty Name="PermanentBlock" ColumnName="PermanentBlock" />
+          <ScalarProperty Name="PermanentRoadNo" ColumnName="PermanentRoadNo" />
+          <ScalarProperty Name="PermanentHouserNo" ColumnName="PermanentHouserNo" />
+          <ScalarProperty Name="TelephoneNo" ColumnName="TelephoneNo" />
+          <ScalarProperty Name="MothersMobileNo" ColumnName="MothersMobileNo" />
+          <ScalarProperty Name="FathersMobileNo" ColumnName="FathersMobileNo" />
+          <ScalarProperty Name="Tribal" ColumnName="Tribal" />
+          <ScalarProperty Name="FreedomFighter" ColumnName="FreedomFighter" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="BanglaOthersInfo" ColumnName="BanglaOthersInfo" />
+          <ScalarProperty Name="BanglaInterest" ColumnName="BanglaInterest" />
+          <ScalarProperty Name="BanglaHobby" ColumnName="BanglaHobby" />
+          <ScalarProperty Name="BanglaReligion" ColumnName="BanglaReligion" />
+          <ScalarProperty Name="BanglaNationality" ColumnName="BanglaNationality" />
+          <ScalarProperty Name="BanglaGender" ColumnName="BanglaGender" />
+          <ScalarProperty Name="BanglaApplicantName" ColumnName="BanglaApplicantName" />
+          <ScalarProperty Name="OthersInfo" ColumnName="OthersInfo" />
+          <ScalarProperty Name="Interest" ColumnName="Interest" />
+          <ScalarProperty Name="ReligionId" ColumnName="ReligionId" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="BanglaDateOfBirth" ColumnName="BanglaDateOfBirth" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="ApplicantName" ColumnName="ApplicantName" />
+          <ScalarProperty Name="BanglaBatch" ColumnName="BanglaBatch" />
+          <ScalarProperty Name="BanglaAccadamicYear" ColumnName="BanglaAccadamicYear" />
+          <ScalarProperty Name="BanglaSession" ColumnName="BanglaSession" />
+          <ScalarProperty Name="BanglaCampas" ColumnName="BanglaCampas" />
+          <ScalarProperty Name="BangDepartment" ColumnName="BangDepartment" />
+          <ScalarProperty Name="BanglaProgram" ColumnName="BanglaProgram" />
+          <ScalarProperty Name="BatchId" ColumnName="BatchId" />
+          <ScalarProperty Name="AccadamicYear" ColumnName="AccadamicYear" />
+          <ScalarProperty Name="Session" ColumnName="Session" />
+          <ScalarProperty Name="CampusId" ColumnName="CampusId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMISSIONOFFICEs">
+      <EntityTypeMapping TypeName="SIPIDBModel.ADMISSIONOFFICE">
+        <MappingFragment StoreEntitySet="ADMISSIONOFFICE">
+          <ScalarProperty Name="CampusId" ColumnName="CampusId" />
+          <ScalarProperty Name="OfficeName" ColumnName="OfficeName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ALL_ACCOUNT_TYPE">
+      <EntityTypeMapping TypeName="SIPIDBModel.ALL_ACCOUNT_TYPE">
+        <MappingFragment StoreEntitySet="ALL_ACCOUNT_TYPE">
+          <ScalarProperty Name="ACC_NAME" ColumnName="ACC_NAME" />
+          <ScalarProperty Name="ACC_TYPE_ID" ColumnName="ACC_TYPE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BALANCE_SHEET_CONFIGURE">
+      <EntityTypeMapping TypeName="SIPIDBModel.BALANCE_SHEET_CONFIGURE">
+        <MappingFragment StoreEntitySet="BALANCE_SHEET_CONFIGURE">
+          <ScalarProperty Name="ACCID" ColumnName="ACCID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BATCHes">
+      <EntityTypeMapping TypeName="SIPIDBModel.BATCH">
+        <MappingFragment StoreEntitySet="BATCH">
+          <ScalarProperty Name="BanglaBatch" ColumnName="BanglaBatch" />
+          <ScalarProperty Name="BatchNo" ColumnName="BatchNo" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BLOODGROUPs">
+      <EntityTypeMapping TypeName="SIPIDBModel.BLOODGROUP">
+        <MappingFragment StoreEntitySet="BLOODGROUP">
+          <ScalarProperty Name="BloodGroupName" ColumnName="BloodGroupName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOOK_ISSUE">
+      <EntityTypeMapping TypeName="SIPIDBModel.BOOK_ISSUE">
+        <MappingFragment StoreEntitySet="BOOK_ISSUE">
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="BookReturnDateFromStudent" ColumnName="BookReturnDateFromStudent" />
+          <ScalarProperty Name="DelayReturn" ColumnName="DelayReturn" />
+          <ScalarProperty Name="BookReturnStatus" ColumnName="BookReturnStatus" />
+          <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+          <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+          <ScalarProperty Name="BookId" ColumnName="BookId" />
+          <ScalarProperty Name="Semester" ColumnName="Semester" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="StudentPKId" ColumnName="StudentPKId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOOKS_DETAILS">
+      <EntityTypeMapping TypeName="SIPIDBModel.BOOKS_DETAILS">
+        <MappingFragment StoreEntitySet="BOOKS_DETAILS">
+          <ScalarProperty Name="Quantiry" ColumnName="Quantiry" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="SelfNumber" ColumnName="SelfNumber" />
+          <ScalarProperty Name="PublishedYear" ColumnName="PublishedYear" />
+          <ScalarProperty Name="BookEdition" ColumnName="BookEdition" />
+          <ScalarProperty Name="BookAuthor" ColumnName="BookAuthor" />
+          <ScalarProperty Name="BookName" ColumnName="BookName" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAMPUSINFOes">
+      <EntityTypeMapping TypeName="SIPIDBModel.CAMPUSINFO">
+        <MappingFragment StoreEntitySet="CAMPUSINFO">
+          <ScalarProperty Name="BanglaCampus" ColumnName="BanglaCampus" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="CampusAddress" ColumnName="CampusAddress" />
+          <ScalarProperty Name="CampusName" ColumnName="CampusName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHART_ACCOUNT">
+      <EntityTypeMapping TypeName="SIPIDBModel.CHART_ACCOUNT">
+        <MappingFragment StoreEntitySet="CHART_ACCOUNT">
+          <ScalarProperty Name="ACCESS_DATE" ColumnName="ACCESS_DATE" />
+          <ScalarProperty Name="ACCESS_BY" ColumnName="ACCESS_BY" />
+          <ScalarProperty Name="CHART_ACC_CREATION_DATE" ColumnName="CHART_ACC_CREATION_DATE" />
+          <ScalarProperty Name="CHART_ACC_STATUS" ColumnName="CHART_ACC_STATUS" />
+          <ScalarProperty Name="CHART_ACC_HEADER" ColumnName="CHART_ACC_HEADER" />
+          <ScalarProperty Name="CHART_ACC_OPENING_BALANCE_CR" ColumnName="CHART_ACC_OPENING_BALANCE_CR" />
+          <ScalarProperty Name="CHART_ACC_OPENING_BALANCE_DR" ColumnName="CHART_ACC_OPENING_BALANCE_DR" />
+          <ScalarProperty Name="CHART_ACC_NAME" ColumnName="CHART_ACC_NAME" />
+          <ScalarProperty Name="CHART_ACC_PARENT_TYPE" ColumnName="CHART_ACC_PARENT_TYPE" />
+          <ScalarProperty Name="CHART_ACC_PARENT_ID" ColumnName="CHART_ACC_PARENT_ID" />
+          <ScalarProperty Name="CHART_ACC_CODE" ColumnName="CHART_ACC_CODE" />
+          <ScalarProperty Name="CHART_ACC_ID" ColumnName="CHART_ACC_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLASSPERIODs">
+      <EntityTypeMapping TypeName="SIPIDBModel.CLASSPERIOD">
+        <MappingFragment StoreEntitySet="CLASSPERIOD">
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPANY_SETUP">
+      <EntityTypeMapping TypeName="SIPIDBModel.COMPANY_SETUP">
+        <MappingFragment StoreEntitySet="COMPANY_SETUP">
+          <ScalarProperty Name="PROP_NAME" ColumnName="PROP_NAME" />
+          <ScalarProperty Name="LOGO" ColumnName="LOGO" />
+          <ScalarProperty Name="WEBSITE" ColumnName="WEBSITE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="COMPANY_NAME" ColumnName="COMPANY_NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COURSEs">
+      <EntityTypeMapping TypeName="SIPIDBModel.COURSE">
+        <MappingFragment StoreEntitySet="COURSE">
+          <ScalarProperty Name="TotalMarks" ColumnName="TotalMarks" />
+          <ScalarProperty Name="PracticalMarkasFinalExam" ColumnName="PracticalMarkasFinalExam" />
+          <ScalarProperty Name="PracticalMarkasContinuousAssessment" ColumnName="PracticalMarkasContinuousAssessment" />
+          <ScalarProperty Name="TheoryMarkasFinalExam" ColumnName="TheoryMarkasFinalExam" />
+          <ScalarProperty Name="TheoryMarkasContinuousAssessment" ColumnName="TheoryMarkasContinuousAssessment" />
+          <ScalarProperty Name="TotalCredit" ColumnName="TotalCredit" />
+          <ScalarProperty Name="PracticalCredit" ColumnName="PracticalCredit" />
+          <ScalarProperty Name="TheoryCredit" ColumnName="TheoryCredit" />
+          <ScalarProperty Name="CourseCode" ColumnName="CourseCode" />
+          <ScalarProperty Name="BanglaCourseName" ColumnName="BanglaCourseName" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="SemesterId" ColumnName="SemesterId" />
+          <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COURSE_ASSIGN_TO_STUDENT">
+      <EntityTypeMapping TypeName="SIPIDBModel.COURSE_ASSIGN_TO_STUDENT">
+        <MappingFragment StoreEntitySet="COURSE_ASSIGN_TO_STUDENT">
+          <ScalarProperty Name="TotalMarks" ColumnName="TotalMarks" />
+          <ScalarProperty Name="PreStudentPracticalTheoryMarksFinalExam" ColumnName="PreStudentPracticalTheoryMarksFinalExam" />
+          <ScalarProperty Name="PreStudentTheoryMarksFinalExam" ColumnName="PreStudentTheoryMarksFinalExam" />
+          <ScalarProperty Name="PreStudentPracticalMarksContinuousAssessment" ColumnName="PreStudentPracticalMarksContinuousAssessment" />
+          <ScalarProperty Name="PreStudentTheoryMarksContinuousAssessment" ColumnName="PreStudentTheoryMarksContinuousAssessment" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="SemesterId" ColumnName="SemesterId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="StudentPkId" ColumnName="StudentPkId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CREATE_ROUTINE">
+      <EntityTypeMapping TypeName="SIPIDBModel.CREATE_ROUTINE">
+        <MappingFragment StoreEntitySet="CREATE_ROUTINE">
+          <ScalarProperty Name="SemesterId" ColumnName="SemesterId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="EighthTeacher" ColumnName="EighthTeacher" />
+          <ScalarProperty Name="EighthCourse" ColumnName="EighthCourse" />
+          <ScalarProperty Name="EighthClass" ColumnName="EighthClass" />
+          <ScalarProperty Name="SeventhTeacher" ColumnName="SeventhTeacher" />
+          <ScalarProperty Name="SeventhCourse" ColumnName="SeventhCourse" />
+          <ScalarProperty Name="SeventhClass" ColumnName="SeventhClass" />
+          <ScalarProperty Name="SixthTeacher" ColumnName="SixthTeacher" />
+          <ScalarProperty Name="SixthCourse" ColumnName="SixthCourse" />
+          <ScalarProperty Name="SixthClass" ColumnName="SixthClass" />
+          <ScalarProperty Name="FifthTeacher" ColumnName="FifthTeacher" />
+          <ScalarProperty Name="FifthCourse" ColumnName="FifthCourse" />
+          <ScalarProperty Name="FifthClass" ColumnName="FifthClass" />
+          <ScalarProperty Name="ForthTeacher" ColumnName="ForthTeacher" />
+          <ScalarProperty Name="ForthCourse" ColumnName="ForthCourse" />
+          <ScalarProperty Name="ForthClass" ColumnName="ForthClass" />
+          <ScalarProperty Name="ThirdTeacher" ColumnName="ThirdTeacher" />
+          <ScalarProperty Name="ThirdCourse" ColumnName="ThirdCourse" />
+          <ScalarProperty Name="ThirdClass" ColumnName="ThirdClass" />
+          <ScalarProperty Name="SecondTeacher" ColumnName="SecondTeacher" />
+          <ScalarProperty Name="SecondCourse" ColumnName="SecondCourse" />
+          <ScalarProperty Name="SecondClass" ColumnName="SecondClass" />
+          <ScalarProperty Name="FirstTeacher" ColumnName="FirstTeacher" />
+          <ScalarProperty Name="FirstCourse" ColumnName="FirstCourse" />
+          <ScalarProperty Name="FirstClass" ColumnName="FirstClass" />
+          <ScalarProperty Name="ClassRutinGroupId" ColumnName="ClassRutinGroupId" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMER_EMPLOYEE_SETUP">
+      <EntityTypeMapping TypeName="SIPIDBModel.CUSTOMER_EMPLOYEE_SETUP">
+        <MappingFragment StoreEntitySet="CUSTOMER_EMPLOYEE_SETUP">
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="NATIONAL_ID" ColumnName="NATIONAL_ID" />
+          <ScalarProperty Name="CONTACT_PERSON" ColumnName="CONTACT_PERSON" />
+          <ScalarProperty Name="CONTACT_NO" ColumnName="CONTACT_NO" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ACCOUNT_ID" ColumnName="ACCOUNT_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DAYs">
+      <EntityTypeMapping TypeName="SIPIDBModel.DAY">
+        <MappingFragment StoreEntitySet="DAY">
+          <ScalarProperty Name="BanglaDay" ColumnName="BanglaDay" />
+          <ScalarProperty Name="DaySeveneven" ColumnName="DaySeveneven" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEPARTMENTs">
+      <EntityTypeMapping TypeName="SIPIDBModel.DEPARTMENT">
+        <MappingFragment StoreEntitySet="DEPARTMENT">
+          <ScalarProperty Name="BanglaDepartment" ColumnName="BanglaDepartment" />
+          <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEPOSIT_PAYMENT">
+      <EntityTypeMapping TypeName="SIPIDBModel.DEPOSIT_PAYMENT">
+        <MappingFragment StoreEntitySet="DEPOSIT_PAYMENT">
+          <ScalarProperty Name="ACCESS_DATETIME" ColumnName="ACCESS_DATETIME" />
+          <ScalarProperty Name="ACCESS_BY" ColumnName="ACCESS_BY" />
+          <ScalarProperty Name="CANCEL_JVOUCHAR" ColumnName="CANCEL_JVOUCHAR" />
+          <ScalarProperty Name="JOURNAL_VOUCHER" ColumnName="JOURNAL_VOUCHER" />
+          <ScalarProperty Name="TRANSACTION_TYPE" ColumnName="TRANSACTION_TYPE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="CLEARING_DATE" ColumnName="CLEARING_DATE" />
+          <ScalarProperty Name="BANK_CHEQUE_DATE" ColumnName="BANK_CHEQUE_DATE" />
+          <ScalarProperty Name="BANK_CHEQUE" ColumnName="BANK_CHEQUE" />
+          <ScalarProperty Name="BANK_INFO_CHEQUE" ColumnName="BANK_INFO_CHEQUE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="BANK_ACCOUNT_ID" ColumnName="BANK_ACCOUNT_ID" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="DEPOSIT_PAYMENT_DATE" ColumnName="DEPOSIT_PAYMENT_DATE" />
+          <ScalarProperty Name="ACCOUNT_ID" ColumnName="ACCOUNT_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEPRICIATIONs">
+      <EntityTypeMapping TypeName="SIPIDBModel.DEPRICIATION">
+        <MappingFragment StoreEntitySet="DEPRICIATION">
+          <ScalarProperty Name="JOURNAL_ID" ColumnName="JOURNAL_ID" />
+          <ScalarProperty Name="ACCESS_DATE" ColumnName="ACCESS_DATE" />
+          <ScalarProperty Name="ACCESS_BY" ColumnName="ACCESS_BY" />
+          <ScalarProperty Name="NEW_ORIGINAL_COST" ColumnName="NEW_ORIGINAL_COST" />
+          <ScalarProperty Name="DEP_VALUE" ColumnName="DEP_VALUE" />
+          <ScalarProperty Name="ORIGINAL_COST" ColumnName="ORIGINAL_COST" />
+          <ScalarProperty Name="ACCOUNT_ID" ColumnName="ACCOUNT_ID" />
+          <ScalarProperty Name="DEP_ID" ColumnName="DEP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEPRICIATION_SETUP">
+      <EntityTypeMapping TypeName="SIPIDBModel.DEPRICIATION_SETUP">
+        <MappingFragment StoreEntitySet="DEPRICIATION_SETUP">
+          <ScalarProperty Name="ACCESS_DATE" ColumnName="ACCESS_DATE" />
+          <ScalarProperty Name="ACCESS_BY" ColumnName="ACCESS_BY" />
+          <ScalarProperty Name="CREDIT_ACC_ID" ColumnName="CREDIT_ACC_ID" />
+          <ScalarProperty Name="DEBIT_ACC_ID" ColumnName="DEBIT_ACC_ID" />
+          <ScalarProperty Name="DEP_PERCENTAGE" ColumnName="DEP_PERCENTAGE" />
+          <ScalarProperty Name="ACCOUNT_ID" ColumnName="ACCOUNT_ID" />
+          <ScalarProperty Name="DEP_SET_ID" ColumnName="DEP_SET_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DISTRICTs">
+      <EntityTypeMapping TypeName="SIPIDBModel.DISTRICT">
+        <MappingFragment StoreEntitySet="DISTRICT">
+          <ScalarProperty Name="BanglaDistrict" ColumnName="BanglaDistrict" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FEESDETAILS">
+      <EntityTypeMapping TypeName="SIPIDBModel.FEESDETAIL">
+        <MappingFragment StoreEntitySet="FEESDETAILS">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FEESSETUPs">
+      <EntityTypeMapping TypeName="SIPIDBModel.FEESSETUP">
+        <MappingFragment StoreEntitySet="FEESSETUP">
+          <ScalarProperty Name="CampusId" ColumnName="CampusId" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="FeesDetailsId" ColumnName="FeesDetailsId" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="SemesterId" ColumnName="SemesterId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FISCAL_YEAR">
+      <EntityTypeMapping TypeName="SIPIDBModel.FISCAL_YEAR">
+        <MappingFragment StoreEntitySet="FISCAL_YEAR">
+          <ScalarProperty Name="ACCESS_DATE" ColumnName="ACCESS_DATE" />
+          <ScalarProperty Name="ACCESS_BY" ColumnName="ACCESS_BY" />
+          <ScalarProperty Name="F_YEAR_STATUS" ColumnName="F_YEAR_STATUS" />
+          <ScalarProperty Name="F_YEAR_END_DATE" ColumnName="F_YEAR_END_DATE" />
+          <ScalarProperty Name="F_YEAR_START_DATE" ColumnName="F_YEAR_START_DATE" />
+          <ScalarProperty Name="F_YEAR_NAME" ColumnName="F_YEAR_NAME" />
+          <ScalarProperty Name="F_YEAR_ID" ColumnName="F_YEAR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GS_tblCategory">
+      <EntityTypeMapping TypeName="SIPIDBModel.GS_tblCategory">
+        <MappingFragment StoreEntitySet="GS_tblCategory">
+          <ScalarProperty Name="CategoryTypeID" ColumnName="CategoryTypeID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="ItemCategoryID" ColumnName="ItemCategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INCOME_SHEET_CONFIGURE">
+      <EntityTypeMapping TypeName="SIPIDBModel.INCOME_SHEET_CONFIGURE">
+        <MappingFragment StoreEntitySet="INCOME_SHEET_CONFIGURE">
+          <ScalarProperty Name="ACCID" ColumnName="ACCID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTORY_BRAND_CATEGORY">
+      <EntityTypeMapping TypeName="SIPIDBModel.INVENTORY_BRAND_CATEGORY">
+        <MappingFragment StoreEntitySet="INVENTORY_BRAND_CATEGORY">
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="BrabdId" ColumnName="BrabdId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTORY_BRAND_NAME">
+      <EntityTypeMapping TypeName="SIPIDBModel.INVENTORY_BRAND_NAME">
+        <MappingFragment StoreEntitySet="INVENTORY_BRAND_NAME">
+          <ScalarProperty Name="ContactInfo" ColumnName="ContactInfo" />
+          <ScalarProperty Name="BrandDiscription" ColumnName="BrandDiscription" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+      <EntityTypeMapping TypeName="SIPIDBModel.INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+        <MappingFragment StoreEntitySet="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+          <ScalarProperty Name="StockPrice" ColumnName="StockPrice" />
+          <ScalarProperty Name="StockInHand" ColumnName="StockInHand" />
+          <ScalarProperty Name="UnitTypeNote" ColumnName="UnitTypeNote" />
+          <ScalarProperty Name="UnitTypeId" ColumnName="UnitTypeId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTORY_PURCHAGE_DETAILS">
+      <EntityTypeMapping TypeName="SIPIDBModel.INVENTORY_PURCHAGE_DETAILS">
+        <MappingFragment StoreEntitySet="INVENTORY_PURCHAGE_DETAILS">
+          <ScalarProperty Name="SystemSerialNo" ColumnName="SystemSerialNo" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="ItemPrice" ColumnName="ItemPrice" />
+          <ScalarProperty Name="SalableQuantity" ColumnName="SalableQuantity" />
+          <ScalarProperty Name="ExtraQuantity" ColumnName="ExtraQuantity" />
+          <ScalarProperty Name="EveryPackQuantity" ColumnName="EveryPackQuantity" />
+          <ScalarProperty Name="NumberOfProduct" ColumnName="NumberOfProduct" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="PurchaserInfo" ColumnName="PurchaserInfo" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTORY_PURCHASE_ENTRY">
+      <EntityTypeMapping TypeName="SIPIDBModel.INVENTORY_PURCHASE_ENTRY">
+        <MappingFragment StoreEntitySet="INVENTORY_PURCHASE_ENTRY">
+          <ScalarProperty Name="SystemSerialNo" ColumnName="SystemSerialNo" />
+          <ScalarProperty Name="PurchaserInfo" ColumnName="PurchaserInfo" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="ItemPrice" ColumnName="ItemPrice" />
+          <ScalarProperty Name="SalableQuantity" ColumnName="SalableQuantity" />
+          <ScalarProperty Name="NumberOfProduct" ColumnName="NumberOfProduct" />
+          <ScalarProperty Name="ProductMasterEntryId" ColumnName="ProductMasterEntryId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTORY_STOCK_OUT">
+      <EntityTypeMapping TypeName="SIPIDBModel.INVENTORY_STOCK_OUT">
+        <MappingFragment StoreEntitySet="INVENTORY_STOCK_OUT">
+          <ScalarProperty Name="StockOutInfo" ColumnName="StockOutInfo" />
+          <ScalarProperty Name="StockOutDate" ColumnName="StockOutDate" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="StockOutTotalQuantity" ColumnName="StockOutTotalQuantity" />
+          <ScalarProperty Name="StockOutQuantity" ColumnName="StockOutQuantity" />
+          <ScalarProperty Name="StockOutPrice" ColumnName="StockOutPrice" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTORY_STOCKOUT_DETAILS">
+      <EntityTypeMapping TypeName="SIPIDBModel.INVENTORY_STOCKOUT_DETAILS">
+        <MappingFragment StoreEntitySet="INVENTORY_STOCKOUT_DETAILS">
+          <ScalarProperty Name="StockOutInfo" ColumnName="StockOutInfo" />
+          <ScalarProperty Name="StockOutDate" ColumnName="StockOutDate" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="ItemPrice" ColumnName="ItemPrice" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTORY_UNIT_TYPE">
+      <EntityTypeMapping TypeName="SIPIDBModel.INVENTORY_UNIT_TYPE">
+        <MappingFragment StoreEntitySet="INVENTORY_UNIT_TYPE">
+          <ScalarProperty Name="UnitTypeDetails" ColumnName="UnitTypeDetails" />
+          <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JOURNAL_TRANSACTION_TYPE">
+      <EntityTypeMapping TypeName="SIPIDBModel.JOURNAL_TRANSACTION_TYPE">
+        <MappingFragment StoreEntitySet="JOURNAL_TRANSACTION_TYPE">
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JOURNAL_VOUCHAR">
+      <EntityTypeMapping TypeName="SIPIDBModel.JOURNAL_VOUCHAR">
+        <MappingFragment StoreEntitySet="JOURNAL_VOUCHAR">
+          <ScalarProperty Name="JV_ACCESS_DATE" ColumnName="JV_ACCESS_DATE" />
+          <ScalarProperty Name="JV_ACCESS_BY" ColumnName="JV_ACCESS_BY" />
+          <ScalarProperty Name="JV_BANK_REMARK" ColumnName="JV_BANK_REMARK" />
+          <ScalarProperty Name="JV_CHEQUE_DATE" ColumnName="JV_CHEQUE_DATE" />
+          <ScalarProperty Name="JV_CHEQUE_NO" ColumnName="JV_CHEQUE_NO" />
+          <ScalarProperty Name="JV_DATE" ColumnName="JV_DATE" />
+          <ScalarProperty Name="JV_NOTES" ColumnName="JV_NOTES" />
+          <ScalarProperty Name="JV_CREDIT_AMOUNT" ColumnName="JV_CREDIT_AMOUNT" />
+          <ScalarProperty Name="JV_DEBIT_AMOUNT" ColumnName="JV_DEBIT_AMOUNT" />
+          <ScalarProperty Name="JV_ACCOUNT_CODE" ColumnName="JV_ACCOUNT_CODE" />
+          <ScalarProperty Name="JV_ACCOUNT_NAME" ColumnName="JV_ACCOUNT_NAME" />
+          <ScalarProperty Name="JV_ACCOUNT_ID" ColumnName="JV_ACCOUNT_ID" />
+          <ScalarProperty Name="JV_ID" ColumnName="JV_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_tblCompany">
+      <EntityTypeMapping TypeName="SIPIDBModel.LMS_tblCompany">
+        <MappingFragment StoreEntitySet="LMS_tblCompany">
+          <ScalarProperty Name="dtEDate" ColumnName="dtEDate" />
+          <ScalarProperty Name="dtIDate" ColumnName="dtIDate" />
+          <ScalarProperty Name="strEUser" ColumnName="strEUser" />
+          <ScalarProperty Name="strIUser" ColumnName="strIUser" />
+          <ScalarProperty Name="strAddress" ColumnName="strAddress" />
+          <ScalarProperty Name="strCompany" ColumnName="strCompany" />
+          <ScalarProperty Name="strCompanyID" ColumnName="strCompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEMBER_ACC_TYPE">
+      <EntityTypeMapping TypeName="SIPIDBModel.MEMBER_ACC_TYPE">
+        <MappingFragment StoreEntitySet="MEMBER_ACC_TYPE">
+          <ScalarProperty Name="ACCOUNT_PREFIX" ColumnName="ACCOUNT_PREFIX" />
+          <ScalarProperty Name="MEMBER_ACCOUNT_TYPE_ID" ColumnName="MEMBER_ACCOUNT_TYPE_ID" />
+          <ScalarProperty Name="TABLE_ID" ColumnName="TABLE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEMBER_ASSIGN">
+      <EntityTypeMapping TypeName="SIPIDBModel.MEMBER_ASSIGN">
+        <MappingFragment StoreEntitySet="MEMBER_ASSIGN">
+          <ScalarProperty Name="ACC_ID" ColumnName="ACC_ID" />
+          <ScalarProperty Name="MEMBER_PARENT_ACC_ID" ColumnName="MEMBER_PARENT_ACC_ID" />
+          <ScalarProperty Name="MEMBER_ID" ColumnName="MEMBER_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEMBER_INFO">
+      <EntityTypeMapping TypeName="SIPIDBModel.MEMBER_INFO">
+        <MappingFragment StoreEntitySet="MEMBER_INFO">
+          <ScalarProperty Name="ACCESS_DATE" ColumnName="ACCESS_DATE" />
+          <ScalarProperty Name="ACCESS_BY" ColumnName="ACCESS_BY" />
+          <ScalarProperty Name="NOMINEE_PHOTO" ColumnName="NOMINEE_PHOTO" />
+          <ScalarProperty Name="DIGITAL_SIGNATURE" ColumnName="DIGITAL_SIGNATURE" />
+          <ScalarProperty Name="MEMBER_PHOTO" ColumnName="MEMBER_PHOTO" />
+          <ScalarProperty Name="RELATION_WITH_NOMINEE" ColumnName="RELATION_WITH_NOMINEE" />
+          <ScalarProperty Name="NOMINEE_OCCUPATION" ColumnName="NOMINEE_OCCUPATION" />
+          <ScalarProperty Name="NOMINEE_BIRTH_DATE" ColumnName="NOMINEE_BIRTH_DATE" />
+          <ScalarProperty Name="NOMINEE_NAME" ColumnName="NOMINEE_NAME" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+          <ScalarProperty Name="MARITAL_STATUS" ColumnName="MARITAL_STATUS" />
+          <ScalarProperty Name="MEMBER_OCCUPATION" ColumnName="MEMBER_OCCUPATION" />
+          <ScalarProperty Name="RELIGION" ColumnName="RELIGION" />
+          <ScalarProperty Name="MEMBER_BIRTH_DATE" ColumnName="MEMBER_BIRTH_DATE" />
+          <ScalarProperty Name="EDUCATION_STATUS" ColumnName="EDUCATION_STATUS" />
+          <ScalarProperty Name="MOBILE_NO" ColumnName="MOBILE_NO" />
+          <ScalarProperty Name="PERMANENT_ADDRESS" ColumnName="PERMANENT_ADDRESS" />
+          <ScalarProperty Name="PRESENT_ADDRESS" ColumnName="PRESENT_ADDRESS" />
+          <ScalarProperty Name="HUSBAND_NAME" ColumnName="HUSBAND_NAME" />
+          <ScalarProperty Name="MOTHER_NAME" ColumnName="MOTHER_NAME" />
+          <ScalarProperty Name="FATHER_NAME" ColumnName="FATHER_NAME" />
+          <ScalarProperty Name="MEMBER_FULL_NAME" ColumnName="MEMBER_FULL_NAME" />
+          <ScalarProperty Name="NO_OF_SHARE" ColumnName="NO_OF_SHARE" />
+          <ScalarProperty Name="MEMBER_NO" ColumnName="MEMBER_NO" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MODULE_PERMISSION">
+      <EntityTypeMapping TypeName="SIPIDBModel.MODULE_PERMISSION">
+        <MappingFragment StoreEntitySet="MODULE_PERMISSION">
+          <ScalarProperty Name="USER_GROUP_ID" ColumnName="USER_GROUP_ID" />
+          <ScalarProperty Name="MODULE_NAME" ColumnName="MODULE_NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ONLINEDEPARTMENTs">
+      <EntityTypeMapping TypeName="SIPIDBModel.ONLINEDEPARTMENT">
+        <MappingFragment StoreEntitySet="ONLINEDEPARTMENT">
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ONLINEEXAMs">
+      <EntityTypeMapping TypeName="SIPIDBModel.ONLINEEXAM">
+        <MappingFragment StoreEntitySet="ONLINEEXAM">
+          <ScalarProperty Name="ExamName" ColumnName="ExamName" />
+          <ScalarProperty Name="ExamId" ColumnName="ExamId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORGANIZATION_INFO">
+      <EntityTypeMapping TypeName="SIPIDBModel.ORGANIZATION_INFO">
+        <MappingFragment StoreEntitySet="ORGANIZATION_INFO">
+          <ScalarProperty Name="DateOfEstablishment" ColumnName="DateOfEstablishment" />
+          <ScalarProperty Name="BasicInfo" ColumnName="BasicInfo" />
+          <ScalarProperty Name="OrganizationMobile" ColumnName="OrganizationMobile" />
+          <ScalarProperty Name="OrganizationAddress" ColumnName="OrganizationAddress" />
+          <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblBloodGroup">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblBloodGroup">
+        <MappingFragment StoreEntitySet="PIS_tblBloodGroup">
+          <ScalarProperty Name="BloodGroupName" ColumnName="BloodGroupName" />
+          <ScalarProperty Name="BloodGroupID" ColumnName="BloodGroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblCategory">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblCategory">
+        <MappingFragment StoreEntitySet="PIS_tblCategory">
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblCategoryEmp">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblCategoryEmp">
+        <MappingFragment StoreEntitySet="PIS_tblCategoryEmp">
+          <ScalarProperty Name="CategoryTypeID" ColumnName="CategoryTypeID" />
+          <ScalarProperty Name="CategoryEmpName" ColumnName="CategoryEmpName" />
+          <ScalarProperty Name="CategoryEmpID" ColumnName="CategoryEmpID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblCategorySalary">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblCategorySalary">
+        <MappingFragment StoreEntitySet="PIS_tblCategorySalary">
+          <ScalarProperty Name="CategorySalaryName" ColumnName="CategorySalaryName" />
+          <ScalarProperty Name="CategorySalaryID" ColumnName="CategorySalaryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblCountry">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblCountry">
+        <MappingFragment StoreEntitySet="PIS_tblCountry">
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblDepartment">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblDepartment">
+        <MappingFragment StoreEntitySet="PIS_tblDepartment">
+          <ScalarProperty Name="StrDepartmentCode" ColumnName="StrDepartmentCode" />
+          <ScalarProperty Name="StrDepartmentName" ColumnName="StrDepartmentName" />
+          <ScalarProperty Name="GDepartmentID" ColumnName="GDepartmentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblDesignationInfo">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblDesignationInfo">
+        <MappingFragment StoreEntitySet="PIS_tblDesignationInfo">
+          <ScalarProperty Name="StrDesignationCode" ColumnName="StrDesignationCode" />
+          <ScalarProperty Name="GGradeInfoID" ColumnName="GGradeInfoID" />
+          <ScalarProperty Name="StrDesignationName" ColumnName="StrDesignationName" />
+          <ScalarProperty Name="GDesignationInfoID" ColumnName="GDesignationInfoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblDistrictInfo">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblDistrictInfo">
+        <MappingFragment StoreEntitySet="PIS_tblDistrictInfo">
+          <ScalarProperty Name="StrDistrictDescription" ColumnName="StrDistrictDescription" />
+          <ScalarProperty Name="StrDistrictName" ColumnName="StrDistrictName" />
+          <ScalarProperty Name="StrDistrictCode" ColumnName="StrDistrictCode" />
+          <ScalarProperty Name="GCountryNameID" ColumnName="GCountryNameID" />
+          <ScalarProperty Name="GDistrictInfoID" ColumnName="GDistrictInfoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblDivision">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblDivision">
+        <MappingFragment StoreEntitySet="PIS_tblDivision">
+          <ScalarProperty Name="DivisionName" ColumnName="DivisionName" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblEmpAssignment">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblEmpAssignment">
+        <MappingFragment StoreEntitySet="PIS_tblEmpAssignment">
+          <ScalarProperty Name="CategorySalaryID" ColumnName="CategorySalaryID" />
+          <ScalarProperty Name="CategoryEmpID" ColumnName="CategoryEmpID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="AssetID" ColumnName="AssetID" />
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+          <ScalarProperty Name="FloorID" ColumnName="FloorID" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="GEmployeeGenInfoID" ColumnName="GEmployeeGenInfoID" />
+          <ScalarProperty Name="GEmpAssignID" ColumnName="GEmpAssignID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblEmpEducationInfo">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblEmpEducationInfo">
+        <MappingFragment StoreEntitySet="PIS_tblEmpEducationInfo">
+          <ScalarProperty Name="GEmpEduBoardID" ColumnName="GEmpEduBoardID" />
+          <ScalarProperty Name="GEmpEduResultID" ColumnName="GEmpEduResultID" />
+          <ScalarProperty Name="StrEmpEduInstituteName" ColumnName="StrEmpEduInstituteName" />
+          <ScalarProperty Name="GEmpEduGroupSubject" ColumnName="GEmpEduGroupSubject" />
+          <ScalarProperty Name="intEmpEduDegreeYear" ColumnName="intEmpEduDegreeYear" />
+          <ScalarProperty Name="GEmpEduDegreeID" ColumnName="GEmpEduDegreeID" />
+          <ScalarProperty Name="GEmployeeGenInfoID" ColumnName="GEmployeeGenInfoID" />
+          <ScalarProperty Name="GEmpEducationInfoID" ColumnName="GEmpEducationInfoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblEmployeeGenInfo">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblEmployeeGenInfo">
+        <MappingFragment StoreEntitySet="PIS_tblEmployeeGenInfo">
+          <ScalarProperty Name="GPaymentRuleSetupID" ColumnName="GPaymentRuleSetupID" />
+          <ScalarProperty Name="RosterGroupID" ColumnName="RosterGroupID" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="RelationWithAlternatePhoneOwner" ColumnName="RelationWithAlternatePhoneOwner" />
+          <ScalarProperty Name="FingerPrintNo" ColumnName="FingerPrintNo" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+          <ScalarProperty Name="intActiveStatus" ColumnName="intActiveStatus" />
+          <ScalarProperty Name="bitEligibleForVistaGLAccount" ColumnName="bitEligibleForVistaGLAccount" />
+          <ScalarProperty Name="bitIsRoaster" ColumnName="bitIsRoaster" />
+          <ScalarProperty Name="bitHeadOffice" ColumnName="bitHeadOffice" />
+          <ScalarProperty Name="bitCarryForwardProcessForDataUpdate" ColumnName="bitCarryForwardProcessForDataUpdate" />
+          <ScalarProperty Name="GNationalityID" ColumnName="GNationalityID" />
+          <ScalarProperty Name="strBloodGroup" ColumnName="strBloodGroup" />
+          <ScalarProperty Name="strFunctionalDesignation" ColumnName="strFunctionalDesignation" />
+          <ScalarProperty Name="strAgeString" ColumnName="strAgeString" />
+          <ScalarProperty Name="strNationalIDCard" ColumnName="strNationalIDCard" />
+          <ScalarProperty Name="strTIN" ColumnName="strTIN" />
+          <ScalarProperty Name="strAlternatePhone" ColumnName="strAlternatePhone" />
+          <ScalarProperty Name="chkEligibleForOverTime" ColumnName="chkEligibleForOverTime" />
+          <ScalarProperty Name="strShift" ColumnName="strShift" />
+          <ScalarProperty Name="strGrade" ColumnName="strGrade" />
+          <ScalarProperty Name="DtResignRetireTerminationDate" ColumnName="DtResignRetireTerminationDate" />
+          <ScalarProperty Name="DtConfirmationDate" ColumnName="DtConfirmationDate" />
+          <ScalarProperty Name="strEmailAdress" ColumnName="strEmailAdress" />
+          <ScalarProperty Name="DtUpdatedOn" ColumnName="DtUpdatedOn" />
+          <ScalarProperty Name="GUpdatedBy" ColumnName="GUpdatedBy" />
+          <ScalarProperty Name="DtCreatedOn" ColumnName="DtCreatedOn" />
+          <ScalarProperty Name="GCreatedBy" ColumnName="GCreatedBy" />
+          <ScalarProperty Name="intLatePresentPunishmentFlag" ColumnName="intLatePresentPunishmentFlag" />
+          <ScalarProperty Name="StrEmpIdenMark" ColumnName="StrEmpIdenMark" />
+          <ScalarProperty Name="numEmpWeightKG" ColumnName="numEmpWeightKG" />
+          <ScalarProperty Name="strEmpMobileNo" ColumnName="strEmpMobileNo" />
+          <ScalarProperty Name="StrEmpNationalID" ColumnName="StrEmpNationalID" />
+          <ScalarProperty Name="StrEmpPssportNo" ColumnName="StrEmpPssportNo" />
+          <ScalarProperty Name="GPerAddrDistrictInfoID" ColumnName="GPerAddrDistrictInfoID" />
+          <ScalarProperty Name="GPerAddrThanaUpazilaInfoID" ColumnName="GPerAddrThanaUpazilaInfoID" />
+          <ScalarProperty Name="GPerAddrAreaInfoID" ColumnName="GPerAddrAreaInfoID" />
+          <ScalarProperty Name="StrPerAddrPostCode" ColumnName="StrPerAddrPostCode" />
+          <ScalarProperty Name="StrPerAddrPostofficeName" ColumnName="StrPerAddrPostofficeName" />
+          <ScalarProperty Name="StrPerAddrVillageMohalla" ColumnName="StrPerAddrVillageMohalla" />
+          <ScalarProperty Name="StrPermanentAddress" ColumnName="StrPermanentAddress" />
+          <ScalarProperty Name="GCurrAddrDistrictInfoID" ColumnName="GCurrAddrDistrictInfoID" />
+          <ScalarProperty Name="GCurrAddrThanaUpazilaInfoID" ColumnName="GCurrAddrThanaUpazilaInfoID" />
+          <ScalarProperty Name="GCurrAddrAreaInfoID" ColumnName="GCurrAddrAreaInfoID" />
+          <ScalarProperty Name="StrCurrAddrPostCode" ColumnName="StrCurrAddrPostCode" />
+          <ScalarProperty Name="StrCurrAddrPostOfficeName" ColumnName="StrCurrAddrPostOfficeName" />
+          <ScalarProperty Name="StrCurrAddrVillageMohalla" ColumnName="StrCurrAddrVillageMohalla" />
+          <ScalarProperty Name="StrCurrentAddress" ColumnName="StrCurrentAddress" />
+          <ScalarProperty Name="StrMotherName" ColumnName="StrMotherName" />
+          <ScalarProperty Name="StrFatherName" ColumnName="StrFatherName" />
+          <ScalarProperty Name="dtJoiningDate" ColumnName="dtJoiningDate" />
+          <ScalarProperty Name="dtBirthDate" ColumnName="dtBirthDate" />
+          <ScalarProperty Name="intMaritalStatus" ColumnName="intMaritalStatus" />
+          <ScalarProperty Name="GReligionID" ColumnName="GReligionID" />
+          <ScalarProperty Name="bitSystemUser" ColumnName="bitSystemUser" />
+          <ScalarProperty Name="intGender" ColumnName="intGender" />
+          <ScalarProperty Name="StrEmpNameOwnLanguage" ColumnName="StrEmpNameOwnLanguage" />
+          <ScalarProperty Name="StrEmpName" ColumnName="StrEmpName" />
+          <ScalarProperty Name="StrEmpOwnLanguageID" ColumnName="StrEmpOwnLanguageID" />
+          <ScalarProperty Name="StrEmpOldCardNo" ColumnName="StrEmpOldCardNo" />
+          <ScalarProperty Name="StrEmpCardNo" ColumnName="StrEmpCardNo" />
+          <ScalarProperty Name="StrEmpID" ColumnName="StrEmpID" />
+          <ScalarProperty Name="GEmployeeCatID" ColumnName="GEmployeeCatID" />
+          <ScalarProperty Name="GDepartmentID" ColumnName="GDepartmentID" />
+          <ScalarProperty Name="GLocationID" ColumnName="GLocationID" />
+          <ScalarProperty Name="GDesignationInfoID" ColumnName="GDesignationInfoID" />
+          <ScalarProperty Name="GFactoryID" ColumnName="GFactoryID" />
+          <ScalarProperty Name="GCompanyGenInfoID" ColumnName="GCompanyGenInfoID" />
+          <ScalarProperty Name="GEmployeeGenInfoID" ColumnName="GEmployeeGenInfoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblGender">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblGender">
+        <MappingFragment StoreEntitySet="PIS_tblGender">
+          <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblGradeInfo">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblGradeInfo">
+        <MappingFragment StoreEntitySet="PIS_tblGradeInfo">
+          <ScalarProperty Name="numMaximumSalary" ColumnName="numMaximumSalary" />
+          <ScalarProperty Name="numMinimumSalary" ColumnName="numMinimumSalary" />
+          <ScalarProperty Name="StrGradeDesc" ColumnName="StrGradeDesc" />
+          <ScalarProperty Name="StrGradeName" ColumnName="StrGradeName" />
+          <ScalarProperty Name="GGradeTypeID" ColumnName="GGradeTypeID" />
+          <ScalarProperty Name="GGradeInfoID" ColumnName="GGradeInfoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblJobStatus">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblJobStatus">
+        <MappingFragment StoreEntitySet="PIS_tblJobStatus">
+          <ScalarProperty Name="JobStatus" ColumnName="JobStatus" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblMaritalStatus">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblMaritalStatus">
+        <MappingFragment StoreEntitySet="PIS_tblMaritalStatus">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblReligion">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblReligion">
+        <MappingFragment StoreEntitySet="PIS_tblReligion">
+          <ScalarProperty Name="ReligionName" ColumnName="ReligionName" />
+          <ScalarProperty Name="GReligionID" ColumnName="GReligionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblSection">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblSection">
+        <MappingFragment StoreEntitySet="PIS_tblSection">
+          <ScalarProperty Name="SectionName" ColumnName="SectionName" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_tblWorkTimeScheduleSetup">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblWorkTimeScheduleSetup">
+        <MappingFragment StoreEntitySet="PIS_tblWorkTimeScheduleSetup">
+          <ScalarProperty Name="intRecordStatus" ColumnName="intRecordStatus" />
+          <ScalarProperty Name="numTotalWorkingHours" ColumnName="numTotalWorkingHours" />
+          <ScalarProperty Name="dtSecondTeaBreakEndTime" ColumnName="dtSecondTeaBreakEndTime" />
+          <ScalarProperty Name="dtSecondTeaBreakStartTime" ColumnName="dtSecondTeaBreakStartTime" />
+          <ScalarProperty Name="dtFirstTeaBreakEndTime" ColumnName="dtFirstTeaBreakEndTime" />
+          <ScalarProperty Name="dtFirstTeaBreakStartTime" ColumnName="dtFirstTeaBreakStartTime" />
+          <ScalarProperty Name="dtLunchMiddleBreakEndTime" ColumnName="dtLunchMiddleBreakEndTime" />
+          <ScalarProperty Name="dtLunchMiddleBreakStartTime" ColumnName="dtLunchMiddleBreakStartTime" />
+          <ScalarProperty Name="dtWorkEndTime" ColumnName="dtWorkEndTime" />
+          <ScalarProperty Name="dtWorkStartTime" ColumnName="dtWorkStartTime" />
+          <ScalarProperty Name="strWorkTimeSchedule" ColumnName="strWorkTimeSchedule" />
+          <ScalarProperty Name="intWorkScheduleShift" ColumnName="intWorkScheduleShift" />
+          <ScalarProperty Name="GWorkTimeScheduleSetupID" ColumnName="GWorkTimeScheduleSetupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POSTs">
+      <EntityTypeMapping TypeName="SIPIDBModel.POST">
+        <MappingFragment StoreEntitySet="POST">
+          <ScalarProperty Name="BanglaPostName" ColumnName="BanglaPostName" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+          <ScalarProperty Name="ThanaId" ColumnName="ThanaId" />
+          <ScalarProperty Name="PostName" ColumnName="PostName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROGRAMs">
+      <EntityTypeMapping TypeName="SIPIDBModel.PROGRAM">
+        <MappingFragment StoreEntitySet="PROGRAM">
+          <ScalarProperty Name="BanglaProgram" ColumnName="BanglaProgram" />
+          <ScalarProperty Name="ProgramCode" ColumnName="ProgramCode" />
+          <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RELIGIONs">
+      <EntityTypeMapping TypeName="SIPIDBModel.RELIGION">
+        <MappingFragment StoreEntitySet="RELIGION">
+          <ScalarProperty Name="BanglaReligion" ColumnName="BanglaReligion" />
+          <ScalarProperty Name="ReligionName" ColumnName="ReligionName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLEWISE_MENU">
+      <EntityTypeMapping TypeName="SIPIDBModel.ROLEWISE_MENU">
+        <MappingFragment StoreEntitySet="ROLEWISE_MENU">
+          <ScalarProperty Name="CHILD_MENU_CONTENT" ColumnName="CHILD_MENU_CONTENT" />
+          <ScalarProperty Name="CHILD_MENU_NAME" ColumnName="CHILD_MENU_NAME" />
+          <ScalarProperty Name="PARENT_MENU_CONTENT" ColumnName="PARENT_MENU_CONTENT" />
+          <ScalarProperty Name="PARENT_MENU_NAME" ColumnName="PARENT_MENU_NAME" />
+          <ScalarProperty Name="USER_GROUP_ID" ColumnName="USER_GROUP_ID" />
+          <ScalarProperty Name="MODULE_ID" ColumnName="MODULE_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROUTINEGROUPs">
+      <EntityTypeMapping TypeName="SIPIDBModel.ROUTINEGROUP">
+        <MappingFragment StoreEntitySet="ROUTINEGROUP">
+          <ScalarProperty Name="SemesterId" ColumnName="SemesterId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEMESTERs">
+      <EntityTypeMapping TypeName="SIPIDBModel.SEMESTER">
+        <MappingFragment StoreEntitySet="SEMESTER">
+          <ScalarProperty Name="BanglaSemesterNo" ColumnName="BanglaSemesterNo" />
+          <ScalarProperty Name="SemesterNo" ColumnName="SemesterNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPI_DEPARTMENT">
+      <EntityTypeMapping TypeName="SIPIDBModel.SIPI_DEPARTMENT">
+        <MappingFragment StoreEntitySet="SIPI_DEPARTMENT">
+          <ScalarProperty Name="SIPI_DepartmentEntryDate" ColumnName="SIPI_DepartmentEntryDate" />
+          <ScalarProperty Name="SIPI_DepartmentRegulation" ColumnName="SIPI_DepartmentRegulation" />
+          <ScalarProperty Name="BanglaSIPI_Department" ColumnName="BanglaSIPI_Department" />
+          <ScalarProperty Name="SIPI_DepartmentCode" ColumnName="SIPI_DepartmentCode" />
+          <ScalarProperty Name="SIPI_DepartmentName" ColumnName="SIPI_DepartmentName" />
+          <ScalarProperty Name="SIPI_ProgramId" ColumnName="SIPI_ProgramId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPI_PROGRAM">
+      <EntityTypeMapping TypeName="SIPIDBModel.SIPI_PROGRAM">
+        <MappingFragment StoreEntitySet="SIPI_PROGRAM">
+          <ScalarProperty Name="BanglaSIPI_Program" ColumnName="BanglaSIPI_Program" />
+          <ScalarProperty Name="SIPI_ProgramTime" ColumnName="SIPI_ProgramTime" />
+          <ScalarProperty Name="SIPI_ProgramName" ColumnName="SIPI_ProgramName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDENT_ATTENDENCE">
+      <EntityTypeMapping TypeName="SIPIDBModel.STUDENT_ATTENDENCE">
+        <MappingFragment StoreEntitySet="STUDENT_ATTENDENCE">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="SemesterId" ColumnName="SemesterId" />
+          <ScalarProperty Name="CampusId" ColumnName="CampusId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="StudentPKId" ColumnName="StudentPKId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDENT_CURRENT_SEMESTER_STATUS">
+      <EntityTypeMapping TypeName="SIPIDBModel.STUDENT_CURRENT_SEMESTER_STATUS">
+        <MappingFragment StoreEntitySet="STUDENT_CURRENT_SEMESTER_STATUS">
+          <ScalarProperty Name="CurrentSemesterId" ColumnName="CurrentSemesterId" />
+          <ScalarProperty Name="StudentPKId" ColumnName="StudentPKId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDENT_RESULT">
+      <EntityTypeMapping TypeName="SIPIDBModel.STUDENT_RESULT">
+        <MappingFragment StoreEntitySet="STUDENT_RESULT">
+          <ScalarProperty Name="TotalMarks" ColumnName="TotalMarks" />
+          <ScalarProperty Name="PracticalMarksFinalExam" ColumnName="PracticalMarksFinalExam" />
+          <ScalarProperty Name="PracticalMarksConAssess" ColumnName="PracticalMarksConAssess" />
+          <ScalarProperty Name="TheoryMarksFinalExam" ColumnName="TheoryMarksFinalExam" />
+          <ScalarProperty Name="TheoryMarksConAssess" ColumnName="TheoryMarksConAssess" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="YearId" ColumnName="YearId" />
+          <ScalarProperty Name="SemesterId" ColumnName="SemesterId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="StudentPKId" ColumnName="StudentPKId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDENTFEES">
+      <EntityTypeMapping TypeName="SIPIDBModel.STUDENTFEE">
+        <MappingFragment StoreEntitySet="STUDENTFEES">
+          <ScalarProperty Name="PaidStatus" ColumnName="PaidStatus" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+          <ScalarProperty Name="TotalPayableAmount" ColumnName="TotalPayableAmount" />
+          <ScalarProperty Name="DiscountPercent" ColumnName="DiscountPercent" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="StudentPkId" ColumnName="StudentPkId" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="FeesDetailsId" ColumnName="FeesDetailsId" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="SemesterId" ColumnName="SemesterId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDENTFEESCOLLECTIONs">
+      <EntityTypeMapping TypeName="SIPIDBModel.STUDENTFEESCOLLECTION">
+        <MappingFragment StoreEntitySet="STUDENTFEESCOLLECTION">
+          <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="ReceiveAmount" ColumnName="ReceiveAmount" />
+          <ScalarProperty Name="ReceiveableAmount" ColumnName="ReceiveableAmount" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="SemesterId" ColumnName="SemesterId" />
+          <ScalarProperty Name="StudentPKId" ColumnName="StudentPKId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SIPIDBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCfgCommons">
+      <EntityTypeMapping TypeName="SIPIDBModel.tblCfgCommon">
+        <MappingFragment StoreEntitySet="tblCfgCommon">
+          <ScalarProperty Name="IntIncrementalPK" ColumnName="IntIncrementalPK" />
+          <ScalarProperty Name="StrDescription" ColumnName="StrDescription" />
+          <ScalarProperty Name="StrName" ColumnName="StrName" />
+          <ScalarProperty Name="intSlNo" ColumnName="intSlNo" />
+          <ScalarProperty Name="GCfgCommonTypeID" ColumnName="GCfgCommonTypeID" />
+          <ScalarProperty Name="GCfgCommonID" ColumnName="GCfgCommonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCfgCommonTypes">
+      <EntityTypeMapping TypeName="SIPIDBModel.tblCfgCommonType">
+        <MappingFragment StoreEntitySet="tblCfgCommonType">
+          <ScalarProperty Name="strType" ColumnName="strType" />
+          <ScalarProperty Name="strModuleName" ColumnName="strModuleName" />
+          <ScalarProperty Name="intSLNo" ColumnName="intSLNo" />
+          <ScalarProperty Name="GCfgCommonTypeID" ColumnName="GCfgCommonTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFactories">
+      <EntityTypeMapping TypeName="SIPIDBModel.tblFactory">
+        <MappingFragment StoreEntitySet="tblFactory">
+          <ScalarProperty Name="FactoryAddressOwnLanguage" ColumnName="FactoryAddressOwnLanguage" />
+          <ScalarProperty Name="FactoryNameOwnLanguage" ColumnName="FactoryNameOwnLanguage" />
+          <ScalarProperty Name="DtUpdatedOn" ColumnName="DtUpdatedOn" />
+          <ScalarProperty Name="GUpdatedBy" ColumnName="GUpdatedBy" />
+          <ScalarProperty Name="DtCreatedOn" ColumnName="DtCreatedOn" />
+          <ScalarProperty Name="GCreatedBy" ColumnName="GCreatedBy" />
+          <ScalarProperty Name="SealWithSignature" ColumnName="SealWithSignature" />
+          <ScalarProperty Name="BitStatus" ColumnName="BitStatus" />
+          <ScalarProperty Name="StrRemark" ColumnName="StrRemark" />
+          <ScalarProperty Name="StrFax" ColumnName="StrFax" />
+          <ScalarProperty Name="StrEmail" ColumnName="StrEmail" />
+          <ScalarProperty Name="StrTelephone" ColumnName="StrTelephone" />
+          <ScalarProperty Name="StrCountry" ColumnName="StrCountry" />
+          <ScalarProperty Name="StrDistrict" ColumnName="StrDistrict" />
+          <ScalarProperty Name="StrAddress" ColumnName="StrAddress" />
+          <ScalarProperty Name="StrFactoryShortName" ColumnName="StrFactoryShortName" />
+          <ScalarProperty Name="StrFactoryName" ColumnName="StrFactoryName" />
+          <ScalarProperty Name="GCommonIDFactoryType" ColumnName="GCommonIDFactoryType" />
+          <ScalarProperty Name="intFactoryID" ColumnName="intFactoryID" />
+          <ScalarProperty Name="GFactoryID" ColumnName="GFactoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEACHERs">
+      <EntityTypeMapping TypeName="SIPIDBModel.TEACHER">
+        <MappingFragment StoreEntitySet="TEACHER">
+          <ScalarProperty Name="CampusId" ColumnName="CampusId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="TeacherName" ColumnName="TeacherName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="test_district">
+      <EntityTypeMapping TypeName="SIPIDBModel.test_district">
+        <MappingFragment StoreEntitySet="test_district">
+          <ScalarProperty Name="BanglaDistrict" ColumnName="BanglaDistrict" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THANAs">
+      <EntityTypeMapping TypeName="SIPIDBModel.THANA">
+        <MappingFragment StoreEntitySet="THANA">
+          <ScalarProperty Name="BanglaThanaName" ColumnName="BanglaThanaName" />
+          <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+          <ScalarProperty Name="ThanaName" ColumnName="ThanaName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERs">
+      <EntityTypeMapping TypeName="SIPIDBModel.USER">
+        <MappingFragment StoreEntitySet="USER">
+          <ScalarProperty Name="USER_GROUP_ID" ColumnName="USER_GROUP_ID" />
+          <ScalarProperty Name="USER_PASSWORD" ColumnName="USER_PASSWORD" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USER_GROUP">
+      <EntityTypeMapping TypeName="SIPIDBModel.USER_GROUP">
+        <MappingFragment StoreEntitySet="USER_GROUP">
+          <ScalarProperty Name="GROUP_NAME" ColumnName="GROUP_NAME" />
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YEARs">
+      <EntityTypeMapping TypeName="SIPIDBModel.YEAR">
+        <MappingFragment StoreEntitySet="YEAR">
+          <ScalarProperty Name="Year1" ColumnName="Year" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIS_EMPLOYEE_INFO">
+      <EntityTypeMapping TypeName="SIPIDBModel.PIS_EMPLOYEE_INFO">
+        <MappingFragment StoreEntitySet="PIS_EMPLOYEE_INFO">
+          <ScalarProperty Name="GPaymentRuleSetupID" ColumnName="GPaymentRuleSetupID" />
+          <ScalarProperty Name="RosterGroupID" ColumnName="RosterGroupID" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="RelationWithAlternatePhoneOwner" ColumnName="RelationWithAlternatePhoneOwner" />
+          <ScalarProperty Name="FingerPrintNo" ColumnName="FingerPrintNo" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+          <ScalarProperty Name="intActiveStatus" ColumnName="intActiveStatus" />
+          <ScalarProperty Name="bitEligibleForVistaGLAccount" ColumnName="bitEligibleForVistaGLAccount" />
+          <ScalarProperty Name="bitIsRoaster" ColumnName="bitIsRoaster" />
+          <ScalarProperty Name="bitHeadOffice" ColumnName="bitHeadOffice" />
+          <ScalarProperty Name="bitCarryForwardProcessForDataUpdate" ColumnName="bitCarryForwardProcessForDataUpdate" />
+          <ScalarProperty Name="GNationalityID" ColumnName="GNationalityID" />
+          <ScalarProperty Name="strBloodGroup" ColumnName="strBloodGroup" />
+          <ScalarProperty Name="strFunctionalDesignation" ColumnName="strFunctionalDesignation" />
+          <ScalarProperty Name="strAgeString" ColumnName="strAgeString" />
+          <ScalarProperty Name="strNationalIDCard" ColumnName="strNationalIDCard" />
+          <ScalarProperty Name="strTIN" ColumnName="strTIN" />
+          <ScalarProperty Name="strAlternatePhone" ColumnName="strAlternatePhone" />
+          <ScalarProperty Name="chkEligibleForOverTime" ColumnName="chkEligibleForOverTime" />
+          <ScalarProperty Name="strShift" ColumnName="strShift" />
+          <ScalarProperty Name="strGrade" ColumnName="strGrade" />
+          <ScalarProperty Name="DtResignRetireTerminationDate" ColumnName="DtResignRetireTerminationDate" />
+          <ScalarProperty Name="DtConfirmationDate" ColumnName="DtConfirmationDate" />
+          <ScalarProperty Name="strEmailAdress" ColumnName="strEmailAdress" />
+          <ScalarProperty Name="DtUpdatedOn" ColumnName="DtUpdatedOn" />
+          <ScalarProperty Name="GUpdatedBy" ColumnName="GUpdatedBy" />
+          <ScalarProperty Name="DtCreatedOn" ColumnName="DtCreatedOn" />
+          <ScalarProperty Name="GCreatedBy" ColumnName="GCreatedBy" />
+          <ScalarProperty Name="intLatePresentPunishmentFlag" ColumnName="intLatePresentPunishmentFlag" />
+          <ScalarProperty Name="StrEmpIdenMark" ColumnName="StrEmpIdenMark" />
+          <ScalarProperty Name="numEmpWeightKG" ColumnName="numEmpWeightKG" />
+          <ScalarProperty Name="strEmpMobileNo" ColumnName="strEmpMobileNo" />
+          <ScalarProperty Name="StrEmpNationalID" ColumnName="StrEmpNationalID" />
+          <ScalarProperty Name="StrEmpPssportNo" ColumnName="StrEmpPssportNo" />
+          <ScalarProperty Name="GPerAddrDistrictInfoID" ColumnName="GPerAddrDistrictInfoID" />
+          <ScalarProperty Name="GPerAddrThanaUpazilaInfoID" ColumnName="GPerAddrThanaUpazilaInfoID" />
+          <ScalarProperty Name="GPerAddrAreaInfoID" ColumnName="GPerAddrAreaInfoID" />
+          <ScalarProperty Name="StrPerAddrPostCode" ColumnName="StrPerAddrPostCode" />
+          <ScalarProperty Name="StrPerAddrPostofficeName" ColumnName="StrPerAddrPostofficeName" />
+          <ScalarProperty Name="StrPerAddrVillageMohalla" ColumnName="StrPerAddrVillageMohalla" />
+          <ScalarProperty Name="StrPermanentAddress" ColumnName="StrPermanentAddress" />
+          <ScalarProperty Name="GCurrAddrDistrictInfoID" ColumnName="GCurrAddrDistrictInfoID" />
+          <ScalarProperty Name="GCurrAddrThanaUpazilaInfoID" ColumnName="GCurrAddrThanaUpazilaInfoID" />
+          <ScalarProperty Name="GCurrAddrAreaInfoID" ColumnName="GCurrAddrAreaInfoID" />
+          <ScalarProperty Name="StrCurrAddrPostCode" ColumnName="StrCurrAddrPostCode" />
+          <ScalarProperty Name="StrCurrAddrPostOfficeName" ColumnName="StrCurrAddrPostOfficeName" />
+          <ScalarProperty Name="StrCurrAddrVillageMohalla" ColumnName="StrCurrAddrVillageMohalla" />
+          <ScalarProperty Name="StrCurrentAddress" ColumnName="StrCurrentAddress" />
+          <ScalarProperty Name="StrMotherName" ColumnName="StrMotherName" />
+          <ScalarProperty Name="StrFatherName" ColumnName="StrFatherName" />
+          <ScalarProperty Name="dtJoiningDate" ColumnName="dtJoiningDate" />
+          <ScalarProperty Name="dtBirthDate" ColumnName="dtBirthDate" />
+          <ScalarProperty Name="intMaritalStatus" ColumnName="intMaritalStatus" />
+          <ScalarProperty Name="GReligionID" ColumnName="GReligionID" />
+          <ScalarProperty Name="bitSystemUser" ColumnName="bitSystemUser" />
+          <ScalarProperty Name="intGender" ColumnName="intGender" />
+          <ScalarProperty Name="StrEmpNameOwnLanguage" ColumnName="StrEmpNameOwnLanguage" />
+          <ScalarProperty Name="StrEmpName" ColumnName="StrEmpName" />
+          <ScalarProperty Name="StrEmpOwnLanguageID" ColumnName="StrEmpOwnLanguageID" />
+          <ScalarProperty Name="StrEmpOldCardNo" ColumnName="StrEmpOldCardNo" />
+          <ScalarProperty Name="StrEmpCardNo" ColumnName="StrEmpCardNo" />
+          <ScalarProperty Name="StrEmpID" ColumnName="StrEmpID" />
+          <ScalarProperty Name="GEmployeeCatID" ColumnName="GEmployeeCatID" />
+          <ScalarProperty Name="GDepartmentID" ColumnName="GDepartmentID" />
+          <ScalarProperty Name="GLocationID" ColumnName="GLocationID" />
+          <ScalarProperty Name="GDesignationInfoID" ColumnName="GDesignationInfoID" />
+          <ScalarProperty Name="GFactoryID" ColumnName="GFactoryID" />
+          <ScalarProperty Name="GCompanyGenInfoID" ColumnName="GCompanyGenInfoID" />
+          <ScalarProperty Name="GEmployeeGenInfoID" ColumnName="GEmployeeGenInfoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

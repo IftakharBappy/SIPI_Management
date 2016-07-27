@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA8439A2-17FB-40A0-A3E8-A9723B14EDCE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Visual Studio\ORCHID_FINAL_VERSION\DJBLBillingSystem.DAL.Billing\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admission\AmissionOfficeGetway.cs" />
+    <Compile Include="Admission\BatchGetway.cs" />
+    <Compile Include="Admission\BloodGroupGetway.cs" />
+    <Compile Include="Admission\CampusGetway.cs" />
+    <Compile Include="Admission\DayYearGetway.cs" />
+    <Compile Include="Admission\DepartmentGetway.cs" />
+    <Compile Include="Admission\DistrictGateway.cs" />
+    <Compile Include="Admission\PostGetway.cs" />
+    <Compile Include="Admission\ProgramGetway.cs" />
+    <Compile Include="Admission\ReligionGateway.cs" />
+    <Compile Include="Admission\SIPI_DepartmentGateway.cs" />
+    <Compile Include="Admission\SIPI_ProgramGateway.cs" />
+    <Compile Include="Admission\StudentInfoGetway.cs" />
+    <Compile Include="Admission\ThanaGateway.cs" />
+    <Compile Include="AttendenceSystem\AttendenceSystemGetWay.cs" />
+    <Compile Include="Fees\FeesCollectionGateway.cs" />
+    <Compile Include="Fees\FeesCommonDAL.cs" />
+    <Compile Include="Fees\FeesDetailsGetway.cs" />
+    <Compile Include="Fees\FeesSetupGetway.cs" />
+    <Compile Include="InventoryManagement\InventoryGetway.cs" />
+    <Compile Include="InventoryManagement\ProductMasterEntry_inventoryGetway.cs" />
+    <Compile Include="LibraryManagement\BookEntryGetway.cs" />
+    <Compile Include="LibraryManagement\BookIssueGetway.cs" />
+    <Compile Include="PIS\CategoryDAL.cs" />
+    <Compile Include="PIS\CategoryEmpDAL.cs" />
+    <Compile Include="PIS\CategorySalaryDAL.cs" />
+    <Compile Include="PIS\DepartmentDAL.cs" />
+    <Compile Include="PIS\EmployeeGenInfoDAL.cs" />
+    <Compile Include="PIS\GradeDAL.cs" />
+    <Compile Include="PIS\PISCommonDAL.cs" />
+    <Compile Include="PIS\SectionDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultManagement\StudentResultGetwey.cs" />
+    <Compile Include="StudentManagement\ClassPeriodGetway.cs" />
+    <Compile Include="StudentManagement\ClassRoutineCreateGetway.cs" />
+    <Compile Include="StudentManagement\ClassRoutineGroupGetway.cs" />
+    <Compile Include="StudentManagement\CourseGetway.cs" />
+    <Compile Include="StudentManagement\DayGetWay.cs" />
+    <Compile Include="StudentManagement\SemesterGetway.cs" />
+    <Compile Include="TeacherManagement\TeacherInfoGetway.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DATA\DATA.csproj">
+      <Project>{f26586c7-3dee-472e-aa45-662e8db22482}</Project>
+      <Name>DATA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENTITY\ENTITY.csproj">
+      <Project>{5bbf5f1f-512a-48a7-a998-a6b284181464}</Project>
+      <Name>ENTITY</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Login\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

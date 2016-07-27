@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F26586C7-3DEE-472E-AA45-662E8DB22482}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DATA</RootNamespace>
+    <AssemblyName>DATA</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACCOUNT_TYPE.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADD_STUDENT.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADMISSIONINFO.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADMISSIONOFFICE.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ALL_ACCOUNT_TYPE.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BALANCE_SHEET_CONFIGURE.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BATCH.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BLOODGROUP.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BOOKS_DETAILS.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BOOK_ISSUE.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAMPUSINFO.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHART_ACCOUNT.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLASSPERIOD.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMPANY_SETUP.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COURSE.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COURSE_ASSIGN_TO_STUDENT.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CREATE_ROUTINE.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CUSTOMER_EMPLOYEE_SETUP.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAY.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEPARTMENT.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEPOSIT_PAYMENT.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEPRICIATION.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEPRICIATION_SETUP.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DISTRICT.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FEESDETAIL.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FEESSETUP.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FISCAL_YEAR.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GS_tblCategory.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INCOME_SHEET_CONFIGURE.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTORY_BRAND_CATEGORY.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTORY_BRAND_NAME.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTORY_PURCHAGE_DETAILS.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTORY_PURCHASE_ENTRY.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTORY_STOCKOUT_DETAILS.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTORY_STOCK_OUT.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTORY_UNIT_TYPE.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JOURNAL_TRANSACTION_TYPE.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JOURNAL_VOUCHAR.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LMS_tblCompany.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MEMBER_ACC_TYPE.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MEMBER_ASSIGN.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MEMBER_INFO.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODULE_PERMISSION.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ONLINEDEPARTMENT.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ONLINEEXAM.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ORGANIZATION_INFO.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_EMPLOYEE_INFO.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblBloodGroup.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblCategory.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblCategoryEmp.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblCategorySalary.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblCountry.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblDepartment.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblDesignationInfo.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblDistrictInfo.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblDivision.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblEmpAssignment.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblEmpEducationInfo.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblEmployeeGenInfo.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblGender.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblGradeInfo.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblJobStatus.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblMaritalStatus.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblReligion.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblSection.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIS_tblWorkTimeScheduleSetup.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POST.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROGRAM.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RELIGION.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ROLEWISE_MENU.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ROUTINEGROUP.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SEMESTER.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIPIDBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIPIDBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIPIDBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIPIDBModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIPIDBModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SIPI_DEPARTMENT.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIPI_PROGRAM.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_ACCOUNT_STATEMENT_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_BANK_STATEMENT_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CURRENT_BALANCE_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CURRENT_BALANCE_REVENUE_EXPENSE_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CURRENT_DEBIT_CREDIT_DEPRICIATION_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CURRENT_DEBIT_CREDIT_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_DEBIT_CREDIT_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_DEBIT_CREDIT_VOUCHER_FOR_DAY_BOOK_BY_DATE_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GET_ALL_DEPRICIATION_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GET_DEPRICIATION_ALL_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GET_DEPRICIATION_DATE_WISE_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_HEADER_ACC_NAME_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_HEADER_STATEMENT_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_INCOME_STATEMENT_FINAL_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_JOURNAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_JOURNAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BY_DATE_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_RECEIVE_PAYMENT_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_TRIAL_BALANCE_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STUDENTFEE.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STUDENTFEESCOLLECTION.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STUDENT_ATTENDENCE.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STUDENT_CURRENT_SEMESTER_STATUS.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Money_Receipt_Report_Result.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STUDENT_RESULT.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblCfgCommon.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblCfgCommonType.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblFactory.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TEACHER.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="test_district.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="THANA.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USER.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USER_GROUP.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YEAR.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="SIPIDBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SIPIDBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="SIPIDBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SIPIDBModel.edmx</DependentUpon>
+      <LastGenOutput>SIPIDBModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="SIPIDBModel.edmx.diagram">
+      <DependentUpon>SIPIDBModel.edmx</DependentUpon>
+    </None>
+    <None Include="SIPIDBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SIPIDBModel.edmx</DependentUpon>
+      <LastGenOutput>SIPIDBModel.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

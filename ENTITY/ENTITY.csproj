@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BBF5F1F-512A-48A7-A998-A6B284181464}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ENTITY</RootNamespace>
+    <AssemblyName>ENTITY</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admission\AdmissionOffice.cs" />
+    <Compile Include="Admission\Batch.cs" />
+    <Compile Include="Admission\BloodGroup.cs" />
+    <Compile Include="Admission\Campus.cs" />
+    <Compile Include="Admission\Department.cs" />
+    <Compile Include="Admission\District.cs" />
+    <Compile Include="Admission\Post.cs" />
+    <Compile Include="Admission\Program.cs" />
+    <Compile Include="Admission\Religion.cs" />
+    <Compile Include="Admission\SIPI_Department.cs" />
+    <Compile Include="Admission\SIPI_Program.cs" />
+    <Compile Include="Admission\StudentInfo.cs" />
+    <Compile Include="Admission\Thana.cs" />
+    <Compile Include="AttendenceSystem\StudentAttendence.cs" />
+    <Compile Include="Common\BloodGroup.cs" />
+    <Compile Include="Common\Company.cs" />
+    <Compile Include="Common\Country.cs" />
+    <Compile Include="Common\Designation.cs" />
+    <Compile Include="Common\District.cs" />
+    <Compile Include="Common\Factory.cs" />
+    <Compile Include="Common\Gender.cs" />
+    <Compile Include="Common\JobStatus.cs" />
+    <Compile Include="Common\MaritalStatus.cs" />
+    <Compile Include="Common\Religion.cs" />
+    <Compile Include="Common\Work.cs" />
+    <Compile Include="Fees\FeesCollection.cs" />
+    <Compile Include="Fees\FeesCommon.cs" />
+    <Compile Include="Fees\FeesDetails.cs" />
+    <Compile Include="Fees\FeesDiscount.cs" />
+    <Compile Include="Fees\FeesSetup.cs" />
+    <Compile Include="InventoryManagement\BrandCategory.cs" />
+    <Compile Include="InventoryManagement\BrandName.cs" />
+    <Compile Include="InventoryManagement\InventoryReporting.cs" />
+    <Compile Include="InventoryManagement\ProductMasterEntryEntity.cs" />
+    <Compile Include="InventoryManagement\ProductMasterEntry_inventory.cs" />
+    <Compile Include="InventoryManagement\PurchaseEntry.cs" />
+    <Compile Include="InventoryManagement\StockOut.cs" />
+    <Compile Include="InventoryManagement\UnitType.cs" />
+    <Compile Include="LibraryManagement\BookEntryEntity.cs" />
+    <Compile Include="LibraryManagement\BookIssueEntity.cs" />
+    <Compile Include="LibraryManagement\BookListing.cs" />
+    <Compile Include="Login\EMenuPermission.cs" />
+    <Compile Include="Login\ESModulePermission.cs" />
+    <Compile Include="Login\ESUser.cs" />
+    <Compile Include="Login\ESUserGroup.cs" />
+    <Compile Include="Login\EUser.cs" />
+    <Compile Include="OrganizationInfo\OrganizationInfo.cs" />
+    <Compile Include="PIS\Catagory.cs" />
+    <Compile Include="PIS\Category.cs" />
+    <Compile Include="PIS\CategoryEmp.cs" />
+    <Compile Include="PIS\CategorySalary.cs" />
+    <Compile Include="PIS\Department.cs" />
+    <Compile Include="PIS\Division.cs" />
+    <Compile Include="PIS\EmpFamily.cs" />
+    <Compile Include="PIS\EmployeeEducationInfo.cs" />
+    <Compile Include="PIS\EmployeeFamily.cs" />
+    <Compile Include="PIS\EmployeeGenInfo.cs" />
+    <Compile Include="PIS\EmployeeInformation.cs" />
+    <Compile Include="PIS\Grade.cs" />
+    <Compile Include="PIS\NomineeProfession.cs" />
+    <Compile Include="PIS\Section.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\Fees\RStudentFees.cs" />
+    <Compile Include="ResultManagement\MarksDistribution.cs" />
+    <Compile Include="ResultManagement\StudentResult.cs" />
+    <Compile Include="StudentManagement\ClassPeriod.cs" />
+    <Compile Include="StudentManagement\ClassRoutineGroup.cs" />
+    <Compile Include="StudentManagement\Course.cs" />
+    <Compile Include="StudentManagement\CreateRoutine.cs" />
+    <Compile Include="StudentManagement\Day.cs" />
+    <Compile Include="StudentManagement\Semester.cs" />
+    <Compile Include="StudentManagement\Year.cs" />
+    <Compile Include="TeacherManagement\TeacherInfo.cs" />
+    <Compile Include="Validations\Validations.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

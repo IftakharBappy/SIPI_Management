@@ -1,0 +1,70 @@
+﻿<Window x:Class="SIPI_SL.UI.Fees.FeesDiscountUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Fees Discount UI" Height="525.657" Width="814.638" ShowInTaskbar="False" Background="{StaticResource GrayWhite}" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="308*"/>
+            <ColumnDefinition Width="485*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="Student Info" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Height="77" Width="773"  FontWeight="Bold" Grid.ColumnSpan="2">
+            <Grid >
+                <Label Content="Name" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="106"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="75,0,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="247" Name="nameTextBox"/>
+
+                <Label Content="Department" HorizontalAlignment="Left" Margin="342,-3,0,0" VerticalAlignment="Top" Width="106"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="425,0,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="326"  Name="DepartmentTextBox"/>
+
+                <Label Content="Id" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="82" Height="24"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="75,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" Name="idTextBox"/>
+                <Button Content="Get Student" HorizontalAlignment="Left" Margin="425,28,0,0" VerticalAlignment="Top" Width="83" Height="24" Name="getStudentPopupButton" Click="getStudentPopupButton_Click"/>
+
+            </Grid>
+
+
+
+
+
+        </GroupBox>
+        <DataGrid AutoGenerateColumns="False" Height="202" HorizontalAlignment="Left" Margin="25,143,0,0" Name="setupFeesDataGrid" VerticalAlignment="Top" Width="744" CanUserAddRows="False" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" Header="Fees Details Name" Binding="{Binding Path=FeesName}" Width="450"/>
+
+                <DataGridTemplateColumn IsReadOnly="True" Header="Fees Amount" Width="250" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding FeesAmount}" Name="txt"  />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="175.071,350,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="260" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="175.071,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="175.071,404,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Grid.Column="1"/>
+        <Label Content="Total" HorizontalAlignment="Left" Margin="123.071,350,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="Discount" HorizontalAlignment="Left" Margin="101.071,373,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="2.656,0.526" Grid.Column="1"/>
+        <Label Content="Payable Amount" HorizontalAlignment="Left" Margin="58.071,401,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
+
+        <ComboBox HorizontalAlignment="Left" Margin="106,104,0,0"  VerticalAlignment="Top" Width="155" 
+                  x:Name="semesterCombobax" SelectionChanged="semesterCombobax_SelectionChanged"
+                  Style="{StaticResource ComboBoxBGYellowGreen}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding SemesterNo}" Width="60"/>
+
+
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Label Content="Semester" HorizontalAlignment="Left" Margin="25,107,0,0" VerticalAlignment="Top" Width="62"  FontWeight="Bold"/>
+
+        <ComboBox HorizontalAlignment="Left" Margin="30,103,0,0" VerticalAlignment="Top" Width="120" Name="yearCombobox" 
+        Style="{StaticResource ComboBoxBGYellowGreen}" Grid.Column="1"/>
+        <Label Content="Year" HorizontalAlignment="Left" Margin="281,107,0,0" VerticalAlignment="Top" Width="62" FontWeight="Bold" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

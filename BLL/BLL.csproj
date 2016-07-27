@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22823F78-CDA4-4FED-9916-93CD50B85D9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admission\AdmissionOfficeManager.cs" />
+    <Compile Include="Admission\BatchManager.cs" />
+    <Compile Include="Admission\BloodGroupsManager.cs" />
+    <Compile Include="Admission\CampusManager.cs" />
+    <Compile Include="Admission\DepartmentManager.cs" />
+    <Compile Include="Admission\DistrictManager.cs" />
+    <Compile Include="Admission\PostManager.cs" />
+    <Compile Include="Admission\ProgarmManager.cs" />
+    <Compile Include="Admission\ReligionManager.cs" />
+    <Compile Include="Admission\SIPI_DepartmentManager.cs" />
+    <Compile Include="Admission\SIPI_ProgramManager.cs" />
+    <Compile Include="Admission\StudentInfoManager.cs" />
+    <Compile Include="Admission\ThanaManager.cs" />
+    <Compile Include="AttendenceSystem\AttendenceSystemManager.cs" />
+    <Compile Include="Fees\FeesCollectionManager.cs" />
+    <Compile Include="Fees\FeesCommonBAL.cs" />
+    <Compile Include="Fees\FeesDetailsManager.cs" />
+    <Compile Include="Fees\FeesSetupManager.cs" />
+    <Compile Include="InventoryManagement\InventoryManager.cs" />
+    <Compile Include="InventoryManagement\InventorymasterEntryManager.cs" />
+    <Compile Include="LibraryManagement\BookEntryManager.cs" />
+    <Compile Include="LibraryManagement\BookIssueManager.cs" />
+    <Compile Include="Login\BMenuPermissionManager.cs" />
+    <Compile Include="Login\BSModulePermissionManager.cs" />
+    <Compile Include="Login\BSUserGroupManager.cs" />
+    <Compile Include="Login\BSUserManager.cs" />
+    <Compile Include="Login\BUserManager.cs" />
+    <Compile Include="PIS\CategoryBAL.cs" />
+    <Compile Include="PIS\CategoryEmpBAL.cs" />
+    <Compile Include="PIS\CategorySalaryBAL.cs" />
+    <Compile Include="PIS\DepartmentBAL.cs" />
+    <Compile Include="PIS\EmployeeGenInfoBAL.cs" />
+    <Compile Include="PIS\GradeBAL.cs" />
+    <Compile Include="PIS\PISCommonBAL.cs" />
+    <Compile Include="PIS\SectionBAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultManagement\StudentResultManager.cs" />
+    <Compile Include="StudentManagement\ClassPeriodManager.cs" />
+    <Compile Include="StudentManagement\ClassRoutineCreateManager.cs" />
+    <Compile Include="StudentManagement\ClassRoutineGroupManager.cs" />
+    <Compile Include="StudentManagement\CourseManager.cs" />
+    <Compile Include="StudentManagement\DayManager.cs" />
+    <Compile Include="StudentManagement\SemesterManager.cs" />
+    <Compile Include="TeacherManagement\TeacherInfoManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{ca8439a2-17fb-40a0-a3e8-a9723b14edce}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DATADBML\DATADBML.csproj">
+      <Project>{54b06f41-1161-40e0-ac9e-59c63e437d07}</Project>
+      <Name>DATADBML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENTITY\ENTITY.csproj">
+      <Project>{5bbf5f1f-512a-48a7-a998-a6b284181464}</Project>
+      <Name>ENTITY</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

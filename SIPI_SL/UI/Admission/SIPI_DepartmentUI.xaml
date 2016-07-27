@@ -1,0 +1,83 @@
+﻿<Window x:Class="SIPI_SL.UI.Admission.SIPI_DepartmentUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Department UI" Height="456.865" Width="726.867" Background="{StaticResource GrayWhite}" ShowInTaskbar="False" 
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,6,-8,-5">
+        <GroupBox Margin="-3,0,33,280">
+            <Grid  Margin="0,0,-2,4"  >
+                <ComboBox HorizontalAlignment="Left" Margin="155,14,0,0" VerticalAlignment="Top" Width="161" Name="sipi_ProgramCombobax" 
+                          Style="{StaticResource ComboBoxBGYellowGreen}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+
+                                <TextBlock Text="{Binding SIPI_ProgramName}" Width="120"/>
+                                <TextBlock Text="||"/>
+                                <TextBlock Text="{Binding SIPI_ProgramTime}" Width="60"/>
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <Label Content="Program Name" HorizontalAlignment="Left" Margin="27,14,0,0" VerticalAlignment="Top"/>
+                <Label Content="Technology " HorizontalAlignment="Left" Margin="27,48,0,0" VerticalAlignment="Top"/>
+                <Label Content="Regulation / প্রবিধান " HorizontalAlignment="Left" Margin="321,14,0,0" VerticalAlignment="Top"/>
+                <Label Content="Entry Date" HorizontalAlignment="Left" Margin="321,38,0,0" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="155,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="161" x:Name="departmentNameTextBox"/>
+
+                <Label Content="Technology Code" HorizontalAlignment="Left" Margin="27,73,0,0" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="155,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="161" x:Name="departmentCodeTextBox"/>
+
+                <Label Content="Technology In Bangla" HorizontalAlignment="Left" Margin="27,100,0,0" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="155,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="161" x:Name="bangladepartmentTextBox"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="467,17,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="regulationTextBox"/>
+                <DatePicker Background="White" HorizontalAlignment="Left" Margin="467,45,0,0" VerticalAlignment="Top" Width="120" Height="24" Name="regulationEntryDateDatePicker" />
+
+                <Button Content="Save" HorizontalAlignment="Left" Margin="602,102,0,0" VerticalAlignment="Top" Width="75" Name="saveButton" Height="23" Click="saveButton_Click" />
+
+                <Button Content="Clear" HorizontalAlignment="Left" Margin="512,102,0,0" VerticalAlignment="Top" Width="75" Name="clearButton" RenderTransformOrigin="0.284,0.634" Height="23" Click="clearButton_Click"/>
+
+
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="Department Info" Margin="51,177,0,0" VerticalAlignment="Top" Height="188" HorizontalAlignment="Left" Width="643">
+            <Grid Height="117" VerticalAlignment="Top" Margin="10,48,0,0" HorizontalAlignment="Left" Width="621">
+
+
+                <ListView Height="156" 
+                        HorizontalAlignment="Left"
+                        Margin="10,-39,0,0" 
+                        Name="sIPIDepartmentListView" 
+                        VerticalAlignment="Top" 
+                        Width="600" 
+                        ItemContainerStyle="{StaticResource alternatingListViewItemStyle}"
+                        AlternationCount="2" >
+                    <ListView.ContextMenu>
+                        <ContextMenu Name="proramList" StaysOpen="true" Background="WhiteSmoke">
+                            <ContextMenu.BitmapEffect>
+                                <BitmapEffectGroup/>
+                            </ContextMenu.BitmapEffect>
+                            <MenuItem Header="Edit" Name="EditSIPI_DeprtmentContextMenu" Click="EditSIPI_DeprtmentContextMenu_Click" />
+                            <MenuItem Header="Remove" Name="RemoveSIPI_DeprtmentContextMenu" Click="RemoveSIPI_DeprtmentContextMenu_Click"  />
+                            <MenuItem Header="View" Name="ViewContextMenu" Click="ViewContextMenu_Click"  />
+                        </ContextMenu>
+                    </ListView.ContextMenu>
+                    <ListView.View>
+                        <GridView AllowsColumnReorder="True">
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Id}" Header="" Width="0"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=SIPI_ProgramName}" Header="Program Name" Width="200"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=SIPI_DepartmentName}" Header="Department Name" Width="200"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=SIPI_DepartmentCode}" Header="Department Code" Width="200"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Regulation}" Header="Regulation" Width="100"/>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </GroupBox>
+
+
+    </Grid>
+</Window>

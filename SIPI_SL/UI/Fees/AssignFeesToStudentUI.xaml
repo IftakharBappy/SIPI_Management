@@ -1,0 +1,8 @@
+﻿<Window x:Class="SIPI_SL.UI.Fees.AssignFeesToStudentUI"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Assign Fees" Height="513.03" Width="774.284"  ShowInTaskbar="False" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="{StaticResource GrayWhite}">
+    <Grid>
+        
+    </Grid>
+</Window>

@@ -1,0 +1,68 @@
+﻿<Window x:Class="SIPI_SL.UI.Admission.ProgramUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ProgramUI" Height="456.865" Width="726.867" Background="{StaticResource GrayWhite}" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" >
+    <Grid Margin="0,6,2,4">
+        <Label Content="Department Name" HorizontalAlignment="Left" Margin="195,62,0,0" VerticalAlignment="Top"/>
+        <Label Content="Program Name" HorizontalAlignment="Left" Margin="195,100,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="318,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="programNameTextBox"/>
+
+        <Label Content="Program Code" HorizontalAlignment="Left" Margin="195,129,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="318,131,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="programCodeTextBox"/>
+
+        <Label Content="Program In Bangla" HorizontalAlignment="Left" Margin="195,164,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="318,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="banglaProgramTextBox"/>
+        <GroupBox Header="GroupBox" Margin="51,208,0,0" VerticalAlignment="Top" Height="188" HorizontalAlignment="Left" Width="643">
+            <Grid Height="117" VerticalAlignment="Top" Margin="10,48,0,0" HorizontalAlignment="Left" Width="621">
+
+
+                <ListView Height="156" 
+                        HorizontalAlignment="Left"
+                        Margin="10,-39,0,0" 
+                        Name="programlistView" 
+                        VerticalAlignment="Top" 
+                        Width="600"
+                          ItemContainerStyle="{StaticResource alternatingListViewItemStyle}" AlternationCount="2">
+                    <ListView.ContextMenu>
+                        <ContextMenu Name="proramList" StaysOpen="true" Background="WhiteSmoke">
+                            <ContextMenu.BitmapEffect>
+                                <BitmapEffectGroup/>
+                            </ContextMenu.BitmapEffect>
+                            <MenuItem Header="Edit" Name="EditProgramContextMenu"  Click="EditProgramContextMenu_Click_1"/>
+                            <MenuItem Header="Remove" Name="RemoveProgramContextMenu"  Click="RemoveProgramContextMenu_Click_1" />
+                        </ContextMenu>
+                    </ListView.ContextMenu>
+                    <ListView.View>
+                        <GridView AllowsColumnReorder="True">
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Id}" Header="" Width="0"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=DeparimentName}" Header="Department Name" Width="200"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=ProgramName}" Header="Program Name" Width="200"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=ProgramCode}" Header="Program Code" Width="200"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=BanglaProgram}" Header="Bangla Program" Width="100"/>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </GroupBox>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="489,150,0,0" VerticalAlignment="Top" Width="99" Name="saveButton" Click="saveButton_Click" RenderTransformOrigin="0.382,2.52" Height="40" />
+        <ComboBox HorizontalAlignment="Left" Margin="318,62,0,0" VerticalAlignment="Top" Width="120" 
+                  
+                    Style="{StaticResource ComboBoxBGYellowGreen}"
+                    Name = "departmentCombobax" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+
+                        <TextBlock Text="{Binding DepartmentCode}" Width="60"/>
+                        <TextBlock Text="|"/>
+                        <TextBlock Text="{Binding DepartmentName}" Width="60"/>
+
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+
+    </Grid>
+</Window>

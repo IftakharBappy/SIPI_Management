@@ -1,0 +1,3219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SIPIDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ACCOUNT_TYPE">
+    <Key>
+      <PropertyRef Name="ACC_TYPE_ID" />
+    </Key>
+    <Property Name="ACC_TYPE_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACC_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ADD_STUDENT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentID" Type="varchar" MaxLength="50" />
+    <Property Name="ProgramId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="CampusId" Type="int" />
+    <Property Name="Session" Type="varchar" MaxLength="50" />
+    <Property Name="AccadamicYear" Type="varchar" MaxLength="50" />
+    <Property Name="BatchId" Type="int" />
+    <Property Name="BanglaProgram" Type="int" />
+    <Property Name="BangDepartment" Type="int" />
+    <Property Name="BanglaCampas" Type="int" />
+    <Property Name="BanglaSession" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaAccadamicYear" Type="varchar" MaxLength="50" />
+    <Property Name="BanglaBatch" Type="int" />
+    <Property Name="ApplicantName" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="varchar" MaxLength="50" />
+    <Property Name="Nationality" Type="varchar" MaxLength="50" />
+    <Property Name="BloodGroup" Type="int" />
+    <Property Name="ReligionId" Type="int" />
+    <Property Name="Interest" Type="varchar" MaxLength="50" />
+    <Property Name="OthersInfo" Type="varchar(max)" />
+    <Property Name="BanglaApplicantName" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaGender" Type="bit" />
+    <Property Name="BanglaNationality" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaReligion" Type="int" />
+    <Property Name="BanglaHobby" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaInterest" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaOthersInfo" Type="nvarchar" MaxLength="200" />
+    <Property Name="FatherName" Type="varchar" MaxLength="50" />
+    <Property Name="MotherName" Type="varchar" MaxLength="50" />
+    <Property Name="FreedomFighter" Type="bit" />
+    <Property Name="Tribal" Type="bit" />
+    <Property Name="FathersMobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="MothersMobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="TelephoneNo" Type="varchar" MaxLength="50" />
+    <Property Name="PermanentHouserNo" Type="varchar" MaxLength="50" />
+    <Property Name="PermanentRoadNo" Type="varchar" MaxLength="50" />
+    <Property Name="PermanentBlock" Type="varchar" MaxLength="50" />
+    <Property Name="PermanentSector" Type="varchar" MaxLength="50" />
+    <Property Name="PermanentPostId" Type="int" />
+    <Property Name="PermanentThanaId" Type="int" />
+    <Property Name="PermanentDistrictid" Type="int" />
+    <Property Name="PresentHouserNo" Type="varchar" MaxLength="50" />
+    <Property Name="PresentRoadNo" Type="varchar" MaxLength="50" />
+    <Property Name="PresentBlock" Type="varchar" MaxLength="50" />
+    <Property Name="PresentSector" Type="varchar" MaxLength="50" />
+    <Property Name="PresentPostId" Type="int" />
+    <Property Name="PresentThanaId" Type="int" />
+    <Property Name="PresentDistrictId" Type="int" />
+    <Property Name="BanglaFatherName" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaMotherName" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaFreedomFighter" Type="bit" />
+    <Property Name="BanglaTribal" Type="bit" />
+    <Property Name="BanglaPermanentHouserNo" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPermanentRoadNo" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPermanentBlock" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPermanentSector" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPermanentPost" Type="int" />
+    <Property Name="BanglaPermanentThana" Type="int" />
+    <Property Name="BanglaPermanentDistrict" Type="int" />
+    <Property Name="BanglaPresentHouserNo" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPresentRoadNo" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPresentBlock" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPresentSector" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPresentPost" Type="int" />
+    <Property Name="BanglaPresentThana" Type="int" />
+    <Property Name="BanglaPresentDistrict" Type="int" />
+    <Property Name="GuardianName" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianMobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianEmail" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianHouserNo" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianRoadNo" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianBlock" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianSector" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianPostId" Type="int" />
+    <Property Name="GuardianThanaId" Type="int" />
+    <Property Name="GuardianDistrictId" Type="int" />
+    <Property Name="BanglaGuardianName" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaGuardianHouserNo" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaGuardianRoadNo" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaGuardianBlock" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaGuardianSector" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaGuardianPost" Type="int" />
+    <Property Name="BanglaGuardianThana" Type="int" />
+    <Property Name="BanglaGuardianDistrict" Type="int" />
+    <Property Name="DateOfBirth" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ADMISSIONINFO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentID" Type="varchar" MaxLength="50" />
+    <Property Name="ProgramId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="CampusId" Type="int" />
+    <Property Name="Session" Type="varchar" MaxLength="50" />
+    <Property Name="AccadamicYear" Type="varchar" MaxLength="50" />
+    <Property Name="BatchId" Type="int" />
+    <Property Name="BanglaProgram" Type="int" />
+    <Property Name="BangDepartment" Type="int" />
+    <Property Name="BanglaCampas" Type="int" />
+    <Property Name="BanglaSession" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaAccadamicYear" Type="nvarchar" MaxLength="50" />
+    <Property Name="BanglaBatch" Type="int" />
+    <Property Name="ApplicantName" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="varchar" MaxLength="50" />
+    <Property Name="DateOfBirth" Type="datetime" />
+    <Property Name="BanglaDateOfBirth" Type="datetime" />
+    <Property Name="Nationality" Type="varchar" MaxLength="50" />
+    <Property Name="BloodGroup" Type="int" />
+    <Property Name="ReligionId" Type="int" />
+    <Property Name="Interest" Type="varchar" MaxLength="50" />
+    <Property Name="OthersInfo" Type="varchar(max)" />
+    <Property Name="BanglaApplicantName" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaGender" Type="nvarchar" MaxLength="50" />
+    <Property Name="BanglaNationality" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaReligion" Type="int" />
+    <Property Name="BanglaHobby" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaInterest" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaOthersInfo" Type="nvarchar" MaxLength="200" />
+    <Property Name="FatherName" Type="varchar" MaxLength="50" />
+    <Property Name="MotherName" Type="varchar" MaxLength="50" />
+    <Property Name="FreedomFighter" Type="bit" />
+    <Property Name="Tribal" Type="bit" />
+    <Property Name="FathersMobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="MothersMobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="TelephoneNo" Type="varchar" MaxLength="50" />
+    <Property Name="PermanentHouserNo" Type="varchar" MaxLength="50" />
+    <Property Name="PermanentRoadNo" Type="varchar" MaxLength="50" />
+    <Property Name="PermanentBlock" Type="varchar" MaxLength="50" />
+    <Property Name="PermanentSector" Type="varchar" MaxLength="50" />
+    <Property Name="PermanentPostId" Type="int" />
+    <Property Name="PermanentThanaId" Type="int" />
+    <Property Name="PermanentDistrictid" Type="int" />
+    <Property Name="PresentHouserNo" Type="varchar" MaxLength="50" />
+    <Property Name="PresentRoadNo" Type="varchar" MaxLength="50" />
+    <Property Name="PresentBlock" Type="varchar" MaxLength="50" />
+    <Property Name="PresentSector" Type="varchar" MaxLength="50" />
+    <Property Name="PresentPostId" Type="int" />
+    <Property Name="PresentThanaId" Type="int" />
+    <Property Name="PresentDistrictId" Type="int" />
+    <Property Name="BanglaFatherName" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaMotherName" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaFreedomFighter" Type="bit" />
+    <Property Name="BanglaTribal" Type="bit" />
+    <Property Name="BanglaPermanentHouserNo" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPermanentRoadNo" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPermanentBlock" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPermanentSector" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPermanentPost" Type="int" />
+    <Property Name="BanglaPermanentThana" Type="int" />
+    <Property Name="BanglaPermanentDistrict" Type="int" />
+    <Property Name="BanglaPresentHouserNo" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPresentRoadNo" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPresentBlock" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPresentSector" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaPresentPost" Type="int" />
+    <Property Name="BanglaPresentThana" Type="int" />
+    <Property Name="BanglaPresentDistrict" Type="int" />
+    <Property Name="GuardianName" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianMobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianEmail" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianHouserNo" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianRoadNo" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianBlock" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianSector" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianPostId" Type="int" />
+    <Property Name="GuardianThanaId" Type="int" />
+    <Property Name="GuardianDistrictId" Type="int" />
+    <Property Name="BanglaGuardianName" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaGuardianHouserNo" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaGuardianRoadNo" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaGuardianBlock" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaGuardianSector" Type="nvarchar" MaxLength="200" />
+    <Property Name="BanglaGuardianPost" Type="int" />
+    <Property Name="BanglaGuardianThana" Type="int" />
+    <Property Name="BanglaGuardianDistrict" Type="int" />
+    <Property Name="Student_Photo" Type="varbinary(max)" />
+    <Property Name="Student_Signature" Type="varbinary(max)" />
+    <Property Name="AccadamicInfo_ExamNme" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccadamicInfo_Group" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccadamicInfo_Board" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccadamicInfo_SchoolName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccadamicInfo_RollNo" Type="int" />
+    <Property Name="AccadamicInfo_RegistrationNo" Type="int" />
+    <Property Name="AccadamicInfo_PassingYear" Type="int" />
+    <Property Name="AccadamicInfo_GPA" Type="varchar" MaxLength="50" />
+    <Property Name="CurrentSemester" Type="int" />
+    <Property Name="BoardRollNo" Type="int" />
+    <Property Name="BoardRegistrationNo" Type="int" />
+  </EntityType>
+  <EntityType Name="ADMISSIONOFFICE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OfficeName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CampusId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ALL_ACCOUNT_TYPE">
+    <Key>
+      <PropertyRef Name="ACC_TYPE_ID" />
+    </Key>
+    <Property Name="ACC_TYPE_ID" Type="bigint" Nullable="false" />
+    <Property Name="ACC_NAME" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BALANCE_SHEET_CONFIGURE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACCID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="BATCH">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="BatchNo" Type="varchar" MaxLength="50" />
+    <Property Name="BanglaBatch" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="BLOODGROUP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BloodGroupName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BOOK_ISSUE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentPKId" Type="int" />
+    <Property Name="StudentId" Type="varchar" MaxLength="50" />
+    <Property Name="Semester" Type="varchar" MaxLength="50" />
+    <Property Name="BookId" Type="int" />
+    <Property Name="ReceiveDate" Type="date" />
+    <Property Name="ReturnDate" Type="date" />
+    <Property Name="BookReturnStatus" Type="varchar" MaxLength="50" />
+    <Property Name="DelayReturn" Type="varchar" MaxLength="50" />
+    <Property Name="BookReturnDateFromStudent" Type="date" />
+    <Property Name="Quantity" Type="int" />
+  </EntityType>
+  <EntityType Name="BOOKS_DETAILS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProgramId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="BookName" Type="varchar" MaxLength="50" />
+    <Property Name="BookAuthor" Type="varchar" MaxLength="50" />
+    <Property Name="BookEdition" Type="varchar" MaxLength="50" />
+    <Property Name="PublishedYear" Type="int" />
+    <Property Name="SelfNumber" Type="varchar" MaxLength="50" />
+    <Property Name="EntryDate" Type="date" />
+    <Property Name="Quantiry" Type="int" />
+  </EntityType>
+  <EntityType Name="CAMPUSINFO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CampusName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CampusAddress" Type="varchar(max)" Nullable="false" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MobileNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BanglaCampus" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="CHART_ACCOUNT">
+    <Key>
+      <PropertyRef Name="CHART_ACC_ID" />
+    </Key>
+    <Property Name="CHART_ACC_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CHART_ACC_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="CHART_ACC_PARENT_ID" Type="bigint" />
+    <Property Name="CHART_ACC_PARENT_TYPE" Type="varchar" MaxLength="50" />
+    <Property Name="CHART_ACC_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="CHART_ACC_OPENING_BALANCE_DR" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CHART_ACC_OPENING_BALANCE_CR" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CHART_ACC_HEADER" Type="varchar" MaxLength="10" />
+    <Property Name="CHART_ACC_STATUS" Type="varchar" MaxLength="10" />
+    <Property Name="CHART_ACC_CREATION_DATE" Type="date" />
+    <Property Name="ACCESS_BY" Type="varchar" MaxLength="50" />
+    <Property Name="ACCESS_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="CLASSPERIOD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Period" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartTime" Type="nchar" MaxLength="10" />
+    <Property Name="EndTime" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="COMPANY_SETUP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COMPANY_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="ADDRESS" Type="varchar" MaxLength="250" />
+    <Property Name="PHONE" Type="varchar" MaxLength="50" />
+    <Property Name="FAX" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="WEBSITE" Type="varchar" MaxLength="100" />
+    <Property Name="LOGO" Type="varbinary(max)" />
+    <Property Name="PROP_NAME" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="COURSE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="ProgramId" Type="int" />
+    <Property Name="SemesterId" Type="int" />
+    <Property Name="CourseName" Type="varchar" MaxLength="50" />
+    <Property Name="BanglaCourseName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CourseCode" Type="varchar" MaxLength="50" />
+    <Property Name="TheoryCredit" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PracticalCredit" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TotalCredit" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TheoryMarkasContinuousAssessment" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TheoryMarkasFinalExam" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PracticalMarkasContinuousAssessment" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PracticalMarkasFinalExam" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TotalMarks" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="COURSE_ASSIGN_TO_STUDENT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentPkId" Type="int" Nullable="false" />
+    <Property Name="DepartmentId" Type="int" Nullable="false" />
+    <Property Name="SemesterId" Type="int" Nullable="false" />
+    <Property Name="CourseId" Type="int" />
+    <Property Name="PreStudentTheoryMarksContinuousAssessment" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PreStudentPracticalMarksContinuousAssessment" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PreStudentTheoryMarksFinalExam" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PreStudentPracticalTheoryMarksFinalExam" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TotalMarks" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="CREATE_ROUTINE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Day" Type="varchar" MaxLength="50" />
+    <Property Name="ClassRutinGroupId" Type="varchar" MaxLength="50" />
+    <Property Name="FirstClass" Type="int" />
+    <Property Name="FirstCourse" Type="int" />
+    <Property Name="FirstTeacher" Type="int" />
+    <Property Name="SecondClass" Type="int" />
+    <Property Name="SecondCourse" Type="int" />
+    <Property Name="SecondTeacher" Type="int" />
+    <Property Name="ThirdClass" Type="int" />
+    <Property Name="ThirdCourse" Type="int" />
+    <Property Name="ThirdTeacher" Type="int" />
+    <Property Name="ForthClass" Type="int" />
+    <Property Name="ForthCourse" Type="int" />
+    <Property Name="ForthTeacher" Type="int" />
+    <Property Name="FifthClass" Type="int" />
+    <Property Name="FifthCourse" Type="int" />
+    <Property Name="FifthTeacher" Type="int" />
+    <Property Name="SixthClass" Type="int" />
+    <Property Name="SixthCourse" Type="int" />
+    <Property Name="SixthTeacher" Type="int" />
+    <Property Name="SeventhClass" Type="int" />
+    <Property Name="SeventhCourse" Type="int" />
+    <Property Name="SeventhTeacher" Type="int" />
+    <Property Name="EighthClass" Type="int" />
+    <Property Name="EighthCourse" Type="int" />
+    <Property Name="EighthTeacher" Type="int" />
+    <Property Name="Year" Type="varchar" MaxLength="50" />
+    <Property Name="ProgramId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="SemesterId" Type="int" />
+  </EntityType>
+  <EntityType Name="CUSTOMER_EMPLOYEE_SETUP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACCOUNT_ID" Type="bigint" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" />
+    <Property Name="CONTACT_NO" Type="varchar" MaxLength="50" />
+    <Property Name="CONTACT_PERSON" Type="varchar" MaxLength="100" />
+    <Property Name="NATIONAL_ID" Type="varchar" MaxLength="50" />
+    <Property Name="ADDRESS" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="DAY">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DaySeveneven" Type="varchar" MaxLength="50" />
+    <Property Name="BanglaDay" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DEPARTMENT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DepartmentCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BanglaDepartment" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="DEPOSIT_PAYMENT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACCOUNT_ID" Type="bigint" Nullable="false" />
+    <Property Name="DEPOSIT_PAYMENT_DATE" Type="date" />
+    <Property Name="AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BANK_ACCOUNT_ID" Type="bigint" />
+    <Property Name="DESCRIPTION" Type="varchar" MaxLength="500" />
+    <Property Name="BANK_INFO_CHEQUE" Type="varchar" MaxLength="250" />
+    <Property Name="BANK_CHEQUE" Type="varchar" MaxLength="50" />
+    <Property Name="BANK_CHEQUE_DATE" Type="date" />
+    <Property Name="CLEARING_DATE" Type="date" />
+    <Property Name="STATUS" Type="varchar" MaxLength="50" />
+    <Property Name="TRANSACTION_TYPE" Type="varchar" MaxLength="50" />
+    <Property Name="JOURNAL_VOUCHER" Type="varchar" MaxLength="50" />
+    <Property Name="CANCEL_JVOUCHAR" Type="varchar" MaxLength="500" />
+    <Property Name="ACCESS_BY" Type="varchar" MaxLength="50" />
+    <Property Name="ACCESS_DATETIME" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DEPRICIATION">
+    <Key>
+      <PropertyRef Name="DEP_ID" />
+    </Key>
+    <Property Name="DEP_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACCOUNT_ID" Type="bigint" Nullable="false" />
+    <Property Name="ORIGINAL_COST" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DEP_VALUE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NEW_ORIGINAL_COST" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ACCESS_BY" Type="varchar" MaxLength="50" />
+    <Property Name="ACCESS_DATE" Type="date" />
+    <Property Name="JOURNAL_ID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DEPRICIATION_SETUP">
+    <Key>
+      <PropertyRef Name="DEP_SET_ID" />
+    </Key>
+    <Property Name="DEP_SET_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACCOUNT_ID" Type="bigint" Nullable="false" />
+    <Property Name="DEP_PERCENTAGE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DEBIT_ACC_ID" Type="bigint" />
+    <Property Name="CREDIT_ACC_ID" Type="bigint" />
+    <Property Name="ACCESS_BY" Type="varchar" MaxLength="50" />
+    <Property Name="ACCESS_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="DISTRICT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DistrictName" Type="varchar" MaxLength="50" />
+    <Property Name="BanglaDistrict" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="FEESDETAILS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FEESSETUP">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentId" Type="int" Nullable="false" />
+    <Property Name="SemesterId" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" />
+    <Property Name="FeesDetailsId" Type="int" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Total" Type="int" />
+    <Property Name="CampusId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FISCAL_YEAR">
+    <Key>
+      <PropertyRef Name="F_YEAR_ID" />
+    </Key>
+    <Property Name="F_YEAR_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="F_YEAR_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="F_YEAR_START_DATE" Type="date" Nullable="false" />
+    <Property Name="F_YEAR_END_DATE" Type="date" Nullable="false" />
+    <Property Name="F_YEAR_STATUS" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ACCESS_BY" Type="varchar" MaxLength="50" />
+    <Property Name="ACCESS_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GS_tblCategory">
+    <Key>
+      <PropertyRef Name="ItemCategoryID" />
+    </Key>
+    <Property Name="ItemCategoryID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CategoryTypeID" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="INCOME_SHEET_CONFIGURE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACCID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="INVENTORY_BRAND_CATEGORY">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BrabdId" Type="int" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="INVENTORY_BRAND_NAME">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="BrandName" Type="varchar" MaxLength="50" />
+    <Property Name="BrandDiscription" Type="varchar(max)" />
+    <Property Name="ContactInfo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BrandId" Type="int" />
+    <Property Name="CategoryId" Type="int" />
+    <Property Name="UnitTypeId" Type="int" />
+    <Property Name="UnitTypeNote" Type="varchar(max)" />
+    <Property Name="StockInHand" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="StockPrice" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="INVENTORY_PURCHAGE_DETAILS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PurchaseDate" Type="date" />
+    <Property Name="PurchaserInfo" Type="varchar(max)" Nullable="false" />
+    <Property Name="ProductName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="NumberOfProduct" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="EveryPackQuantity" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ExtraQuantity" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="SalableQuantity" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ItemPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SystemSerialNo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="INVENTORY_PURCHASE_ENTRY">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductMasterEntryId" Type="int" />
+    <Property Name="NumberOfProduct" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="SalableQuantity" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ItemPrice" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="InvoiceNo" Type="varchar" MaxLength="50" />
+    <Property Name="PurchaseDate" Type="date" />
+    <Property Name="PurchaserInfo" Type="varbinary" MaxLength="50" />
+    <Property Name="SystemSerialNo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="INVENTORY_STOCK_OUT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="StockOutPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="StockOutQuantity" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="StockOutTotalQuantity" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="InvoiceNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StockOutDate" Type="date" />
+    <Property Name="StockOutInfo" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="INVENTORY_STOCKOUT_DETAILS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="Quantity" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ItemPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="StockOutDate" Type="date" />
+    <Property Name="StockOutInfo" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="INVENTORY_UNIT_TYPE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UnitType" Type="varchar" MaxLength="50" />
+    <Property Name="UnitTypeDetails" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="JOURNAL_TRANSACTION_TYPE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="TypeName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="JOURNAL_VOUCHAR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JV_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="JV_ACCOUNT_ID" Type="bigint" Nullable="false" />
+    <Property Name="JV_ACCOUNT_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="JV_ACCOUNT_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="JV_DEBIT_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="JV_CREDIT_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="JV_NOTES" Type="varchar" MaxLength="250" />
+    <Property Name="JV_DATE" Type="date" />
+    <Property Name="JV_CHEQUE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="JV_CHEQUE_DATE" Type="date" />
+    <Property Name="JV_BANK_REMARK" Type="varchar" MaxLength="100" />
+    <Property Name="JV_ACCESS_BY" Type="varchar" MaxLength="50" />
+    <Property Name="JV_ACCESS_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="LMS_tblCompany">
+    <Key>
+      <PropertyRef Name="strCompanyID" />
+    </Key>
+    <Property Name="strCompanyID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="strCompany" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="strAddress" Type="varchar" MaxLength="200" />
+    <Property Name="strIUser" Type="varchar" MaxLength="50" />
+    <Property Name="strEUser" Type="varchar" MaxLength="50" />
+    <Property Name="dtIDate" Type="datetime" />
+    <Property Name="dtEDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MEMBER_ACC_TYPE">
+    <Key>
+      <PropertyRef Name="TABLE_ID" />
+    </Key>
+    <Property Name="TABLE_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MEMBER_ACCOUNT_TYPE_ID" Type="bigint" Nullable="false" />
+    <Property Name="ACCOUNT_PREFIX" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MEMBER_ASSIGN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MEMBER_ID" Type="bigint" />
+    <Property Name="MEMBER_PARENT_ACC_ID" Type="bigint" />
+    <Property Name="ACC_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="MEMBER_INFO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MEMBER_NO" Type="varchar" MaxLength="50" />
+    <Property Name="NO_OF_SHARE" Type="varchar" MaxLength="50" />
+    <Property Name="MEMBER_FULL_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="FATHER_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="MOTHER_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="HUSBAND_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="PRESENT_ADDRESS" Type="varchar" MaxLength="250" />
+    <Property Name="PERMANENT_ADDRESS" Type="varchar" MaxLength="250" />
+    <Property Name="MOBILE_NO" Type="int" />
+    <Property Name="EDUCATION_STATUS" Type="varchar" MaxLength="200" />
+    <Property Name="MEMBER_BIRTH_DATE" Type="date" />
+    <Property Name="RELIGION" Type="varchar" MaxLength="50" />
+    <Property Name="MEMBER_OCCUPATION" Type="varchar" MaxLength="100" />
+    <Property Name="MARITAL_STATUS" Type="varchar" MaxLength="50" />
+    <Property Name="NATIONALITY" Type="varchar" MaxLength="50" />
+    <Property Name="NOMINEE_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="NOMINEE_BIRTH_DATE" Type="date" />
+    <Property Name="NOMINEE_OCCUPATION" Type="varchar" MaxLength="100" />
+    <Property Name="RELATION_WITH_NOMINEE" Type="varchar" MaxLength="100" />
+    <Property Name="MEMBER_PHOTO" Type="varbinary(max)" />
+    <Property Name="DIGITAL_SIGNATURE" Type="varbinary(max)" />
+    <Property Name="NOMINEE_PHOTO" Type="varbinary(max)" />
+    <Property Name="ACCESS_BY" Type="varchar" MaxLength="50" />
+    <Property Name="ACCESS_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="MODULE_PERMISSION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MODULE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="USER_GROUP_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ONLINEDEPARTMENT">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ONLINEEXAM">
+    <Key>
+      <PropertyRef Name="ExamId" />
+    </Key>
+    <Property Name="ExamId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExamName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ORGANIZATION_INFO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrganizationName" Type="nvarchar(max)" />
+    <Property Name="OrganizationAddress" Type="nvarchar(max)" />
+    <Property Name="OrganizationMobile" Type="nvarchar(max)" />
+    <Property Name="BasicInfo" Type="nvarchar(max)" />
+    <Property Name="DateOfEstablishment" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PIS_EMPLOYEE_INFO">
+    <Key>
+      <PropertyRef Name="GEmployeeGenInfoID" />
+      <PropertyRef Name="GCompanyGenInfoID" />
+      <PropertyRef Name="StrEmpName" />
+      <PropertyRef Name="dtBirthDate" />
+      <PropertyRef Name="dtJoiningDate" />
+      <PropertyRef Name="bitHeadOffice" />
+    </Key>
+    <Property Name="GEmployeeGenInfoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GCompanyGenInfoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GFactoryID" Type="uniqueidentifier" />
+    <Property Name="GDesignationInfoID" Type="uniqueidentifier" />
+    <Property Name="GLocationID" Type="uniqueidentifier" />
+    <Property Name="GDepartmentID" Type="uniqueidentifier" />
+    <Property Name="GEmployeeCatID" Type="uniqueidentifier" />
+    <Property Name="StrEmpID" Type="varchar" MaxLength="12" />
+    <Property Name="StrEmpCardNo" Type="varchar" MaxLength="20" />
+    <Property Name="StrEmpOldCardNo" Type="varchar" MaxLength="20" />
+    <Property Name="StrEmpOwnLanguageID" Type="varchar" MaxLength="10" />
+    <Property Name="StrEmpName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="StrEmpNameOwnLanguage" Type="nvarchar" MaxLength="200" />
+    <Property Name="intGender" Type="int" />
+    <Property Name="bitSystemUser" Type="bit" />
+    <Property Name="GReligionID" Type="uniqueidentifier" />
+    <Property Name="intMaritalStatus" Type="int" />
+    <Property Name="dtBirthDate" Type="datetime" Nullable="false" />
+    <Property Name="dtJoiningDate" Type="datetime" Nullable="false" />
+    <Property Name="StrFatherName" Type="varchar" MaxLength="100" />
+    <Property Name="StrMotherName" Type="varchar" MaxLength="100" />
+    <Property Name="StrCurrentAddress" Type="varchar" MaxLength="250" />
+    <Property Name="StrCurrAddrVillageMohalla" Type="varchar" MaxLength="100" />
+    <Property Name="StrCurrAddrPostOfficeName" Type="varchar" MaxLength="100" />
+    <Property Name="StrCurrAddrPostCode" Type="varchar" MaxLength="20" />
+    <Property Name="GCurrAddrAreaInfoID" Type="uniqueidentifier" />
+    <Property Name="GCurrAddrThanaUpazilaInfoID" Type="uniqueidentifier" />
+    <Property Name="GCurrAddrDistrictInfoID" Type="uniqueidentifier" />
+    <Property Name="StrPermanentAddress" Type="varchar" MaxLength="250" />
+    <Property Name="StrPerAddrVillageMohalla" Type="varchar" MaxLength="100" />
+    <Property Name="StrPerAddrPostofficeName" Type="varchar" MaxLength="100" />
+    <Property Name="StrPerAddrPostCode" Type="varchar" MaxLength="20" />
+    <Property Name="GPerAddrAreaInfoID" Type="uniqueidentifier" />
+    <Property Name="GPerAddrThanaUpazilaInfoID" Type="uniqueidentifier" />
+    <Property Name="GPerAddrDistrictInfoID" Type="uniqueidentifier" />
+    <Property Name="StrEmpPssportNo" Type="varchar" MaxLength="50" />
+    <Property Name="StrEmpNationalID" Type="varchar" MaxLength="20" />
+    <Property Name="strEmpMobileNo" Type="varchar" MaxLength="20" />
+    <Property Name="numEmpWeightKG" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="StrEmpIdenMark" Type="varchar" MaxLength="100" />
+    <Property Name="intLatePresentPunishmentFlag" Type="int" />
+    <Property Name="GCreatedBy" Type="uniqueidentifier" />
+    <Property Name="DtCreatedOn" Type="datetime" />
+    <Property Name="GUpdatedBy" Type="uniqueidentifier" />
+    <Property Name="DtUpdatedOn" Type="datetime" />
+    <Property Name="strEmailAdress" Type="varchar" MaxLength="100" />
+    <Property Name="DtConfirmationDate" Type="datetime" />
+    <Property Name="DtResignRetireTerminationDate" Type="datetime" />
+    <Property Name="strGrade" Type="varchar" MaxLength="50" />
+    <Property Name="strShift" Type="varchar" MaxLength="50" />
+    <Property Name="chkEligibleForOverTime" Type="bit" />
+    <Property Name="strAlternatePhone" Type="varchar" MaxLength="50" />
+    <Property Name="strTIN" Type="varchar" MaxLength="50" />
+    <Property Name="strNationalIDCard" Type="varchar" MaxLength="80" />
+    <Property Name="strAgeString" Type="varchar" MaxLength="80" />
+    <Property Name="strFunctionalDesignation" Type="varchar" MaxLength="80" />
+    <Property Name="strBloodGroup" Type="varchar" MaxLength="80" />
+    <Property Name="GNationalityID" Type="uniqueidentifier" />
+    <Property Name="bitCarryForwardProcessForDataUpdate" Type="bit" />
+    <Property Name="bitHeadOffice" Type="bit" Nullable="false" />
+    <Property Name="bitIsRoaster" Type="bit" />
+    <Property Name="bitEligibleForVistaGLAccount" Type="bit" />
+    <Property Name="intActiveStatus" Type="int" />
+    <Property Name="DivisionID" Type="uniqueidentifier" />
+    <Property Name="FingerPrintNo" Type="varchar" MaxLength="50" />
+    <Property Name="RelationWithAlternatePhoneOwner" Type="varchar" MaxLength="50" />
+    <Property Name="ShiftID" Type="tinyint" />
+    <Property Name="RosterGroupID" Type="uniqueidentifier" />
+    <Property Name="GPaymentRuleSetupID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="PIS_tblBloodGroup">
+    <Key>
+      <PropertyRef Name="BloodGroupID" />
+    </Key>
+    <Property Name="BloodGroupID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BloodGroupName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PIS_tblCategory">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PIS_tblCategoryEmp">
+    <Key>
+      <PropertyRef Name="CategoryEmpID" />
+    </Key>
+    <Property Name="CategoryEmpID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CategoryEmpName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CategoryTypeID" Type="int" />
+  </EntityType>
+  <EntityType Name="PIS_tblCategorySalary">
+    <Key>
+      <PropertyRef Name="CategorySalaryID" />
+    </Key>
+    <Property Name="CategorySalaryID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CategorySalaryName" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PIS_tblCountry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="CountryName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PIS_tblDepartment">
+    <Key>
+      <PropertyRef Name="GDepartmentID" />
+    </Key>
+    <Property Name="GDepartmentID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StrDepartmentName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="StrDepartmentCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PIS_tblDesignationInfo">
+    <Key>
+      <PropertyRef Name="GDesignationInfoID" />
+    </Key>
+    <Property Name="GDesignationInfoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StrDesignationName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="GGradeInfoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StrDesignationCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PIS_tblDistrictInfo">
+    <Key>
+      <PropertyRef Name="GDistrictInfoID" />
+    </Key>
+    <Property Name="GDistrictInfoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GCountryNameID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StrDistrictCode" Type="varchar" MaxLength="10" />
+    <Property Name="StrDistrictName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="StrDistrictDescription" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="PIS_tblDivision">
+    <Key>
+      <PropertyRef Name="DivisionID" />
+    </Key>
+    <Property Name="DivisionID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DivisionName" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PIS_tblEmpAssignment">
+    <Key>
+      <PropertyRef Name="GEmpAssignID" />
+    </Key>
+    <Property Name="GEmpAssignID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GEmployeeGenInfoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SectionID" Type="uniqueidentifier" />
+    <Property Name="FloorID" Type="uniqueidentifier" />
+    <Property Name="BlockID" Type="uniqueidentifier" />
+    <Property Name="MachineID" Type="uniqueidentifier" />
+    <Property Name="TableID" Type="uniqueidentifier" />
+    <Property Name="AssetID" Type="uniqueidentifier" />
+    <Property Name="CategoryID" Type="uniqueidentifier" />
+    <Property Name="CategoryEmpID" Type="uniqueidentifier" />
+    <Property Name="CategorySalaryID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="PIS_tblEmpEducationInfo">
+    <Key>
+      <PropertyRef Name="GEmpEducationInfoID" />
+    </Key>
+    <Property Name="GEmpEducationInfoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GEmployeeGenInfoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GEmpEduDegreeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="intEmpEduDegreeYear" Type="int" Nullable="false" />
+    <Property Name="GEmpEduGroupSubject" Type="uniqueidentifier" />
+    <Property Name="StrEmpEduInstituteName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="GEmpEduResultID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GEmpEduBoardID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="PIS_tblEmployeeGenInfo">
+    <Key>
+      <PropertyRef Name="GEmployeeGenInfoID" />
+    </Key>
+    <Property Name="GEmployeeGenInfoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GCompanyGenInfoID" Type="uniqueidentifier" />
+    <Property Name="GFactoryID" Type="uniqueidentifier" />
+    <Property Name="GDesignationInfoID" Type="uniqueidentifier" />
+    <Property Name="GLocationID" Type="uniqueidentifier" />
+    <Property Name="GDepartmentID" Type="uniqueidentifier" />
+    <Property Name="GEmployeeCatID" Type="uniqueidentifier" />
+    <Property Name="StrEmpID" Type="varchar" MaxLength="12" />
+    <Property Name="StrEmpCardNo" Type="varchar" MaxLength="20" />
+    <Property Name="StrEmpOldCardNo" Type="varchar" MaxLength="20" />
+    <Property Name="StrEmpOwnLanguageID" Type="varchar" MaxLength="10" />
+    <Property Name="StrEmpName" Type="varchar" MaxLength="200" />
+    <Property Name="StrEmpNameOwnLanguage" Type="nvarchar" MaxLength="200" />
+    <Property Name="intGender" Type="int" />
+    <Property Name="bitSystemUser" Type="bit" />
+    <Property Name="GReligionID" Type="uniqueidentifier" />
+    <Property Name="intMaritalStatus" Type="int" />
+    <Property Name="dtBirthDate" Type="datetime" Nullable="false" />
+    <Property Name="dtJoiningDate" Type="datetime" Nullable="false" />
+    <Property Name="StrFatherName" Type="varchar" MaxLength="100" />
+    <Property Name="StrMotherName" Type="varchar" MaxLength="100" />
+    <Property Name="StrCurrentAddress" Type="varchar" MaxLength="250" />
+    <Property Name="StrCurrAddrVillageMohalla" Type="varchar" MaxLength="100" />
+    <Property Name="StrCurrAddrPostOfficeName" Type="varchar" MaxLength="100" />
+    <Property Name="StrCurrAddrPostCode" Type="varchar" MaxLength="20" />
+    <Property Name="GCurrAddrAreaInfoID" Type="uniqueidentifier" />
+    <Property Name="GCurrAddrThanaUpazilaInfoID" Type="uniqueidentifier" />
+    <Property Name="GCurrAddrDistrictInfoID" Type="uniqueidentifier" />
+    <Property Name="StrPermanentAddress" Type="varchar" MaxLength="250" />
+    <Property Name="StrPerAddrVillageMohalla" Type="varchar" MaxLength="100" />
+    <Property Name="StrPerAddrPostofficeName" Type="varchar" MaxLength="100" />
+    <Property Name="StrPerAddrPostCode" Type="varchar" MaxLength="20" />
+    <Property Name="GPerAddrAreaInfoID" Type="uniqueidentifier" />
+    <Property Name="GPerAddrThanaUpazilaInfoID" Type="uniqueidentifier" />
+    <Property Name="GPerAddrDistrictInfoID" Type="uniqueidentifier" />
+    <Property Name="StrEmpPssportNo" Type="varchar" MaxLength="50" />
+    <Property Name="StrEmpNationalID" Type="varchar" MaxLength="20" />
+    <Property Name="strEmpMobileNo" Type="varchar" MaxLength="20" />
+    <Property Name="numEmpWeightKG" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="StrEmpIdenMark" Type="varchar" MaxLength="100" />
+    <Property Name="intLatePresentPunishmentFlag" Type="int" />
+    <Property Name="GCreatedBy" Type="uniqueidentifier" />
+    <Property Name="DtCreatedOn" Type="datetime" />
+    <Property Name="GUpdatedBy" Type="uniqueidentifier" />
+    <Property Name="DtUpdatedOn" Type="datetime" />
+    <Property Name="strEmailAdress" Type="varchar" MaxLength="100" />
+    <Property Name="DtConfirmationDate" Type="datetime" />
+    <Property Name="DtResignRetireTerminationDate" Type="datetime" />
+    <Property Name="strGrade" Type="varchar" MaxLength="50" />
+    <Property Name="strShift" Type="varchar" MaxLength="50" />
+    <Property Name="chkEligibleForOverTime" Type="bit" />
+    <Property Name="strAlternatePhone" Type="varchar" MaxLength="50" />
+    <Property Name="strTIN" Type="varchar" MaxLength="50" />
+    <Property Name="strNationalIDCard" Type="varchar" MaxLength="80" />
+    <Property Name="strAgeString" Type="varchar" MaxLength="80" />
+    <Property Name="strFunctionalDesignation" Type="varchar" MaxLength="80" />
+    <Property Name="strBloodGroup" Type="varchar" MaxLength="80" />
+    <Property Name="GNationalityID" Type="uniqueidentifier" />
+    <Property Name="bitCarryForwardProcessForDataUpdate" Type="bit" />
+    <Property Name="bitHeadOffice" Type="bit" />
+    <Property Name="bitIsRoaster" Type="bit" />
+    <Property Name="bitEligibleForVistaGLAccount" Type="bit" />
+    <Property Name="intActiveStatus" Type="int" />
+    <Property Name="DivisionID" Type="uniqueidentifier" />
+    <Property Name="FingerPrintNo" Type="varchar" MaxLength="50" />
+    <Property Name="RelationWithAlternatePhoneOwner" Type="varchar" MaxLength="50" />
+    <Property Name="ShiftID" Type="tinyint" />
+    <Property Name="RosterGroupID" Type="uniqueidentifier" />
+    <Property Name="GPaymentRuleSetupID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="PIS_tblGender">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="GenderName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PIS_tblGradeInfo">
+    <Key>
+      <PropertyRef Name="GGradeInfoID" />
+    </Key>
+    <Property Name="GGradeInfoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GGradeTypeID" Type="uniqueidentifier" />
+    <Property Name="StrGradeName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="StrGradeDesc" Type="varchar" MaxLength="250" />
+    <Property Name="numMinimumSalary" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="numMaximumSalary" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PIS_tblJobStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="JobStatus" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PIS_tblMaritalStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PIS_tblReligion">
+    <Key>
+      <PropertyRef Name="GReligionID" />
+    </Key>
+    <Property Name="GReligionID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ReligionName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PIS_tblSection">
+    <Key>
+      <PropertyRef Name="SectionID" />
+    </Key>
+    <Property Name="SectionID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SectionName" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PIS_tblWorkTimeScheduleSetup">
+    <Key>
+      <PropertyRef Name="GWorkTimeScheduleSetupID" />
+    </Key>
+    <Property Name="GWorkTimeScheduleSetupID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="intWorkScheduleShift" Type="int" Nullable="false" />
+    <Property Name="strWorkTimeSchedule" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dtWorkStartTime" Type="datetime" Nullable="false" />
+    <Property Name="dtWorkEndTime" Type="datetime" Nullable="false" />
+    <Property Name="dtLunchMiddleBreakStartTime" Type="datetime" Nullable="false" />
+    <Property Name="dtLunchMiddleBreakEndTime" Type="datetime" Nullable="false" />
+    <Property Name="dtFirstTeaBreakStartTime" Type="datetime" Nullable="false" />
+    <Property Name="dtFirstTeaBreakEndTime" Type="datetime" Nullable="false" />
+    <Property Name="dtSecondTeaBreakStartTime" Type="datetime" />
+    <Property Name="dtSecondTeaBreakEndTime" Type="datetime" />
+    <Property Name="numTotalWorkingHours" Type="numeric" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="intRecordStatus" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="POST">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PostName" Type="varchar" MaxLength="50" />
+    <Property Name="ThanaId" Type="int" />
+    <Property Name="DistrictId" Type="int" />
+    <Property Name="PostCode" Type="varchar" MaxLength="50" />
+    <Property Name="BanglaPostName" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="PROGRAM">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="ProgramName" Type="varchar" MaxLength="50" />
+    <Property Name="ProgramCode" Type="varchar" MaxLength="50" />
+    <Property Name="BanglaProgram" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="RELIGION">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReligionName" Type="varchar" MaxLength="50" />
+    <Property Name="BanglaReligion" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ROLEWISE_MENU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MODULE_ID" Type="int" />
+    <Property Name="USER_GROUP_ID" Type="bigint" Nullable="false" />
+    <Property Name="PARENT_MENU_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="PARENT_MENU_CONTENT" Type="varchar" MaxLength="100" />
+    <Property Name="CHILD_MENU_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="CHILD_MENU_CONTENT" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ROUTINEGROUP">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Year" Type="varchar" MaxLength="50" />
+    <Property Name="ProgramId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="SemesterId" Type="int" />
+  </EntityType>
+  <EntityType Name="SEMESTER">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SemesterNo" Type="varchar" MaxLength="50" />
+    <Property Name="BanglaSemesterNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SIPI_DEPARTMENT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SIPI_ProgramId" Type="int" />
+    <Property Name="SIPI_DepartmentName" Type="varchar" MaxLength="50" />
+    <Property Name="SIPI_DepartmentCode" Type="varchar" MaxLength="50" />
+    <Property Name="BanglaSIPI_Department" Type="nvarchar" MaxLength="200" />
+    <Property Name="SIPI_DepartmentRegulation" Type="varchar" MaxLength="50" />
+    <Property Name="SIPI_DepartmentEntryDate" Type="date" />
+  </EntityType>
+  <EntityType Name="SIPI_PROGRAM">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SIPI_ProgramName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SIPI_ProgramTime" Type="varchar" MaxLength="50" />
+    <Property Name="BanglaSIPI_Program" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="STUDENT_ATTENDENCE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentPKId" Type="int" Nullable="false" />
+    <Property Name="DepartmentId" Type="int" Nullable="false" />
+    <Property Name="CampusId" Type="int" Nullable="false" />
+    <Property Name="SemesterId" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="STUDENT_CURRENT_SEMESTER_STATUS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentPKId" Type="int" />
+    <Property Name="CurrentSemesterId" Type="int" />
+  </EntityType>
+  <EntityType Name="STUDENT_RESULT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentPKId" Type="int" Nullable="false" />
+    <Property Name="DepartmentId" Type="int" Nullable="false" />
+    <Property Name="SemesterId" Type="int" Nullable="false" />
+    <Property Name="YearId" Type="int" Nullable="false" />
+    <Property Name="CourseId" Type="int" Nullable="false" />
+    <Property Name="TheoryMarksConAssess" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TheoryMarksFinalExam" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PracticalMarksConAssess" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PracticalMarksFinalExam" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TotalMarks" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="STUDENTFEES">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentId" Type="int" Nullable="false" />
+    <Property Name="SemesterId" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" />
+    <Property Name="FeesDetailsId" Type="int" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Total" Type="int" />
+    <Property Name="StudentPkId" Type="int" />
+    <Property Name="DiscountAmount" Type="int" />
+    <Property Name="DiscountPercent" Type="int" />
+    <Property Name="TotalPayableAmount" Type="int" />
+    <Property Name="PaidAmount" Type="int" />
+    <Property Name="DueAmount" Type="int" />
+    <Property Name="PaidStatus" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="STUDENTFEESCOLLECTION">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentPKId" Type="int" />
+    <Property Name="SemesterId" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="ReceiveableAmount" Type="int" />
+    <Property Name="ReceiveAmount" Type="int" />
+    <Property Name="DueAmount" Type="int" />
+    <Property Name="ReceiveDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tblCfgCommon">
+    <Key>
+      <PropertyRef Name="GCfgCommonID" />
+    </Key>
+    <Property Name="GCfgCommonID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GCfgCommonTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="intSlNo" Type="int" Nullable="false" />
+    <Property Name="StrName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="StrDescription" Type="varchar" MaxLength="250" />
+    <Property Name="IntIncrementalPK" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCfgCommonType">
+    <Key>
+      <PropertyRef Name="GCfgCommonTypeID" />
+    </Key>
+    <Property Name="GCfgCommonTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="intSLNo" Type="int" Nullable="false" />
+    <Property Name="strModuleName" Type="varchar" MaxLength="50" />
+    <Property Name="strType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblFactory">
+    <Key>
+      <PropertyRef Name="GFactoryID" />
+    </Key>
+    <Property Name="GFactoryID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="intFactoryID" Type="tinyint" />
+    <Property Name="GCommonIDFactoryType" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StrFactoryName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="StrFactoryShortName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="StrAddress" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="StrDistrict" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StrCountry" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StrTelephone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StrEmail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StrFax" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StrRemark" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="BitStatus" Type="bit" Nullable="false" />
+    <Property Name="SealWithSignature" Type="image" />
+    <Property Name="GCreatedBy" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DtCreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="GUpdatedBy" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DtUpdatedOn" Type="datetime" Nullable="false" />
+    <Property Name="FactoryNameOwnLanguage" Type="nvarchar" MaxLength="500" />
+    <Property Name="FactoryAddressOwnLanguage" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TEACHER">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TeacherName" Type="varchar" MaxLength="50" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="CampusId" Type="int" />
+  </EntityType>
+  <EntityType Name="test_district">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="DistrictName" Type="varchar" MaxLength="50" />
+    <Property Name="BanglaDistrict" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="THANA">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ThanaName" Type="varchar" MaxLength="50" />
+    <Property Name="DistrictId" Type="int" />
+    <Property Name="BanglaThanaName" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="USER">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USER_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="USER_PASSWORD" Type="varchar" MaxLength="50" />
+    <Property Name="USER_GROUP_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USER_GROUP">
+    <Key>
+      <PropertyRef Name="GROUP_ID" />
+    </Key>
+    <Property Name="GROUP_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GROUP_NAME" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="YEAR">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Year" Type="int" />
+  </EntityType>
+  <Association Name="FK_ADMISSIONINFO_BATCH">
+    <End Role="BATCH" Type="Self.BATCH" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BATCH">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="BatchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONINFO_CAMPUSINFO">
+    <End Role="CAMPUSINFO" Type="Self.CAMPUSINFO" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAMPUSINFO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="CampusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONINFO_CAMPUSINFO_CAMPUS">
+    <End Role="CAMPUSINFO" Type="Self.CAMPUSINFO" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAMPUSINFO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="BanglaCampas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONINFO_GuardianDISTRICTDID">
+    <End Role="DISTRICT" Type="Self.DISTRICT" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DISTRICT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="GuardianDistrictId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONINFO_PermanentDISTRICTID">
+    <End Role="DISTRICT" Type="Self.DISTRICT" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DISTRICT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="PermanentDistrictid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONINFO_PermanentPostId">
+    <End Role="POST" Type="Self.POST" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POST">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="PermanentPostId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONINFO_PermanentThanaId">
+    <End Role="THANA" Type="Self.THANA" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="THANA">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="PermanentThanaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONINFO_POST">
+    <End Role="POST" Type="Self.POST" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POST">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="GuardianPostId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONINFO_PresentDISTRICTId">
+    <End Role="DISTRICT" Type="Self.DISTRICT" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DISTRICT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="PresentDistrictId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONINFO_PresentPostId">
+    <End Role="POST" Type="Self.POST" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POST">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="PresentPostId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONINFO_PresentThanaId">
+    <End Role="THANA" Type="Self.THANA" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="THANA">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="PresentThanaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONINFO_RELIGION">
+    <End Role="RELIGION" Type="Self.RELIGION" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RELIGION">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="ReligionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONINFO_SEMESTER">
+    <End Role="SEMESTER" Type="Self.SEMESTER" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEMESTER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="CurrentSemester" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONINFO_SIPI_PROGRAM">
+    <End Role="SIPI_PROGRAM" Type="Self.SIPI_PROGRAM" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_PROGRAM">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="ProgramId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONINFO_SIPIDEPARTMENT">
+    <End Role="SIPI_DEPARTMENT" Type="Self.SIPI_DEPARTMENT" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_DEPARTMENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONINFO_THANA">
+    <End Role="THANA" Type="Self.THANA" Multiplicity="0..1" />
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="THANA">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONINFO">
+        <PropertyRef Name="GuardianThanaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMISSIONOFFICE_CAMPUSINFO">
+    <End Role="CAMPUSINFO" Type="Self.CAMPUSINFO" Multiplicity="1" />
+    <End Role="ADMISSIONOFFICE" Type="Self.ADMISSIONOFFICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAMPUSINFO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADMISSIONOFFICE">
+        <PropertyRef Name="CampusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BALANCE_SHEET_CONFIGURE_CHART_ACCOUNT">
+    <End Role="CHART_ACCOUNT" Type="Self.CHART_ACCOUNT" Multiplicity="0..1" />
+    <End Role="BALANCE_SHEET_CONFIGURE" Type="Self.BALANCE_SHEET_CONFIGURE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHART_ACCOUNT">
+        <PropertyRef Name="CHART_ACC_ID" />
+      </Principal>
+      <Dependent Role="BALANCE_SHEET_CONFIGURE">
+        <PropertyRef Name="ACCID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BOOK_ISSUE_ADMISSIONINFO">
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="0..1" />
+    <End Role="BOOK_ISSUE" Type="Self.BOOK_ISSUE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMISSIONINFO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BOOK_ISSUE">
+        <PropertyRef Name="StudentPKId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BOOK_ISSUE_BOOKS_DETAILS">
+    <End Role="BOOKS_DETAILS" Type="Self.BOOKS_DETAILS" Multiplicity="0..1" />
+    <End Role="BOOK_ISSUE" Type="Self.BOOK_ISSUE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BOOKS_DETAILS">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BOOK_ISSUE">
+        <PropertyRef Name="BookId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BOOKS_DETAILS_SIPI_DEPARTMENT">
+    <End Role="SIPI_DEPARTMENT" Type="Self.SIPI_DEPARTMENT" Multiplicity="0..1" />
+    <End Role="BOOKS_DETAILS" Type="Self.BOOKS_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_DEPARTMENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BOOKS_DETAILS">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BOOKS_DETAILS_SIPI_PROGRAM">
+    <End Role="SIPI_PROGRAM" Type="Self.SIPI_PROGRAM" Multiplicity="0..1" />
+    <End Role="BOOKS_DETAILS" Type="Self.BOOKS_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_PROGRAM">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BOOKS_DETAILS">
+        <PropertyRef Name="ProgramId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COURSE_ASSIGN_TO_STUDENT_ADMISSIONINFO">
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="1" />
+    <End Role="COURSE_ASSIGN_TO_STUDENT" Type="Self.COURSE_ASSIGN_TO_STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMISSIONINFO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="COURSE_ASSIGN_TO_STUDENT">
+        <PropertyRef Name="StudentPkId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COURSE_ASSIGN_TO_STUDENT_COURSE">
+    <End Role="COURSE" Type="Self.COURSE" Multiplicity="0..1" />
+    <End Role="COURSE_ASSIGN_TO_STUDENT" Type="Self.COURSE_ASSIGN_TO_STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURSE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="COURSE_ASSIGN_TO_STUDENT">
+        <PropertyRef Name="CourseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COURSE_ASSIGN_TO_STUDENT_SEMESTER">
+    <End Role="SEMESTER" Type="Self.SEMESTER" Multiplicity="1" />
+    <End Role="COURSE_ASSIGN_TO_STUDENT" Type="Self.COURSE_ASSIGN_TO_STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEMESTER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="COURSE_ASSIGN_TO_STUDENT">
+        <PropertyRef Name="SemesterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COURSE_ASSIGN_TO_STUDENT_SIPI_DEPARTMENT">
+    <End Role="SIPI_DEPARTMENT" Type="Self.SIPI_DEPARTMENT" Multiplicity="1" />
+    <End Role="COURSE_ASSIGN_TO_STUDENT" Type="Self.COURSE_ASSIGN_TO_STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_DEPARTMENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="COURSE_ASSIGN_TO_STUDENT">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COURSE_PROGRAM">
+    <End Role="SIPI_PROGRAM" Type="Self.SIPI_PROGRAM" Multiplicity="0..1" />
+    <End Role="COURSE" Type="Self.COURSE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_PROGRAM">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="COURSE">
+        <PropertyRef Name="ProgramId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COURSE_SEMESTER">
+    <End Role="SEMESTER" Type="Self.SEMESTER" Multiplicity="0..1" />
+    <End Role="COURSE" Type="Self.COURSE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEMESTER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="COURSE">
+        <PropertyRef Name="SemesterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COURSE_SIPI_DEPARTMENT">
+    <End Role="SIPI_DEPARTMENT" Type="Self.SIPI_DEPARTMENT" Multiplicity="0..1" />
+    <End Role="COURSE" Type="Self.COURSE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_DEPARTMENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="COURSE">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_CLASSPERIOD">
+    <End Role="CLASSPERIOD" Type="Self.CLASSPERIOD" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASSPERIOD">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="FirstClass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_CLASSPERIOD1">
+    <End Role="CLASSPERIOD" Type="Self.CLASSPERIOD" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASSPERIOD">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="SecondClass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_CLASSPERIOD2">
+    <End Role="CLASSPERIOD" Type="Self.CLASSPERIOD" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASSPERIOD">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="ThirdClass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_CLASSPERIOD3">
+    <End Role="CLASSPERIOD" Type="Self.CLASSPERIOD" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASSPERIOD">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="ForthClass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_CLASSPERIOD4">
+    <End Role="CLASSPERIOD" Type="Self.CLASSPERIOD" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASSPERIOD">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="FifthClass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_CLASSPERIOD5">
+    <End Role="CLASSPERIOD" Type="Self.CLASSPERIOD" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASSPERIOD">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="SixthClass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_CLASSPERIOD6">
+    <End Role="CLASSPERIOD" Type="Self.CLASSPERIOD" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASSPERIOD">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="SeventhClass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_CLASSPERIOD7">
+    <End Role="CLASSPERIOD" Type="Self.CLASSPERIOD" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASSPERIOD">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="EighthClass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_COURSE">
+    <End Role="COURSE" Type="Self.COURSE" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURSE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="FirstCourse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_COURSE1">
+    <End Role="COURSE" Type="Self.COURSE" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURSE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="SecondCourse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_COURSE2">
+    <End Role="COURSE" Type="Self.COURSE" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURSE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="ThirdCourse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_COURSE3">
+    <End Role="COURSE" Type="Self.COURSE" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURSE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="ForthCourse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_COURSE4">
+    <End Role="COURSE" Type="Self.COURSE" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURSE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="FifthCourse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_COURSE5">
+    <End Role="COURSE" Type="Self.COURSE" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURSE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="SixthCourse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_COURSE6">
+    <End Role="COURSE" Type="Self.COURSE" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURSE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="SeventhCourse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_COURSE7">
+    <End Role="COURSE" Type="Self.COURSE" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURSE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="EighthCourse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_SEMESTER">
+    <End Role="SEMESTER" Type="Self.SEMESTER" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEMESTER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="SemesterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_SIPI_DEPARTMENT">
+    <End Role="SIPI_DEPARTMENT" Type="Self.SIPI_DEPARTMENT" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_DEPARTMENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_SIPI_PROGRAM">
+    <End Role="SIPI_PROGRAM" Type="Self.SIPI_PROGRAM" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_PROGRAM">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="ProgramId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_TEACHER">
+    <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEACHER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="FirstTeacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_TEACHER1">
+    <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEACHER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="SecondTeacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_TEACHER2">
+    <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEACHER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="ThirdTeacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_TEACHER3">
+    <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEACHER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="ForthTeacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_TEACHER4">
+    <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEACHER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="FifthTeacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_TEACHER5">
+    <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEACHER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="SixthTeacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_TEACHER6">
+    <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEACHER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="SeventhTeacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREATE_ROUTINE_TEACHER7">
+    <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="0..1" />
+    <End Role="CREATE_ROUTINE" Type="Self.CREATE_ROUTINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEACHER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CREATE_ROUTINE">
+        <PropertyRef Name="EighthTeacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CUSTOMER_EMPLOYEE_SETUP_CHART_ACCOUNT">
+    <End Role="CHART_ACCOUNT" Type="Self.CHART_ACCOUNT" Multiplicity="1" />
+    <End Role="CUSTOMER_EMPLOYEE_SETUP" Type="Self.CUSTOMER_EMPLOYEE_SETUP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHART_ACCOUNT">
+        <PropertyRef Name="CHART_ACC_ID" />
+      </Principal>
+      <Dependent Role="CUSTOMER_EMPLOYEE_SETUP">
+        <PropertyRef Name="ACCOUNT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DEPOSIT_PAYMENT_CHART_ACCOUNT">
+    <End Role="CHART_ACCOUNT" Type="Self.CHART_ACCOUNT" Multiplicity="1" />
+    <End Role="DEPOSIT_PAYMENT" Type="Self.DEPOSIT_PAYMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHART_ACCOUNT">
+        <PropertyRef Name="CHART_ACC_ID" />
+      </Principal>
+      <Dependent Role="DEPOSIT_PAYMENT">
+        <PropertyRef Name="ACCOUNT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DEPRICIATION_SETUP_CHART_ACCOUNT">
+    <End Role="CHART_ACCOUNT" Type="Self.CHART_ACCOUNT" Multiplicity="1" />
+    <End Role="DEPRICIATION_SETUP" Type="Self.DEPRICIATION_SETUP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHART_ACCOUNT">
+        <PropertyRef Name="CHART_ACC_ID" />
+      </Principal>
+      <Dependent Role="DEPRICIATION_SETUP">
+        <PropertyRef Name="ACCOUNT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FEESSETUP_CAMPUSINFO">
+    <End Role="CAMPUSINFO" Type="Self.CAMPUSINFO" Multiplicity="1" />
+    <End Role="FEESSETUP" Type="Self.FEESSETUP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAMPUSINFO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FEESSETUP">
+        <PropertyRef Name="CampusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FEESSETUP_SEMESTER">
+    <End Role="SEMESTER" Type="Self.SEMESTER" Multiplicity="1" />
+    <End Role="FEESSETUP" Type="Self.FEESSETUP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEMESTER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FEESSETUP">
+        <PropertyRef Name="SemesterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FEESSETUP_SIPI_DEPARTMENT">
+    <End Role="SIPI_DEPARTMENT" Type="Self.SIPI_DEPARTMENT" Multiplicity="1" />
+    <End Role="FEESSETUP" Type="Self.FEESSETUP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_DEPARTMENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FEESSETUP">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INCOME_SHEET_CONFIGURE_CHART_ACCOUNT">
+    <End Role="CHART_ACCOUNT" Type="Self.CHART_ACCOUNT" Multiplicity="0..1" />
+    <End Role="INCOME_SHEET_CONFIGURE" Type="Self.INCOME_SHEET_CONFIGURE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHART_ACCOUNT">
+        <PropertyRef Name="CHART_ACC_ID" />
+      </Principal>
+      <Dependent Role="INCOME_SHEET_CONFIGURE">
+        <PropertyRef Name="ACCID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTORY_BRAND_CATEGORY_INVENTORY_BRAND_NAME">
+    <End Role="INVENTORY_BRAND_NAME" Type="Self.INVENTORY_BRAND_NAME" Multiplicity="0..1" />
+    <End Role="INVENTORY_BRAND_CATEGORY" Type="Self.INVENTORY_BRAND_CATEGORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INVENTORY_BRAND_NAME">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="INVENTORY_BRAND_CATEGORY">
+        <PropertyRef Name="BrabdId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY_INVENTORY_BRAND_CATEGORY">
+    <End Role="INVENTORY_BRAND_CATEGORY" Type="Self.INVENTORY_BRAND_CATEGORY" Multiplicity="0..1" />
+    <End Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Type="Self.INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INVENTORY_BRAND_CATEGORY">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY_INVENTORY_BRAND_NAME">
+    <End Role="INVENTORY_BRAND_NAME" Type="Self.INVENTORY_BRAND_NAME" Multiplicity="0..1" />
+    <End Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Type="Self.INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INVENTORY_BRAND_NAME">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+        <PropertyRef Name="BrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY_INVENTORY_UNIT_TYPE">
+    <End Role="INVENTORY_UNIT_TYPE" Type="Self.INVENTORY_UNIT_TYPE" Multiplicity="0..1" />
+    <End Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Type="Self.INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INVENTORY_UNIT_TYPE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+        <PropertyRef Name="UnitTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTORY_PURCHAGE_DETAILS_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+    <End Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Type="Self.INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Multiplicity="0..1" />
+    <End Role="INVENTORY_PURCHAGE_DETAILS" Type="Self.INVENTORY_PURCHAGE_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="INVENTORY_PURCHAGE_DETAILS">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTORY_STOCK_OUT_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+    <End Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Type="Self.INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Multiplicity="0..1" />
+    <End Role="INVENTORY_STOCK_OUT" Type="Self.INVENTORY_STOCK_OUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="INVENTORY_STOCK_OUT">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTORY_STOCKOUT_DETAILS_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+    <End Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Type="Self.INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Multiplicity="0..1" />
+    <End Role="INVENTORY_STOCKOUT_DETAILS" Type="Self.INVENTORY_STOCKOUT_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="INVENTORY_STOCKOUT_DETAILS">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JOURNAL_VOUCHAR_CHART_ACCOUNT">
+    <End Role="CHART_ACCOUNT" Type="Self.CHART_ACCOUNT" Multiplicity="1" />
+    <End Role="JOURNAL_VOUCHAR" Type="Self.JOURNAL_VOUCHAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHART_ACCOUNT">
+        <PropertyRef Name="CHART_ACC_ID" />
+      </Principal>
+      <Dependent Role="JOURNAL_VOUCHAR">
+        <PropertyRef Name="JV_ACCOUNT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MEMBER_ACC_TYPE_CHART_ACCOUNT">
+    <End Role="CHART_ACCOUNT" Type="Self.CHART_ACCOUNT" Multiplicity="1" />
+    <End Role="MEMBER_ACC_TYPE" Type="Self.MEMBER_ACC_TYPE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHART_ACCOUNT">
+        <PropertyRef Name="CHART_ACC_ID" />
+      </Principal>
+      <Dependent Role="MEMBER_ACC_TYPE">
+        <PropertyRef Name="MEMBER_ACCOUNT_TYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MEMBER_ASSIGN_CHART_ACCOUNT">
+    <End Role="CHART_ACCOUNT" Type="Self.CHART_ACCOUNT" Multiplicity="0..1" />
+    <End Role="MEMBER_ASSIGN" Type="Self.MEMBER_ASSIGN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHART_ACCOUNT">
+        <PropertyRef Name="CHART_ACC_ID" />
+      </Principal>
+      <Dependent Role="MEMBER_ASSIGN">
+        <PropertyRef Name="ACC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MODULE_PERMISSION_USER_GROUP">
+    <End Role="USER_GROUP" Type="Self.USER_GROUP" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MODULE_PERMISSION" Type="Self.MODULE_PERMISSION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USER_GROUP">
+        <PropertyRef Name="GROUP_ID" />
+      </Principal>
+      <Dependent Role="MODULE_PERMISSION">
+        <PropertyRef Name="USER_GROUP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POST_DISTRICT">
+    <End Role="DISTRICT" Type="Self.DISTRICT" Multiplicity="0..1" />
+    <End Role="POST" Type="Self.POST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DISTRICT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="POST">
+        <PropertyRef Name="DistrictId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POST_THANA">
+    <End Role="THANA" Type="Self.THANA" Multiplicity="0..1" />
+    <End Role="POST" Type="Self.POST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="THANA">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="POST">
+        <PropertyRef Name="ThanaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROGRAM_DEPARTMENT">
+    <End Role="DEPARTMENT" Type="Self.DEPARTMENT" Multiplicity="0..1" />
+    <End Role="PROGRAM" Type="Self.PROGRAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPARTMENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PROGRAM">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROLEWISE_MENU_MODULE_PERMISSION">
+    <End Role="MODULE_PERMISSION" Type="Self.MODULE_PERMISSION" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ROLEWISE_MENU" Type="Self.ROLEWISE_MENU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MODULE_PERMISSION">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ROLEWISE_MENU">
+        <PropertyRef Name="MODULE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROLEWISE_MENU_USER_GROUP">
+    <End Role="USER_GROUP" Type="Self.USER_GROUP" Multiplicity="1" />
+    <End Role="ROLEWISE_MENU" Type="Self.ROLEWISE_MENU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USER_GROUP">
+        <PropertyRef Name="GROUP_ID" />
+      </Principal>
+      <Dependent Role="ROLEWISE_MENU">
+        <PropertyRef Name="USER_GROUP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROUTINEGROUP_DEPARTMENT">
+    <End Role="DEPARTMENT" Type="Self.DEPARTMENT" Multiplicity="0..1" />
+    <End Role="ROUTINEGROUP" Type="Self.ROUTINEGROUP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPARTMENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ROUTINEGROUP">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROUTINEGROUP_PROGRAM">
+    <End Role="PROGRAM" Type="Self.PROGRAM" Multiplicity="0..1" />
+    <End Role="ROUTINEGROUP" Type="Self.ROUTINEGROUP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROGRAM">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ROUTINEGROUP">
+        <PropertyRef Name="ProgramId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROUTINEGROUP_SEMESTER">
+    <End Role="SEMESTER" Type="Self.SEMESTER" Multiplicity="0..1" />
+    <End Role="ROUTINEGROUP" Type="Self.ROUTINEGROUP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEMESTER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ROUTINEGROUP">
+        <PropertyRef Name="SemesterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SIPI_DEPARTMENT_SIPI_PROGRAM">
+    <End Role="SIPI_PROGRAM" Type="Self.SIPI_PROGRAM" Multiplicity="0..1" />
+    <End Role="SIPI_DEPARTMENT" Type="Self.SIPI_DEPARTMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_PROGRAM">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SIPI_DEPARTMENT">
+        <PropertyRef Name="SIPI_ProgramId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_ATTENDENCE_ADMISSIONINFO">
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="1" />
+    <End Role="STUDENT_ATTENDENCE" Type="Self.STUDENT_ATTENDENCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMISSIONINFO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="STUDENT_ATTENDENCE">
+        <PropertyRef Name="StudentPKId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_ATTENDENCE_CAMPUSINFO">
+    <End Role="CAMPUSINFO" Type="Self.CAMPUSINFO" Multiplicity="1" />
+    <End Role="STUDENT_ATTENDENCE" Type="Self.STUDENT_ATTENDENCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAMPUSINFO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="STUDENT_ATTENDENCE">
+        <PropertyRef Name="CampusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_ATTENDENCE_SEMESTER">
+    <End Role="SEMESTER" Type="Self.SEMESTER" Multiplicity="1" />
+    <End Role="STUDENT_ATTENDENCE" Type="Self.STUDENT_ATTENDENCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEMESTER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="STUDENT_ATTENDENCE">
+        <PropertyRef Name="SemesterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_ATTENDENCE_SIPI_DEPARTMENT">
+    <End Role="SIPI_DEPARTMENT" Type="Self.SIPI_DEPARTMENT" Multiplicity="1" />
+    <End Role="STUDENT_ATTENDENCE" Type="Self.STUDENT_ATTENDENCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_DEPARTMENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="STUDENT_ATTENDENCE">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_CURRENT_SEMESTER_STATUS_STUDENT_CURRENT_SEMESTER_STATUS">
+    <End Role="SEMESTER" Type="Self.SEMESTER" Multiplicity="0..1" />
+    <End Role="STUDENT_CURRENT_SEMESTER_STATUS" Type="Self.STUDENT_CURRENT_SEMESTER_STATUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEMESTER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="STUDENT_CURRENT_SEMESTER_STATUS">
+        <PropertyRef Name="CurrentSemesterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_RESULT_ADMISSIONINFO">
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="1" />
+    <End Role="STUDENT_RESULT" Type="Self.STUDENT_RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMISSIONINFO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="STUDENT_RESULT">
+        <PropertyRef Name="StudentPKId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_RESULT_COURSE">
+    <End Role="COURSE" Type="Self.COURSE" Multiplicity="1" />
+    <End Role="STUDENT_RESULT" Type="Self.STUDENT_RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURSE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="STUDENT_RESULT">
+        <PropertyRef Name="CourseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_RESULT_SEMESTER">
+    <End Role="SEMESTER" Type="Self.SEMESTER" Multiplicity="1" />
+    <End Role="STUDENT_RESULT" Type="Self.STUDENT_RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEMESTER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="STUDENT_RESULT">
+        <PropertyRef Name="SemesterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_RESULT_SIPI_DEPARTMENT">
+    <End Role="SIPI_DEPARTMENT" Type="Self.SIPI_DEPARTMENT" Multiplicity="1" />
+    <End Role="STUDENT_RESULT" Type="Self.STUDENT_RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_DEPARTMENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="STUDENT_RESULT">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENTFEES_FEESDETAILS">
+    <End Role="FEESDETAILS" Type="Self.FEESDETAILS" Multiplicity="0..1" />
+    <End Role="STUDENTFEES" Type="Self.STUDENTFEES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FEESDETAILS">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="STUDENTFEES">
+        <PropertyRef Name="FeesDetailsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENTFEESCOLLECTION_ADMISSIONINFO">
+    <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="0..1" />
+    <End Role="STUDENTFEESCOLLECTION" Type="Self.STUDENTFEESCOLLECTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMISSIONINFO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="STUDENTFEESCOLLECTION">
+        <PropertyRef Name="StudentPKId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENTFEESCOLLECTION_SEMESTER">
+    <End Role="SEMESTER" Type="Self.SEMESTER" Multiplicity="0..1" />
+    <End Role="STUDENTFEESCOLLECTION" Type="Self.STUDENTFEESCOLLECTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEMESTER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="STUDENTFEESCOLLECTION">
+        <PropertyRef Name="SemesterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TEACHER_CAMPUSINFO">
+    <End Role="CAMPUSINFO" Type="Self.CAMPUSINFO" Multiplicity="0..1" />
+    <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAMPUSINFO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TEACHER">
+        <PropertyRef Name="CampusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TEACHER_SIPI_DEPARTMENT">
+    <End Role="SIPI_DEPARTMENT" Type="Self.SIPI_DEPARTMENT" Multiplicity="0..1" />
+    <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_DEPARTMENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TEACHER">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_THANA_DISTRICT">
+    <End Role="DISTRICT" Type="Self.DISTRICT" Multiplicity="0..1" />
+    <End Role="THANA" Type="Self.THANA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DISTRICT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="THANA">
+        <PropertyRef Name="DistrictId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USER_USER_GROUP">
+    <End Role="USER_GROUP" Type="Self.USER_GROUP" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="USER" Type="Self.USER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USER_GROUP">
+        <PropertyRef Name="GROUP_ID" />
+      </Principal>
+      <Dependent Role="USER">
+        <PropertyRef Name="USER_GROUP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="SP_ACCOUNT_STATEMENT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="accountId" Type="bigint" Mode="In" />
+    <Parameter Name="fromDate" Type="date" Mode="In" />
+    <Parameter Name="toDate" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_BANK_STATEMENT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="accountId" Type="bigint" Mode="In" />
+    <Parameter Name="fromDate" Type="date" Mode="In" />
+    <Parameter Name="toDate" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_CHART_OF_ACCOUNT_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CHART_ACC_ID" Type="bigint" Mode="In" />
+    <Parameter Name="CHART_ACC_STATUS" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_CURRENT_BALANCE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pJV_ACCOUNT_ID" Type="bigint" Mode="In" />
+    <Parameter Name="pDateTo" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_CURRENT_BALANCE_REVENUE_EXPENSE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pJV_ACCOUNT_ID" Type="bigint" Mode="In" />
+    <Parameter Name="pDateFrom" Type="date" Mode="In" />
+    <Parameter Name="pDateTo" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_CURRENT_DEBIT_CREDIT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ACC_ID" Type="bigint" Mode="In" />
+    <Parameter Name="FISCALYEAR" Type="date" Mode="In" />
+    <Parameter Name="pJD_DATE" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_CURRENT_DEBIT_CREDIT_DEPRICIATION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ACC_ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="SP_DEBIT_CREDIT_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="From_Date" Type="date" Mode="In" />
+    <Parameter Name="To_Date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_DEBIT_CREDIT_VOUCHER_FOR_DAY_BOOK_BY_DATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Journal_Date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_DELETE_DEPRICIATION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_ALL_DEPRICIATION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_DEPRICIATION_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_DEPRICIATION_DATE_WISE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="STARTDATE" Type="date" Mode="In" />
+    <Parameter Name="ENDDATE" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_JVID_WITHOUT_BANK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_NET_INCOME_LOSS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FISCALYEAR" Type="date" Mode="In" />
+    <Parameter Name="pJD_DATE" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_HEADER_ACC_NAME" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_HEADER_STATEMENT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="accountId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_INCOME_STATEMENT_FINAL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FisStartDate" Type="date" Mode="In" />
+    <Parameter Name="pJD_DATE" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_JOURNAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="From_Date" Type="date" Mode="In" />
+    <Parameter Name="To_Date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_JOURNAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BY_DATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Journal_Date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_JOURNAL_VOUCHAR_LAST_ID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_RECEIVE_PAYMENT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pFromDate" Type="date" Mode="In" />
+    <Parameter Name="pToDate" Type="date" Mode="In" />
+    <Parameter Name="pParentType" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_TOTAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="From_Date" Type="date" Mode="In" />
+    <Parameter Name="To_Date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_TOTAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BY_DATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Journal_Date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_TOTAL_DEPOSIT_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="From_Date" Type="date" Mode="In" />
+    <Parameter Name="To_Date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_TOTAL_DEPOSIT_VOUCHER_FOR_DAY_BOOK_BY_DATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Journal_Date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_TOTAL_JOURNAL_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="From_Date" Type="date" Mode="In" />
+    <Parameter Name="To_Date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_TOTAL_JOURNAL_VOUCHER_FOR_DAY_BOOK_BY_DATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Journal_Date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_TOTAL_PAYMENT_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="From_Date" Type="date" Mode="In" />
+    <Parameter Name="To_Date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_TOTAL_PAYMENT_VOUCHER_FOR_DAY_BOOK_BY_DATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Journal_Date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_TRIAL_BALANCE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FiscalStartDate" Type="date" Mode="In" />
+    <Parameter Name="pJD_DATE" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Student_Money_Receipt_Report" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StudentId" Type="int" Mode="In" />
+    <Parameter Name="semesterId" Type="int" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="UpdateStudentPaymentAmount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StudentId" Type="int" Mode="In" />
+    <Parameter Name="semesterId" Type="int" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="PaidAmount" Type="int" Mode="In" />
+    <Parameter Name="DueAmount" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="SIPIDBModelStoreContainer">
+    <EntitySet Name="ACCOUNT_TYPE" EntityType="Self.ACCOUNT_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADD_STUDENT" EntityType="Self.ADD_STUDENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMISSIONINFO" EntityType="Self.ADMISSIONINFO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMISSIONOFFICE" EntityType="Self.ADMISSIONOFFICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ALL_ACCOUNT_TYPE" EntityType="Self.ALL_ACCOUNT_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BALANCE_SHEET_CONFIGURE" EntityType="Self.BALANCE_SHEET_CONFIGURE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BATCH" EntityType="Self.BATCH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BLOODGROUP" EntityType="Self.BLOODGROUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BOOK_ISSUE" EntityType="Self.BOOK_ISSUE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BOOKS_DETAILS" EntityType="Self.BOOKS_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAMPUSINFO" EntityType="Self.CAMPUSINFO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHART_ACCOUNT" EntityType="Self.CHART_ACCOUNT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLASSPERIOD" EntityType="Self.CLASSPERIOD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPANY_SETUP" EntityType="Self.COMPANY_SETUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COURSE" EntityType="Self.COURSE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COURSE_ASSIGN_TO_STUDENT" EntityType="Self.COURSE_ASSIGN_TO_STUDENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CREATE_ROUTINE" EntityType="Self.CREATE_ROUTINE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CUSTOMER_EMPLOYEE_SETUP" EntityType="Self.CUSTOMER_EMPLOYEE_SETUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DAY" EntityType="Self.DAY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DEPARTMENT" EntityType="Self.DEPARTMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DEPOSIT_PAYMENT" EntityType="Self.DEPOSIT_PAYMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DEPRICIATION" EntityType="Self.DEPRICIATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DEPRICIATION_SETUP" EntityType="Self.DEPRICIATION_SETUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DISTRICT" EntityType="Self.DISTRICT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FEESDETAILS" EntityType="Self.FEESDETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FEESSETUP" EntityType="Self.FEESSETUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FISCAL_YEAR" EntityType="Self.FISCAL_YEAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GS_tblCategory" EntityType="Self.GS_tblCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INCOME_SHEET_CONFIGURE" EntityType="Self.INCOME_SHEET_CONFIGURE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVENTORY_BRAND_CATEGORY" EntityType="Self.INVENTORY_BRAND_CATEGORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVENTORY_BRAND_NAME" EntityType="Self.INVENTORY_BRAND_NAME" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" EntityType="Self.INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVENTORY_PURCHAGE_DETAILS" EntityType="Self.INVENTORY_PURCHAGE_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVENTORY_PURCHASE_ENTRY" EntityType="Self.INVENTORY_PURCHASE_ENTRY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVENTORY_STOCK_OUT" EntityType="Self.INVENTORY_STOCK_OUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVENTORY_STOCKOUT_DETAILS" EntityType="Self.INVENTORY_STOCKOUT_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVENTORY_UNIT_TYPE" EntityType="Self.INVENTORY_UNIT_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JOURNAL_TRANSACTION_TYPE" EntityType="Self.JOURNAL_TRANSACTION_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JOURNAL_VOUCHAR" EntityType="Self.JOURNAL_VOUCHAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_tblCompany" EntityType="Self.LMS_tblCompany" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MEMBER_ACC_TYPE" EntityType="Self.MEMBER_ACC_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MEMBER_ASSIGN" EntityType="Self.MEMBER_ASSIGN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MEMBER_INFO" EntityType="Self.MEMBER_INFO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MODULE_PERMISSION" EntityType="Self.MODULE_PERMISSION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ONLINEDEPARTMENT" EntityType="Self.ONLINEDEPARTMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ONLINEEXAM" EntityType="Self.ONLINEEXAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORGANIZATION_INFO" EntityType="Self.ORGANIZATION_INFO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblBloodGroup" EntityType="Self.PIS_tblBloodGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblCategory" EntityType="Self.PIS_tblCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblCategoryEmp" EntityType="Self.PIS_tblCategoryEmp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblCategorySalary" EntityType="Self.PIS_tblCategorySalary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblCountry" EntityType="Self.PIS_tblCountry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblDepartment" EntityType="Self.PIS_tblDepartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblDesignationInfo" EntityType="Self.PIS_tblDesignationInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblDistrictInfo" EntityType="Self.PIS_tblDistrictInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblDivision" EntityType="Self.PIS_tblDivision" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblEmpAssignment" EntityType="Self.PIS_tblEmpAssignment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblEmpEducationInfo" EntityType="Self.PIS_tblEmpEducationInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblEmployeeGenInfo" EntityType="Self.PIS_tblEmployeeGenInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblGender" EntityType="Self.PIS_tblGender" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblGradeInfo" EntityType="Self.PIS_tblGradeInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblJobStatus" EntityType="Self.PIS_tblJobStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblMaritalStatus" EntityType="Self.PIS_tblMaritalStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblReligion" EntityType="Self.PIS_tblReligion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblSection" EntityType="Self.PIS_tblSection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_tblWorkTimeScheduleSetup" EntityType="Self.PIS_tblWorkTimeScheduleSetup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="POST" EntityType="Self.POST" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROGRAM" EntityType="Self.PROGRAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RELIGION" EntityType="Self.RELIGION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROLEWISE_MENU" EntityType="Self.ROLEWISE_MENU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROUTINEGROUP" EntityType="Self.ROUTINEGROUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEMESTER" EntityType="Self.SEMESTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPI_DEPARTMENT" EntityType="Self.SIPI_DEPARTMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPI_PROGRAM" EntityType="Self.SIPI_PROGRAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STUDENT_ATTENDENCE" EntityType="Self.STUDENT_ATTENDENCE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STUDENT_CURRENT_SEMESTER_STATUS" EntityType="Self.STUDENT_CURRENT_SEMESTER_STATUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STUDENT_RESULT" EntityType="Self.STUDENT_RESULT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STUDENTFEES" EntityType="Self.STUDENTFEES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STUDENTFEESCOLLECTION" EntityType="Self.STUDENTFEESCOLLECTION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCfgCommon" EntityType="Self.tblCfgCommon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCfgCommonType" EntityType="Self.tblCfgCommonType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblFactory" EntityType="Self.tblFactory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TEACHER" EntityType="Self.TEACHER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="test_district" EntityType="Self.test_district" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="THANA" EntityType="Self.THANA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USER" EntityType="Self.USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USER_GROUP" EntityType="Self.USER_GROUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="YEAR" EntityType="Self.YEAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PIS_EMPLOYEE_INFO" EntityType="Self.PIS_EMPLOYEE_INFO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[PIS_EMPLOYEE_INFO].[GEmployeeGenInfoID] AS [GEmployeeGenInfoID], 
+[PIS_EMPLOYEE_INFO].[GCompanyGenInfoID] AS [GCompanyGenInfoID], 
+[PIS_EMPLOYEE_INFO].[GFactoryID] AS [GFactoryID], 
+[PIS_EMPLOYEE_INFO].[GDesignationInfoID] AS [GDesignationInfoID], 
+[PIS_EMPLOYEE_INFO].[GLocationID] AS [GLocationID], 
+[PIS_EMPLOYEE_INFO].[GDepartmentID] AS [GDepartmentID], 
+[PIS_EMPLOYEE_INFO].[GEmployeeCatID] AS [GEmployeeCatID], 
+[PIS_EMPLOYEE_INFO].[StrEmpID] AS [StrEmpID], 
+[PIS_EMPLOYEE_INFO].[StrEmpCardNo] AS [StrEmpCardNo], 
+[PIS_EMPLOYEE_INFO].[StrEmpOldCardNo] AS [StrEmpOldCardNo], 
+[PIS_EMPLOYEE_INFO].[StrEmpOwnLanguageID] AS [StrEmpOwnLanguageID], 
+[PIS_EMPLOYEE_INFO].[StrEmpName] AS [StrEmpName], 
+[PIS_EMPLOYEE_INFO].[StrEmpNameOwnLanguage] AS [StrEmpNameOwnLanguage], 
+[PIS_EMPLOYEE_INFO].[intGender] AS [intGender], 
+[PIS_EMPLOYEE_INFO].[bitSystemUser] AS [bitSystemUser], 
+[PIS_EMPLOYEE_INFO].[GReligionID] AS [GReligionID], 
+[PIS_EMPLOYEE_INFO].[intMaritalStatus] AS [intMaritalStatus], 
+[PIS_EMPLOYEE_INFO].[dtBirthDate] AS [dtBirthDate], 
+[PIS_EMPLOYEE_INFO].[dtJoiningDate] AS [dtJoiningDate], 
+[PIS_EMPLOYEE_INFO].[StrFatherName] AS [StrFatherName], 
+[PIS_EMPLOYEE_INFO].[StrMotherName] AS [StrMotherName], 
+[PIS_EMPLOYEE_INFO].[StrCurrentAddress] AS [StrCurrentAddress], 
+[PIS_EMPLOYEE_INFO].[StrCurrAddrVillageMohalla] AS [StrCurrAddrVillageMohalla], 
+[PIS_EMPLOYEE_INFO].[StrCurrAddrPostOfficeName] AS [StrCurrAddrPostOfficeName], 
+[PIS_EMPLOYEE_INFO].[StrCurrAddrPostCode] AS [StrCurrAddrPostCode], 
+[PIS_EMPLOYEE_INFO].[GCurrAddrAreaInfoID] AS [GCurrAddrAreaInfoID], 
+[PIS_EMPLOYEE_INFO].[GCurrAddrThanaUpazilaInfoID] AS [GCurrAddrThanaUpazilaInfoID], 
+[PIS_EMPLOYEE_INFO].[GCurrAddrDistrictInfoID] AS [GCurrAddrDistrictInfoID], 
+[PIS_EMPLOYEE_INFO].[StrPermanentAddress] AS [StrPermanentAddress], 
+[PIS_EMPLOYEE_INFO].[StrPerAddrVillageMohalla] AS [StrPerAddrVillageMohalla], 
+[PIS_EMPLOYEE_INFO].[StrPerAddrPostofficeName] AS [StrPerAddrPostofficeName], 
+[PIS_EMPLOYEE_INFO].[StrPerAddrPostCode] AS [StrPerAddrPostCode], 
+[PIS_EMPLOYEE_INFO].[GPerAddrAreaInfoID] AS [GPerAddrAreaInfoID], 
+[PIS_EMPLOYEE_INFO].[GPerAddrThanaUpazilaInfoID] AS [GPerAddrThanaUpazilaInfoID], 
+[PIS_EMPLOYEE_INFO].[GPerAddrDistrictInfoID] AS [GPerAddrDistrictInfoID], 
+[PIS_EMPLOYEE_INFO].[StrEmpPssportNo] AS [StrEmpPssportNo], 
+[PIS_EMPLOYEE_INFO].[StrEmpNationalID] AS [StrEmpNationalID], 
+[PIS_EMPLOYEE_INFO].[strEmpMobileNo] AS [strEmpMobileNo], 
+[PIS_EMPLOYEE_INFO].[numEmpWeightKG] AS [numEmpWeightKG], 
+[PIS_EMPLOYEE_INFO].[StrEmpIdenMark] AS [StrEmpIdenMark], 
+[PIS_EMPLOYEE_INFO].[intLatePresentPunishmentFlag] AS [intLatePresentPunishmentFlag], 
+[PIS_EMPLOYEE_INFO].[GCreatedBy] AS [GCreatedBy], 
+[PIS_EMPLOYEE_INFO].[DtCreatedOn] AS [DtCreatedOn], 
+[PIS_EMPLOYEE_INFO].[GUpdatedBy] AS [GUpdatedBy], 
+[PIS_EMPLOYEE_INFO].[DtUpdatedOn] AS [DtUpdatedOn], 
+[PIS_EMPLOYEE_INFO].[strEmailAdress] AS [strEmailAdress], 
+[PIS_EMPLOYEE_INFO].[DtConfirmationDate] AS [DtConfirmationDate], 
+[PIS_EMPLOYEE_INFO].[DtResignRetireTerminationDate] AS [DtResignRetireTerminationDate], 
+[PIS_EMPLOYEE_INFO].[strGrade] AS [strGrade], 
+[PIS_EMPLOYEE_INFO].[strShift] AS [strShift], 
+[PIS_EMPLOYEE_INFO].[chkEligibleForOverTime] AS [chkEligibleForOverTime], 
+[PIS_EMPLOYEE_INFO].[strAlternatePhone] AS [strAlternatePhone], 
+[PIS_EMPLOYEE_INFO].[strTIN] AS [strTIN], 
+[PIS_EMPLOYEE_INFO].[strNationalIDCard] AS [strNationalIDCard], 
+[PIS_EMPLOYEE_INFO].[strAgeString] AS [strAgeString], 
+[PIS_EMPLOYEE_INFO].[strFunctionalDesignation] AS [strFunctionalDesignation], 
+[PIS_EMPLOYEE_INFO].[strBloodGroup] AS [strBloodGroup], 
+[PIS_EMPLOYEE_INFO].[GNationalityID] AS [GNationalityID], 
+[PIS_EMPLOYEE_INFO].[bitCarryForwardProcessForDataUpdate] AS [bitCarryForwardProcessForDataUpdate], 
+[PIS_EMPLOYEE_INFO].[bitHeadOffice] AS [bitHeadOffice], 
+[PIS_EMPLOYEE_INFO].[bitIsRoaster] AS [bitIsRoaster], 
+[PIS_EMPLOYEE_INFO].[bitEligibleForVistaGLAccount] AS [bitEligibleForVistaGLAccount], 
+[PIS_EMPLOYEE_INFO].[intActiveStatus] AS [intActiveStatus], 
+[PIS_EMPLOYEE_INFO].[DivisionID] AS [DivisionID], 
+[PIS_EMPLOYEE_INFO].[FingerPrintNo] AS [FingerPrintNo], 
+[PIS_EMPLOYEE_INFO].[RelationWithAlternatePhoneOwner] AS [RelationWithAlternatePhoneOwner], 
+[PIS_EMPLOYEE_INFO].[ShiftID] AS [ShiftID], 
+[PIS_EMPLOYEE_INFO].[RosterGroupID] AS [RosterGroupID], 
+[PIS_EMPLOYEE_INFO].[GPaymentRuleSetupID] AS [GPaymentRuleSetupID]
+FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ADMISSIONINFO_BATCH" Association="Self.FK_ADMISSIONINFO_BATCH">
+      <End Role="BATCH" EntitySet="BATCH" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONINFO_CAMPUSINFO" Association="Self.FK_ADMISSIONINFO_CAMPUSINFO">
+      <End Role="CAMPUSINFO" EntitySet="CAMPUSINFO" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONINFO_CAMPUSINFO_CAMPUS" Association="Self.FK_ADMISSIONINFO_CAMPUSINFO_CAMPUS">
+      <End Role="CAMPUSINFO" EntitySet="CAMPUSINFO" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONINFO_GuardianDISTRICTDID" Association="Self.FK_ADMISSIONINFO_GuardianDISTRICTDID">
+      <End Role="DISTRICT" EntitySet="DISTRICT" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONINFO_PermanentDISTRICTID" Association="Self.FK_ADMISSIONINFO_PermanentDISTRICTID">
+      <End Role="DISTRICT" EntitySet="DISTRICT" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONINFO_PermanentPostId" Association="Self.FK_ADMISSIONINFO_PermanentPostId">
+      <End Role="POST" EntitySet="POST" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONINFO_PermanentThanaId" Association="Self.FK_ADMISSIONINFO_PermanentThanaId">
+      <End Role="THANA" EntitySet="THANA" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONINFO_POST" Association="Self.FK_ADMISSIONINFO_POST">
+      <End Role="POST" EntitySet="POST" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONINFO_PresentDISTRICTId" Association="Self.FK_ADMISSIONINFO_PresentDISTRICTId">
+      <End Role="DISTRICT" EntitySet="DISTRICT" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONINFO_PresentPostId" Association="Self.FK_ADMISSIONINFO_PresentPostId">
+      <End Role="POST" EntitySet="POST" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONINFO_PresentThanaId" Association="Self.FK_ADMISSIONINFO_PresentThanaId">
+      <End Role="THANA" EntitySet="THANA" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONINFO_RELIGION" Association="Self.FK_ADMISSIONINFO_RELIGION">
+      <End Role="RELIGION" EntitySet="RELIGION" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONINFO_SEMESTER" Association="Self.FK_ADMISSIONINFO_SEMESTER">
+      <End Role="SEMESTER" EntitySet="SEMESTER" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONINFO_SIPI_PROGRAM" Association="Self.FK_ADMISSIONINFO_SIPI_PROGRAM">
+      <End Role="SIPI_PROGRAM" EntitySet="SIPI_PROGRAM" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONINFO_SIPIDEPARTMENT" Association="Self.FK_ADMISSIONINFO_SIPIDEPARTMENT">
+      <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONINFO_THANA" Association="Self.FK_ADMISSIONINFO_THANA">
+      <End Role="THANA" EntitySet="THANA" />
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMISSIONOFFICE_CAMPUSINFO" Association="Self.FK_ADMISSIONOFFICE_CAMPUSINFO">
+      <End Role="CAMPUSINFO" EntitySet="CAMPUSINFO" />
+      <End Role="ADMISSIONOFFICE" EntitySet="ADMISSIONOFFICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BALANCE_SHEET_CONFIGURE_CHART_ACCOUNT" Association="Self.FK_BALANCE_SHEET_CONFIGURE_CHART_ACCOUNT">
+      <End Role="CHART_ACCOUNT" EntitySet="CHART_ACCOUNT" />
+      <End Role="BALANCE_SHEET_CONFIGURE" EntitySet="BALANCE_SHEET_CONFIGURE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BOOK_ISSUE_ADMISSIONINFO" Association="Self.FK_BOOK_ISSUE_ADMISSIONINFO">
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+      <End Role="BOOK_ISSUE" EntitySet="BOOK_ISSUE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BOOK_ISSUE_BOOKS_DETAILS" Association="Self.FK_BOOK_ISSUE_BOOKS_DETAILS">
+      <End Role="BOOKS_DETAILS" EntitySet="BOOKS_DETAILS" />
+      <End Role="BOOK_ISSUE" EntitySet="BOOK_ISSUE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BOOKS_DETAILS_SIPI_DEPARTMENT" Association="Self.FK_BOOKS_DETAILS_SIPI_DEPARTMENT">
+      <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+      <End Role="BOOKS_DETAILS" EntitySet="BOOKS_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BOOKS_DETAILS_SIPI_PROGRAM" Association="Self.FK_BOOKS_DETAILS_SIPI_PROGRAM">
+      <End Role="SIPI_PROGRAM" EntitySet="SIPI_PROGRAM" />
+      <End Role="BOOKS_DETAILS" EntitySet="BOOKS_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COURSE_ASSIGN_TO_STUDENT_ADMISSIONINFO" Association="Self.FK_COURSE_ASSIGN_TO_STUDENT_ADMISSIONINFO">
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+      <End Role="COURSE_ASSIGN_TO_STUDENT" EntitySet="COURSE_ASSIGN_TO_STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COURSE_ASSIGN_TO_STUDENT_COURSE" Association="Self.FK_COURSE_ASSIGN_TO_STUDENT_COURSE">
+      <End Role="COURSE" EntitySet="COURSE" />
+      <End Role="COURSE_ASSIGN_TO_STUDENT" EntitySet="COURSE_ASSIGN_TO_STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COURSE_ASSIGN_TO_STUDENT_SEMESTER" Association="Self.FK_COURSE_ASSIGN_TO_STUDENT_SEMESTER">
+      <End Role="SEMESTER" EntitySet="SEMESTER" />
+      <End Role="COURSE_ASSIGN_TO_STUDENT" EntitySet="COURSE_ASSIGN_TO_STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COURSE_ASSIGN_TO_STUDENT_SIPI_DEPARTMENT" Association="Self.FK_COURSE_ASSIGN_TO_STUDENT_SIPI_DEPARTMENT">
+      <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+      <End Role="COURSE_ASSIGN_TO_STUDENT" EntitySet="COURSE_ASSIGN_TO_STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COURSE_PROGRAM" Association="Self.FK_COURSE_PROGRAM">
+      <End Role="SIPI_PROGRAM" EntitySet="SIPI_PROGRAM" />
+      <End Role="COURSE" EntitySet="COURSE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COURSE_SEMESTER" Association="Self.FK_COURSE_SEMESTER">
+      <End Role="SEMESTER" EntitySet="SEMESTER" />
+      <End Role="COURSE" EntitySet="COURSE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COURSE_SIPI_DEPARTMENT" Association="Self.FK_COURSE_SIPI_DEPARTMENT">
+      <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+      <End Role="COURSE" EntitySet="COURSE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_CLASSPERIOD" Association="Self.FK_CREATE_ROUTINE_CLASSPERIOD">
+      <End Role="CLASSPERIOD" EntitySet="CLASSPERIOD" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_CLASSPERIOD1" Association="Self.FK_CREATE_ROUTINE_CLASSPERIOD1">
+      <End Role="CLASSPERIOD" EntitySet="CLASSPERIOD" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_CLASSPERIOD2" Association="Self.FK_CREATE_ROUTINE_CLASSPERIOD2">
+      <End Role="CLASSPERIOD" EntitySet="CLASSPERIOD" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_CLASSPERIOD3" Association="Self.FK_CREATE_ROUTINE_CLASSPERIOD3">
+      <End Role="CLASSPERIOD" EntitySet="CLASSPERIOD" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_CLASSPERIOD4" Association="Self.FK_CREATE_ROUTINE_CLASSPERIOD4">
+      <End Role="CLASSPERIOD" EntitySet="CLASSPERIOD" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_CLASSPERIOD5" Association="Self.FK_CREATE_ROUTINE_CLASSPERIOD5">
+      <End Role="CLASSPERIOD" EntitySet="CLASSPERIOD" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_CLASSPERIOD6" Association="Self.FK_CREATE_ROUTINE_CLASSPERIOD6">
+      <End Role="CLASSPERIOD" EntitySet="CLASSPERIOD" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_CLASSPERIOD7" Association="Self.FK_CREATE_ROUTINE_CLASSPERIOD7">
+      <End Role="CLASSPERIOD" EntitySet="CLASSPERIOD" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_COURSE" Association="Self.FK_CREATE_ROUTINE_COURSE">
+      <End Role="COURSE" EntitySet="COURSE" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_COURSE1" Association="Self.FK_CREATE_ROUTINE_COURSE1">
+      <End Role="COURSE" EntitySet="COURSE" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_COURSE2" Association="Self.FK_CREATE_ROUTINE_COURSE2">
+      <End Role="COURSE" EntitySet="COURSE" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_COURSE3" Association="Self.FK_CREATE_ROUTINE_COURSE3">
+      <End Role="COURSE" EntitySet="COURSE" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_COURSE4" Association="Self.FK_CREATE_ROUTINE_COURSE4">
+      <End Role="COURSE" EntitySet="COURSE" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_COURSE5" Association="Self.FK_CREATE_ROUTINE_COURSE5">
+      <End Role="COURSE" EntitySet="COURSE" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_COURSE6" Association="Self.FK_CREATE_ROUTINE_COURSE6">
+      <End Role="COURSE" EntitySet="COURSE" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_COURSE7" Association="Self.FK_CREATE_ROUTINE_COURSE7">
+      <End Role="COURSE" EntitySet="COURSE" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_SEMESTER" Association="Self.FK_CREATE_ROUTINE_SEMESTER">
+      <End Role="SEMESTER" EntitySet="SEMESTER" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_SIPI_DEPARTMENT" Association="Self.FK_CREATE_ROUTINE_SIPI_DEPARTMENT">
+      <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_SIPI_PROGRAM" Association="Self.FK_CREATE_ROUTINE_SIPI_PROGRAM">
+      <End Role="SIPI_PROGRAM" EntitySet="SIPI_PROGRAM" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_TEACHER" Association="Self.FK_CREATE_ROUTINE_TEACHER">
+      <End Role="TEACHER" EntitySet="TEACHER" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_TEACHER1" Association="Self.FK_CREATE_ROUTINE_TEACHER1">
+      <End Role="TEACHER" EntitySet="TEACHER" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_TEACHER2" Association="Self.FK_CREATE_ROUTINE_TEACHER2">
+      <End Role="TEACHER" EntitySet="TEACHER" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_TEACHER3" Association="Self.FK_CREATE_ROUTINE_TEACHER3">
+      <End Role="TEACHER" EntitySet="TEACHER" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_TEACHER4" Association="Self.FK_CREATE_ROUTINE_TEACHER4">
+      <End Role="TEACHER" EntitySet="TEACHER" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_TEACHER5" Association="Self.FK_CREATE_ROUTINE_TEACHER5">
+      <End Role="TEACHER" EntitySet="TEACHER" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_TEACHER6" Association="Self.FK_CREATE_ROUTINE_TEACHER6">
+      <End Role="TEACHER" EntitySet="TEACHER" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREATE_ROUTINE_TEACHER7" Association="Self.FK_CREATE_ROUTINE_TEACHER7">
+      <End Role="TEACHER" EntitySet="TEACHER" />
+      <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CUSTOMER_EMPLOYEE_SETUP_CHART_ACCOUNT" Association="Self.FK_CUSTOMER_EMPLOYEE_SETUP_CHART_ACCOUNT">
+      <End Role="CHART_ACCOUNT" EntitySet="CHART_ACCOUNT" />
+      <End Role="CUSTOMER_EMPLOYEE_SETUP" EntitySet="CUSTOMER_EMPLOYEE_SETUP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DEPOSIT_PAYMENT_CHART_ACCOUNT" Association="Self.FK_DEPOSIT_PAYMENT_CHART_ACCOUNT">
+      <End Role="CHART_ACCOUNT" EntitySet="CHART_ACCOUNT" />
+      <End Role="DEPOSIT_PAYMENT" EntitySet="DEPOSIT_PAYMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DEPRICIATION_SETUP_CHART_ACCOUNT" Association="Self.FK_DEPRICIATION_SETUP_CHART_ACCOUNT">
+      <End Role="CHART_ACCOUNT" EntitySet="CHART_ACCOUNT" />
+      <End Role="DEPRICIATION_SETUP" EntitySet="DEPRICIATION_SETUP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FEESSETUP_CAMPUSINFO" Association="Self.FK_FEESSETUP_CAMPUSINFO">
+      <End Role="CAMPUSINFO" EntitySet="CAMPUSINFO" />
+      <End Role="FEESSETUP" EntitySet="FEESSETUP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FEESSETUP_SEMESTER" Association="Self.FK_FEESSETUP_SEMESTER">
+      <End Role="SEMESTER" EntitySet="SEMESTER" />
+      <End Role="FEESSETUP" EntitySet="FEESSETUP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FEESSETUP_SIPI_DEPARTMENT" Association="Self.FK_FEESSETUP_SIPI_DEPARTMENT">
+      <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+      <End Role="FEESSETUP" EntitySet="FEESSETUP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INCOME_SHEET_CONFIGURE_CHART_ACCOUNT" Association="Self.FK_INCOME_SHEET_CONFIGURE_CHART_ACCOUNT">
+      <End Role="CHART_ACCOUNT" EntitySet="CHART_ACCOUNT" />
+      <End Role="INCOME_SHEET_CONFIGURE" EntitySet="INCOME_SHEET_CONFIGURE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTORY_BRAND_CATEGORY_INVENTORY_BRAND_NAME" Association="Self.FK_INVENTORY_BRAND_CATEGORY_INVENTORY_BRAND_NAME">
+      <End Role="INVENTORY_BRAND_NAME" EntitySet="INVENTORY_BRAND_NAME" />
+      <End Role="INVENTORY_BRAND_CATEGORY" EntitySet="INVENTORY_BRAND_CATEGORY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY_INVENTORY_BRAND_CATEGORY" Association="Self.FK_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY_INVENTORY_BRAND_CATEGORY">
+      <End Role="INVENTORY_BRAND_CATEGORY" EntitySet="INVENTORY_BRAND_CATEGORY" />
+      <End Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" EntitySet="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY_INVENTORY_BRAND_NAME" Association="Self.FK_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY_INVENTORY_BRAND_NAME">
+      <End Role="INVENTORY_BRAND_NAME" EntitySet="INVENTORY_BRAND_NAME" />
+      <End Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" EntitySet="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY_INVENTORY_UNIT_TYPE" Association="Self.FK_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY_INVENTORY_UNIT_TYPE">
+      <End Role="INVENTORY_UNIT_TYPE" EntitySet="INVENTORY_UNIT_TYPE" />
+      <End Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" EntitySet="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTORY_PURCHAGE_DETAILS_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Association="Self.FK_INVENTORY_PURCHAGE_DETAILS_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+      <End Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" EntitySet="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" />
+      <End Role="INVENTORY_PURCHAGE_DETAILS" EntitySet="INVENTORY_PURCHAGE_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTORY_STOCK_OUT_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Association="Self.FK_INVENTORY_STOCK_OUT_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+      <End Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" EntitySet="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" />
+      <End Role="INVENTORY_STOCK_OUT" EntitySet="INVENTORY_STOCK_OUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTORY_STOCKOUT_DETAILS_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Association="Self.FK_INVENTORY_STOCKOUT_DETAILS_INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY">
+      <End Role="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" EntitySet="INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" />
+      <End Role="INVENTORY_STOCKOUT_DETAILS" EntitySet="INVENTORY_STOCKOUT_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JOURNAL_VOUCHAR_CHART_ACCOUNT" Association="Self.FK_JOURNAL_VOUCHAR_CHART_ACCOUNT">
+      <End Role="CHART_ACCOUNT" EntitySet="CHART_ACCOUNT" />
+      <End Role="JOURNAL_VOUCHAR" EntitySet="JOURNAL_VOUCHAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MEMBER_ACC_TYPE_CHART_ACCOUNT" Association="Self.FK_MEMBER_ACC_TYPE_CHART_ACCOUNT">
+      <End Role="CHART_ACCOUNT" EntitySet="CHART_ACCOUNT" />
+      <End Role="MEMBER_ACC_TYPE" EntitySet="MEMBER_ACC_TYPE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MEMBER_ASSIGN_CHART_ACCOUNT" Association="Self.FK_MEMBER_ASSIGN_CHART_ACCOUNT">
+      <End Role="CHART_ACCOUNT" EntitySet="CHART_ACCOUNT" />
+      <End Role="MEMBER_ASSIGN" EntitySet="MEMBER_ASSIGN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MODULE_PERMISSION_USER_GROUP" Association="Self.FK_MODULE_PERMISSION_USER_GROUP">
+      <End Role="USER_GROUP" EntitySet="USER_GROUP" />
+      <End Role="MODULE_PERMISSION" EntitySet="MODULE_PERMISSION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POST_DISTRICT" Association="Self.FK_POST_DISTRICT">
+      <End Role="DISTRICT" EntitySet="DISTRICT" />
+      <End Role="POST" EntitySet="POST" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POST_THANA" Association="Self.FK_POST_THANA">
+      <End Role="THANA" EntitySet="THANA" />
+      <End Role="POST" EntitySet="POST" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROGRAM_DEPARTMENT" Association="Self.FK_PROGRAM_DEPARTMENT">
+      <End Role="DEPARTMENT" EntitySet="DEPARTMENT" />
+      <End Role="PROGRAM" EntitySet="PROGRAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROLEWISE_MENU_MODULE_PERMISSION" Association="Self.FK_ROLEWISE_MENU_MODULE_PERMISSION">
+      <End Role="MODULE_PERMISSION" EntitySet="MODULE_PERMISSION" />
+      <End Role="ROLEWISE_MENU" EntitySet="ROLEWISE_MENU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROLEWISE_MENU_USER_GROUP" Association="Self.FK_ROLEWISE_MENU_USER_GROUP">
+      <End Role="USER_GROUP" EntitySet="USER_GROUP" />
+      <End Role="ROLEWISE_MENU" EntitySet="ROLEWISE_MENU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROUTINEGROUP_DEPARTMENT" Association="Self.FK_ROUTINEGROUP_DEPARTMENT">
+      <End Role="DEPARTMENT" EntitySet="DEPARTMENT" />
+      <End Role="ROUTINEGROUP" EntitySet="ROUTINEGROUP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROUTINEGROUP_PROGRAM" Association="Self.FK_ROUTINEGROUP_PROGRAM">
+      <End Role="PROGRAM" EntitySet="PROGRAM" />
+      <End Role="ROUTINEGROUP" EntitySet="ROUTINEGROUP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROUTINEGROUP_SEMESTER" Association="Self.FK_ROUTINEGROUP_SEMESTER">
+      <End Role="SEMESTER" EntitySet="SEMESTER" />
+      <End Role="ROUTINEGROUP" EntitySet="ROUTINEGROUP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SIPI_DEPARTMENT_SIPI_PROGRAM" Association="Self.FK_SIPI_DEPARTMENT_SIPI_PROGRAM">
+      <End Role="SIPI_PROGRAM" EntitySet="SIPI_PROGRAM" />
+      <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_ATTENDENCE_ADMISSIONINFO" Association="Self.FK_STUDENT_ATTENDENCE_ADMISSIONINFO">
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+      <End Role="STUDENT_ATTENDENCE" EntitySet="STUDENT_ATTENDENCE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_ATTENDENCE_CAMPUSINFO" Association="Self.FK_STUDENT_ATTENDENCE_CAMPUSINFO">
+      <End Role="CAMPUSINFO" EntitySet="CAMPUSINFO" />
+      <End Role="STUDENT_ATTENDENCE" EntitySet="STUDENT_ATTENDENCE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_ATTENDENCE_SEMESTER" Association="Self.FK_STUDENT_ATTENDENCE_SEMESTER">
+      <End Role="SEMESTER" EntitySet="SEMESTER" />
+      <End Role="STUDENT_ATTENDENCE" EntitySet="STUDENT_ATTENDENCE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_ATTENDENCE_SIPI_DEPARTMENT" Association="Self.FK_STUDENT_ATTENDENCE_SIPI_DEPARTMENT">
+      <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+      <End Role="STUDENT_ATTENDENCE" EntitySet="STUDENT_ATTENDENCE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_CURRENT_SEMESTER_STATUS_STUDENT_CURRENT_SEMESTER_STATUS" Association="Self.FK_STUDENT_CURRENT_SEMESTER_STATUS_STUDENT_CURRENT_SEMESTER_STATUS">
+      <End Role="SEMESTER" EntitySet="SEMESTER" />
+      <End Role="STUDENT_CURRENT_SEMESTER_STATUS" EntitySet="STUDENT_CURRENT_SEMESTER_STATUS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_RESULT_ADMISSIONINFO" Association="Self.FK_STUDENT_RESULT_ADMISSIONINFO">
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+      <End Role="STUDENT_RESULT" EntitySet="STUDENT_RESULT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_RESULT_COURSE" Association="Self.FK_STUDENT_RESULT_COURSE">
+      <End Role="COURSE" EntitySet="COURSE" />
+      <End Role="STUDENT_RESULT" EntitySet="STUDENT_RESULT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_RESULT_SEMESTER" Association="Self.FK_STUDENT_RESULT_SEMESTER">
+      <End Role="SEMESTER" EntitySet="SEMESTER" />
+      <End Role="STUDENT_RESULT" EntitySet="STUDENT_RESULT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_RESULT_SIPI_DEPARTMENT" Association="Self.FK_STUDENT_RESULT_SIPI_DEPARTMENT">
+      <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+      <End Role="STUDENT_RESULT" EntitySet="STUDENT_RESULT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENTFEES_FEESDETAILS" Association="Self.FK_STUDENTFEES_FEESDETAILS">
+      <End Role="FEESDETAILS" EntitySet="FEESDETAILS" />
+      <End Role="STUDENTFEES" EntitySet="STUDENTFEES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENTFEESCOLLECTION_ADMISSIONINFO" Association="Self.FK_STUDENTFEESCOLLECTION_ADMISSIONINFO">
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+      <End Role="STUDENTFEESCOLLECTION" EntitySet="STUDENTFEESCOLLECTION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENTFEESCOLLECTION_SEMESTER" Association="Self.FK_STUDENTFEESCOLLECTION_SEMESTER">
+      <End Role="SEMESTER" EntitySet="SEMESTER" />
+      <End Role="STUDENTFEESCOLLECTION" EntitySet="STUDENTFEESCOLLECTION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TEACHER_CAMPUSINFO" Association="Self.FK_TEACHER_CAMPUSINFO">
+      <End Role="CAMPUSINFO" EntitySet="CAMPUSINFO" />
+      <End Role="TEACHER" EntitySet="TEACHER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TEACHER_SIPI_DEPARTMENT" Association="Self.FK_TEACHER_SIPI_DEPARTMENT">
+      <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+      <End Role="TEACHER" EntitySet="TEACHER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_THANA_DISTRICT" Association="Self.FK_THANA_DISTRICT">
+      <End Role="DISTRICT" EntitySet="DISTRICT" />
+      <End Role="THANA" EntitySet="THANA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USER_USER_GROUP" Association="Self.FK_USER_USER_GROUP">
+      <End Role="USER_GROUP" EntitySet="USER_GROUP" />
+      <End Role="USER" EntitySet="USER" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,55 @@
+﻿<Window x:Class="SIPI_SL.UI.Admission.ReligionUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Department UI" Height="426" Width="525" Background="{StaticResource GrayWhite}" ShowInTaskbar="False" 
+        WindowStartupLocation="CenterScreen"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Religion Name" HorizontalAlignment="Left" Margin="47,73,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="170,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Name="religionNameTextBox"/>
+        
+        <GroupBox Header="GroupBox" HorizontalAlignment="Left" Margin="40,176,0,0" VerticalAlignment="Top" Height="184" Width="436">
+            <Grid HorizontalAlignment="Left" Height="162" VerticalAlignment="Top" Width="426" Margin="0,0,-2,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="211*"/>
+                </Grid.ColumnDefinitions>
+
+                <ListView Height="156" 
+                        HorizontalAlignment="Left"
+                        Margin="2.269,6,0,0" 
+                        Name="ReligionlistView" 
+                        VerticalAlignment="Top" 
+                        Width="400" Grid.Column="1"
+                          ItemContainerStyle="{StaticResource alternatingListViewItemStyle}" AlternationCount="2">
+                    <ListView.ContextMenu>
+                        <ContextMenu Name="ZoneIformationList" StaysOpen="true" Background="WhiteSmoke">
+                            <ContextMenu.BitmapEffect>
+                                <BitmapEffectGroup/>
+                            </ContextMenu.BitmapEffect>
+                            <MenuItem Header="Edit" Name="EditDepartmentContextMenu"   Click="EditReligionContextMenu_Click_1" />
+                            <MenuItem Header="Remove" Name="RemoveDepartmentContextMenu"  Click="RemoveReligionContextMenu_Click_1"  />
+                        </ContextMenu>
+                    </ListView.ContextMenu>
+                    <ListView.View>
+                        <GridView AllowsColumnReorder="True">
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Id}" Header="" Width="0"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=ReligionName}" Header="Religion Name" Width="200"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=BanglaReligionName}" Header="Religion Bangla" Width="200"/>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </GroupBox>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="323,149,0,0" VerticalAlignment="Top" Width="75" Name="submitButton" Click="submitButton_Click" Height="22"/>
+        <Label Content="ReligionIn Bangla" HorizontalAlignment="Left" Margin="47,111,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="170,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="BanglaReligionTextBox"/>
+
+    </Grid>
+</Window>
+

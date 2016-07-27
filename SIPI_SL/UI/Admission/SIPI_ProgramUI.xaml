@@ -1,0 +1,57 @@
+﻿<Window x:Class="SIPI_SL.UI.Admission.SIPI_ProgramUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Program UI" Height="414.208" Width="583.962" Background="{StaticResource GrayWhite}" ShowInTaskbar="False"  WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Program Nme" HorizontalAlignment="Left" Margin="47,73,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="186,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Name="SipiProgramNameTextBox"/>
+        <Label Content="Duration Time" HorizontalAlignment="Left" Margin="47,102,0,0" VerticalAlignment="Top" Height="26" Width="105"/>
+        <Label Content="Year" HorizontalAlignment="Left" Margin="318,103,0,0" VerticalAlignment="Top" Height="26" Width="45"/>
+
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="186,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Name="SipiProgramTimeTextBox"/>
+        <GroupBox Header="GroupBox" HorizontalAlignment="Left" Margin="40,176,0,0" VerticalAlignment="Top" Height="197" Width="464">
+            <Grid HorizontalAlignment="Left" Height="162" VerticalAlignment="Top" Width="426" Margin="0,0,-2,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="211*"/>
+                </Grid.ColumnDefinitions>
+
+                <ListView Height="156" 
+                        HorizontalAlignment="Left"
+                        Margin="2,6,-12,0" 
+                        Name="sIPI_programlistView" 
+                        VerticalAlignment="Top" 
+                        Width="432" Grid.Column="1" 
+                        ItemContainerStyle="{StaticResource alternatingListViewItemStyle}" AlternationCount="2">
+                    <ListView.ContextMenu>
+                        <ContextMenu Name="ZoneIformationList" StaysOpen="true" Background="WhiteSmoke">
+                            <ContextMenu.BitmapEffect>
+                                <BitmapEffectGroup/>
+                            </ContextMenu.BitmapEffect>
+                            <MenuItem Header="Edit" Name="EditDepartmentContextMenu"  Click="EditSipiProgramContextMenu_Click_1" />
+                            <MenuItem Header="Remove" Name="RemoveDepartmentContextMenu" Click="RemoveSipiProgramContextMenu_Click_1"  />
+                        </ContextMenu>
+                    </ListView.ContextMenu>
+                    <ListView.View>
+                        <GridView AllowsColumnReorder="True">
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Id}" Header="" Width="0"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=SIPI_ProgramName}" Header="Program Name" Width="200"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=SIPI_ProgramTime}" Header="Duration Time" Width="100"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=BanglaSIPI_ProgramName}" Header="Bangla Program Name" Width="100"/>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </GroupBox>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="395,150,0,0" VerticalAlignment="Top" Width="75" Name="submitButton" Click="submitButton_Click" Height="22"/>
+        <Label Content="Program In Bangla" HorizontalAlignment="Left" Margin="47,128,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="186,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="banglaSipiProgramTextBox"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="311,149,0,0" VerticalAlignment="Top" Width="75" x:Name="clearButton"  Height="22" Click="clearButton_Click"/>
+
+    </Grid>
+</Window>
+

@@ -1,0 +1,35 @@
+﻿<Window x:Class="SIPI_SL.UI.Fees.FeesDetailsUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Setup Fees" Height="373.846" Width="423.495"  ShowInTaskbar="False" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="{StaticResource GrayWhite}">
+    <Grid Margin="0,0,2,0">
+
+        <Label Content="Name" HorizontalAlignment="Left" Margin="19,42,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="86,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="feesNameTextBox"/>
+        <ListView 
+                  Height="175" 
+                  Margin="34,86,0,0" 
+                  VerticalAlignment="Top"
+                  Name="feesDetailsListView" HorizontalAlignment="Left" Width="358"  
+            ItemContainerStyle="{StaticResource alternatingListViewItemStyle}" AlternationCount="2">
+            <ListView.ContextMenu>
+                <ContextMenu Name="lstClassPeriod" StaysOpen="True" Background="WhiteSmoke">
+                    <ContextMenu.BitmapEffect>
+                        <BitmapEffectGroup/>
+                    </ContextMenu.BitmapEffect>
+                    <!--<MenuItem Header="Edit" Name="EditProgramContexMenu" Click="EditProgramContextMenu_Click"/>-->
+                    <MenuItem Header="Rmove" Name="RemoveProgramContexMenu" Click="RemoveFeesDetailsContextMenu_Click"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
+            <ListView.View>
+                <GridView AllowsColumnReorder="True">
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Id}" Header="" Width="0"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=FeesName}" Header="NAME" Width="260"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="225,42,0,0" VerticalAlignment="Top" Width="75" Height="23" Name="saveButton" Click="saveButton_Click"/>
+
+    </Grid>
+</Window>

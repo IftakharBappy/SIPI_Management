@@ -1,0 +1,146 @@
+﻿<Window x:Class="SIPI_SL.UI.StudentManagement.CourseUI"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       Title="Course UI" Height="577.776" Width="930" Background="{StaticResource GrayWhite}" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Course Name" HorizontalAlignment="Left" Margin="24,97,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Name="courseNameTextBox">
+
+        </TextBox>
+
+        <GroupBox Header="All Courses" HorizontalAlignment="Left" Margin="2,218,0,0" VerticalAlignment="Top" Height="319" Width="912">
+            <Grid HorizontalAlignment="Left" Width="902" Margin="0,0,-2,-12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="211*"/>
+                </Grid.ColumnDefinitions>
+
+                <ListView
+                        Margin="2,6,0,-177" 
+                        Name="courselistView" Grid.Column="1" HorizontalAlignment="Left" Width="882" 
+                          ItemContainerStyle="{StaticResource alternatingListViewItemStyle}" Height="285" VerticalAlignment="Top" >
+                    <ListView.ContextMenu>
+                        <ContextMenu Name="ZoneIformationList" StaysOpen="true" Background="WhiteSmoke">
+                            <ContextMenu.BitmapEffect>
+                                <BitmapEffectGroup/>
+                            </ContextMenu.BitmapEffect>
+                            <MenuItem Header="Edit" Name="EditThanaContextMenu" Click="EditCourseContextMenu_Click"  />
+                            <MenuItem Header="Remove" Name="RemoveThanaContextMenu" Click="RemoveCourseContextMenu_Click" />
+                        </ContextMenu>
+                    </ListView.ContextMenu>
+                    <ListView.View>
+                        <GridView AllowsColumnReorder="True">
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Id}" Header="" Width="0"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=ProgramName}" Header="Program Name" Width="100"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=DepartmentName}" Header="Department Name" Width="100"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=SemesterNo}" Header="semester" Width="100"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=CourseName}" Header="Course Name" Width="100"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=BanglaCourseName}" Header="Bangla Course" Width="100"/>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </GroupBox>
+        <Label Content="Department Name" HorizontalAlignment="Left" Margin="374,10,0,0" VerticalAlignment="Top" Height="26" Width="111"/>
+        <ComboBox HorizontalAlignment="Left" Margin="490,10,0,0" VerticalAlignment="Top" Width="273" x:Name="departmentNameCombobax" Style="{StaticResource ComboBoxBGYellowGreen}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding SIPI_DepartmentName}" Width="240"/>
+                        <TextBlock Text="||"/>
+                        <TextBlock Text="{Binding Regulation}" Width="30"/>
+
+
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Label Content="Program Name" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
+        <ComboBox HorizontalAlignment="Left" Margin="131,12,0,0" VerticalAlignment="Top" Width="238" x:Name="programNameCombobax" Style="{StaticResource ComboBoxBGYellowGreen}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding SIPI_ProgramName}" Width="130"/>
+
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Label Content="Semester" HorizontalAlignment="Left" Margin="768,8,0,0" VerticalAlignment="Top" Height="26" Width="65"/>
+        <ComboBox HorizontalAlignment="Left" Margin="838,10,0,0" VerticalAlignment="Top" Width="74" x:Name="semesterCombobax" Style="{StaticResource ComboBoxBGYellowGreen}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding SemesterNo}" Width="60"/>
+
+
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Label Content="Bangla Course Name" HorizontalAlignment="Left" Margin="131,97,0,0" VerticalAlignment="Top" Height="26" Width="126"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="135,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="banglaCourseNameTextBox"/>
+
+        <Label Content="Code" HorizontalAlignment="Left" Margin="277,97,0,0" VerticalAlignment="Top" Height="26" Width="45"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="260,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="76" Name="courseCodeTextBox" />
+
+        <GroupBox Header="" HorizontalAlignment="Left" Margin="343,50,0,0" VerticalAlignment="Top" Height="130" Width="569">
+            <Grid>
+                <GroupBox Header="Credit Info" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="88" Width="182">
+                    <Grid Margin="0,0,-2,0">
+                        <Label Content="Theory" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="26" Width="53"/>
+                        <TextBox TextChanged="theoryCreditTextBox_TextChanged" HorizontalAlignment="Left" Height="23" Margin="0,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53" Name="theoryCreditTextBox"/>
+                        <Label Content="Prectical" HorizontalAlignment="Left" Margin="58,10,0,0" VerticalAlignment="Top" Height="26" Width="53"/>
+                        <TextBox TextChanged="precticalCreditTextBox_TextChanged" HorizontalAlignment="Left" Height="23" Margin="58,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53" Name="precticalCreditTextBox"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="116,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53" Name="TotalCreditTextBox"/>
+
+                        <Label Content="Credit" HorizontalAlignment="Left" Margin="116,10,0,0" VerticalAlignment="Top" Height="26" Width="53"/>
+
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="Marks Info" HorizontalAlignment="Left" Margin="197,0,0,0" VerticalAlignment="Top" Height="108" Width="360">
+                    <Grid Margin="0,0,-2,0">
+                        <GroupBox Header="Theory" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="86" Width="147">
+                            <Grid Margin="0,-9,-11,-12" Height="85" VerticalAlignment="Top" HorizontalAlignment="Left" Width="146">
+                                <Label Content="Cont." HorizontalAlignment="Left" Margin="17,5,0,0" VerticalAlignment="Top" Height="25" Width="43"/>
+                                <Label Content="Assessment" HorizontalAlignment="Left" Margin="0,16,0,0" VerticalAlignment="Top" Height="24" Width="99"/>
+
+                                <Label Content="Final" HorizontalAlignment="Left" Margin="89,6,0,0" VerticalAlignment="Top" Height="24" Width="73"/>
+                                <Label Content="Exam" HorizontalAlignment="Left" Margin="89,17,0,0" VerticalAlignment="Top" Height="24" Width="73"/>
+
+                                <TextBox TextChanged="theoryMarkasContinuousAssessmentTextbox_TextChanged" HorizontalAlignment="Left" Height="23" Margin="10,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53" Name="theoryMarkasContinuousAssessmentTextbox" />
+                                <TextBox TextChanged="theoryMarkasFinalExamTextBox_TextChanged" HorizontalAlignment="Left" Height="23" Margin="80,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53" Name="theoryMarkasFinalExamTextBox"/>
+
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Prectical" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="86" Width="147" Margin="152,0,0,0">
+                            <Grid Margin="0,-9,-11,-12" Height="85" VerticalAlignment="Top" HorizontalAlignment="Left" Width="146">
+                                <Label Content="Cont." HorizontalAlignment="Left" Margin="17,5,0,0" VerticalAlignment="Top" Height="25" Width="43"/>
+                                <Label Content="Assessment" HorizontalAlignment="Left" Margin="0,16,0,0" VerticalAlignment="Top" Height="24" Width="75"/>
+
+                                <Label Content="Final" HorizontalAlignment="Left" Margin="89,6,0,0" VerticalAlignment="Top" Height="24" Width="73"/>
+                                <Label Content="Exam" HorizontalAlignment="Left" Margin="89,17,0,0" VerticalAlignment="Top" Height="24" Width="47"/>
+
+                                <TextBox TextChanged="PracticalMarkasContinuousAssessmentTextBox_TextChanged" HorizontalAlignment="Left" Height="23" Margin="10,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53" Name="PracticalMarkasContinuousAssessmentTextBox"  />
+                                <TextBox TextChanged="PracticalMarkasFinalExamTextBox_TextChanged" HorizontalAlignment="Left" Height="23" Margin="80,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53" Name="PracticalMarkasFinalExamTextBox"/>
+                            </Grid>
+
+                        </GroupBox>
+                        <Label Content="Total" HorizontalAlignment="Left" Margin="306,18,0,0" VerticalAlignment="Top" Height="24" Width="36"/>
+                        <TextBox HorizontalAlignment="Left" Height="25" Margin="303,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="46" Name="totalMarksTextbox"/>
+
+                    </Grid>
+                </GroupBox>
+
+            </Grid>
+        </GroupBox>
+
+        <Button Content="Save" HorizontalAlignment="Left" Margin="837,191,0,0" VerticalAlignment="Top" Width="75" Name="submitButton" Height="22" Click="SubmitButton_OnClick"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="745,191,0,0" VerticalAlignment="Top" Width="75" x:Name="clearButton" Height="22" Click="clearButton_Click"/>
+    </Grid>
+</Window>

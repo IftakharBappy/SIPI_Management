@@ -1,0 +1,62 @@
+﻿<Window x:Class="SIPI_SL.UI.ScholarshipManagement.OtherScholarshipScoreUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OtherScholarshipScoreUI" Height="555.294" Width="894" WindowStartupLocation="CenterScreen"  Background="{StaticResource GrayWhite}" ShowInTaskbar="False">
+    <Grid>
+        <Label FontWeight="Bold" Content="Scholarship Title" HorizontalAlignment="Left" Margin="367,11,0,0" VerticalAlignment="Top" Width="144"/>
+        <TextBox HorizontalAlignment="Left" Height="27" Margin="480,10,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="396" x:Name="nameTextBox_Copy"/>
+        <GroupBox Header="Student Info" HorizontalAlignment="Left" Margin="20,37,0,0" VerticalAlignment="Top" Width="856" Height="125">
+            <Grid>
+                <Label Content="Name" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" Width="86"/>
+                <TextBox HorizontalAlignment="Left" Height="27" Margin="101,28,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="243" Name="nameTextBox"/>
+
+                <Label Content="Department" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" Width="86"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="101,56,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="243"  Name="DepartmentTextBox"/>
+
+                <Label Content="ID" HorizontalAlignment="Left" Margin="377,27,0,0" VerticalAlignment="Top" Width="120" Height="24"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="502,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Name="studentIdTextBox"/>
+                <Button Content="Get Student" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="83" Height="24" Name="getStudentPopupButton"/>
+                <Label Content="Program" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="86"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="101,81,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="243"  x:Name="DepartmentTextBox_Copy"/>
+                <Label Content="Current semester" HorizontalAlignment="Left" Margin="377,51,0,0" VerticalAlignment="Top" Width="120" Height="24"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="502,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" x:Name="studentIdTextBox_Copy"/>
+                <Label Content="Date" HorizontalAlignment="Left" Margin="377,75,0,0" VerticalAlignment="Top" Width="120" Height="24"/>
+                <DatePicker HorizontalAlignment="Left" Margin="502,76,0,0" VerticalAlignment="Top" Width="222"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Details Articles" HorizontalAlignment="Left" Margin="20,167,0,0" VerticalAlignment="Top" Height="206" Width="856">
+            <Grid>
+                <Label FontWeight="Bold" Content="To," HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+                <Label FontWeight="Bold" Content="The" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top"/>
+
+                <TextBox HorizontalAlignment="Left" Height="29" Margin="62,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218"/>
+
+                <Label FontWeight="Bold" Content="Subject:" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="29" Margin="62,51,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="612"/>
+                <Label FontWeight="Bold" Content="Sir," HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Height="90" Margin="10,93,0,0" Text="" VerticalAlignment="Top" Width="824"/>
+
+            </Grid>
+        </GroupBox>
+        <Button Content="Assign"  HorizontalAlignment="Left" Margin="777,485,0,0" VerticalAlignment="Top" Width="99" Height="29"/>
+        <GroupBox Header="Office" HorizontalAlignment="Left" Margin="20,374,0,0" VerticalAlignment="Top" Width="856" Height="106">
+            <Grid>
+                <Label Content="Description " HorizontalAlignment="Left" Margin="9,21,0,0" VerticalAlignment="Top" Width="86"/>
+                <TextBox HorizontalAlignment="Left" Height="64" Margin="80,10,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="288" />
+                <Label Content="Score " HorizontalAlignment="Left" Margin="368,13,0,0" VerticalAlignment="Top" Width="86"/>
+                <TextBox HorizontalAlignment="Left" Height="29" Margin="454,13,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="180" />
+                <Label Content="Price Amount " HorizontalAlignment="Left" Margin="368,42,0,0" VerticalAlignment="Top" Width="86"/>
+                <TextBox HorizontalAlignment="Left" Height="29" Margin="454,42,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="180" />
+                <Label Content="Duration " HorizontalAlignment="Left" Margin="639,13,0,0" VerticalAlignment="Top" Width="57"/>
+                <TextBox HorizontalAlignment="Left" Height="29" Margin="696,13,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="130" />
+                <Label Content="Date " HorizontalAlignment="Left" Margin="639,42,0,0" VerticalAlignment="Top" Width="57"/>
+                <DatePicker HorizontalAlignment="Left" Margin="696,43,0,0" VerticalAlignment="Top" Width="130"/>
+
+            </Grid>
+
+        </GroupBox>
+
+
+    </Grid>
+</Window>

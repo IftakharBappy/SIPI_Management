@@ -1,0 +1,1970 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--=====================================================================================
+      [[[[[[Gray and Yellow Color Combination]]]]]           Button OnLoad Design View
+     =====================================================================================-->
+
+    
+
+    <!--=====================================================================================
+      [[[[[[Gray and Yellow Color Combination]]]]]           Button OnLoad Design View
+     =====================================================================================-->
+
+   
+
+    <!--=====================================================================================
+      [[[[[[Gray and Yellow Color Combination]]]]]           Button OnLoad Design View
+     =====================================================================================-->
+
+    <Style x:Key="SecurityStyle" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="55"></Setter>
+        <Setter Property="Height" Value="55"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/security.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Security</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="LightGreen" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="LightGreen" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--=====================================================================================
+      [[[[[[Gray and Yellow Color Combination]]]]]           Button OnLoad Design View
+     =====================================================================================-->
+
+    <Style x:Key="AdminToolsStyle" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="55"></Setter>
+        <Setter Property="Height" Value="55"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/course.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Course Management</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="LightGreen" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="LightGreen" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!--=====================================================================================
+      [[[[[[Gray and Yellow Color Combination]]]]]           Button OnLoad Design View
+     =====================================================================================-->
+
+    <Style x:Key="LogoutStyle" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="55"></Setter>
+        <Setter Property="Height" Value="55"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/logout.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Logout</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="LightGreen" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="LightGreen" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    
+    
+    
+    
+    
+    <!--////// Scholarship//////////-->
+
+    <Style x:Key="Scholarship" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="55"></Setter>
+        <Setter Property="Height" Value="55"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/scholarship.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Scholarship</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="LightGreen" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="LightGreen" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+    <!--////// Job//////////-->
+
+    <Style x:Key="Job" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="55"></Setter>
+        <Setter Property="Height" Value="55"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/job.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Job Placement</TextBlock>
+                        </StackPanel>
+
+                        
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="LightGreen" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="LightGreen" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+
+
+
+    <!--=====================================================================================
+      [[[[[[Gray and Yellow Color Combination]]]]]           Button OnLoad Design View
+     =====================================================================================-->
+<!--prescription creation-->
+<Style x:Key=" PrescriptionCreation" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="55"></Setter>
+        <Setter Property="Height" Value="55"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/receivable-invoice-creation.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Account Management</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--New Patient Entry-->
+    <Style x:Key="_MainMenuAddCustomer" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/add-customer.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Admission</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Capture Image Camera-->
+ 
+    <Style x:Key="MainCaptureImage" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/result.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Result Management</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!--Patient History-->
+    <Style x:Key="MainHistory" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/attendence.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Attendence System</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Loing Go-->
+    
+    <Style x:Key="LoginGo" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/Go.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="14">Go</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!--Exit-->
+    <Style x:Key="Exit" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/exit.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="14">Go</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!--Patient Search-->
+    <Style x:Key="Search" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/payroll-tools.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="14">HR/Payroll</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!--SMS-->
+    <Style x:Key="smsMenue" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/Go.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="14">SMS</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--End-->
+    <!--Reporting-->
+    <Style x:Key="Report" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/Task Report Hot.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="14">Report</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Surgery-->
+    <Style x:Key="Surgery" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/studentsmanagement.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="14">Student Management</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+<!--Kayes book list-->
+    <Style x:Key="_bookList" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/BookList.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Book List</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+<!--Book list-->
+<!--book Insert-->
+    <Style x:Key="_bookInsert" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/result.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Insert Books</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+<!--end-->
+    <!--book Status-->
+    <Style x:Key="_bookStatus" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/SIPI_3.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Book Status</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--end-->
+    <!--book Issue-->
+    <Style x:Key="_bookIssue" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/book_Issue.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Book Issue</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--end-->
+    <!--book Receive-->
+    <Style x:Key="_bookReceive" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/book_Receive.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Book Receive</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--book Repost-->
+    <Style x:Key="_bookRepostPrint" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/bookInsert.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Report</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!--Search Button-->
+    <Style x:Key="SearchButton" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/SearchPatient.png" Margin="5,0,0,2"></Image>
+                            <TextBlock FontFamily="Verdana" Foreground="Black" FontSize="13" Margin=" 0,20,10,5">Search</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFEAF76F" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kayes-->
+
+    <!--=====================================================================================
+      [[[[[[Gray and Yellow Color Combination]]]]]           Button OnLoad Design View
+     =====================================================================================-->
+
+    <Style x:Key="Library" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="55"></Setter>
+        <Setter Property="Height" Value="55"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/course.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Library Management</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="LightGreen" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="LightGreen" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Inventory-->
+    <Style x:Key="Inventory" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="55"></Setter>
+        <Setter Property="Height" Value="55"></Setter>
+        <Setter Property="Margin" Value="0,0,0,0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.999,0.268" StartPoint="0.081,0.281" Opacity="0.465">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.978"/>
+                    <GradientStop Color="#FFD4D4D4" Offset="0.673"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="ImageBorder" Padding="1" BorderThickness="1" CornerRadius="5" BorderBrush="#FF64B815" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image HorizontalAlignment="Center" Source="/Resources\images/course.png" Margin="5,0,0,2"></Image>
+                            <TextBlock Margin="5,35,10,0" FontFamily="Verdana" Foreground="Black" FontSize="13">Inventory Management</TextBlock>
+                        </StackPanel>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <!--=====================================================================================
+                                  Button MouseOver Design View
+    =====================================================================================-->
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+
+                                <Setter.Value>
+
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="LightGreen" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+
+                                </Setter.Value>
+
+
+                            </Setter>
+
+
+                        </Trigger>
+                        <!--=====================================================================================
+                                  Button Mouse Pressed Design View
+     =====================================================================================-->
+                        <Trigger Property="IsPressed" Value="True">
+
+                            <Setter TargetName="ImageBorder" Property="BorderBrush" Value="#FF64B815" />
+
+                            <Setter TargetName="ImageBorder" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="LightGreen" Offset="0.598" />
+                                        <GradientStop Color="#FFF6F8F5" Offset="0.295" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+
+</ResourceDictionary>

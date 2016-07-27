@@ -1,0 +1,48 @@
+﻿<Window x:Class="SIPI_SL.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SplashWindow"
+    SizeToContent="WidthAndHeight"
+    ShowInTaskbar="False"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    AllowsTransparency="True"
+    Background="Transparent" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="236" d:DesignWidth="268">
+
+    <Grid>
+        <Border
+            CornerRadius="10"
+            BorderBrush="LightGray"
+            BorderThickness="1"
+            SnapsToDevicePixels="True"
+            Margin="0 0 10 10"
+            Background="#7D004C"
+            Padding="10">
+            <Border.Effect>
+                <DropShadowEffect
+                    Color="Gray"
+                    BlurRadius="10" />
+            </Border.Effect>
+            <StackPanel>
+                <Label
+                    Content="Shyamoli Ideal Politechnical Institute"
+                    Foreground="White"
+                    FontSize="14"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Margin="0 10 0 10" />
+                <Image Height="48" Name="image1" Stretch="Uniform" Width="84" Source="/SIPI_SL;component/Resources/images/4D-2s.png" Panel.ZIndex="0" />
+                <Label
+                    x:Name="lblProgress"
+                    Content="Loading..."
+                    Foreground="White"
+                    FontWeight="Bold" Margin="0 10 0 10" />
+                <ProgressBar
+                    Height="20"
+                    HorizontalAlignment="Stretch"
+                    IsIndeterminate="True" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

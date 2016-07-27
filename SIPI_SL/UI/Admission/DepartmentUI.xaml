@@ -1,0 +1,53 @@
+﻿<Window x:Class="SIPI_SL.UI.Admission.DepartmentUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Department UI" Height="426" Width="525" Background="{StaticResource GrayWhite}" ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Department Nme" HorizontalAlignment="Left" Margin="47,73,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="186,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Name="departmentNameTextBox"/>
+        <Label Content="Department Code" HorizontalAlignment="Left" Margin="47,111,0,0" VerticalAlignment="Top" Height="26" Width="105"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="186,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Name="departmentCodeTextBox"/>
+        <GroupBox Header="GroupBox" HorizontalAlignment="Left" Margin="40,176,0,0" VerticalAlignment="Top" Height="184" Width="436">
+            <Grid HorizontalAlignment="Left" Height="162" VerticalAlignment="Top" Width="426" Margin="0,0,-2,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="211*"/>
+                </Grid.ColumnDefinitions>
+
+                <ListView Height="156" 
+                        HorizontalAlignment="Left"
+                        Margin="12,6,0,0" 
+                        Name="departmentlistView" 
+                        VerticalAlignment="Top" 
+                        Width="400" Grid.Column="1" ItemContainerStyle="{StaticResource alternatingListViewItemStyle}" AlternationCount="2">
+                                <ListView.ContextMenu>
+                                        <ContextMenu Name="ZoneIformationList" StaysOpen="true" Background="WhiteSmoke">
+                                        <ContextMenu.BitmapEffect>
+                                        <BitmapEffectGroup/>
+                                         </ContextMenu.BitmapEffect>
+                                                <MenuItem Header="Edit" Name="EditDepartmentContextMenu"  Click="EditDepartmentContextMenu_Click_1" />
+                                                <MenuItem Header="Remove" Name="RemoveDepartmentContextMenu" Click="RemoveDepartmentContextMenu_Click_1"  />
+                                         </ContextMenu>
+                                </ListView.ContextMenu>
+                                <ListView.View>
+                                        <GridView AllowsColumnReorder="True">
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Id}" Header="" Width="0"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=DepartmentName}" Header="Department Name" Width="200"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=DepartmentCode}" Header="Code" Width="100"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=BanglaDepartment}" Header="Bangla Department Name" Width="100"/>
+
+                        </GridView>
+                                </ListView.View>
+                </ListView>
+            </Grid>
+        </GroupBox>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="348,150,0,0" VerticalAlignment="Top" Width="75" Name="submitButton" Click="submitButton_Click" Height="22"/>
+        <Label Content="Department In Bangla" HorizontalAlignment="Left" Margin="47,146,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="186,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="banglaDepartmentTextBox"/>
+
+    </Grid>
+</Window>

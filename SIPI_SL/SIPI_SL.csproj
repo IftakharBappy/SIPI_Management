@@ -1,0 +1,1104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A93D39CA-F86A-4C20-9A13-59A8B0374DD8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIPI_SL</RootNamespace>
+    <AssemblyName>SIPI_SL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SIPI_2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="sapbusinessobjects.wpf.viewer, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="SAPBusinessObjects.WPF.ViewerShared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFExtensions, Version=1.0.4225.28429, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\SIPI_SL\SIPI_SL\SIPI_SL\bin\Debug\WPFExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit.Extended, Version=1.4.0.2, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\SIPI_SL\SIPI_SL\SIPI_SL\bin\Debug\WPFToolkit.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.2.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.2.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.2.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.2.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.2.0\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.2.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="LoginUI.xaml.cs">
+      <DependentUpon>LoginUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CategoryModels.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportUtility.cs" />
+    <Compile Include="Report\Crystal\Admission\BanglaReportBoard.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BanglaReportBoard.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Crystal\Admission\report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Crystal\Admission\studentAdmissionCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studentAdmissionCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Crystal\AttendenceSystem\StudentAttendenceRepost.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentAttendenceRepost.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Crystal\CourseManagement\CourseReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Crystal\CourseManagement\DepartmentWiseRoutine.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DepartmentWiseRoutine.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Crystal\CourseManagement\RoutineRepost.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RoutineRepost.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Crystal\Fees\moneyReceiptCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>moneyReceiptCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Crystal\Fees\StudentRepotCrystalHistry.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentRepotCrystalHistry.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Crystal\Inventory\AlldetailsReport.cs">
+      <DependentUpon>AlldetailsReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\Crystal\Inventory\StockOutReport.cs">
+      <DependentUpon>StockOutReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\Crystal\Inventory\InventoryStockOut.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryStockOut.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Crystal\Inventory\PurchageEntryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurchageEntryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Crystal\ResultManagement\MarksSheetReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarksSheetReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Crystal\ResultManagement\ResultForBoard.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResultForBoard.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Entity\CourseR.cs" />
+    <Compile Include="Report\Entity\CreateRoutineR.cs" />
+    <Compile Include="Report\Entity\Fees\RstudentReportHistry.cs" />
+    <Compile Include="Report\Entity\Fees\StudentFeesReport.cs" />
+    <Compile Include="Report\Entity\Inventory\RInventoryPurchageEntry.cs" />
+    <Compile Include="Report\Entity\Inventory\RInventoryReporting.cs" />
+    <Compile Include="Report\Entity\Inventory\RInventoryStockOutER.cs" />
+    <Compile Include="Report\Entity\ResultManagement\StudentResultReport.cs" />
+    <Compile Include="Report\Entity\RStudentAttandence.cs" />
+    <Compile Include="Report\Entity\RStudentInfo.cs" />
+    <Compile Include="Report\Entity\StudentInfoForBoard.cs" />
+    <Compile Include="Report\UI\Admission\StudentAdmissionReport.xaml.cs">
+      <DependentUpon>StudentAdmissionReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\UI\AttendenceSystem\AttendenceSystemReport.xaml.cs">
+      <DependentUpon>AttendenceSystemReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\UI\CourseManagement\CourseReportUI.xaml.cs">
+      <DependentUpon>CourseReportUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\UI\ReportViewerUI.xaml.cs">
+      <DependentUpon>ReportViewerUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\UI\ResultManagement\ResultManagementReportUI.xaml.cs">
+      <DependentUpon>ResultManagementReportUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\UI\Routine\RoutineReposrt.xaml.cs">
+      <DependentUpon>RoutineReposrt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\UI\StudentFees\FeesCollectionHistoryUI.xaml.cs">
+      <DependentUpon>FeesCollectionHistoryUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SplashWindow.xaml.cs">
+      <DependentUpon>SplashWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TESTUI.xaml.cs">
+      <DependentUpon>TESTUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\AdmissionDashBoard.xaml.cs">
+      <DependentUpon>AdmissionDashBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\AdmissionOfficeUI.xaml.cs">
+      <DependentUpon>AdmissionOfficeUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\BatchUI.xaml.cs">
+      <DependentUpon>BatchUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\BloodGroupUI.xaml.cs">
+      <DependentUpon>BloodGroupUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\Campus.xaml.cs">
+      <DependentUpon>Campus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\DepartmentUI.xaml.cs">
+      <DependentUpon>DepartmentUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\DistrictUI.xaml.cs">
+      <DependentUpon>DistrictUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\MonthlyPayment.xaml.cs">
+      <DependentUpon>MonthlyPayment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\PostUI.xaml.cs">
+      <DependentUpon>PostUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\ProgramUI.xaml.cs">
+      <DependentUpon>ProgramUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\ReligionUI.xaml.cs">
+      <DependentUpon>ReligionUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\SIPI_DepartmentUI.xaml.cs">
+      <DependentUpon>SIPI_DepartmentUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\SIPI_ProgramUI.xaml.cs">
+      <DependentUpon>SIPI_ProgramUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\StudentAdmissionInformation.xaml.cs">
+      <DependentUpon>StudentAdmissionInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\StudentInfoViewUI.xaml.cs">
+      <DependentUpon>StudentInfoViewUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\ThanaUI.xaml.cs">
+      <DependentUpon>ThanaUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admission\ViewAllStudent.xaml.cs">
+      <DependentUpon>ViewAllStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AttendenceSystem\AttendenceSystemDashBoardUI.xaml.cs">
+      <DependentUpon>AttendenceSystemDashBoardUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AttendenceSystem\StudentAttendenceUI.xaml.cs">
+      <DependentUpon>StudentAttendenceUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Fees\AssignFeesToStudentUI.xaml.cs">
+      <DependentUpon>AssignFeesToStudentUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Fees\FeesCollectionUI.xaml.cs">
+      <DependentUpon>FeesCollectionUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Fees\FeesDashBoardUI.xaml.cs">
+      <DependentUpon>FeesDashBoardUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Fees\FeesDetailsUI.xaml.cs">
+      <DependentUpon>FeesDetailsUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Fees\FeesDiscountUI.xaml.cs">
+      <DependentUpon>FeesDiscountUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Fees\SetupUpFeesUI.xaml.cs">
+      <DependentUpon>SetupUpFeesUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Fees\StudentListUI.xaml.cs">
+      <DependentUpon>StudentListUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryManagement\BrandCategoryUI.xaml.cs">
+      <DependentUpon>BrandCategoryUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryManagement\BrandNameEntryUI.xaml.cs">
+      <DependentUpon>BrandNameEntryUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryManagement\InventoryListUI.xaml.cs">
+      <DependentUpon>InventoryListUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryManagement\InventoryManagementDashBoardUI.xaml.cs">
+      <DependentUpon>InventoryManagementDashBoardUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryManagement\InventoryReportUI.xaml.cs">
+      <DependentUpon>InventoryReportUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryManagement\ProductMasterEntry.xaml.cs">
+      <DependentUpon>ProductMasterEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryManagement\PurchaseEntryUI.xaml.cs">
+      <DependentUpon>PurchaseEntryUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryManagement\StockOutUI.xaml.cs">
+      <DependentUpon>StockOutUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryManagement\UnitTypeDetailsUI.xaml.cs">
+      <DependentUpon>UnitTypeDetailsUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LibraryManagement\BookEntry.xaml.cs">
+      <DependentUpon>BookEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LibraryManagement\BookIssue.xaml.cs">
+      <DependentUpon>BookIssue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LibraryManagement\BookPickerUI.xaml.cs">
+      <DependentUpon>BookPickerUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LibraryManagement\BookReturnUI.xaml.cs">
+      <DependentUpon>BookReturnUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LibraryManagement\LibraryMamagementDashBoardUI.xaml.cs">
+      <DependentUpon>LibraryMamagementDashBoardUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login\GroupSetupUI.xaml.cs">
+      <DependentUpon>GroupSetupUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login\MenuPermissionUI.xaml.cs">
+      <DependentUpon>MenuPermissionUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login\ModulePermissionUI.xaml.cs">
+      <DependentUpon>ModulePermissionUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login\SecurityDashBoardUI.xaml.cs">
+      <DependentUpon>SecurityDashBoardUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login\UserSetUpUI.xaml.cs">
+      <DependentUpon>UserSetUpUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PIS\CategoryEmployeeUI.xaml.cs">
+      <DependentUpon>CategoryEmployeeUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PIS\CategorySalaryUI.xaml.cs">
+      <DependentUpon>CategorySalaryUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PIS\CategoryUI.xaml.cs">
+      <DependentUpon>CategoryUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PIS\DepartmentUI.xaml.cs">
+      <DependentUpon>DepartmentUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PIS\EmployeeInfoUI.xaml.cs">
+      <DependentUpon>EmployeeInfoUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PIS\GradeUI.xaml.cs">
+      <DependentUpon>GradeUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PIS\PISDashBoardUI.xaml.cs">
+      <DependentUpon>PISDashBoardUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PIS\SectionUI.xaml.cs">
+      <DependentUpon>SectionUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ReportManager\ReportDashBoard.xaml.cs">
+      <DependentUpon>ReportDashBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ResultManagement\CourseAssignToStudentUI.xaml.cs">
+      <DependentUpon>CourseAssignToStudentUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ResultManagement\CourseAssignToTracherUI.xaml.cs">
+      <DependentUpon>CourseAssignToTracherUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ResultManagement\MarksDistributionToStudentUI.xaml.cs">
+      <DependentUpon>MarksDistributionToStudentUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ResultManagement\ResultManagementDeshBoard.xaml.cs">
+      <DependentUpon>ResultManagementDeshBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ScholarshipManagement\AccademicScholarshipApplicationUI.xaml.cs">
+      <DependentUpon>AccademicScholarshipApplicationUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ScholarshipManagement\OldScholarsListUI.xaml.cs">
+      <DependentUpon>OldScholarsListUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ScholarshipManagement\OtherScholarshipScoreUI.xaml.cs">
+      <DependentUpon>OtherScholarshipScoreUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ScholarshipManagement\OthersScholarshipApplicationUI.xaml.cs">
+      <DependentUpon>OthersScholarshipApplicationUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ScholarshipManagement\ScholarshipCriteriaUI.xaml.cs">
+      <DependentUpon>ScholarshipCriteriaUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ScholarshipManagement\ScholarshipMamagementDashBoardUI.xaml.cs">
+      <DependentUpon>ScholarshipMamagementDashBoardUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ScholarshipManagement\ScholarshipScoreProvideUI.xaml.cs">
+      <DependentUpon>ScholarshipScoreProvideUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ScholarshipManagement\SelectedScholarsListUI.xaml.cs">
+      <DependentUpon>SelectedScholarsListUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SMSManagement\SMSManagementDeshboard.xaml.cs">
+      <DependentUpon>SMSManagementDeshboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StudentManagement\AssignTeacherUI.xaml.cs">
+      <DependentUpon>AssignTeacherUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StudentManagement\ClassPeriodUI.xaml.cs">
+      <DependentUpon>ClassPeriodUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StudentManagement\ClassRoutineCreateUI.xaml.cs">
+      <DependentUpon>ClassRoutineCreateUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StudentManagement\CourseDashBoardUI.xaml.cs">
+      <DependentUpon>CourseDashBoardUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StudentManagement\CourseUI.xaml.cs">
+      <DependentUpon>CourseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StudentManagement\DayUI.xaml.cs">
+      <DependentUpon>DayUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StudentManagement\SemesterUI.xaml.cs">
+      <DependentUpon>SemesterUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StudentManagement\StudentManagementMainUI.xaml.cs">
+      <DependentUpon>StudentManagementMainUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TeacherManagement\TeacherInfoUI.xaml.cs">
+      <DependentUpon>TeacherInfoUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Common.cs" />
+    <Page Include="LoginUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Report\UI\Admission\StudentAdmissionReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report\UI\AttendenceSystem\AttendenceSystemReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report\UI\CourseManagement\CourseReportUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report\UI\ReportViewerUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report\UI\ResultManagement\ResultManagementReportUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report\UI\Routine\RoutineReposrt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Report\UI\StudentFees\FeesCollectionHistoryUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ButtonDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ComboBoxDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataGridDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\FormDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\GroupBoxDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ListViewDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\TabItemDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\TextBoxDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SplashWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TESTUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Admission\AdmissionDashBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Admission\AdmissionOfficeUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Admission\BatchUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Admission\BloodGroupUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Admission\Campus.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Admission\DepartmentUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Admission\DistrictUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Admission\MonthlyPayment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Admission\PostUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Admission\ProgramUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Admission\ReligionUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Admission\SIPI_DepartmentUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Admission\SIPI_ProgramUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Admission\StudentAdmissionInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Admission\StudentInfoViewUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Admission\ThanaUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Admission\ViewAllStudent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\AttendenceSystem\AttendenceSystemDashBoardUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\AttendenceSystem\StudentAttendenceUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Fees\AssignFeesToStudentUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Fees\FeesCollectionUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Fees\FeesDashBoardUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Fees\FeesDetailsUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Fees\FeesDiscountUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Fees\SetupUpFeesUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Fees\StudentListUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\InventoryManagement\BrandCategoryUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\InventoryManagement\BrandNameEntryUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\InventoryManagement\InventoryListUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\InventoryManagement\InventoryManagementDashBoardUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\InventoryManagement\InventoryReportUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\InventoryManagement\ProductMasterEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\InventoryManagement\PurchaseEntryUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\InventoryManagement\StockOutUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\InventoryManagement\UnitTypeDetailsUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\LibraryManagement\BookEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\LibraryManagement\BookIssue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\LibraryManagement\BookPickerUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\LibraryManagement\BookReturnUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\LibraryManagement\LibraryMamagementDashBoardUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Login\GroupSetupUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Login\MenuPermissionUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Login\ModulePermissionUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Login\SecurityDashBoardUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Login\UserSetUpUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\PIS\CategoryEmployeeUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\PIS\CategorySalaryUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\PIS\CategoryUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\PIS\DepartmentUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\PIS\EmployeeInfoUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\PIS\GradeUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\PIS\PISDashBoardUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\PIS\SectionUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ReportManager\ReportDashBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ResultManagement\CourseAssignToStudentUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ResultManagement\CourseAssignToTracherUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ResultManagement\MarksDistributionToStudentUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ResultManagement\ResultManagementDeshBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ScholarshipManagement\AccademicScholarshipApplicationUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ScholarshipManagement\OldScholarsListUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ScholarshipManagement\OtherScholarshipScoreUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ScholarshipManagement\OthersScholarshipApplicationUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ScholarshipManagement\ScholarshipCriteriaUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ScholarshipManagement\ScholarshipMamagementDashBoardUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ScholarshipManagement\ScholarshipScoreProvideUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ScholarshipManagement\SelectedScholarsListUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\SMSManagement\SMSManagementDeshboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\StudentManagement\AssignTeacherUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\StudentManagement\ClassPeriodUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\StudentManagement\ClassRoutineCreateUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\StudentManagement\CourseDashBoardUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\StudentManagement\CourseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\StudentManagement\DayUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\StudentManagement\SemesterUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\StudentManagement\StudentManagementMainUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\TeacherManagement\TeacherInfoUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Crystal\Admission\BanglaReportBoard.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BanglaReportBoard.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Crystal\Admission\report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Crystal\Admission\studentAdmissionCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>studentAdmissionCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Crystal\AttendenceSystem\StudentAttendenceRepost.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StudentAttendenceRepost.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Crystal\CourseManagement\CourseReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CourseReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Crystal\CourseManagement\DepartmentWiseRoutine.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DepartmentWiseRoutine.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Crystal\CourseManagement\RoutineRepost.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RoutineRepost.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Crystal\Fees\moneyReceiptCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>moneyReceiptCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Crystal\Fees\StudentRepotCrystalHistry.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StudentRepotCrystalHistry.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Crystal\Inventory\AlldetailsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AlldetailsReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Crystal\Inventory\StockOutReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockOutReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Crystal\Inventory\InventoryStockOut.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InventoryStockOut.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Crystal\Inventory\PurchageEntryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PurchageEntryReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Crystal\ResultManagement\MarksSheetReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MarksSheetReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Crystal\ResultManagement\ResultForBoard.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ResultForBoard.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{22823f78-cda4-4fed-9916-93cd50b85d9e}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENTITY\ENTITY.csproj">
+      <Project>{5bbf5f1f-512a-48a7-a998-a6b284181464}</Project>
+      <Name>ENTITY</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UTILITY\UTILITY.csproj">
+      <Project>{1a2fad53-8aa2-4e0d-be6a-d90124ac0a64}</Project>
+      <Name>UTILITY</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\payroll-tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\add-customer.png" />
+    <Resource Include="Resources\images\admin.png" />
+    <Resource Include="Resources\images\background_WPF.jpg" />
+    <Resource Include="Resources\images\camera.png" />
+    <Resource Include="Resources\images\exit.png" />
+    <Resource Include="Resources\images\Go.png" />
+    <Resource Include="Resources\images\History.png" />
+    <Resource Include="Resources\images\login.png" />
+    <Resource Include="Resources\images\logo1.png" />
+    <Resource Include="Resources\images\logout.png" />
+    <Resource Include="Resources\images\logo_red.png" />
+    <Resource Include="Resources\images\logo_trans.gif" />
+    <Resource Include="Resources\images\n-trans.gif" />
+    <Resource Include="Resources\images\n.png" />
+    <Resource Include="Resources\images\n_old.png" />
+    <Resource Include="Resources\images\n_red.png" />
+    <Resource Include="Resources\images\n_shade.png" />
+    <Resource Include="Resources\images\receivable-invoice-creation.png" />
+    <Resource Include="Resources\images\SearchPatient.png" />
+    <Resource Include="Resources\images\security.png" />
+    <Resource Include="Resources\images\surgery.png" />
+    <Resource Include="Resources\images\Task Report Hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\4D-2s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\studentsmanagement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\attendence.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\result.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\course.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\scholarship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\job.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\login-image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\SIPI.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\BookList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\bookInsert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\book_Issue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\book_Receive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\book_status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\RepostCrystal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SIPI_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\SIPI_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\SIPI_3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

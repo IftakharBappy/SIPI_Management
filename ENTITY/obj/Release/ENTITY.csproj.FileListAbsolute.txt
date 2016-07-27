@@ -1,0 +1,13 @@
+E:\SIPI_SL\SIPI_SL\ENTITY\bin\Release\ENTITY.dll
+E:\SIPI_SL\SIPI_SL\ENTITY\bin\Release\ENTITY.pdb
+E:\SIPI_SL\SIPI_SL\ENTITY\obj\Release\ENTITY.dll
+E:\SIPI_SL\SIPI_SL\ENTITY\obj\Release\ENTITY.pdb
+D:\Project\SIPI_SL\SIPI_SL\ENTITY\bin\Release\ENTITY.dll
+D:\Project\SIPI_SL\SIPI_SL\ENTITY\bin\Release\ENTITY.pdb
+D:\Project\SIPI_SL\SIPI_SL\ENTITY\obj\Release\ENTITY.dll
+D:\Project\SIPI_SL\SIPI_SL\ENTITY\obj\Release\ENTITY.pdb
+E:\Application\SIPI_SL\ENTITY\bin\Release\ENTITY.dll
+E:\Application\SIPI_SL\ENTITY\bin\Release\ENTITY.pdb
+E:\Application\SIPI_SL\ENTITY\obj\Release\ENTITY.csprojResolveAssemblyReference.cache
+E:\Application\SIPI_SL\ENTITY\obj\Release\ENTITY.dll
+E:\Application\SIPI_SL\ENTITY\obj\Release\ENTITY.pdb

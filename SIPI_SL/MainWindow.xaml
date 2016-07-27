@@ -1,0 +1,33 @@
+﻿<Window x:Class="SIPI_SL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Shyamoli Ideal Polytechnic Institute" Height="541" Width="1132" WindowState="Maximized" WindowStartupLocation="CenterScreen"  >
+    <Window.Background>
+        <ImageBrush ImageSource="/Resources\images\background_WPF.jpg"/>
+    </Window.Background>
+    <Grid>
+
+        <Button Content="Admission" Height="76" HorizontalAlignment="Left" Margin="98,128,0,0" Name="DashBoardAdmissionButton" Style="{StaticResource _MainMenuAddCustomer}" VerticalAlignment="Top" Width="238"  Click="newPatientMainButton_Click"/>
+        <Button  Content="Account" Height="78" HorizontalAlignment="Left" Margin="356,126,0,0" Name="DashBoardAccountButton"  VerticalAlignment="Top" Width="238" Style="{StaticResource ' PrescriptionCreation'}"  />
+        <Button Content="HR and Payroll" Height="76" HorizontalAlignment="Left" Margin="616,126,0,0" Name="DashBoardHRandPayrollButton" Style="{StaticResource Search}" VerticalAlignment="Top" Width="238"  Click="searchPatientButton_Click" />
+
+        <Button Content="Result" Height="78" HorizontalAlignment="Left" Margin="98,226,0,0" Name="DashBoardResultButton" Style="{StaticResource MainCaptureImage}" VerticalAlignment="Top" Width="238" Click="DashBoardResultButton_Click"  />
+        <Button Content="Attendence" Height="78" HorizontalAlignment="Left" IsEnabled="True" Name="DashBoardAttendenceButton" Margin="356,226,0,0"  Style="{StaticResource MainHistory}" VerticalAlignment="Top" Width="238" Click="mainPatientHistoryButton_Click"  />
+        <Button Content="Student" Height="76" HorizontalAlignment="Left" Margin="616,226,0,0" Name="DashBoardStudentButton" Style="{StaticResource Surgery}" VerticalAlignment="Top" Width="238"  Click="surgeryButton_Click"/>
+
+        <Button Content="Course" Height="74" HorizontalAlignment="Left" IsEnabled="True" Margin="98,330,0,0" Name="DashBoardCourseButton" Style="{StaticResource AdminToolsStyle}" VerticalAlignment="Top" Width="238" Click="courseManagementButtonClick"   />
+        <Button Content="Report" Height="76" HorizontalAlignment="Left" Margin="356,327,0,0" Name="DashBoardReportButton" Style="{StaticResource Report}" VerticalAlignment="Top" Width="238" Click="dashBoardReportButton_Click" />
+        <Button Content="Security" Height="74" HorizontalAlignment="Left" IsEnabled="True" Margin="616,328,0,0" Name="dashBoardSecurityButton"  VerticalAlignment="Top" Width="238" Style="{StaticResource SecurityStyle}" Click="dashBoardSecurityButton_Click"   />
+
+
+        <Button Content="Scolarship" Height="74" HorizontalAlignment="Left" IsEnabled="True" Margin="98,418,0,0" Name="DashBoardScolarshipButton" Style="{StaticResource Scholarship}" VerticalAlignment="Top" Width="238" Click="DashBoardScolarshipButton_Click" />
+        <Button Content="job" Height="74" HorizontalAlignment="Left" IsEnabled="True" Margin="356,418,0,0" x:Name="DashBoardJobButton" Style="{StaticResource Job}" VerticalAlignment="Top" Width="238" />
+        <Button Content="Logout" Height="74" HorizontalAlignment="Left" IsEnabled="True" Margin="616,418,0,0" x:Name="DashBoardlogoutButton" Style="{StaticResource LogoutStyle}" VerticalAlignment="Top" Width="238" Click="logOut_click" />
+
+        <Image Height="82" HorizontalAlignment="Right" Margin="0,0,37,12" Name="image1" Stretch="Uniform" VerticalAlignment="Bottom" Width="251" Source="/SIPI_SL;component/Resources/images/4D-2s.png" />
+        <Button Content="SMS" Height="76" HorizontalAlignment="Left" Margin="868,125,0,0" x:Name="smsManager" Style="{StaticResource smsMenue}" VerticalAlignment="Top" Width="238"  Click="smsManager_Click" />
+        <Button Content="Liberty Management" Height="74" HorizontalAlignment="Left" IsEnabled="True" Margin="868,226,0,0" x:Name="libertyManagementButton" Style="{StaticResource Library}" VerticalAlignment="Top" Width="238" Click="libertyManagementButton_Click"   />
+        <Button Content="Inventory Management" Height="74" HorizontalAlignment="Left" IsEnabled="True" Margin="868,327,0,0" x:Name="inventoryManagementButton" Style="{StaticResource Inventory}" VerticalAlignment="Top" Width="238" Click="inventoryManagementButton_Click"   />
+
+    </Grid>
+</Window>

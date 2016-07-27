@@ -1,0 +1,98 @@
+E:\SIPI_SL\SIPI_SL\BLL\bin\Debug\BLL.dll
+E:\SIPI_SL\SIPI_SL\BLL\bin\Debug\BLL.pdb
+E:\SIPI_SL\SIPI_SL\BLL\bin\Debug\DAL.dll
+E:\SIPI_SL\SIPI_SL\BLL\bin\Debug\DATADBML.dll
+E:\SIPI_SL\SIPI_SL\BLL\bin\Debug\ENTITY.dll
+E:\SIPI_SL\SIPI_SL\BLL\bin\Debug\DATA.dll
+E:\SIPI_SL\SIPI_SL\BLL\bin\Debug\EntityFramework.dll
+E:\SIPI_SL\SIPI_SL\BLL\bin\Debug\DAL.pdb
+E:\SIPI_SL\SIPI_SL\BLL\bin\Debug\DATADBML.pdb
+E:\SIPI_SL\SIPI_SL\BLL\bin\Debug\ENTITY.pdb
+E:\SIPI_SL\SIPI_SL\BLL\bin\Debug\DATA.pdb
+E:\SIPI_SL\SIPI_SL\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\SIPI_SL\SIPI_SL\BLL\obj\Debug\BLL.dll
+E:\SIPI_SL\SIPI_SL\BLL\obj\Debug\BLL.pdb
+D:\Project\SIPI_SL\BLL\bin\Debug\BLL.dll
+D:\Project\SIPI_SL\BLL\bin\Debug\BLL.pdb
+D:\Project\SIPI_SL\BLL\bin\Debug\DAL.dll
+D:\Project\SIPI_SL\BLL\bin\Debug\DATADBML.dll
+D:\Project\SIPI_SL\BLL\bin\Debug\ENTITY.dll
+D:\Project\SIPI_SL\BLL\bin\Debug\DATA.dll
+D:\Project\SIPI_SL\BLL\bin\Debug\EntityFramework.dll
+D:\Project\SIPI_SL\BLL\bin\Debug\DAL.pdb
+D:\Project\SIPI_SL\BLL\bin\Debug\DATADBML.pdb
+D:\Project\SIPI_SL\BLL\bin\Debug\ENTITY.pdb
+D:\Project\SIPI_SL\BLL\bin\Debug\DATA.pdb
+D:\Project\SIPI_SL\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\Project\SIPI_SL\BLL\obj\Debug\BLL.dll
+D:\Project\SIPI_SL\BLL\obj\Debug\BLL.pdb
+C:\Users\Kazi Obaydollah\Desktop\SIPI_SL_pre_Lal\BLL\bin\Debug\BLL.dll
+C:\Users\Kazi Obaydollah\Desktop\SIPI_SL_pre_Lal\BLL\bin\Debug\BLL.pdb
+C:\Users\Kazi Obaydollah\Desktop\SIPI_SL_pre_Lal\BLL\bin\Debug\DAL.dll
+C:\Users\Kazi Obaydollah\Desktop\SIPI_SL_pre_Lal\BLL\bin\Debug\DATADBML.dll
+C:\Users\Kazi Obaydollah\Desktop\SIPI_SL_pre_Lal\BLL\bin\Debug\ENTITY.dll
+C:\Users\Kazi Obaydollah\Desktop\SIPI_SL_pre_Lal\BLL\bin\Debug\DATA.dll
+C:\Users\Kazi Obaydollah\Desktop\SIPI_SL_pre_Lal\BLL\bin\Debug\EntityFramework.dll
+C:\Users\Kazi Obaydollah\Desktop\SIPI_SL_pre_Lal\BLL\bin\Debug\DAL.pdb
+C:\Users\Kazi Obaydollah\Desktop\SIPI_SL_pre_Lal\BLL\bin\Debug\DATADBML.pdb
+C:\Users\Kazi Obaydollah\Desktop\SIPI_SL_pre_Lal\BLL\bin\Debug\ENTITY.pdb
+C:\Users\Kazi Obaydollah\Desktop\SIPI_SL_pre_Lal\BLL\bin\Debug\DATA.pdb
+C:\Users\Kazi Obaydollah\Desktop\SIPI_SL_pre_Lal\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Kazi Obaydollah\Desktop\SIPI_SL_pre_Lal\BLL\obj\Debug\BLL.dll
+C:\Users\Kazi Obaydollah\Desktop\SIPI_SL_pre_Lal\BLL\obj\Debug\BLL.pdb
+D:\ALl SIPI Project\SIPI_SL_Development\BLL\bin\Debug\BLL.dll
+D:\ALl SIPI Project\SIPI_SL_Development\BLL\bin\Debug\BLL.pdb
+D:\ALl SIPI Project\SIPI_SL_Development\BLL\bin\Debug\DAL.dll
+D:\ALl SIPI Project\SIPI_SL_Development\BLL\bin\Debug\DATADBML.dll
+D:\ALl SIPI Project\SIPI_SL_Development\BLL\bin\Debug\ENTITY.dll
+D:\ALl SIPI Project\SIPI_SL_Development\BLL\bin\Debug\DATA.dll
+D:\ALl SIPI Project\SIPI_SL_Development\BLL\bin\Debug\EntityFramework.dll
+D:\ALl SIPI Project\SIPI_SL_Development\BLL\bin\Debug\DAL.pdb
+D:\ALl SIPI Project\SIPI_SL_Development\BLL\bin\Debug\DATADBML.pdb
+D:\ALl SIPI Project\SIPI_SL_Development\BLL\bin\Debug\ENTITY.pdb
+D:\ALl SIPI Project\SIPI_SL_Development\BLL\bin\Debug\DATA.pdb
+D:\ALl SIPI Project\SIPI_SL_Development\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\ALl SIPI Project\SIPI_SL_Development\BLL\obj\Debug\BLL.dll
+D:\ALl SIPI Project\SIPI_SL_Development\BLL\obj\Debug\BLL.pdb
+D:\Project\SIPI_SL\SIPI_SL\BLL\bin\Debug\BLL.dll
+D:\Project\SIPI_SL\SIPI_SL\BLL\bin\Debug\BLL.pdb
+D:\Project\SIPI_SL\SIPI_SL\BLL\bin\Debug\DAL.dll
+D:\Project\SIPI_SL\SIPI_SL\BLL\bin\Debug\DATADBML.dll
+D:\Project\SIPI_SL\SIPI_SL\BLL\bin\Debug\ENTITY.dll
+D:\Project\SIPI_SL\SIPI_SL\BLL\bin\Debug\DATA.dll
+D:\Project\SIPI_SL\SIPI_SL\BLL\bin\Debug\EntityFramework.dll
+D:\Project\SIPI_SL\SIPI_SL\BLL\bin\Debug\DAL.pdb
+D:\Project\SIPI_SL\SIPI_SL\BLL\bin\Debug\DATADBML.pdb
+D:\Project\SIPI_SL\SIPI_SL\BLL\bin\Debug\ENTITY.pdb
+D:\Project\SIPI_SL\SIPI_SL\BLL\bin\Debug\DATA.pdb
+D:\Project\SIPI_SL\SIPI_SL\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\Project\SIPI_SL\SIPI_SL\BLL\obj\Debug\BLL.dll
+D:\Project\SIPI_SL\SIPI_SL\BLL\obj\Debug\BLL.pdb
+E:\Application\SIPI_SL\BLL\bin\Debug\BLL.dll
+E:\Application\SIPI_SL\BLL\bin\Debug\BLL.pdb
+E:\Application\SIPI_SL\BLL\bin\Debug\DAL.dll
+E:\Application\SIPI_SL\BLL\bin\Debug\DATADBML.dll
+E:\Application\SIPI_SL\BLL\bin\Debug\ENTITY.dll
+E:\Application\SIPI_SL\BLL\bin\Debug\DATA.dll
+E:\Application\SIPI_SL\BLL\bin\Debug\EntityFramework.dll
+E:\Application\SIPI_SL\BLL\bin\Debug\DAL.pdb
+E:\Application\SIPI_SL\BLL\bin\Debug\DATADBML.pdb
+E:\Application\SIPI_SL\BLL\bin\Debug\ENTITY.pdb
+E:\Application\SIPI_SL\BLL\bin\Debug\DATA.pdb
+E:\Application\SIPI_SL\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\Application\SIPI_SL\BLL\obj\Debug\BLL.dll
+E:\Application\SIPI_SL\BLL\obj\Debug\BLL.pdb
+F:\NET\SIPI_SL\BLL\bin\Debug\BLL.dll
+F:\NET\SIPI_SL\BLL\bin\Debug\BLL.pdb
+F:\NET\SIPI_SL\BLL\bin\Debug\DAL.dll
+F:\NET\SIPI_SL\BLL\bin\Debug\DATADBML.dll
+F:\NET\SIPI_SL\BLL\bin\Debug\ENTITY.dll
+F:\NET\SIPI_SL\BLL\bin\Debug\DATA.dll
+F:\NET\SIPI_SL\BLL\bin\Debug\EntityFramework.dll
+F:\NET\SIPI_SL\BLL\bin\Debug\DAL.pdb
+F:\NET\SIPI_SL\BLL\bin\Debug\DATADBML.pdb
+F:\NET\SIPI_SL\BLL\bin\Debug\ENTITY.pdb
+F:\NET\SIPI_SL\BLL\bin\Debug\DATA.pdb
+F:\NET\SIPI_SL\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\NET\SIPI_SL\BLL\obj\Debug\BLL.dll
+F:\NET\SIPI_SL\BLL\obj\Debug\BLL.pdb

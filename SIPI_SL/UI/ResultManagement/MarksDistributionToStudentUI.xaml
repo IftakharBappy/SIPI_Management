@@ -1,0 +1,67 @@
+﻿<Window x:Class="SIPI_SL.UI.ResultManagement.MarksDistributionToStudentUI"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Marks Distribution To Student UI" Height="606" Width="1063" 
+        WindowState="Maximized" WindowStartupLocation="CenterScreen" 
+        ResizeMode="CanMinimize"  Background="{StaticResource GrayWhite}" ShowInTaskbar="False"  >
+    <Grid>
+        <Grid Margin="85,10,77,0" HorizontalAlignment="Center" Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" Width="895" Height="557" VerticalAlignment="Top" >
+            <ComboBox Name="departmentCombobox" HorizontalAlignment="Left" Margin="142,22,0,0" VerticalAlignment="Top" Width="254" Style="{StaticResource ComboBoxBGYellowGreen}"/>
+            <Label Content="Department"  HorizontalAlignment="Left" Margin="32,22,0,0" VerticalAlignment="Top" Width="106"/>
+            <ComboBox Name="semesterCombobox" HorizontalAlignment="Left" Margin="142,100,0,0" VerticalAlignment="Top" Width="119" Style="{StaticResource ComboBoxBGYellowGreen}"/>
+            <Label Content="Semester"  HorizontalAlignment="Left" Margin="32,100,0,0" VerticalAlignment="Top" Width="110"/>
+            <ComboBox Name="yearCombobox" HorizontalAlignment="Left" Margin="142,139,0,0" VerticalAlignment="Top" Width="119" Style="{StaticResource ComboBoxBGYellowGreen}"/>
+            <Label Content="Year"  HorizontalAlignment="Left" Margin="34,139,0,0" VerticalAlignment="Top" Width="66"/>
+            <Button Content="" HorizontalAlignment="Left" Margin="266,100,0,0" VerticalAlignment="Top" Width="130" Height="73" Style="{DynamicResource SearchButton}" Name="searchButton" Click="searchButton_Click"/>
+            <Button Content="Entry" HorizontalAlignment="Left" Margin="763,528,0,0" VerticalAlignment="Top" Width="108" Height="24" Name="marksEntryButton" Click="marksEntryButton_Click" />
+
+
+            <DataGrid 
+            AutoGenerateColumns="False" HorizontalAlignment="Center" 
+            Margin="20,178,24,34" Name="StudentMarksEntryDataGrid" Width="851" 
+            CanUserAddRows="False">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Department" Binding="{Binding Path=DepartmentName}" Width="auto" IsReadOnly="True" />
+                    <DataGridTextColumn Header="Semester" Binding="{Binding Path=SemesterNo}" Width="auto" IsReadOnly="True" />
+                    <DataGridTextColumn Header="Student Name" Binding="{Binding Path=StudentName}" Width="auto" IsReadOnly="True" />
+                    <DataGridTextColumn Header="Srudent Id" Binding="{Binding Path=StudentId}" Width="auto" IsReadOnly="True" />
+                    <DataGridTemplateColumn Header="Theoty Con. Asses" Width="100" IsReadOnly="True"  >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox  Name="theotyConAssesTextBox" TextChanged="theotyConAssesTextBox_TextChanged"  Text="{Binding Path=TheoryMarksConAssess,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged }"  />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Practical Con. Asses" Width="100" IsReadOnly="True"  >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox  Name="PracticalConAssesTextBox" TextChanged="PracticalConAssesTextBox_TextChanged"  Text="{Binding Path=PracticalMarksConAssess,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Theoty Final Exam" Width="100" IsReadOnly="True" >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox  Name="theotyFinalExamTextBox" TextChanged="theotyFinalExamTextBox_TextChanged"  Text="{Binding Path=TheoryMarksFinalExam,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Practical Final Exam" Width="100" IsReadOnly="True" >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox  Name="practicalFinalExamTextBox" TextChanged="practicalFinalExamTextBox_TextChanged"  Text="{Binding Path=PracticalMarksFinalExam,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTextColumn Header="Total Marks" Binding="{Binding Path=TotalMarks}" Width="auto" IsReadOnly="True" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <ComboBox Name="courseCombobox" HorizontalAlignment="Left" Margin="142,61,0,0" VerticalAlignment="Top" Width="254" Style="{StaticResource ComboBoxBGYellowGreen}"/>
+            <Label Content="Course"  HorizontalAlignment="Left" Margin="34,61,0,0" VerticalAlignment="Top" Width="108"/>
+        </Grid>
+    </Grid>
+</Window>
+        
+  

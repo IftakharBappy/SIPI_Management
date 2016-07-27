@@ -1,0 +1,30 @@
+﻿<Window x:Class="SIPI_SL.UI.LibraryManagement.LibraryMamagementDashBoardUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Library Mamagement DeshBoard UI" Height="520" Width="894" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="{StaticResource GrayWhite}" ShowInTaskbar="False">
+    <Grid>
+        <Menu Height="56" Name="libraryMenu" VerticalAlignment="Top" >
+            <MenuItem Header="Library Manager" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="courseRoleBasedAccessSetup" >
+                <MenuItem Header="Book Entry" Name="bookEntry" Click="bookEntry_Click" />
+                <MenuItem Header="Book List" Name="bookList"  />
+                <MenuItem Header="Book Issue" Name="bookIssue" Click="bookIssue_Click"/>
+                <MenuItem Header="Book Return" Name="bookReturn" Click="bookReturn_Click" />
+
+            </MenuItem>
+
+            <MenuItem Header="Repost" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="repostBooks" >
+                <MenuItem Header="All Book " Name="allBook" />
+
+            </MenuItem>
+
+
+        </Menu>
+
+        <!--<Button Content="Customer" FontWeight="Bold" Height="76" HorizontalAlignment="Left" Margin="139,77,0,0" Name="BookListButton" Style="{StaticResource  _MainMenuAddCustomer}" VerticalAlignment="Top" Width="238"  />
+        <Button Content="Customer" FontWeight="Bold" Height="76" HorizontalAlignment="Left" Margin="480,77,0,0" Style="{StaticResource _bookInsert}" VerticalAlignment="Top" Width="238"  />
+        <Button Content="Customer" FontWeight="Bold" Height="76" HorizontalAlignment="Left" Margin="139,190,0,0" Style="{StaticResource _bookStatus}" VerticalAlignment="Top" Width="238"  />
+        <Button Content="Customer" FontWeight="Bold" Height="76" HorizontalAlignment="Left" Margin="480,190,0,0" Style="{StaticResource _bookRepostPrint}" VerticalAlignment="Top" Width="238"  />
+        <Button Content="Customer" FontWeight="Bold" Height="76" HorizontalAlignment="Left" Margin="139,312,0,0" Style="{StaticResource _bookIssue}" VerticalAlignment="Top" Width="238"  />
+        <Button Content="Customer" FontWeight="Bold" Height="76" HorizontalAlignment="Left" Margin="480,312,0,0"  Style="{StaticResource _bookReceive}" VerticalAlignment="Top" Width="238"  />-->
+    </Grid>
+</Window>

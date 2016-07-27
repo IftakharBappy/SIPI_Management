@@ -1,0 +1,72 @@
+﻿<Window x:Class="SIPI_SL.Report.UI.AttendenceSystem.AttendenceSystemReport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:extToolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit/extended"
+        Title="Routine Reposrt" Height="353.356" Width="621.197"  Background="{StaticResource GrayWhite}" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid>
+            <extToolkit:WatermarkTextBox Watermark="Year" Text="" Name="yearTextBox" FontSize="15" SnapsToDevicePixels="False" SelectionBrush="#FF5677B1" Margin="338,29,0,0" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92"  />
+
+            <Button Content="Preview" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="514,35,0,0" Height="24" Name="previewReportButton" Click="previewReportButton_Click" />
+            <Button Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="433,35,0,0" Height="24" Name="searchButton" Click="searchButton_Click" />
+            <ComboBox
+                                IsEditable="True"
+                                TextSearch.TextPath="SIPI_DepartmentName"
+                                HorizontalAlignment="Left" 
+                                Margin="53,30,0,0" 
+                                VerticalAlignment="Top" 
+                                Width="152" 
+                                RenderTransformOrigin="0.037,0.146" 
+                                Name="departmentCombobox" Height="33">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock Text="{Binding SIPI_DepartmentName}" Width="200"/>
+
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <ComboBox 
+            	IsEditable="True"
+            	TextSearch.TextPath="SemesterNo"
+            	HorizontalAlignment="Left" 
+            	Margin="210,29,0,0" 
+            	VerticalAlignment="Top" 
+            	Width="123" 
+            	RenderTransformOrigin="0.037,0.146" 
+            	x:Name="semesterCombobox" Height="34" >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding SemesterNo}" Width="130"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Label Content="Department" HorizontalAlignment="Left" Margin="51,0,0,0" VerticalAlignment="Top" Width="154" Height="30" TextBlock.FontSize="15" TextBlock.FontWeight="Bold"/>
+            <Label Content="Semester" HorizontalAlignment="Left" Margin="210,0,0,0" VerticalAlignment="Top" Width="123" Height="30" TextBlock.FontSize="15" TextBlock.FontWeight="Bold"/>
+            <DatePicker HorizontalAlignment="Left" Margin="53,68,0,0" VerticalAlignment="Top" Width="152" Height="29" Name="reportSearchDatepicker"/>
+            <Label Content="Year" HorizontalAlignment="Left" Margin="333,-1,0,0" VerticalAlignment="Top" Width="97" Height="30" TextBlock.FontSize="15" TextBlock.FontWeight="Bold"/>
+        </Grid>
+
+        <ListView HorizontalAlignment="Left" Height="211" Margin="60,101,0,0" VerticalAlignment="Top" Width="518" 
+                  Name="allStudentAttendenceListView" ItemContainerStyle="{StaticResource alternatingListViewItemStyle}">
+
+
+            <ListView.View>
+                <GridView AllowsColumnReorder="True">
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="" Width="0"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding StudentName}" Header="Student Name " Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DepartmentName}" Header="Department" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding SemesterNo}" Header="Semester " Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Date}" Header="Date " Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Status}" Header="Status " Width="100"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>

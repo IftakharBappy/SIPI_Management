@@ -1,0 +1,42 @@
+/////////// between DateTime seaech
+ 
+c# ClickEvent:
+
+	foreach (SaleItemInfo item in CartListView.Items)
+            {
+                _saleItemInfoObj = new SaleItemInfo();
+                _saleItemManagerObj = new SaleItemManager();
+                _saleItemInfoObj.SaleId = item.SaleId;
+                _saleItemInfoObj.InvoiceNumber = item.InvoiceNumber;               
+                _saleItemInfoObj.MakingCost = item.MakingCost;
+                _saleItemInfoObj.UnitPrice = item.UnitPrice;
+                _saleItemInfoObj.TotalAmount = item.TotalAmount;
+                _saleItemManagerObj.SaveSaleItem(_saleItemInfoObj);
+                _saleItemManagerObj.UpdateQuantity(Convert.ToInt32(_saleItemInfoObj.Quantity), item.ProductId);
+
+            }
+		
+BLL:		
+public List<FeesCollection> GetCollection(DateTime startDate, DateTime endDate, int campus)
+        {
+            return _feesCollectionGateWayObj.GetCollection(startDate, endDate, campus);
+        }
+		
+GetWay:
+public List<FeesCollection> GetCollection(DateTime startDate, DateTime endDate, int campus)
+        {
+			////////SIPIDBEntities datacontextObj = new SIPIDBEntities();
+            List<FeesCollection> feesCollectionDetails = new List<FeesCollection>();
+            var query = from j in datacontextObj.STUDENTFEESCOLLECTIONs
+                        where j.ReceiveDate >= startDate.Date && j.ReceiveDate <= endDate.Date && j.ADMISSIONINFO.CAMPUSINFO.Id == campus
+                        select j;
+            foreach (var item in query)
+            {
+                    FeesCollection _obj = new FeesCollection();
+                    _obj.Id = item.Id;
+					
+					
+                    feesCollectionDetails.Add(_obj);
+            }
+                return feesCollectionDetails;
+          }

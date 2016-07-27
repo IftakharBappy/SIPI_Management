@@ -1,0 +1,33 @@
+﻿<Window x:Class="SIPI_SL.UI.ReportManager.ReportDashBoard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Report Dash Board" Height="520" Width="894" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <Menu Height="56" Name="reportMainMenu" VerticalAlignment="Top" >
+            <MenuItem Header="Admission Report" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="courseRoleBasedAccessSetup" >
+                <MenuItem Header="Student Report" Name="admissionInfo"  Click="admissionInfo_Click" />
+                <MenuItem Header="Student Report Board" Name="studentRepostBoard"  Click="studentRepostBoard_Click" />
+
+
+            </MenuItem>
+
+            <MenuItem Header="Attendence Report" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="rAttendence" >
+                <MenuItem Header="Attendence Report" Name="AttendenceReport" Click="AttendenceReport_Click" />
+            </MenuItem>
+            <MenuItem Header="Course Report" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="CourseRepost" >
+                <MenuItem Header="Course Details " Name="courseDetails" Click="courseDetails_Click"/>
+                
+
+
+            </MenuItem>
+            <MenuItem Header="Routine Report" Height="19.46" FontFamily="Verdana" FontWeight="DemiBold" Margin="10,6,0,0" Name="RoutineRepost" >
+                
+                <MenuItem Header="Department Waise Routine" Name="departmentWaiseRoutine" Click="departmentWaiseRoutine_Click" />
+                <MenuItem Header="Semester Waise Routine" Name="semesterWaiseRoutine" Click="semesterWaiseRoutine_Click" />
+
+            </MenuItem>
+
+
+        </Menu>
+    </Grid>
+</Window>
