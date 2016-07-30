@@ -670,3 +670,6 @@ F:\NET\SIPI_SL\SIPI_SL\obj\Debug\SIPI_SL_MarkupCompile.cache
 F:\NET\SIPI_SL\SIPI_SL\obj\Debug\SIPI_SL.g.resources
 F:\NET\SIPI_SL\SIPI_SL\obj\Debug\SIPI_SL.Properties.Resources.resources
 F:\NET\SIPI_SL\SIPI_SL\obj\Debug\SIPI_SL.csproj.GenerateResource.Cache
+F:\SIPI_Management\SIPI_SL\bin\Debug\SIPI_SL.exe.config
+F:\SIPI_Management\SIPI_SL\obj\Debug\SIPI_SL.exe
+F:\SIPI_Management\SIPI_SL\obj\Debug\SIPI_SL.pdb
