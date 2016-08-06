@@ -61,3 +61,12 @@ F:\NET\SIPI_SL\DAL\bin\Debug\ENTITY.pdb
 F:\NET\SIPI_SL\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 F:\NET\SIPI_SL\DAL\obj\Debug\DAL.dll
 F:\NET\SIPI_SL\DAL\obj\Debug\DAL.pdb
+F:\SIPI_Management\DAL\bin\Debug\DAL.dll
+F:\SIPI_Management\DAL\bin\Debug\DAL.pdb
+F:\SIPI_Management\DAL\bin\Debug\DATA.dll
+F:\SIPI_Management\DAL\bin\Debug\ENTITY.dll
+F:\SIPI_Management\DAL\bin\Debug\DATA.pdb
+F:\SIPI_Management\DAL\bin\Debug\ENTITY.pdb
+F:\SIPI_Management\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\SIPI_Management\DAL\obj\Debug\DAL.dll
+F:\SIPI_Management\DAL\obj\Debug\DAL.pdb

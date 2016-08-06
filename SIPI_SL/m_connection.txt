@@ -1,0 +1,2 @@
+﻿metadata=res://*/SIPIDBModel.csdl|res://*/SIPIDBModel.ssdl|res://*/SIPIDBModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;
+         data source=DESKTOP-R1L1P8K\SIPI_SERVER;initial catalog=SIPIDB;user id=sa;password=asd123;MultipleActiveResultSets=True;App=EntityFramework&quot;
