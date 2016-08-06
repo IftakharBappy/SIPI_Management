@@ -21,3 +21,10 @@ E:\Application\SIPI_SL\DATADBML\bin\Release\ENTITY.pdb
 E:\Application\SIPI_SL\DATADBML\obj\Release\DATADBML.csprojResolveAssemblyReference.cache
 E:\Application\SIPI_SL\DATADBML\obj\Release\DATADBML.dll
 E:\Application\SIPI_SL\DATADBML\obj\Release\DATADBML.pdb
+F:\SIPI_Management\DATADBML\bin\Release\DATADBML.dll.config
+F:\SIPI_Management\DATADBML\bin\Release\DATADBML.dll
+F:\SIPI_Management\DATADBML\bin\Release\DATADBML.pdb
+F:\SIPI_Management\DATADBML\bin\Release\ENTITY.dll
+F:\SIPI_Management\DATADBML\bin\Release\ENTITY.pdb
+F:\SIPI_Management\DATADBML\obj\Release\DATADBML.dll
+F:\SIPI_Management\DATADBML\obj\Release\DATADBML.pdb

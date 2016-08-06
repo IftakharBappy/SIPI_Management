@@ -11,3 +11,7 @@ E:\Application\SIPI_SL\UTILITY\bin\Release\UTILITY.pdb
 E:\Application\SIPI_SL\UTILITY\obj\Release\UTILITY.csprojResolveAssemblyReference.cache
 E:\Application\SIPI_SL\UTILITY\obj\Release\UTILITY.dll
 E:\Application\SIPI_SL\UTILITY\obj\Release\UTILITY.pdb
+F:\SIPI_Management\UTILITY\bin\Release\UTILITY.dll
+F:\SIPI_Management\UTILITY\bin\Release\UTILITY.pdb
+F:\SIPI_Management\UTILITY\obj\Release\UTILITY.dll
+F:\SIPI_Management\UTILITY\obj\Release\UTILITY.pdb

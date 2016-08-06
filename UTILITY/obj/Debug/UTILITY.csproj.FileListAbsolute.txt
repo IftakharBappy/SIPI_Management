@@ -22,3 +22,7 @@ E:\Application\SIPI_SL\UTILITY\bin\Debug\UTILITY.pdb
 E:\Application\SIPI_SL\UTILITY\obj\Debug\UTILITY.csprojResolveAssemblyReference.cache
 E:\Application\SIPI_SL\UTILITY\obj\Debug\UTILITY.dll
 E:\Application\SIPI_SL\UTILITY\obj\Debug\UTILITY.pdb
+F:\SIPI_Management\UTILITY\bin\Debug\UTILITY.dll
+F:\SIPI_Management\UTILITY\bin\Debug\UTILITY.pdb
+F:\SIPI_Management\UTILITY\obj\Debug\UTILITY.dll
+F:\SIPI_Management\UTILITY\obj\Debug\UTILITY.pdb

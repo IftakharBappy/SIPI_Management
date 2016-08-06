@@ -54,3 +54,11 @@ F:\NET\SIPI_SL\DATA\bin\Debug\EntityFramework.xml
 F:\NET\SIPI_SL\DATA\obj\Debug\DATA.csprojResolveAssemblyReference.cache
 F:\NET\SIPI_SL\DATA\obj\Debug\DATA.dll
 F:\NET\SIPI_SL\DATA\obj\Debug\DATA.pdb
+F:\SIPI_Management\DATA\bin\Debug\DATA.dll.config
+F:\SIPI_Management\DATA\bin\Debug\DATA.dll
+F:\SIPI_Management\DATA\bin\Debug\DATA.pdb
+F:\SIPI_Management\DATA\bin\Debug\EntityFramework.dll
+F:\SIPI_Management\DATA\bin\Debug\EntityFramework.xml
+F:\SIPI_Management\DATA\obj\Debug\DATA.dll
+F:\SIPI_Management\DATA\obj\Debug\DATA.pdb
+F:\SIPI_Management\DATA\obj\Debug\DATA.csprojResolveAssemblyReference.cache

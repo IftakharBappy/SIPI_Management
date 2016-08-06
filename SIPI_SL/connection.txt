@@ -1,0 +1,1 @@
+﻿Data Source=KAYES;Initial Catalog=SIPIDB;User ID=sa;Password=asd123

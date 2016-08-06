@@ -96,3 +96,17 @@ F:\NET\SIPI_SL\BLL\bin\Debug\DATA.pdb
 F:\NET\SIPI_SL\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 F:\NET\SIPI_SL\BLL\obj\Debug\BLL.dll
 F:\NET\SIPI_SL\BLL\obj\Debug\BLL.pdb
+F:\SIPI_Management\BLL\bin\Debug\BLL.dll
+F:\SIPI_Management\BLL\bin\Debug\BLL.pdb
+F:\SIPI_Management\BLL\bin\Debug\DAL.dll
+F:\SIPI_Management\BLL\bin\Debug\DATADBML.dll
+F:\SIPI_Management\BLL\bin\Debug\ENTITY.dll
+F:\SIPI_Management\BLL\bin\Debug\DATA.dll
+F:\SIPI_Management\BLL\bin\Debug\EntityFramework.dll
+F:\SIPI_Management\BLL\bin\Debug\DAL.pdb
+F:\SIPI_Management\BLL\bin\Debug\DATADBML.pdb
+F:\SIPI_Management\BLL\bin\Debug\ENTITY.pdb
+F:\SIPI_Management\BLL\bin\Debug\DATA.pdb
+F:\SIPI_Management\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\SIPI_Management\BLL\obj\Debug\BLL.dll
+F:\SIPI_Management\BLL\obj\Debug\BLL.pdb
