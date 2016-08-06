@@ -66,7 +66,7 @@ namespace SIPI_SL.UI.Admission
 
         public void LoadAllUIData()
         {
-            LoadAllStudentInfo();
+            //LoadAllStudentInfo();
 
             LoadDepartmentComboBox();
             LoadBanglaDepartmentComboBox();
@@ -86,25 +86,25 @@ namespace SIPI_SL.UI.Admission
 
             LoadPermanentDistrictComboBox();
 
-            LoadPermanentPostComboBox(-1);
+            //LoadPermanentPostComboBox(-1);
 
-            LoadPermanentThanaComboBox(-1);
+            //LoadPermanentThanaComboBox(-1);
             ////LoadPermanentThanaComboBox();
-            LoadPresentPostComboBox(-1);
+            //LoadPresentPostComboBox(-1);
 
-            LoadPresentThanaComboBox(-1);
+            //LoadPresentThanaComboBox(-1);
 
 
             LoadPresentDistrictComboBox();
 
-            LoadGuardianThanaComboBox(-1);
-            LoadBanglaGuardianThanaComboBox(-1);
+            //LoadGuardianThanaComboBox(-1);
+            //LoadBanglaGuardianThanaComboBox(-1);,
 
             LoadBanglaGuardianDistrictComboBox();
             LoadGuardianDistrictComboBox();
 
-            LoadGuardianPostComboBox(-1); ;
-            LoadBanglaGuardianPostComboBox(-1);
+            //LoadGuardianPostComboBox(-1); 
+            //LoadBanglaGuardianPostComboBox(-1);
             dateOfBirth.SelectedDate = DateTime.Now;
             banglaDateOfbirth.SelectedDate = DateTime.Now;
         }

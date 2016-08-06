@@ -30,5 +30,6 @@ F:\NET\SIPI_SL\ENTITY\obj\Debug\ENTITY.dll
 F:\NET\SIPI_SL\ENTITY\obj\Debug\ENTITY.pdb
 F:\SIPI_Management\ENTITY\bin\Debug\ENTITY.dll
 F:\SIPI_Management\ENTITY\bin\Debug\ENTITY.pdb
+F:\SIPI_Management\ENTITY\obj\Debug\ENTITY.csprojResolveAssemblyReference.cache
 F:\SIPI_Management\ENTITY\obj\Debug\ENTITY.dll
 F:\SIPI_Management\ENTITY\obj\Debug\ENTITY.pdb
