@@ -5,19 +5,19 @@
 
     <Grid Margin="0,10,0,-1">
 
-        <TabControl Name="mainTab" Margin="45,27,36,36" >
+        <TabControl Name="mainTab" Margin="45,31,36,32" >
 
 
             <TabItem Header="Program Information" FontWeight="Bold" Background="PaleGoldenrod" Margin="-2,0,-2,-25" Name="programInform"  >
 
                 <Grid VerticalAlignment="Stretch" Margin="0,27,0,0">
-                    <GroupBox Header="Program Information" FontWeight="Normal" Background="White" Margin="49,10,0,0" HorizontalAlignment="Left" Width="451" Height="272" VerticalAlignment="Top" >
+                    <GroupBox Header="Program Information" FontWeight="Normal" Background="White" Margin="50,0,0,0" HorizontalAlignment="Left" Width="341" Height="440" VerticalAlignment="Top" >
                         <Grid>
                             <Label Content="Program" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Height="33" Width="117" RenderTransformOrigin="-0.85,-1.907"/>
-                            <ComboBox HorizontalAlignment="Left" Name="programCombobox" Margin="132,10,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
-                            <Label Content="Department" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" Height="33" Width="117" RenderTransformOrigin="-0.85,-1.907"/>
+                            <ComboBox HorizontalAlignment="Left" Name="programCombobox" Margin="10,45,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
+                            <Label Content="Department" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Height="33" Width="117" RenderTransformOrigin="-0.85,-1.907"/>
 
-                            <ComboBox HorizontalAlignment="Left" Name="departmentCombobox" Margin="132,48,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}">
+                            <ComboBox HorizontalAlignment="Left" Name="departmentCombobox" Margin="10,112,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}">
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
@@ -29,56 +29,62 @@
                                 </ComboBox.ItemTemplate>
                             </ComboBox>
 
-                            <TextBox Text="2015-2016" Margin="132,83,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="297" RenderTransformOrigin="-0.85,-1.907" Name="sessionTextBox" Height="34"/>
-                            <ComboBox HorizontalAlignment="Left" Name="campusCombobox" Margin="132,120,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
+                            <TextBox Text="2015-2016" Margin="10,175,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="297" RenderTransformOrigin="-0.85,-1.907" Name="sessionTextBox" Height="34"/>
+                            <ComboBox HorizontalAlignment="Left" Name="campusCombobox" Margin="10,242,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
 
 
-                            <TextBox Text="2016" Margin="132,157,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="297" RenderTransformOrigin="-0.85,-1.907" Name="accademicYearTextBox" Height="34"/>
-                            <ComboBox HorizontalAlignment="Left" Name="batchCombobox" Margin="132,194,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
+                            <TextBox Text="2016" Margin="10,305,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="297" RenderTransformOrigin="-0.85,-1.907" Name="accademicYearTextBox" Height="34"/>
+                            <ComboBox HorizontalAlignment="Left" Name="batchCombobox" Margin="10,374,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
 
 
 
-                            <Label Content="Session" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Height="38" Width="117" RenderTransformOrigin="-0.85,-1.907"/>
-                            <Label Content="Campus" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" Height="38" Width="117" RenderTransformOrigin="-0.85,-1.907"/>
+                            <Label Content="Session" HorizontalAlignment="Left" Margin="10,151,0,0" VerticalAlignment="Top" Height="38" Width="117" RenderTransformOrigin="-0.85,-1.907"/>
+                            <Label Content="Campus" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top" Height="38" Width="117" RenderTransformOrigin="-0.85,-1.907"/>
 
-                            <Label Content="Academic Year" HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top" Height="38" Width="117" RenderTransformOrigin="-0.85,-1.907"/>
-                            <Label Content="Batch" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top" Height="35" Width="117" RenderTransformOrigin="-0.85,-1.907"/>
+                            <Label Content="Academic Year" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Height="38" Width="117" RenderTransformOrigin="-0.85,-1.907"/>
+                            <Label Content="Batch" HorizontalAlignment="Left" Margin="10,339,0,0" VerticalAlignment="Top" Height="35" Width="117" RenderTransformOrigin="-0.85,-1.907"/>
 
 
                         </Grid>
                     </GroupBox>
-                    <GroupBox Header="প্রোগ্রাম ইনফরমেশন" FontWeight="Normal" Background="White" Margin="520,10,0,0" HorizontalAlignment="Left" Width="470" Height="272" VerticalAlignment="Top" >
+                    <GroupBox Header="প্রোগ্রাম ইনফরমেশন" FontWeight="Normal" Background="White" Margin="396,0,0,0" HorizontalAlignment="Left" Width="339" Height="440" VerticalAlignment="Top" >
                         <Grid>
                             <Label Content="প্রোগ্রাম" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" Height="43" Width="136" RenderTransformOrigin="-0.85,-1.907"/>
-                            <ComboBox HorizontalAlignment="Left" Name="banglaProgramCombobox" Margin="151,10,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
-                            <ComboBox HorizontalAlignment="Left" Name="banglaDepartmentCombobox" Margin="151,47,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
-
-
-                            <TextBox Text="২০১৫-২০১৬" Margin="150,83,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="297" RenderTransformOrigin="-0.85,-1.907" Name="banglaSessionTextBox"/>
-                            <ComboBox HorizontalAlignment="Left" Name="banglaCampusCombobox" Margin="150,120,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
-
-
-
-                            <TextBox Text="২০১৬" Margin="150,157,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="297" RenderTransformOrigin="-0.85,-1.907" Name="banglaAccademicYearTextBox"/>
-                            <ComboBox HorizontalAlignment="Left" Name="banglaBatchCombobox" Margin="151,196,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
-
-
-
-                            <Label Content="সেসন" HorizontalAlignment="Left" Margin="14,89,0,0" VerticalAlignment="Top" Height="42" Width="131" RenderTransformOrigin="-0.85,-1.907"/>
-                            <Label Content="ক্যাম্পাস" HorizontalAlignment="Left" Margin="14,127,0,0" VerticalAlignment="Top" Height="33" Width="131" RenderTransformOrigin="-0.85,-1.907"/>
+                            <ComboBox HorizontalAlignment="Left" Name="banglaProgramCombobox" Margin="14,45,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
+                            <ComboBox HorizontalAlignment="Left" Name="banglaDepartmentCombobox" Margin="14,112,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding BanglaSIPI_DepartmentName}" Width="270"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                            </ComboBox>
+                            <TextBox Text="২০১৫-২০১৬" Margin="14,178,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="297" RenderTransformOrigin="-0.85,-1.907" Name="banglaSessionTextBox"/>
+                            <ComboBox HorizontalAlignment="Left" Name="banglaCampusCombobox" Margin="10,241,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
 
 
 
-                            <Label Content="ডিপার্টমেন্ট" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Height="43" Width="135" RenderTransformOrigin="-0.85,-1.907"/>
+                            <TextBox Text="২০১৬" Margin="15,306,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="297" RenderTransformOrigin="-0.85,-1.907" Name="banglaAccademicYearTextBox"/>
+                            <ComboBox HorizontalAlignment="Left" Name="banglaBatchCombobox" Margin="10,374,0,0" VerticalAlignment="Top" Width="297"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
 
-                            <Label Content="একাডেমিক বর্ষ" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Height="44" Width="135" RenderTransformOrigin="-0.85,-1.907"/>
-                            <Label Content="ব্যাচ" HorizontalAlignment="Left" Margin="10,204,0,0" VerticalAlignment="Top" Height="30" Width="136" RenderTransformOrigin="-0.85,-1.907"/>
+
+
+                            <Label Content="সেসন" HorizontalAlignment="Left" Margin="15,150,0,0" VerticalAlignment="Top" Height="42" Width="131" RenderTransformOrigin="-0.85,-1.907"/>
+                            <Label Content="ক্যাম্পাস" HorizontalAlignment="Left" Margin="14,217,0,0" VerticalAlignment="Top" Height="33" Width="131" RenderTransformOrigin="-0.85,-1.907"/>
+
+
+
+                            <Label Content="ডিপার্টমেন্ট" HorizontalAlignment="Left" Margin="14,84,0,0" VerticalAlignment="Top" Height="43" Width="135" RenderTransformOrigin="-0.85,-1.907"/>
+
+                            <Label Content="একাডেমিক বর্ষ" HorizontalAlignment="Left" Margin="10,278,0,0" VerticalAlignment="Top" Height="44" Width="135" RenderTransformOrigin="-0.85,-1.907"/>
+                            <Label Content="ব্যাচ" HorizontalAlignment="Left" Margin="15,346,0,0" VerticalAlignment="Top" Height="30" Width="136" RenderTransformOrigin="-0.85,-1.907"/>
 
 
                         </Grid>
 
                     </GroupBox>
-                    <Button Content="Next" Background="Purple"  RenderTransformOrigin="6.592,9.945"  Click="nextButton" Height="34"  HorizontalAlignment="Right" Width="90" Margin="0,306,179,190"/>
+                    <Button Content="Next" Background="Purple"  RenderTransformOrigin="6.592,9.945"  Click="nextButton" Height="34"  HorizontalAlignment="Right" Width="90" Margin="0,460,467,51"/>
 
 
                 </Grid>
