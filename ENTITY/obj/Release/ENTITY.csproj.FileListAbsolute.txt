@@ -15,3 +15,8 @@ F:\SIPI_Management\ENTITY\bin\Release\ENTITY.dll
 F:\SIPI_Management\ENTITY\bin\Release\ENTITY.pdb
 F:\SIPI_Management\ENTITY\obj\Release\ENTITY.dll
 F:\SIPI_Management\ENTITY\obj\Release\ENTITY.pdb
+D:\SIPI_Management\ENTITY\bin\Release\ENTITY.dll
+D:\SIPI_Management\ENTITY\bin\Release\ENTITY.pdb
+D:\SIPI_Management\ENTITY\obj\Release\ENTITY.csprojResolveAssemblyReference.cache
+D:\SIPI_Management\ENTITY\obj\Release\ENTITY.dll
+D:\SIPI_Management\ENTITY\obj\Release\ENTITY.pdb

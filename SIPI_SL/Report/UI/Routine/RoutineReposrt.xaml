@@ -7,7 +7,7 @@
 
     <Grid>
         <Grid>
-            <extToolkit:WatermarkTextBox Watermark="Year" Text="" Name="yearTextBox" FontSize="15" SnapsToDevicePixels="False" SelectionBrush="#FF5677B1" Margin="336,33,0,0" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92"  />
+            <TextBox Text="" Name="yearTextBox" FontSize="15" SnapsToDevicePixels="False" SelectionBrush="#FF5677B1" Margin="336,33,0,0" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92"  />
 
             <Button Content="Preview" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="514,35,0,0" Height="24" Name="previewReportButton" Click="previewReportButton_Click" />
             <Button Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="433,35,0,0" Height="24" Name="searchButton" Click="searchButton_Click" />

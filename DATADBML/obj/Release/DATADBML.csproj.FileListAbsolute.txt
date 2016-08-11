@@ -28,3 +28,10 @@ F:\SIPI_Management\DATADBML\bin\Release\ENTITY.dll
 F:\SIPI_Management\DATADBML\bin\Release\ENTITY.pdb
 F:\SIPI_Management\DATADBML\obj\Release\DATADBML.dll
 F:\SIPI_Management\DATADBML\obj\Release\DATADBML.pdb
+D:\SIPI_Management\DATADBML\bin\Release\DATADBML.dll.config
+D:\SIPI_Management\DATADBML\bin\Release\DATADBML.dll
+D:\SIPI_Management\DATADBML\bin\Release\DATADBML.pdb
+D:\SIPI_Management\DATADBML\bin\Release\ENTITY.dll
+D:\SIPI_Management\DATADBML\bin\Release\ENTITY.pdb
+D:\SIPI_Management\DATADBML\obj\Release\DATADBML.dll
+D:\SIPI_Management\DATADBML\obj\Release\DATADBML.pdb

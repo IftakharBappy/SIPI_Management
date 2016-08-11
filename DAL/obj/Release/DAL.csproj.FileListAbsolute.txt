@@ -35,3 +35,14 @@ F:\SIPI_Management\DAL\bin\Release\ENTITY.pdb
 F:\SIPI_Management\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
 F:\SIPI_Management\DAL\obj\Release\DAL.dll
 F:\SIPI_Management\DAL\obj\Release\DAL.pdb
+D:\SIPI_Management\DAL\bin\Release\DAL.dll
+D:\SIPI_Management\DAL\bin\Release\DAL.pdb
+D:\SIPI_Management\DAL\bin\Release\DATA.dll
+D:\SIPI_Management\DAL\bin\Release\ENTITY.dll
+D:\SIPI_Management\DAL\bin\Release\EntityFramework.dll
+D:\SIPI_Management\DAL\bin\Release\DATA.pdb
+D:\SIPI_Management\DAL\bin\Release\ENTITY.pdb
+D:\SIPI_Management\DAL\bin\Release\EntityFramework.xml
+D:\SIPI_Management\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+D:\SIPI_Management\DAL\obj\Release\DAL.dll
+D:\SIPI_Management\DAL\obj\Release\DAL.pdb

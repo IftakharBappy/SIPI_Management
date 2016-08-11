@@ -5,7 +5,7 @@
         Title="Attendance Reposrt" Height="353.356" Width="621.197"  Background="{StaticResource GrayWhite}" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" >
     <Grid>
         <Grid>
-            <extToolkit:WatermarkTextBox Watermark="Year" Text="" Name="yearTextBox" FontSize="15" SnapsToDevicePixels="False" SelectionBrush="#FF5677B1" Margin="338,29,0,0" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92"  />
+            <TextBox Text="" Name="yearTextBox" FontSize="15" SnapsToDevicePixels="False" SelectionBrush="#FF5677B1" Margin="338,29,0,0" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92"  />
 
             <Button Content="Preview" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="514,35,0,0" Height="24" Name="previewReportButton" Click="previewReportButton_Click" />
             <Button Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="433,35,0,0" Height="24" Name="searchButton" Click="searchButton_Click" />

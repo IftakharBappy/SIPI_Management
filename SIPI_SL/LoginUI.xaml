@@ -6,18 +6,21 @@
         <ImageBrush ImageSource="/Resources\images\background_WPF.jpg"/>
     </Window.Background>
     <Grid>
-        <extToolkit:WatermarkTextBox Watermark="Username" Height="35" Name="txtUserName" Width="220" FontSize="15" SnapsToDevicePixels="False" SelectionBrush="#FF5677B1" Margin="165,223,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
-        <PasswordBox   Name="txtPassword" Width="220" PasswordChar="*" Foreground="Red" ForceCursor="False" FontSize="15" Margin="166,263,0,0" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" />
-        <Grid Margin="186,63,205,168"></Grid>
 
-        <Canvas Margin="186,64,205,169">
-            <Image Source="/SIPI_SL;component/Resources/images/login-image.png" Height="146" Width="178" Canvas.Top="-1" />
+        <TextBox Height="35" Name="txtUserName" Width="220" FontSize="15" SnapsToDevicePixels="False" SelectionBrush="#FF5677B1" Margin="175,223,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+        <PasswordBox   Name="txtPassword" Width="220" PasswordChar="*" Foreground="Red" ForceCursor="False" FontSize="15" Margin="174,286,0,0" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" />
+        <Grid Margin="186,61,205,170"></Grid>
+
+        <Canvas Margin="195,63,196,170">
+            <Image Source="/SIPI_SL;component/Resources/images/login-image.png" Height="146" Width="178" Canvas.Top="-23" />
 
         </Canvas>
-        <Button Content="Button" Height="35" HorizontalAlignment="Left" Margin="396,263,0,0" Name="loginGoButton" VerticalAlignment="Top" Width="56" Style="{StaticResource LoginGo}" Click="LoginGoButtonClick" />
-        <Button Content="Button" Height="35" HorizontalAlignment="Left" Margin="462,263,0,0" Name="loginExitbutton" Style="{StaticResource Exit}" VerticalAlignment="Top" Width="52" Click="LoginExitbuttonClick" />
+        <Button Content="Button" Height="35" HorizontalAlignment="Left" Margin="404,286,0,0" Name="loginGoButton" VerticalAlignment="Top" Width="56" Style="{StaticResource LoginGo}" Click="LoginGoButtonClick" />
+        <Button Content="Button" Height="35" HorizontalAlignment="Left" Margin="470,286,0,0" Name="loginExitbutton" Style="{StaticResource Exit}" VerticalAlignment="Top" Width="52" Click="LoginExitbuttonClick" />
         <Label Content="Shyamoli Ideal Politechnical Institute User login" Height="28" Margin="123,12,93,0" Name="label1" VerticalAlignment="Top" Foreground="AliceBlue" FontWeight="Bold" FontSize="13" />
         <Image Height="42" HorizontalAlignment="Right" Margin="0,0,4,3" Name="image1" Stretch="Uniform" VerticalAlignment="Bottom" Width="142" Source="/SIPI_SL;component/Resources/images/4D-2s.png" />
+        <Label Content="User Name" HorizontalAlignment="Left" Margin="175,197,0,0" VerticalAlignment="Top" Width="110" Foreground="#FFF5ECEC" FontSize="14"/>
+        <Label Content="Password"  HorizontalAlignment="Left" Margin="175,260,0,0" VerticalAlignment="Top" Width="110" Background="{x:Null}" Foreground="#FFFBF8F8" FontSize="14"/>
 
     </Grid>
 </Window>

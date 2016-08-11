@@ -70,3 +70,14 @@ F:\SIPI_Management\DAL\bin\Debug\ENTITY.pdb
 F:\SIPI_Management\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 F:\SIPI_Management\DAL\obj\Debug\DAL.dll
 F:\SIPI_Management\DAL\obj\Debug\DAL.pdb
+D:\SIPI_Management\DAL\bin\Debug\DAL.dll
+D:\SIPI_Management\DAL\bin\Debug\DAL.pdb
+D:\SIPI_Management\DAL\bin\Debug\DATA.dll
+D:\SIPI_Management\DAL\bin\Debug\ENTITY.dll
+D:\SIPI_Management\DAL\bin\Debug\EntityFramework.dll
+D:\SIPI_Management\DAL\bin\Debug\DATA.pdb
+D:\SIPI_Management\DAL\bin\Debug\ENTITY.pdb
+D:\SIPI_Management\DAL\bin\Debug\EntityFramework.xml
+D:\SIPI_Management\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\SIPI_Management\DAL\obj\Debug\DAL.dll
+D:\SIPI_Management\DAL\obj\Debug\DAL.pdb

@@ -15,9 +15,9 @@
                 <ColumnDefinition Width="293*"/>
                 <ColumnDefinition Width="716*"/>
             </Grid.ColumnDefinitions>
-            <extToolkit:WatermarkTextBox Watermark="Name" Height="35" Name="studentNameTextbox" FontSize="15" SnapsToDevicePixels="False" SelectionBrush="#FF5677B1" Margin="28,-140,714,472" Grid.ColumnSpan="2"  />
-            <extToolkit:WatermarkTextBox Watermark="Department" Name="departmentTextbox" FontSize="15" SnapsToDevicePixels="False" SelectionBrush="#FF5677B1" Margin="7,-140,474,473" Height="34" Grid.Column="1"  />
-            <extToolkit:WatermarkTextBox Watermark="Student Id" Name="studentIdTextbox" FontSize="15" SnapsToDevicePixels="False" SelectionBrush="#FF5677B1" Margin="285,-140,196,473" Height="34" Grid.Column="1" />
+            <!--<extToolkit:WatermarkTextBox Watermark="Name" Height="35" Name="studentNameTextbox" FontSize="15" SnapsToDevicePixels="False" SelectionBrush="#FF5677B1" Margin="28,-140,714,472" Grid.ColumnSpan="2"  />-->
+            <!--<extToolkit:WatermarkTextBox Watermark="Department" Name="departmentTextbox" FontSize="15" SnapsToDevicePixels="False" SelectionBrush="#FF5677B1" Margin="7,-140,474,473" Height="34" Grid.Column="1"  />-->
+            <!--<extToolkit:WatermarkTextBox Watermark="Student Id" Name="studentIdTextbox" FontSize="15" SnapsToDevicePixels="False" SelectionBrush="#FF5677B1" Margin="285,-140,196,473" Height="34" Grid.Column="1" />-->
             <Button Content="Search" HorizontalAlignment="Left" Margin="537,-142,0,0" VerticalAlignment="Top" Width="86" Height="32" Name="SearchButton" RenderTransformOrigin="3.221,-0.219" Grid.Column="1"/>
 
         </Grid>

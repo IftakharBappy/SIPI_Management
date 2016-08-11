@@ -1,7 +1,7 @@
 ﻿<Window x:Class="SIPI_SL.Report.UI.CourseManagement.CourseReportUI"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:extToolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit/extended"
+        
         Title="Course Report" Height="353.356" Width="621.197"  Background="{StaticResource GrayWhite}" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" >
     <Grid>
         <Grid>
