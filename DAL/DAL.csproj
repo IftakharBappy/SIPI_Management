@@ -34,9 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -81,6 +81,7 @@
     <Compile Include="PIS\SectionDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultManagement\StudentResultGetwey.cs" />
+    <Compile Include="SetupClass\TemporaryDataSetGetway.cs" />
     <Compile Include="StudentManagement\ClassPeriodGetway.cs" />
     <Compile Include="StudentManagement\ClassRoutineCreateGetway.cs" />
     <Compile Include="StudentManagement\ClassRoutineGroupGetway.cs" />

@@ -19,12 +19,14 @@ namespace DATA
         public int DepartmentId { get; set; }
         public int CampusId { get; set; }
         public int SemesterId { get; set; }
-        public Nullable<int> Year { get; set; }
+        public string Year { get; set; }
         public System.DateTime Date { get; set; }
         public string Status { get; set; }
+        public Nullable<int> CourseId { get; set; }
     
         public virtual ADMISSIONINFO ADMISSIONINFO { get; set; }
         public virtual CAMPUSINFO CAMPUSINFO { get; set; }
+        public virtual COURSE COURSE { get; set; }
         public virtual SEMESTER SEMESTER { get; set; }
         public virtual SIPI_DEPARTMENT SIPI_DEPARTMENT { get; set; }
     }

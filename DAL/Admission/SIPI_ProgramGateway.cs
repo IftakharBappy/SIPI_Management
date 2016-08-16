@@ -69,6 +69,26 @@ namespace DAL.Admission
             return sipi_programList;
         }
 
+        public List<SIPI_Program> GetAllSIPI_ProgramNA()
+        {
+            datacontextObj = new SIPIDBEntities();
+            List<SIPI_Program> sipi_programList = new List<SIPI_Program>();
+          
+            foreach (var p in (from j in datacontextObj.SIPI_PROGRAM select new { j.Id, j.SIPI_ProgramName, j.SIPI_ProgramTime, j.BanglaSIPI_Program }).Distinct())
+            {
+                if (p.SIPI_ProgramName == "N/A")
+                {
+                    SIPI_Program sipi_program = new SIPI_Program();
+                    sipi_program.Id = p.Id;
+                    sipi_program.SIPI_ProgramName = p.SIPI_ProgramName;
+                    sipi_programList.Add(sipi_program);
+                }
+               
+            }
+
+            return sipi_programList;
+        }
+
         public void DeleteSipiProgram(SIPI_Program _sIPI_ProgramObj)
         {
             SIPI_PROGRAM sipi_program = datacontextObj.SIPI_PROGRAM.First(c => c.Id == _sIPI_ProgramObj.Id);

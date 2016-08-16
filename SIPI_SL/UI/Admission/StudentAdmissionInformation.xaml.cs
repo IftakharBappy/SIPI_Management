@@ -1,5 +1,7 @@
 ﻿using BLL.Admission;
+using BLL.SetupClass;
 using ENTITY.Admission;
+using ENTITY.SetupClass;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -60,10 +62,901 @@ namespace SIPI_SL.UI.Admission
         {
             InitializeComponent();
             LoadAllUIData();
-
-
+            //datetest.DisplayMode = CalendarMode.Year;
+            //datetest.DisplayDate = datetest.DisplayDate.Year.ToString();
+            //datetest.DisplayMode = Microsoft.Windows.Controls.CalendarMode.Year;
+            nextButton();
         }
 
+        private void nextButton()
+        {
+            saveButton.Content = "Next";
+            if (mainTab.SelectedIndex == 0)
+            {
+                saveButton.Content = "Next";
+                backButton.Visibility = Visibility.Hidden;
+            }
+            if (mainTab.SelectedIndex == 1)
+            {
+                saveButton.Content = "Next";
+                backButton.Visibility = Visibility.Visible;
+                backButton.Content = "Previous";
+
+            }
+            if (mainTab.SelectedIndex == 2)
+            {
+                saveButton.Content = "Save";
+                backButton.Visibility = Visibility.Visible;
+                backButton.Content = "Previous";
+
+            }  
+        }
+        private void saveButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (saveButton.Content == "Next")
+            {
+                mainTab.SelectedIndex++;
+            }
+
+            _studentInfo = new StudentInfo();
+
+            try
+            {
+                #region Finish Click event
+                if (saveButton.Content.ToString() == "Save")
+                {
+
+                    //FIRST TAB
+                    #region programCombobox
+                    if (programCombobox.SelectedIndex == -1)
+                    {
+                        _SIPIprogramList = new List<SIPI_Program>();
+                        _SIPIprogramList = sIPI_ProgramManagerObj.GetAllSIPI_ProgramNA();
+                        foreach (var item in _SIPIprogramList)
+                        {
+                            if (item.SIPI_ProgramName == "N/A")
+                            {
+                                _studentInfo.ProgramId = item.Id;
+                                _studentInfo.BanglaProgram = item.Id.ToString();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        _studentInfo.ProgramId = ((SIPI_Program)programCombobox.SelectedItem).Id;
+                        _studentInfo.BanglaProgram = ((SIPI_Program)programCombobox.SelectedItem).Id.ToString();
+
+                    }
+                    #endregion
+
+                    #region departmentCombobox
+                    if (departmentCombobox.SelectedIndex == -1)
+                    {
+                        _SIPIDepartmentList = new List<SIPI_Department>();
+                        _SIPIDepartmentList = sIPI_DepartmentManagerObj.GetAll_SIPIDepartmentNA();
+
+                        foreach (var item in _SIPIDepartmentList)
+                        {
+                            if (item.SIPI_DepartmentName == "N/A")
+                            {
+                                _studentInfo.DepartmentId = item.Id;
+                                _studentInfo.BanglaDepartment = item.Id.ToString();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        _studentInfo.DepartmentId = ((SIPI_Department)departmentCombobox.SelectedItem).Id;
+                        _studentInfo.BanglaDepartment = ((SIPI_Department)departmentCombobox.SelectedItem).Id.ToString();
+
+                    }
+                    #endregion
+
+                    #region Session
+                    _studentInfo.Session = sessionTextBox.Text;
+
+                    string s = _studentInfo.Session;
+                    // Split string on '-'
+                    string[] words = s.Split('-');
+                    string yearStr = "";
+                    string yearEnd = "";
+                    int i = 0;
+                    foreach (string word in words)
+                    {
+                        i++;
+                        if (i == 1)
+                        {
+                            yearStr = word;
+                        }
+                        else
+                        {
+                            yearEnd = word;
+                        }
+                    }
+                    yearStr = string.Concat(yearStr.Select(c => (char)('\u09E6' + c - '0'))); // "১২৩৪৫৬৭৮৯০"
+                    yearEnd = string.Concat(yearEnd.Select(c => (char)('\u09E6' + c - '0'))); // "১২৩৪৫৬৭৮৯০"
+                    _studentInfo.BanglaSession = yearStr + "-" + yearEnd;
+                    #endregion
+
+                    #region campusCombobox
+                    if (campusCombobox.SelectedIndex == -1)
+                    {
+                        campusCombobox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.CampusId = ((Campus)campusCombobox.SelectedItem).Id;
+                    }
+                    #endregion
+
+                    #region accademicYear
+                    _studentInfo.AccadamicYear = accademicYearTextBox.Text;
+                    _studentInfo.BanglaAccadamicYear = string.Concat(_studentInfo.AccadamicYear.Select(c => (char)('\u09E6' + c - '0'))); // "১২৩৪৫৬৭৮৯০"
+
+                    #endregion
+
+                    #region batchCombobox
+                    if (batchCombobox.SelectedIndex == -1)
+                    {
+                        _batchList = new List<Batch>();
+                        _batchList = batchManagerObj.GetAllBatchNA();
+                        _SIPIprogramList = sIPI_ProgramManagerObj.GetAllSIPI_ProgramNA();
+                        foreach (var item in _batchList)
+                        {
+
+                            _studentInfo.BatchId = item.Id;
+                            _studentInfo.BanglaBatch = item.BanglaBatch;
+                            _studentInfo.BatchNo = item.BatchNo;
+
+                        }
+                    }
+                    else
+                    {
+                        _studentInfo.BatchId = ((Batch)batchCombobox.SelectedItem).Id;
+                        _studentInfo.BanglaBatch = ((Batch)batchCombobox.SelectedItem).BanglaBatch;
+                        _studentInfo.BatchNo = ((Batch)batchCombobox.SelectedItem).BatchNo;
+                    }
+
+                    #endregion
+
+                    #region ApplicantName
+                    _studentInfo.ApplicantName = applicantNameTextBox.Text;
+                    _studentInfo.BanglaApplicantName = banglaApplicantNameTextBox.Text;
+                    _studentInfo.MobileNo = applicantmobileNumberTextBox.Text;
+                    _studentInfo.Email = emailTextBox.Text;
+                    _studentInfo.DateOfBirth = DateTime.Parse(dateOfBirth.Text);
+                    _studentInfo.BanglaDateOfBirth = DateTime.Parse(dateOfBirth.Text);
+
+                    _studentInfo.Interest = interestTextBox.Text;
+                    _studentInfo.BanglaInterest = banglaInterestTextBox.Text;
+                    _studentInfo.OthersInfo = othersInformationTextBox.Text;
+                    _studentInfo.BanglaOthersInfo = banglaOthersInformationTextBox.Text;
+
+                    #endregion
+                    #region Nationality
+                    _studentInfo.Nationality = nationalityTextBox.Text;
+                    if (_studentInfo.Nationality.Equals("bangladeshi", StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        _studentInfo.BanglaNationality = "বাংলাদেশী";
+                    }
+                    if (_studentInfo.Nationality.Equals("indian", StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        _studentInfo.BanglaNationality = "ইন্ডিয়ান";
+                    }
+                    if (_studentInfo.Nationality.Equals("bhutanese", StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        _studentInfo.BanglaNationality = "ভুটানি";
+                    }
+                    if (_studentInfo.Nationality.Equals("nepalese", StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        _studentInfo.BanglaNationality = "নেপালী";
+                    }
+                    else
+                    {
+                        _studentInfo.BanglaNationality = nationalityTextBox.Text;
+                    }
+                    #endregion
+                    #region Gender
+                    if (maleRadioButton.IsChecked == true)
+                    {
+                        _studentInfo.Gender = "Male"; // male gender
+                        _studentInfo.BanglaGender = "ছাত্র";
+                    }
+                    if (femaleRadioButton.IsChecked == true)
+                    {
+                        _studentInfo.Gender = "Female"; // Female 
+                        _studentInfo.BanglaGender = "ছাত্রী"; // Female 
+                    }
+                    #endregion
+
+                    #region Student_Photo
+                    _studentInfo.Student_Photo = MemberPhoto;
+                    _studentInfo.Student_Signature = SignaturePhoto;
+                    #endregion
+
+                    #region bloodGroup
+                    if (bloodGroupComboBox.SelectedIndex == -1)
+                    {
+                        bloodGroupComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.BloodGroupId = ((BloodGroup)bloodGroupComboBox.SelectedItem).Id;
+                    }
+                    #endregion
+
+                    #region religion
+                    if (religionCombobox.SelectedIndex == -1)
+                    {
+                        religionCombobox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.ReligionId = ((Religion)religionCombobox.SelectedItem).Id;
+                    }
+                    #endregion
+
+                    //// 2nd tab
+
+                    #region Family father mother
+
+                    _studentInfo.FatherName = fathersNameTextBox.Text;
+                    _studentInfo.BanglaFatherName = banglaFathersNameTextBox.Text;
+
+                    _studentInfo.MotherName = mothersNameTextBox.Text;
+                    _studentInfo.BanglaMotherName = banglaMothersNameTextBox.Text;
+                    #endregion
+
+                    #region contact
+                    _studentInfo.FathersMobileNo = fathersMobileNotextBox.Text;
+                    _studentInfo.MothersMobileNo = mothersMobileNoTextBox.Text;
+                    _studentInfo.TelephoneNo = telephoneNoTestBox.Text;
+                    #endregion
+
+                    #region Permanent
+                    _studentInfo.PermanentHouserNo = permanentHouserNoTextBox.Text;
+                    _studentInfo.BanglaPermanentHouserNo = banglaPermanentHouserNoTextBox.Text;
+
+                    _studentInfo.PermanentRoadNo = permanentRoadNoTextBox.Text;
+                    _studentInfo.BanglaPermanentRoadNo = banglaPermanentRoadNoTextBox.Text;
+
+                    _studentInfo.PermanentBlock = permanentBlockTextBox.Text;
+                    _studentInfo.BanglaPermanentBlock = banglaPermanentBlockTextBox.Text;
+
+                    _studentInfo.PermanentSector = permanentSectorTextBox.Text;
+                    _studentInfo.BanglaPermanentSector = banglaPermanentSectorTextBox.Text;
+
+                    #region permanentPostComboBox
+                    if (permanentPostComboBox.SelectedIndex == -1)
+                    {
+                        permanentPostComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.BanglaPermanentPost = ((Post)permanentPostComboBox.SelectedItem).BanglaPostName;
+                        _studentInfo.PermanentPost = ((Post)permanentPostComboBox.SelectedItem).Id;
+                        _studentInfo.PermanentPostName = ((Post)permanentPostComboBox.SelectedItem).PostName;
+                    }
+                    #endregion
+                    #region permanentThanaComboBox
+                    if (permanentThanaComboBox.SelectedIndex == -1)
+                    {
+                        permanentThanaComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.PermanentThana = ((Thana)permanentThanaComboBox.SelectedItem).Id;
+                        _studentInfo.BanglaPermanentThana = ((Thana)permanentThanaComboBox.SelectedItem).BanglaThanaName;
+                        _studentInfo.PermanentThanaName = ((Thana)permanentThanaComboBox.SelectedItem).ThanaName;
+                    }
+                    #endregion
+                    #region permanentDistrictComboBox
+                    if (permanentDistrictComboBox.SelectedIndex == -1)
+                    {
+                        permanentDistrictComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.PermanentDistrict = ((District)permanentDistrictComboBox.SelectedItem).Id;
+                        _studentInfo.PermanentDistrictName = ((District)permanentDistrictComboBox.SelectedItem).DistrictName;
+                        _studentInfo.BanglaPermanentDistrict = ((District)permanentDistrictComboBox.SelectedItem).BanglaDistrict;
+                    }
+                    #endregion
+
+                    #endregion
+                    #region present
+                    _studentInfo.PresentHouserNo = presentHouserNoTextBox.Text;
+                    _studentInfo.BanglaPresentHouserNo = banglapresentHouserNoTextBox.Text;
+
+                    _studentInfo.PresentRoadNo = presentRoadNoTextBox.Text;
+                    _studentInfo.BanglaPresentRoadNo = banglaPresentRoadNoTextBox.Text;
+
+                    _studentInfo.PresentBlock = presentBlockTextBox.Text;
+                    _studentInfo.BanglaPresentBlock = banglaPresentBlockTextBox.Text;
+
+                    _studentInfo.PresentSector = presentSectorTextBox.Text;
+                    _studentInfo.BanglaPresentSector = banglaPresentSectorTextBox.Text;
+
+                    #region presentPostComboBox
+                    if (presentPostComboBox.SelectedIndex == -1)
+                    {
+                        presentPostComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.PresentPost = ((Post)presentPostComboBox.SelectedItem).Id;
+                        _studentInfo.BanglaPresentPost = ((Post)presentPostComboBox.SelectedItem).BanglaPostName;
+                        _studentInfo.PresentPostName = ((Post)presentPostComboBox.SelectedItem).PostName;
+                    }
+                    #endregion
+                    #region presentThanaComboBox
+                    if (presentThanaComboBox.SelectedIndex == -1)
+                    {
+                        presentThanaComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.PresentThana = ((Thana)presentThanaComboBox.SelectedItem).Id;
+                        _studentInfo.BanglaPresentThana = ((Thana)presentThanaComboBox.SelectedItem).BanglaThanaName;
+                        _studentInfo.PresentThanaName = ((Thana)presentThanaComboBox.SelectedItem).ThanaName;
+                    }
+                    #endregion
+                    #region presentDistrictComboBox
+                    if (presentDistrictComboBox.SelectedIndex == -1)
+                    {
+                        presentDistrictComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.PresentDistrict = ((District)presentDistrictComboBox.SelectedItem).Id;
+                        _studentInfo.PresentDistrictName = ((District)presentDistrictComboBox.SelectedItem).DistrictName;
+                        _studentInfo.BanglaPresentDistrict = ((District)presentDistrictComboBox.SelectedItem).BanglaDistrict;
+                    }
+                    #endregion
+
+                    #endregion
+
+                    #region freedomFighter
+                    if (freedomFighterYesRadioButton.IsChecked == true)
+                    {
+                        _studentInfo.FreedomFighter = true;
+                        _studentInfo.BanglaFreedomFighter = true;
+                    }
+                    if (freedomFighterNoRadioButton.IsChecked == true)
+                    {
+                        _studentInfo.FreedomFighter = false;
+                        _studentInfo.BanglaFreedomFighter = false;
+                    }
+                    #endregion
+
+                    #region tribal
+                    if (tribalYesRadioButton.IsChecked == true)
+                    {
+                        _studentInfo.Tribal = true;
+                        _studentInfo.BanglaTribal = true;
+
+                    }
+                    if (tribalNoRadioButton.IsChecked == true)
+                    {
+                        _studentInfo.Tribal = false;
+                        _studentInfo.BanglaTribal = false;
+                    }
+
+                    #endregion
+                    #region Guardian local
+                    _studentInfo.GuardianName = guardianNameTextbox.Text;
+                    _studentInfo.BanglaGuardianName = banglaGuardianNameTextbox.Text;
+                    _studentInfo.GuardianMobileNo = guardianMobileNoTextbox.Text;
+                    _studentInfo.GuardianEmail = guardianEmailTextBox.Text;
+                    #endregion
+                    #region Guardian local address
+                    _studentInfo.GuardianHouserNo = guardianHouserNoTextBox.Text;
+                    _studentInfo.GuardianRoadNo = guardianRoadNoTextBox.Text;
+                    _studentInfo.GuardianBlock = guardianBlockTextBox.Text;
+                    _studentInfo.GuardianSector = guardianSectorTextBox.Text;
+
+                    _studentInfo.BanglaGuardianHouserNo = banglaGuardianHouserNoTextBox.Text;
+                    _studentInfo.BanglaGuardianRoadNo = banglaGuardianRoadNoTextBox.Text;
+                    _studentInfo.BanglaGuardianBlock = banglaGuardianBlockTextBox.Text;
+                    _studentInfo.BanglaGuardianSector = banglaGuardianSectorTextBox.Text;
+
+                    #region guardianPostComboBox
+                    if (guardianPostComboBox.SelectedIndex == -1)
+                    {
+                        guardianPostComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.GuardianPost = ((Post)guardianPostComboBox.SelectedItem).Id;
+                        _studentInfo.BanglaGuardianPost = ((Post)guardianPostComboBox.SelectedItem).BanglaPostName;
+                    }
+                    #endregion
+                    #region guardianThanaComboBox
+                    if (guardianThanaComboBox.SelectedIndex == -1)
+                    {
+                        guardianThanaComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.GuardianThana = ((Thana)guardianThanaComboBox.SelectedItem).Id;
+                        _studentInfo.BanglaGuardianThana = ((Thana)guardianThanaComboBox.SelectedItem).BanglaThanaName;
+                    }
+                    #endregion
+                    #region guardianDistrictComboBox
+                    if (guardianDistrictComboBox.SelectedIndex == -1)
+                    {
+                        guardianDistrictComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.GuardianDistrict = ((District)guardianDistrictComboBox.SelectedItem).Id;
+                        _studentInfo.BanglaGuardianDistrict = ((District)guardianDistrictComboBox.SelectedItem).BanglaDistrict;
+                    }
+                    #endregion
+
+                    ////
+                    #endregion
+
+                    #region AccadamicInfo
+                    _studentInfo.AccadamicInfo_ExamNme = examNameCombobox.Text;
+                    _studentInfo.AccadamicInfo_Group = groupNameCombobox.Text;
+                    _studentInfo.AccadamicInfo_Board = boardCombobox.Text;
+                    _studentInfo.AccadamicInfo_SchoolName = schoolNameTextbox.Text;
+                    #region rollNo
+                    if (rollNoTextbox.Text == "")
+                    {
+                        rollNoTextbox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.AccadamicInfo_RollNo = Convert.ToInt32(rollNoTextbox.Text);
+                    }
+                    #endregion
+
+                    #region RegistrationNo
+                    if (registrationNoTextbox.Text == "")
+                    {
+                        registrationNoTextbox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.AccadamicInfo_RegistrationNo = Convert.ToInt32(registrationNoTextbox.Text);
+                    }
+                    #endregion AccadamicInfo_RegistrationNo
+
+                    #region passingYear
+                    if (passingYearTextbox.Text == "")
+                    {
+                        passingYearTextbox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.AccadamicInfo_PassingYear = Convert.ToInt32(passingYearTextbox.Text);
+                    }
+
+                    #endregion
+
+                    _studentInfo.AccadamicInfo_GPA = gpaTextbox.Text;
+                    #endregion
+
+                    #region Id Generate
+
+                    string yearforStId = accademicYearTextBox.Text;
+                    string sub = yearforStId.Substring(2, yearforStId.Length - 2); /////Sub string
+                    int cnt = 0;
+                    string dept = ((SIPI_Department)departmentCombobox.SelectedItem).SIPI_DepartmentName;
+                    string year = accademicYearTextBox.Text.Trim();
+
+                    cnt = studentInfoManager.GetLastStudentForID(dept, year) + 1; /////count
+
+
+                    string threeDigit = cnt.ToString("000");
+
+                    _studentInfo.StudentID = sub + ((SIPI_Department)departmentCombobox.SelectedItem).SIPI_DepartmentCode + threeDigit;
+                    #endregion
+
+                    studentInfoManager.SaveStudentInfo(_studentInfo);
+                    #region Message box
+                    string message = "Student Admission Successfull" +
+                       Environment.NewLine + "This Student ID IS :  " + _studentInfo.StudentID +
+                       Environment.NewLine + "Keep Remember this ID";
+                    string caption = "Confirmation";
+                    MessageBoxButton buttons = MessageBoxButton.OK;
+                    MessageBoxImage icon = MessageBoxImage.Information;
+                    MessageBox.Show(message, caption, buttons, icon);
+                    #endregion
+
+                    LoadAllStudentInfo();
+                    ClearAllStudentInfo();
+
+                }
+                #endregion
+
+                #region Update Click Event
+                if (finishButton.Content.ToString() == "Update")
+                {
+                    //// Program Information
+
+
+                    if (programCombobox.Text == "")
+                    {
+                        programCombobox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.ProgramId = ((SIPI_Program)programCombobox.SelectedItem).Id;
+                    }
+
+                    _studentInfo.Session = sessionTextBox.Text;
+
+                    ///// campusCombobox
+                    if (campusCombobox.Text == "")
+                    {
+                        campusCombobox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.CampusId = ((Campus)campusCombobox.SelectedItem).Id;
+                    }
+
+                    ///// departmentCombobox
+                    if (departmentCombobox.Text == "")
+                    {
+                        departmentCombobox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.DepartmentId = ((SIPI_Department)departmentCombobox.SelectedItem).Id;
+                    }
+                    ////
+
+                    _studentInfo.AccadamicYear = accademicYearTextBox.Text; //problem is here
+
+                    //_studentInfo.BanglaAccadamicYear = banglaAccademicYearTextBox.Text;
+
+                    ///// batchCombobox
+                    if (batchCombobox.Text == "")
+                    {
+                        batchCombobox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.BatchId = ((Batch)batchCombobox.SelectedItem).Id;
+                    }
+                    ////
+
+                    //_studentInfo.BanglaSession = banglaSessionTextBox.Text;
+
+                    _studentInfo.GuardianName = guardianNameTextbox.Text;
+
+                    //// 2nd tab (Presonal Information)
+
+                    _studentInfo.Student_Photo = MemberPhoto;
+                    _studentInfo.Student_Signature = SignaturePhoto;
+
+                    _studentInfo.ApplicantName = applicantNameTextBox.Text;
+
+                    _studentInfo.MobileNo = applicantmobileNumberTextBox.Text;
+                    _studentInfo.Email = emailTextBox.Text;
+
+                    /// Boolin type here
+                    if (maleRadioButton.IsChecked == true)
+                    {
+                        _studentInfo.Gender = "Male"; // male gender
+                    }
+                    if (femaleRadioButton.IsChecked == true)
+                    {
+                        _studentInfo.Gender = "Female"; // Female 
+                    }
+
+                    _studentInfo.DateOfBirth = DateTime.Parse(dateOfBirth.Text);
+                    _studentInfo.Nationality = nationalityTextBox.Text;
+                    /////bloodGroupComboBox
+                    if (bloodGroupComboBox.Text == "")
+                    {
+                        bloodGroupComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.BloodGroupId = ((BloodGroup)bloodGroupComboBox.SelectedItem).Id;
+                    }
+                    ////
+                    /////religionCombobox
+                    if (religionCombobox.Text == "")
+                    {
+                        religionCombobox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.ReligionId = ((Religion)religionCombobox.SelectedItem).Id;
+                    }
+                    ////
+
+
+
+                    _studentInfo.Interest = interestTextBox.Text;
+                    _studentInfo.OthersInfo = othersInformationTextBox.Text;
+                    _studentInfo.BanglaApplicantName = banglaApplicantNameTextBox.Text;
+                    ////Boolin type here  bangla Gender
+                    //if (banglaMaleRadioButton.IsChecked == true)
+                    //{
+                    //    _studentInfo.BanglaGender = "ছাত্র"; // male gender
+                    //}
+                    //if (banglaFemaleRadioButton.IsChecked == true)
+                    //{
+                    //    _studentInfo.BanglaGender = "ছাত্রী"; // Female 
+                    //}
+
+                    //_studentInfo.BanglaNationality = banglaNationalityTextBox.Text;
+                    //_studentInfo.BanglaDateOfBirth = DateTime.Parse(banglaDateOfbirth.Text);
+                    _studentInfo.BanglaInterest = banglaInterestTextBox.Text;
+                    _studentInfo.BanglaOthersInfo = banglaOthersInformationTextBox.Text;
+
+                    //// 3rd tab (Contact Information)
+                    /////Family And Contact Information
+
+                    _studentInfo.FatherName = fathersNameTextBox.Text;
+                    _studentInfo.MotherName = mothersNameTextBox.Text;
+
+                    ////Freedom Fighter Radio Button
+                    //end
+                    if (freedomFighterYesRadioButton.IsChecked == true)
+                    {
+                        _studentInfo.FreedomFighter = true;
+                    }
+                    if (freedomFighterNoRadioButton.IsChecked == true)
+                    {
+                        _studentInfo.FreedomFighter = false;
+                    }
+                    ///// Tribal Radio Button
+                    if (tribalYesRadioButton.IsChecked == true)
+                    {
+                        _studentInfo.Tribal = true;
+                    }
+                    if (tribalNoRadioButton.IsChecked == true)
+                    {
+                        _studentInfo.Tribal = false;
+                    }
+
+                    ///////
+                    _studentInfo.FathersMobileNo = fathersMobileNotextBox.Text;
+                    _studentInfo.MothersMobileNo = mothersMobileNoTextBox.Text;
+                    _studentInfo.TelephoneNo = telephoneNoTestBox.Text;
+                    //////
+
+                    _studentInfo.BanglaFatherName = banglaFathersNameTextBox.Text;
+                    _studentInfo.BanglaMotherName = banglaMothersNameTextBox.Text;
+
+                    //Bangla Freedom Fighter Radio Button
+                    //if (banglaFreedomFighterYesRadioButton.IsChecked == true)
+                    //{
+                    //    _studentInfo.BanglaFreedomFighter = true;
+                    //}
+                    //if (banglaFreedomFighterNoRadioButton.IsChecked == true)
+                    //{
+                    //    _studentInfo.BanglaFreedomFighter = false;
+                    //}
+                    ///// Bangla Tribal Radio Button
+                    //if (banglaTribalYesRadioButton.IsChecked == true)
+                    //{
+                    //    _studentInfo.BanglaTribal = true;
+                    //}
+                    //if (banglaTribalNoRadioButton.IsChecked == true)
+                    //{
+                    //    _studentInfo.BanglaTribal = false;
+                    //}
+
+
+                    _studentInfo.PermanentHouserNo = permanentHouserNoTextBox.Text;
+                    _studentInfo.PermanentRoadNo = permanentRoadNoTextBox.Text;
+                    _studentInfo.PermanentBlock = permanentBlockTextBox.Text;
+                    _studentInfo.PermanentSector = permanentSectorTextBox.Text;
+
+                    ///// permanentPostComboBox
+                    if (permanentPostComboBox.Text == "")
+                    {
+                        permanentPostComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.PostId = ((Post)permanentPostComboBox.SelectedItem).Id;
+                    }
+                    ////
+
+                    ///// permanentThanaComboBox
+                    if (permanentThanaComboBox.Text == "")
+                    {
+                        permanentThanaComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.ThanaId = ((Thana)permanentThanaComboBox.SelectedItem).Id;
+                    }
+                    ////
+
+                    ///// permanentDistrictComboBox
+                    if (permanentDistrictComboBox.Text == "")
+                    {
+                        permanentDistrictComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.DistrictId = ((District)permanentDistrictComboBox.SelectedItem).Id;
+                    }
+                    ////
+
+                    //////Bangla Permanent
+                    _studentInfo.BanglaPermanentHouserNo = banglaPermanentHouserNoTextBox.Text;
+                    _studentInfo.BanglaPermanentRoadNo = banglaPermanentRoadNoTextBox.Text;
+                    _studentInfo.BanglaPermanentBlock = banglaPermanentBlockTextBox.Text;
+                    _studentInfo.BanglaPermanentSector = banglaPermanentSectorTextBox.Text;
+
+
+                    ////// present address
+                    _studentInfo.PresentHouserNo = presentHouserNoTextBox.Text;
+                    _studentInfo.PresentRoadNo = presentRoadNoTextBox.Text;
+                    _studentInfo.PresentBlock = presentBlockTextBox.Text;
+                    _studentInfo.PresentSector = presentSectorTextBox.Text;
+
+                    ///// presentPostComboBox
+                    if (presentPostComboBox.Text == "")
+                    {
+                        presentPostComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.PostId = ((Post)presentPostComboBox.SelectedItem).Id;
+                    }
+                    ////
+
+                    ///// presentThanaComboBox
+                    if (presentThanaComboBox.Text == "")
+                    {
+                        presentThanaComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.ThanaId = ((Thana)presentThanaComboBox.SelectedItem).Id;
+                    }
+                    ////
+
+                    ///// presentDistrictComboBox
+                    if (presentDistrictComboBox.Text == "")
+                    {
+                        presentDistrictComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.DistrictId = ((District)presentDistrictComboBox.SelectedItem).Id;
+                    }
+                    ////
+
+                    //// bangla present
+                    _studentInfo.BanglaPresentHouserNo = banglapresentHouserNoTextBox.Text;
+                    _studentInfo.BanglaPresentRoadNo = banglaPresentRoadNoTextBox.Text;
+                    _studentInfo.BanglaPresentBlock = banglaPresentBlockTextBox.Text;
+                    _studentInfo.BanglaPresentSector = banglaPresentSectorTextBox.Text;
+
+
+                    //Guardian Info
+
+                    _studentInfo.GuardianName = guardianNameTextbox.Text;
+                    _studentInfo.BanglaGuardianName = banglaGuardianNameTextbox.Text;
+                    _studentInfo.GuardianMobileNo = guardianMobileNoTextbox.Text;
+                    _studentInfo.GuardianEmail = guardianEmailTextBox.Text;
+
+                    ///Guardian Address
+                    _studentInfo.GuardianHouserNo = guardianHouserNoTextBox.Text;
+                    _studentInfo.GuardianRoadNo = guardianRoadNoTextBox.Text;
+                    _studentInfo.GuardianBlock = guardianBlockTextBox.Text;
+                    _studentInfo.GuardianSector = guardianSectorTextBox.Text;
+
+                    ///// guardianPostComboBox
+                    if (guardianPostComboBox.Text == "")
+                    {
+                        guardianPostComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.PostId = ((Post)guardianPostComboBox.SelectedItem).Id;
+                    }
+                    ////
+
+                    ///// guardianThanaComboBox
+                    if (guardianThanaComboBox.Text == "")
+                    {
+                        guardianThanaComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.ThanaId = ((Thana)guardianThanaComboBox.SelectedItem).Id;
+                        //_studentInfo.GuardianThana = guardianThanaComboBox.Text;
+                    }
+                    ////
+                    ///// guardianDistrictComboBox
+                    if (guardianDistrictComboBox.Text == "")
+                    {
+                        guardianDistrictComboBox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.DistrictId = ((District)guardianDistrictComboBox.SelectedItem).Id;
+                        //_studentInfo.GuardianDistrict = guardianDistrictComboBox.Text;
+                    }
+                    ////
+
+
+                    //Bangla Guardian Info
+
+                    _studentInfo.BanglaGuardianHouserNo = banglaGuardianHouserNoTextBox.Text;
+                    _studentInfo.BanglaGuardianRoadNo = banglaGuardianRoadNoTextBox.Text;
+                    _studentInfo.BanglaGuardianBlock = banglaGuardianBlockTextBox.Text;
+                    _studentInfo.BanglaGuardianSector = banglaGuardianSectorTextBox.Text;
+
+
+                    ////Accadamic info
+                    /////
+                    _studentInfo.AccadamicInfo_ExamNme = examNameCombobox.Text;
+                    _studentInfo.AccadamicInfo_Group = groupNameCombobox.Text;
+                    _studentInfo.AccadamicInfo_Board = boardCombobox.Text;
+                    _studentInfo.AccadamicInfo_SchoolName = schoolNameTextbox.Text;
+                    if (rollNoTextbox.Text == "")
+                    {
+                        rollNoTextbox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.AccadamicInfo_RollNo = Convert.ToInt32(rollNoTextbox.Text);
+                    }
+                    /////
+                    //
+                    if (registrationNoTextbox.Text == "")
+                    {
+                        registrationNoTextbox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.AccadamicInfo_RegistrationNo = Convert.ToInt32(registrationNoTextbox.Text);
+                    }
+                    ////
+                    //
+                    if (passingYearTextbox.Text == "")
+                    {
+                        passingYearTextbox.Text = null;
+                    }
+                    else
+                    {
+                        _studentInfo.AccadamicInfo_PassingYear = Convert.ToInt32(passingYearTextbox.Text);
+                    }
+
+                    _studentInfo.AccadamicInfo_GPA = gpaTextbox.Text;
+
+                    studentInfoManager.UpdateInfo(_studentInfo);
+                    LoadAllStudentInfo();
+                    MessageBox.Show("Data Update Successfully");
+                    finishButton.Content = "Finish";
+                    ClearAllStudentInfo();
+
+
+                }
+                #endregion
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            nextButton();
+
+        }
+        private void backButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainTab.SelectedIndex--;
+        }
+        private void mainTab_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            nextButton();
+        }
         public void LoadAllUIData()
         {
             //LoadAllStudentInfo();
@@ -73,7 +966,7 @@ namespace SIPI_SL.UI.Admission
 
             LoadProgramComboBox();
             //LoadBanglaProgramComboBox();
-
+            LoadsessionTextBox();
             LoadCampusComboBox();
             //LoadBanglaCampusComboBox();
 
@@ -82,7 +975,6 @@ namespace SIPI_SL.UI.Admission
 
             LoadBloodGroupComboBox();
             LoadReligionComboBox();
-            LoadBanglaReligionComboBox();
 
             LoadPermanentDistrictComboBox();
 
@@ -100,105 +992,130 @@ namespace SIPI_SL.UI.Admission
             //LoadGuardianThanaComboBox(-1);
             //LoadBanglaGuardianThanaComboBox(-1);,
 
-            LoadBanglaGuardianDistrictComboBox();
+            //LoadBanglaGuardianDistrictComboBox();
             LoadGuardianDistrictComboBox();
 
             //LoadGuardianPostComboBox(-1); 
             //LoadBanglaGuardianPostComboBox(-1);
             dateOfBirth.SelectedDate = DateTime.Now;
-            banglaDateOfbirth.SelectedDate = DateTime.Now;
+            //banglaDateOfbirth.SelectedDate = DateTime.Now;
+        }
+
+        TemporaryDataSetManager _temporaryDataSetManagerObj = new TemporaryDataSetManager();
+        List<TemporaryDataSet> _temporaryDataSetList;
+        private void LoadsessionTextBox()
+        {
+            sessionTextBox.SelectedIndex = -1;
+            _temporaryDataSetList = new List<TemporaryDataSet>();
+            _temporaryDataSetList = _temporaryDataSetManagerObj.GetAllSession();
+            sessionTextBox.Items.Clear();
+
+            foreach (TemporaryDataSet temporaryDataSession in _temporaryDataSetList)
+            {
+                sessionTextBox.Items.Add(temporaryDataSession);
+                for (int i = 0; i < sessionTextBox.Items.Count; i++)
+                {
+                    TemporaryDataSet departmentobj = (TemporaryDataSet)sessionTextBox.Items[i];
+                    if (departmentobj.Session == "N/A")
+                    {
+                        sessionTextBox.SelectedIndex = i;
+                        break;
+                    }
+                }
+            }
+            sessionTextBox.DisplayMemberPath = "Session";
         }
 
 
-        private void LoadBanglaGuardianPostComboBox(int p)
-        {
+        //private void LoadBanglaGuardianPostComboBox(int p)
+        //{
 
 
-            if (p == -1)
-            {
-                _postList = postManagerObj.LoadAllPost(p);
-                foreach (Post post in _postList)
-                {
-                    banglaGuardianPostComboBox.ItemsSource = _postList;
-                    for (int i = 0; i < banglaGuardianPostComboBox.Items.Count; i++)
-                    {
-                        Post banglaPostObj = (Post)banglaGuardianPostComboBox.Items[i];
-                        if (banglaPostObj.PostName == "N/A")
-                        {
-                            banglaGuardianPostComboBox.SelectedIndex = i;
-                            break;
-                        }
-                        banglaGuardianPostComboBox.DisplayMemberPath = "BanglaPostName";
-                    }
-                }
+        //    if (p == -1)
+        //    {
+        //        _postList = postManagerObj.LoadAllPost(p);
+        //        foreach (Post post in _postList)
+        //        {
+        //            banglaGuardianPostComboBox.ItemsSource = _postList;
+        //            for (int i = 0; i < banglaGuardianPostComboBox.Items.Count; i++)
+        //            {
+        //                Post banglaPostObj = (Post)banglaGuardianPostComboBox.Items[i];
+        //                if (banglaPostObj.PostName == "N/A")
+        //                {
+        //                    banglaGuardianPostComboBox.SelectedIndex = i;
+        //                    break;
+        //                }
+        //                banglaGuardianPostComboBox.DisplayMemberPath = "BanglaPostName";
+        //            }
+        //        }
                 
-            }
+        //    }
 
-            else
-            {
-                try
-                {
-                    Thana thana = banglaGuardianThanaComboBox.SelectedItem as Thana;
-                    _postList = postManagerObj.LoadAllPost(thana.Id);
+        //    else
+        //    {
+        //        try
+        //        {
+        //            Thana thana = banglaGuardianThanaComboBox.SelectedItem as Thana;
+        //            _postList = postManagerObj.LoadAllPost(thana.Id);
 
-                    foreach (Post post in _postList)
-                    {
-                        banglaGuardianPostComboBox.ItemsSource = _postList;
-                    }
-                    banglaGuardianPostComboBox.DisplayMemberPath = "BanglaPostName";
+        //            foreach (Post post in _postList)
+        //            {
+        //                banglaGuardianPostComboBox.ItemsSource = _postList;
+        //            }
+        //            banglaGuardianPostComboBox.DisplayMemberPath = "BanglaPostName";
 
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Please Select Product Category", "Confirmation");
-                }
+        //        }
+        //        catch (Exception)
+        //        {
+        //            MessageBox.Show("Please Select Product Category", "Confirmation");
+        //        }
 
-            }
-        }
+        //    }
+        //}
 
-        private void LoadBanglaGuardianThanaComboBox(int p)
-        {
-            if (p == -1)
-            {
-                _thanaList = thanaManagerObj.LoadAllThana(p);
-                foreach (Thana thana in _thanaList)
-                {
-                    banglaGuardianThanaComboBox.ItemsSource = _thanaList;
-                    for (int i = 0; i < banglaGuardianThanaComboBox.Items.Count; i++)
-                    {
-                        Thana banglaThanaObj = (Thana)banglaGuardianThanaComboBox.Items[i];
-                        if (banglaThanaObj.ThanaName == "N/A")
-                        {
-                            banglaGuardianThanaComboBox.SelectedIndex = i;
-                            break;
-                        }
-                        banglaGuardianThanaComboBox.DisplayMemberPath = "BanglaThanaName";
-                    }
-                }
-                banglaGuardianThanaComboBox.DisplayMemberPath = "BanglaThanaName";
-            }
+        //private void LoadBanglaGuardianThanaComboBox(int p)
+        //{
+        //    if (p == -1)
+        //    {
+        //        _thanaList = thanaManagerObj.LoadAllThana(p);
+        //        foreach (Thana thana in _thanaList)
+        //        {
+        //            banglaGuardianThanaComboBox.ItemsSource = _thanaList;
+        //            for (int i = 0; i < banglaGuardianThanaComboBox.Items.Count; i++)
+        //            {
+        //                Thana banglaThanaObj = (Thana)banglaGuardianThanaComboBox.Items[i];
+        //                if (banglaThanaObj.ThanaName == "N/A")
+        //                {
+        //                    banglaGuardianThanaComboBox.SelectedIndex = i;
+        //                    break;
+        //                }
+        //                banglaGuardianThanaComboBox.DisplayMemberPath = "BanglaThanaName";
+        //            }
+        //        }
+        //        banglaGuardianThanaComboBox.DisplayMemberPath = "BanglaThanaName";
+        //    }
 
-            else
-            {
-                try
-                {
-                    District district = banglaGuardianDistrictComboBox.SelectedItem as District;
-                    _thanaList = thanaManagerObj.LoadAllThana(district.Id);
+        //    else
+        //    {
+        //        try
+        //        {
+        //            District district = banglaGuardianDistrictComboBox.SelectedItem as District;
+        //            _thanaList = thanaManagerObj.LoadAllThana(district.Id);
 
-                    foreach (Thana thana in _thanaList)
-                    {
-                        banglaGuardianThanaComboBox.ItemsSource = _thanaList;
-                    }
-                    banglaGuardianThanaComboBox.DisplayMemberPath = "BanglaThanaName";
+        //            foreach (Thana thana in _thanaList)
+        //            {
+        //                banglaGuardianThanaComboBox.ItemsSource = _thanaList;
+        //            }
+        //            banglaGuardianThanaComboBox.DisplayMemberPath = "BanglaThanaName";
 
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Please Select Product Category", "Confirmation");
-                }
+        //        }
+        //        catch (Exception)
+        //        {
+        //            MessageBox.Show("Please Select Product Category", "Confirmation");
+        //        }
 
-            }
-        }
+        //    }
+        //}
 
         private void LoadGuardianPostComboBox(int p)
         {
@@ -534,16 +1451,16 @@ namespace SIPI_SL.UI.Admission
         /// ////////////Gurdian Address
         /// </summary>
 
-        private void LoadBanglaGuardianThanaComboBox()
-        {
-            _thanaList = new List<Thana>();
-            banglaGuardianThanaComboBox.Items.Clear();
-            _thanaList = thanaManagerObj.GetAllThana();
-            foreach (Thana thana in _thanaList)
-            {
-                banglaGuardianThanaComboBox.ItemsSource = _thanaList;
-            }
-        }
+        //private void LoadBanglaGuardianThanaComboBox()
+        //{
+        //    _thanaList = new List<Thana>();
+        //    banglaGuardianThanaComboBox.Items.Clear();
+        //    _thanaList = thanaManagerObj.GetAllThana();
+        //    foreach (Thana thana in _thanaList)
+        //    {
+        //        banglaGuardianThanaComboBox.ItemsSource = _thanaList;
+        //    }
+        //}
 
         private void LoadGuardianPostComboBox()
         {
@@ -557,16 +1474,16 @@ namespace SIPI_SL.UI.Admission
         }
 
 
-        private void LoadBanglaGuardianPostComboBox()
-        {
-            _postList = new List<Post>();
-            banglaGuardianPostComboBox.Items.Clear();
-            _postList = postManagerObj.GetAllPost();
-            foreach (Post post in _postList)
-            {
-                banglaGuardianPostComboBox.ItemsSource = _postList;
-            }
-        }
+        //private void LoadBanglaGuardianPostComboBox()
+        //{
+        //    _postList = new List<Post>();
+        //    banglaGuardianPostComboBox.Items.Clear();
+        //    _postList = postManagerObj.GetAllPost();
+        //    foreach (Post post in _postList)
+        //    {
+        //        banglaGuardianPostComboBox.ItemsSource = _postList;
+        //    }
+        //}
 
         private void LoadGuardianDistrictComboBox()
         {
@@ -590,27 +1507,27 @@ namespace SIPI_SL.UI.Admission
             
         }
 
-        private void LoadBanglaGuardianDistrictComboBox()
-        {
-            _districtList = new List<District>();
-            banglaGuardianDistrictComboBox.Items.Clear();
-            _districtList = districtManagerobj.GetAllDistrict();
-            foreach (District district in _districtList)
-            {
-                banglaGuardianDistrictComboBox.ItemsSource = _districtList;
-                for (int i = 0; i < banglaGuardianDistrictComboBox.Items.Count; i++)
-                {
-                    District guardianDistrictObj = (District)banglaGuardianDistrictComboBox.Items[i];
-                    if (guardianDistrictObj.DistrictName == "N/A")
-                    {
-                        banglaGuardianDistrictComboBox.SelectedIndex = i;
-                        break;
-                    }
-                    banglaGuardianDistrictComboBox.DisplayMemberPath = "DistrictName";
-                }
-            }
-            banglaGuardianDistrictComboBox.DisplayMemberPath = "BanglaDistrict";
-        }
+        //private void LoadBanglaGuardianDistrictComboBox()
+        //{
+        //    _districtList = new List<District>();
+        //    banglaGuardianDistrictComboBox.Items.Clear();
+        //    _districtList = districtManagerobj.GetAllDistrict();
+        //    foreach (District district in _districtList)
+        //    {
+        //        banglaGuardianDistrictComboBox.ItemsSource = _districtList;
+        //        for (int i = 0; i < banglaGuardianDistrictComboBox.Items.Count; i++)
+        //        {
+        //            District guardianDistrictObj = (District)banglaGuardianDistrictComboBox.Items[i];
+        //            if (guardianDistrictObj.DistrictName == "N/A")
+        //            {
+        //                banglaGuardianDistrictComboBox.SelectedIndex = i;
+        //                break;
+        //            }
+        //            banglaGuardianDistrictComboBox.DisplayMemberPath = "DistrictName";
+        //        }
+        //    }
+        //    banglaGuardianDistrictComboBox.DisplayMemberPath = "BanglaDistrict";
+        //}
         /// <summary>
         /// //////////////END address
         /// </summary>
@@ -621,7 +1538,7 @@ namespace SIPI_SL.UI.Admission
             _campusList = campusManagerObj.GetAllCampus();
 
             campusCombobox.Items.Clear();
-            banglaCampusCombobox.Items.Clear();
+            //banglaCampusCombobox.Items.Clear();
 
             
             foreach (Campus campus in _campusList)
@@ -637,17 +1554,17 @@ namespace SIPI_SL.UI.Admission
                     }
                     campusCombobox.DisplayMemberPath = "CampusName";
                 }
-                banglaCampusCombobox.ItemsSource = _campusList;
-                for (int i = 0; i < banglaCampusCombobox.Items.Count; i++)
-                {
-                    Campus banglaCampusobj = (Campus)banglaCampusCombobox.Items[i];
-                    if (banglaCampusobj.BanglaCampus == "N/A")
-                    {
-                        banglaCampusCombobox.SelectedIndex = i;
-                        break;
-                    }
-                    banglaCampusCombobox.DisplayMemberPath = "BanglaCampus";
-                }
+                //banglaCampusCombobox.ItemsSource = _campusList;
+                //for (int i = 0; i < banglaCampusCombobox.Items.Count; i++)
+                //{
+                //    Campus banglaCampusobj = (Campus)banglaCampusCombobox.Items[i];
+                //    if (banglaCampusobj.BanglaCampus == "N/A")
+                //    {
+                //        banglaCampusCombobox.SelectedIndex = i;
+                //        break;
+                //    }
+                //    banglaCampusCombobox.DisplayMemberPath = "BanglaCampus";
+                //}
 
             }
             
@@ -657,26 +1574,26 @@ namespace SIPI_SL.UI.Admission
         /// ///////Bangla campus
         /// </summary>
 
-        private void LoadBanglaCampusComboBox()
-        {
-            _campusList = new List<Campus>();
-            banglaCampusCombobox.Items.Clear();
-            _campusList = campusManagerObj.GetAllCampus();
-            foreach (Campus banglacampus in _campusList)
-            {
-                banglaCampusCombobox.ItemsSource = _campusList;
-                for (int i = 0; i < banglaCampusCombobox.Items.Count; i++)
-                {
-                    Campus banglaCampusobj = (Campus)banglaCampusCombobox.Items[i];
-                    if (banglaCampusobj.BanglaCampus == "N/A")
-                    {
-                        banglaCampusCombobox.SelectedIndex = i;
-                        break;
-                    }
-                    banglaCampusCombobox.DisplayMemberPath = "BanglaCampus";
-                }
-            }
-        }
+        //private void LoadBanglaCampusComboBox()
+        //{
+        //    _campusList = new List<Campus>();
+        //    banglaCampusCombobox.Items.Clear();
+        //    _campusList = campusManagerObj.GetAllCampus();
+        //    foreach (Campus banglacampus in _campusList)
+        //    {
+        //        banglaCampusCombobox.ItemsSource = _campusList;
+        //        for (int i = 0; i < banglaCampusCombobox.Items.Count; i++)
+        //        {
+        //            Campus banglaCampusobj = (Campus)banglaCampusCombobox.Items[i];
+        //            if (banglaCampusobj.BanglaCampus == "N/A")
+        //            {
+        //                banglaCampusCombobox.SelectedIndex = i;
+        //                break;
+        //            }
+        //            banglaCampusCombobox.DisplayMemberPath = "BanglaCampus";
+        //        }
+        //    }
+        //}
         
         private void LoadBatchComboBox()
         {
@@ -684,7 +1601,7 @@ namespace SIPI_SL.UI.Admission
             _batchList = batchManagerObj.GetAllBatch();
 
             batchCombobox.Items.Clear();
-            banglaBatchCombobox.Items.Clear(); 
+            //banglaBatchCombobox.Items.Clear(); 
 
             foreach (Batch batch in _batchList)
             {
@@ -699,80 +1616,80 @@ namespace SIPI_SL.UI.Admission
                     }
                     batchCombobox.DisplayMemberPath = "BatchNo";
                 }
-                banglaBatchCombobox.ItemsSource = _batchList;
-                for (int i = 0; i < banglaBatchCombobox.Items.Count; i++)
-                {
-                    Batch banglaBatchObj = (Batch)banglaBatchCombobox.Items[i];
-                    if (banglaBatchObj.BatchNo == "N/A")
-                    {
-                        banglaBatchCombobox.SelectedIndex = i;
-                        break;
-                    }
-                    banglaBatchCombobox.DisplayMemberPath = "BanglaBatch";
-                }
+                //banglaBatchCombobox.ItemsSource = _batchList;
+                //for (int i = 0; i < banglaBatchCombobox.Items.Count; i++)
+                //{
+                //    Batch banglaBatchObj = (Batch)banglaBatchCombobox.Items[i];
+                //    if (banglaBatchObj.BatchNo == "N/A")
+                //    {
+                //        banglaBatchCombobox.SelectedIndex = i;
+                //        break;
+                //    }
+                //    banglaBatchCombobox.DisplayMemberPath = "BanglaBatch";
+                //}
             }
             
         }
         /// <summary>
         /// /////Bangla Batch
         /// </summary>
-        private void LoadBanglaBatchComboBox()
-        {
-            _batchList = new List<Batch>();
-            banglaBatchCombobox.Items.Clear();
-            _batchList = batchManagerObj.GetAllBatch();
-            foreach (Batch batch in _batchList)
-            {
-                banglaBatchCombobox.ItemsSource = _batchList;
+        //private void LoadBanglaBatchComboBox()
+        //{
+        //    _batchList = new List<Batch>();
+        //    banglaBatchCombobox.Items.Clear();
+        //    _batchList = batchManagerObj.GetAllBatch();
+        //    foreach (Batch batch in _batchList)
+        //    {
+        //        banglaBatchCombobox.ItemsSource = _batchList;
 
-                for (int i = 0; i < banglaBatchCombobox.Items.Count; i++)
-                {
-                    Batch banglaBatchObj = (Batch)banglaBatchCombobox.Items[i];
-                    if (banglaBatchObj.BatchNo == "N/A")
-                    {
-                        banglaBatchCombobox.SelectedIndex = i;
-                        break;
-                    }
-                    banglaBatchCombobox.DisplayMemberPath = "BanglaBatch";
-                }
+        //        for (int i = 0; i < banglaBatchCombobox.Items.Count; i++)
+        //        {
+        //            Batch banglaBatchObj = (Batch)banglaBatchCombobox.Items[i];
+        //            if (banglaBatchObj.BatchNo == "N/A")
+        //            {
+        //                banglaBatchCombobox.SelectedIndex = i;
+        //                break;
+        //            }
+        //            banglaBatchCombobox.DisplayMemberPath = "BanglaBatch";
+        //        }
 
-            }
+        //    }
            
-        }
+        //}
         private void LoadProgramComboBox()
         {
             _SIPIprogramList = new List<SIPI_Program>();
             programCombobox.Items.Clear();
-            banglaProgramCombobox.Items.Clear();
+            //banglaProgramCombobox.Items.Clear();
             _SIPIprogramList = sIPI_ProgramManagerObj.GetAllSIPI_Program();
             foreach (SIPI_Program program in _SIPIprogramList)
             {
                 programCombobox.ItemsSource = _SIPIprogramList;
-                banglaProgramCombobox.ItemsSource = _SIPIprogramList;
+                //banglaProgramCombobox.ItemsSource = _SIPIprogramList;
 
             }
             programCombobox.DisplayMemberPath = "SIPI_ProgramName";
             programCombobox.SelectedIndex = 0;
-            banglaProgramCombobox.DisplayMemberPath = "BanglaSIPI_ProgramName";
-            banglaProgramCombobox.SelectedIndex = 0;
+            //banglaProgramCombobox.DisplayMemberPath = "BanglaSIPI_ProgramName";
+            //banglaProgramCombobox.SelectedIndex = 0;
             
         }
 
         /// <summary>
         /// /////BanglaProgramComboBox
         /// </summary>
-        private void LoadBanglaProgramComboBox()
-        {
-            _SIPIprogramList = new List<SIPI_Program>();
-            banglaProgramCombobox.Items.Clear();
-            _SIPIprogramList = sIPI_ProgramManagerObj.GetAllSIPI_Program();
-            foreach (SIPI_Program program in _SIPIprogramList)
-            {
-                banglaProgramCombobox.ItemsSource = _SIPIprogramList;
-            }
-            banglaProgramCombobox.DisplayMemberPath = "BanglaSIPI_ProgramName";
-            banglaProgramCombobox.SelectedIndex = 0;
-        }
+        //private void LoadBanglaProgramComboBox()
+        //{
+        //    _SIPIprogramList = new List<SIPI_Program>();
+        //    //banglaProgramCombobox.Items.Clear();
+        //    _SIPIprogramList = sIPI_ProgramManagerObj.GetAllSIPI_Program();
+        //    foreach (SIPI_Program program in _SIPIprogramList)
+        //    {
+        //        banglaProgramCombobox.ItemsSource = _SIPIprogramList;
+        //    }
+        //    banglaProgramCombobox.DisplayMemberPath = "BanglaSIPI_ProgramName";
+        //    banglaProgramCombobox.SelectedIndex = 0;
+        //}
         /// <summary>
         /// ////SIPI_Department Technology
         /// </summary>
@@ -782,7 +1699,7 @@ namespace SIPI_SL.UI.Admission
             _SIPIDepartmentList = new List<SIPI_Department>();
             _SIPIDepartmentList = sIPI_DepartmentManagerObj.GetAll_SIPIDepartment();
             departmentCombobox.Items.Clear();
-            banglaDepartmentCombobox.Items.Clear();
+            //banglaDepartmentCombobox.Items.Clear();
             foreach (SIPI_Department department in _SIPIDepartmentList)
             {
                 departmentCombobox.ItemsSource = _SIPIDepartmentList;
@@ -797,46 +1714,46 @@ namespace SIPI_SL.UI.Admission
 
                 }
 
-                banglaDepartmentCombobox.ItemsSource = _SIPIDepartmentList;
-                for (int i = 0; i < banglaDepartmentCombobox.Items.Count; i++)
-                {
-                    SIPI_Department departmentobj = (SIPI_Department)banglaDepartmentCombobox.Items[i];
-                    if (departmentobj.SIPI_DepartmentName == "N/A")
-                    {
-                        banglaDepartmentCombobox.SelectedIndex = i;
-                        break;
-                    }
-                    //banglaDepartmentCombobox.DisplayMemberPath = department.BanglaSIPI_DepartmentName;
-                }
+                //banglaDepartmentCombobox.ItemsSource = _SIPIDepartmentList;
+                //for (int i = 0; i < banglaDepartmentCombobox.Items.Count; i++)
+                //{
+                //    SIPI_Department departmentobj = (SIPI_Department)banglaDepartmentCombobox.Items[i];
+                //    if (departmentobj.SIPI_DepartmentName == "N/A")
+                //    {
+                //        banglaDepartmentCombobox.SelectedIndex = i;
+                //        break;
+                //    }
+                //    //banglaDepartmentCombobox.DisplayMemberPath = department.BanglaSIPI_DepartmentName;
+                //}
             }
 
         }
         /// <summary>
         /// ////////Bangla Department
         /// </summary>
-        private void LoadBanglaDepartmentComboBox()
-        {
-            _SIPIDepartmentList = new List<SIPI_Department>();
-            banglaDepartmentCombobox.Items.Clear();
-            _SIPIDepartmentList = sIPI_DepartmentManagerObj.GetAll_SIPIDepartment();
-            foreach (SIPI_Department department in _SIPIDepartmentList)
-            {
-                banglaDepartmentCombobox.ItemsSource = _SIPIDepartmentList;
-                for (int i = 0; i < banglaDepartmentCombobox.Items.Count; i++)
-                {
-                    SIPI_Department departmentobj = (SIPI_Department)banglaDepartmentCombobox.Items[i];
-                    if (departmentobj.SIPI_DepartmentName == "N/A")
-                    {
-                        banglaDepartmentCombobox.SelectedIndex = i;
-                        break;
-                    }
-                    banglaDepartmentCombobox.DisplayMemberPath = "BanglaSIPI_DepartmentName";
-                }
+        //private void LoadBanglaDepartmentComboBox()
+        //{
+        //    _SIPIDepartmentList = new List<SIPI_Department>();
+        //    banglaDepartmentCombobox.Items.Clear();
+        //    _SIPIDepartmentList = sIPI_DepartmentManagerObj.GetAll_SIPIDepartment();
+        //    foreach (SIPI_Department department in _SIPIDepartmentList)
+        //    {
+        //        banglaDepartmentCombobox.ItemsSource = _SIPIDepartmentList;
+        //        for (int i = 0; i < banglaDepartmentCombobox.Items.Count; i++)
+        //        {
+        //            SIPI_Department departmentobj = (SIPI_Department)banglaDepartmentCombobox.Items[i];
+        //            if (departmentobj.SIPI_DepartmentName == "N/A")
+        //            {
+        //                banglaDepartmentCombobox.SelectedIndex = i;
+        //                break;
+        //            }
+        //            banglaDepartmentCombobox.DisplayMemberPath = "BanglaSIPI_DepartmentName";
+        //        }
 
-            }
+        //    }
             
 
-        }
+        //}
 
         /// <summary>
         /// Blood Group Combobox
@@ -881,787 +1798,22 @@ namespace SIPI_SL.UI.Admission
         /// <summary>
         /// Bangla Religion Combobox
         /// </summary>
-        private void LoadBanglaReligionComboBox()
-        {
-            _rligionList = new List<Religion>();
-            banglaReligionCombobox.Items.Clear();
-            _rligionList = religionManager.GetAllReligion();
-            foreach (Religion religion in _rligionList)
-            {
-                banglaReligionCombobox.ItemsSource = _rligionList;
-                banglaReligionCombobox.SelectedIndex = 0;
+        //private void LoadBanglaReligionComboBox()
+        //{
+        //    _rligionList = new List<Religion>();
+        //    banglaReligionCombobox.Items.Clear();
+        //    _rligionList = religionManager.GetAllReligion();
+        //    foreach (Religion religion in _rligionList)
+        //    {
+        //        banglaReligionCombobox.ItemsSource = _rligionList;
+        //        banglaReligionCombobox.SelectedIndex = 0;
 
-            }
-        }
+        //    }
+        //}
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                if (finishButton.Content.ToString() == "Finish")
-                {
-                    //// Program Information
-                    _studentInfo = new StudentInfo();
-
-                    if (programCombobox.Text == "")
-                    {
-                        programCombobox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.ProgramId = ((SIPI_Program)programCombobox.SelectedItem).Id;
-                    }
-
-                    _studentInfo.Session = sessionTextBox.Text;
-
-                    ///// campusCombobox
-                    if (campusCombobox.Text == "")
-                    {
-                        campusCombobox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.CampusId = ((Campus)campusCombobox.SelectedItem).Id;
-                    }
-
-                    ///// departmentCombobox
-                    if (departmentCombobox.Text == "")
-                    {
-                        departmentCombobox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.DepartmentId = ((SIPI_Department)departmentCombobox.SelectedItem).Id;
-                    }
-                    ////
-
-                    _studentInfo.AccadamicYear = accademicYearTextBox.Text; //problem is here
-                    ///// batchCombobox
-                    if (batchCombobox.Text == "")
-                    {
-                        batchCombobox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.BatchId = ((Batch)batchCombobox.SelectedItem).Id;
-                    }
-                    ////
-
-                    _studentInfo.BanglaSession = banglaSessionTextBox.Text;
-                    _studentInfo.BanglaAccadamicYear = banglaAccademicYearTextBox.Text;
-
-                    _studentInfo.GuardianName = guardianNameTextbox.Text;
-
-                    //// 2nd tab (Presonal Information)
-
-                    _studentInfo.Student_Photo = MemberPhoto;
-                    _studentInfo.Student_Signature = SignaturePhoto;
-
-                    _studentInfo.ApplicantName = applicantNameTextBox.Text;
-
-                    _studentInfo.MobileNo = applicantmobileNumberTextBox.Text;
-                    _studentInfo.Email = emailTextBox.Text;
-
-                    /// Boolin type here
-                    if (maleRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.Gender = "Male"; // male gender
-                    }
-                    if (femaleRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.Gender = "Female"; // Female 
-                    }
-
-                    _studentInfo.DateOfBirth = DateTime.Parse(dateOfBirth.Text);
-                    _studentInfo.Nationality = nationalityTextBox.Text;
-                    /////bloodGroupComboBox
-                    if (bloodGroupComboBox.Text == "")
-                    {
-                        bloodGroupComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.BloodGroupId = ((BloodGroup)bloodGroupComboBox.SelectedItem).Id;
-                    }
-                    ////
-                    /////religionCombobox
-                    if (religionCombobox.Text == "")
-                    {
-                        religionCombobox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.ReligionId = ((Religion)religionCombobox.SelectedItem).Id;
-                    }
-                    ////
-
-
-
-                    _studentInfo.Interest = interestTextBox.Text;
-                    _studentInfo.OthersInfo = othersInformationTextBox.Text;
-                    _studentInfo.BanglaApplicantName = banglaApplicantNameTextBox.Text;
-                    ////Boolin type here  bangla Gender
-                    if (banglaMaleRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.BanglaGender = "ছাত্র"; // male gender
-                    }
-                    if (banglaFemaleRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.BanglaGender = "ছাত্রী"; // Female 
-                    }
-
-                    _studentInfo.BanglaNationality = banglaNationalityTextBox.Text;
-                    _studentInfo.BanglaDateOfBirth = DateTime.Parse(banglaDateOfbirth.Text);
-                    _studentInfo.BanglaInterest = banglaInterestTextBox.Text;
-                    _studentInfo.BanglaOthersInfo = banglaOthersInformationTextBox.Text;
-
-                    //// 3rd tab (Contact Information)
-                    /////Family And Contact Information
-
-                    _studentInfo.FatherName = fathersNameTextBox.Text;
-                    _studentInfo.MotherName = mothersNameTextBox.Text;
-
-                    ////Freedom Fighter Radio Button
-                    //end
-                    if (freedomFighterYesRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.FreedomFighter = true;
-                    }
-                    if (freedomFighterNoRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.FreedomFighter = false;
-                    }
-                    ///// Tribal Radio Button
-                    if (tribalYesRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.Tribal = true;
-                    }
-                    if (tribalNoRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.Tribal = false;
-                    }
-
-                    ///////
-                    _studentInfo.FathersMobileNo = fathersMobileNotextBox.Text;
-                    _studentInfo.MothersMobileNo = mothersMobileNoTextBox.Text;
-                    _studentInfo.TelephoneNo = telephoneNoTestBox.Text;
-                    //////
-
-                    _studentInfo.BanglaFatherName = banglaFathersNameTextBox.Text;
-                    _studentInfo.BanglaMotherName = banglaMothersNameTextBox.Text;
-
-                    //Bangla Freedom Fighter Radio Button
-                    if (banglaFreedomFighterYesRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.BanglaFreedomFighter = true;
-                    }
-                    if (banglaFreedomFighterNoRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.BanglaFreedomFighter = false;
-                    }
-                    /// Bangla Tribal Radio Button
-                    if (banglaTribalYesRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.BanglaTribal = true;
-                    }
-                    if (banglaTribalNoRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.BanglaTribal = false;
-                    }
-
-
-                    _studentInfo.PermanentHouserNo = permanentHouserNoTextBox.Text;
-                    _studentInfo.PermanentRoadNo = permanentRoadNoTextBox.Text;
-                    _studentInfo.PermanentBlock = permanentBlockTextBox.Text;
-                    _studentInfo.PermanentSector = permanentSectorTextBox.Text;
-
-                    ///// permanentPostComboBox
-                    if (permanentPostComboBox.Text == "")
-                    {
-                        permanentPostComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.PostId = ((Post)permanentPostComboBox.SelectedItem).Id;
-                    }
-                    ////
-                    //_studentInfo.PermanentPost = permanentPostComboBox.Text;
-
-                    ///// permanentThanaComboBox
-                    if (permanentThanaComboBox.Text == "")
-                    {
-                        permanentThanaComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.ThanaId = ((Thana)permanentThanaComboBox.SelectedItem).Id;
-                    }
-                    ////
-
-                    ///// permanentDistrictComboBox
-                    if (permanentDistrictComboBox.Text == "")
-                    {
-                        permanentDistrictComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.DistrictId = ((District)permanentDistrictComboBox.SelectedItem).Id;
-                    }
-                    ////
-
-                    //////Bangla Permanent
-                    _studentInfo.BanglaPermanentHouserNo = banglaPermanentHouserNoTextBox.Text;
-                    _studentInfo.BanglaPermanentRoadNo = banglaPermanentRoadNoTextBox.Text;
-                    _studentInfo.BanglaPermanentBlock = banglaPermanentBlockTextBox.Text;
-                    _studentInfo.BanglaPermanentSector = banglaPermanentSectorTextBox.Text;
-
-
-                    ////// present address
-                    _studentInfo.PresentHouserNo = presentHouserNoTextBox.Text;
-                    _studentInfo.PresentRoadNo = presentRoadNoTextBox.Text;
-                    _studentInfo.PresentBlock = presentBlockTextBox.Text;
-                    _studentInfo.PresentSector = presentSectorTextBox.Text;
-
-                    ///// presentPostComboBox
-                    if (presentPostComboBox.Text == "")
-                    {
-                        presentPostComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.PostId = ((Post)presentPostComboBox.SelectedItem).Id;
-                    }
-                    ////
-
-                    ///// presentThanaComboBox
-                    if (presentThanaComboBox.Text == "")
-                    {
-                        presentThanaComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.ThanaId = ((Thana)presentThanaComboBox.SelectedItem).Id;
-                    }
-                    ////
-
-                    ///// presentDistrictComboBox
-                    if (presentDistrictComboBox.Text == "")
-                    {
-                        presentDistrictComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.DistrictId = ((District)presentDistrictComboBox.SelectedItem).Id;
-                    }
-                    ////
-
-                    //// bangla present
-                    _studentInfo.BanglaPresentHouserNo = banglapresentHouserNoTextBox.Text;
-                    _studentInfo.BanglaPresentRoadNo = banglaPresentRoadNoTextBox.Text;
-                    _studentInfo.BanglaPresentBlock = banglaPresentBlockTextBox.Text;
-                    _studentInfo.BanglaPresentSector = banglaPresentSectorTextBox.Text;
-
-
-                    //Guardian Info
-
-                    _studentInfo.GuardianName = guardianNameTextbox.Text;
-                    _studentInfo.BanglaGuardianName = banglaGuardianNameTextbox.Text;
-                    _studentInfo.GuardianMobileNo = guardianMobileNoTextbox.Text;
-                    _studentInfo.GuardianEmail = guardianEmailTextBox.Text;
-
-                    ///Guardian Address
-                    _studentInfo.GuardianHouserNo = guardianHouserNoTextBox.Text;
-                    _studentInfo.GuardianRoadNo = guardianRoadNoTextBox.Text;
-                    _studentInfo.GuardianBlock = guardianBlockTextBox.Text;
-                    _studentInfo.GuardianSector = guardianSectorTextBox.Text;
-
-                    ///// guardianPostComboBox
-                    if (guardianPostComboBox.Text == "")
-                    {
-                        guardianPostComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.PostId = ((Post)guardianPostComboBox.SelectedItem).Id;
-                    }
-                    ////
-
-                    ///// guardianThanaComboBox
-                    if (guardianThanaComboBox.Text == "")
-                    {
-                        guardianThanaComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.ThanaId = ((Thana)guardianThanaComboBox.SelectedItem).Id;
-                        //_studentInfo.GuardianThana = guardianThanaComboBox.Text;
-                    }
-                    ////
-                    ///// guardianDistrictComboBox
-                    if (guardianDistrictComboBox.Text == "")
-                    {
-                        guardianDistrictComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.DistrictId = ((District)guardianDistrictComboBox.SelectedItem).Id;
-                        //_studentInfo.GuardianDistrict = guardianDistrictComboBox.Text;
-                    }
-                    ////
-
-
-                    //Bangla Guardian Info
-
-                    _studentInfo.BanglaGuardianHouserNo = banglaGuardianHouserNoTextBox.Text;
-                    _studentInfo.BanglaGuardianRoadNo = banglaGuardianRoadNoTextBox.Text;
-                    _studentInfo.BanglaGuardianBlock = banglaGuardianBlockTextBox.Text;
-                    _studentInfo.BanglaGuardianSector = banglaGuardianSectorTextBox.Text;
-
-
-                    ////Accadamic info
-                    /////
-                    _studentInfo.AccadamicInfo_ExamNme = examNameCombobox.Text;
-                    _studentInfo.AccadamicInfo_Group = groupNameCombobox.Text;
-                    _studentInfo.AccadamicInfo_Board = boardCombobox.Text;
-                    _studentInfo.AccadamicInfo_SchoolName = schoolNameTextbox.Text;
-                    if (rollNoTextbox.Text == "")
-                    {
-                        rollNoTextbox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.AccadamicInfo_RollNo = Convert.ToInt32(rollNoTextbox.Text);
-                    }
-                    /////
-                    //
-                    if (registrationNoTextbox.Text == "")
-                    {
-                        registrationNoTextbox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.AccadamicInfo_RegistrationNo = Convert.ToInt32(registrationNoTextbox.Text);
-                    }
-                    ////
-                    //
-                    if (passingYearTextbox.Text == "")
-                    {
-                        passingYearTextbox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.AccadamicInfo_PassingYear = Convert.ToInt32(passingYearTextbox.Text);
-                    }
-
-                    _studentInfo.AccadamicInfo_GPA = gpaTextbox.Text;
-
-                    //// Id Generate
-
-                    string yearforStId = accademicYearTextBox.Text;
-                    string sub = yearforStId.Substring(2, yearforStId.Length - 2); /////Sub string
-                    int cnt = 0;
-                    string dept = ((SIPI_Department)departmentCombobox.SelectedItem).SIPI_DepartmentName;
-                    string year = accademicYearTextBox.Text.Trim();
-
-                    cnt = studentInfoManager.GetLastStudentForID(dept, year) + 1; /////count
-
-
-                    string threeDigit = cnt.ToString("000");
-
-                    _studentInfo.StudentID = sub + ((SIPI_Department)departmentCombobox.SelectedItem).SIPI_DepartmentCode + threeDigit;
-
-                    //// Id Generate
-
-
-                    studentInfoManager.SaveStudentInfo(_studentInfo);
-                    LoadAllStudentInfo();
-                    ClearAllStudentInfo();
-                    //////Message box
-                    string message = "Student Admission Successfull" +
-                        Environment.NewLine + "This Student ID IS :  " + _studentInfo.StudentID +
-                        Environment.NewLine + "Keep Remember this ID";
-                    string caption = "Confirmation";
-                    MessageBoxButton buttons = MessageBoxButton.OK;
-                    MessageBoxImage icon = MessageBoxImage.Information;
-                    MessageBox.Show(message, caption, buttons, icon);
-                    //////Message box
-
-
-                    listwiewTab.IsSelected = true;
-
-
-                }
-
-                if (finishButton.Content.ToString() == "Update")
-                {
-                    //// Program Information
-
-
-                    if (programCombobox.Text == "")
-                    {
-                        programCombobox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.ProgramId = ((SIPI_Program)programCombobox.SelectedItem).Id;
-                    }
-
-                    _studentInfo.Session = sessionTextBox.Text;
-
-                    ///// campusCombobox
-                    if (campusCombobox.Text == "")
-                    {
-                        campusCombobox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.CampusId = ((Campus)campusCombobox.SelectedItem).Id;
-                    }
-
-                    ///// departmentCombobox
-                    if (departmentCombobox.Text == "")
-                    {
-                        departmentCombobox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.DepartmentId = ((SIPI_Department)departmentCombobox.SelectedItem).Id;
-                    }
-                    ////
-
-                    _studentInfo.AccadamicYear = accademicYearTextBox.Text; //problem is here
-                    ///// batchCombobox
-                    if (batchCombobox.Text == "")
-                    {
-                        batchCombobox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.BatchId = ((Batch)batchCombobox.SelectedItem).Id;
-                    }
-                    ////
-
-                    _studentInfo.BanglaSession = banglaSessionTextBox.Text;
-                    _studentInfo.BanglaAccadamicYear = banglaAccademicYearTextBox.Text;
-
-                    _studentInfo.GuardianName = guardianNameTextbox.Text;
-
-                    //// 2nd tab (Presonal Information)
-
-                    _studentInfo.Student_Photo = MemberPhoto;
-                    _studentInfo.Student_Signature = SignaturePhoto;
-
-                    _studentInfo.ApplicantName = applicantNameTextBox.Text;
-
-                    _studentInfo.MobileNo = applicantmobileNumberTextBox.Text;
-                    _studentInfo.Email = emailTextBox.Text;
-
-                    /// Boolin type here
-                    if (maleRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.Gender = "Male"; // male gender
-                    }
-                    if (femaleRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.Gender = "Female"; // Female 
-                    }
-
-                    _studentInfo.DateOfBirth = DateTime.Parse(dateOfBirth.Text);
-                    _studentInfo.Nationality = nationalityTextBox.Text;
-                    /////bloodGroupComboBox
-                    if (bloodGroupComboBox.Text == "")
-                    {
-                        bloodGroupComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.BloodGroupId = ((BloodGroup)bloodGroupComboBox.SelectedItem).Id;
-                    }
-                    ////
-                    /////religionCombobox
-                    if (religionCombobox.Text == "")
-                    {
-                        religionCombobox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.ReligionId = ((Religion)religionCombobox.SelectedItem).Id;
-                    }
-                    ////
-
-
-
-                    _studentInfo.Interest = interestTextBox.Text;
-                    _studentInfo.OthersInfo = othersInformationTextBox.Text;
-                    _studentInfo.BanglaApplicantName = banglaApplicantNameTextBox.Text;
-                    ////Boolin type here  bangla Gender
-                    if (banglaMaleRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.BanglaGender = "ছাত্র"; // male gender
-                    }
-                    if (banglaFemaleRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.BanglaGender = "ছাত্রী"; // Female 
-                    }
-
-                    _studentInfo.BanglaNationality = banglaNationalityTextBox.Text;
-                    _studentInfo.BanglaDateOfBirth = DateTime.Parse(banglaDateOfbirth.Text);
-                    _studentInfo.BanglaInterest = banglaInterestTextBox.Text;
-                    _studentInfo.BanglaOthersInfo = banglaOthersInformationTextBox.Text;
-
-                    //// 3rd tab (Contact Information)
-                    /////Family And Contact Information
-
-                    _studentInfo.FatherName = fathersNameTextBox.Text;
-                    _studentInfo.MotherName = mothersNameTextBox.Text;
-
-                    ////Freedom Fighter Radio Button
-                    //end
-                    if (freedomFighterYesRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.FreedomFighter = true;
-                    }
-                    if (freedomFighterNoRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.FreedomFighter = false;
-                    }
-                    ///// Tribal Radio Button
-                    if (tribalYesRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.Tribal = true;
-                    }
-                    if (tribalNoRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.Tribal = false;
-                    }
-
-                    ///////
-                    _studentInfo.FathersMobileNo = fathersMobileNotextBox.Text;
-                    _studentInfo.MothersMobileNo = mothersMobileNoTextBox.Text;
-                    _studentInfo.TelephoneNo = telephoneNoTestBox.Text;
-                    //////
-
-                    _studentInfo.BanglaFatherName = banglaFathersNameTextBox.Text;
-                    _studentInfo.BanglaMotherName = banglaMothersNameTextBox.Text;
-
-                    //Bangla Freedom Fighter Radio Button
-                    if (banglaFreedomFighterYesRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.BanglaFreedomFighter = true;
-                    }
-                    if (banglaFreedomFighterNoRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.BanglaFreedomFighter = false;
-                    }
-                    /// Bangla Tribal Radio Button
-                    if (banglaTribalYesRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.BanglaTribal = true;
-                    }
-                    if (banglaTribalNoRadioButton.IsChecked == true)
-                    {
-                        _studentInfo.BanglaTribal = false;
-                    }
-
-
-                    _studentInfo.PermanentHouserNo = permanentHouserNoTextBox.Text;
-                    _studentInfo.PermanentRoadNo = permanentRoadNoTextBox.Text;
-                    _studentInfo.PermanentBlock = permanentBlockTextBox.Text;
-                    _studentInfo.PermanentSector = permanentSectorTextBox.Text;
-
-                    ///// permanentPostComboBox
-                    if (permanentPostComboBox.Text == "")
-                    {
-                        permanentPostComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.PostId = ((Post)permanentPostComboBox.SelectedItem).Id;
-                    }
-                    ////
-
-                    ///// permanentThanaComboBox
-                    if (permanentThanaComboBox.Text == "")
-                    {
-                        permanentThanaComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.ThanaId = ((Thana)permanentThanaComboBox.SelectedItem).Id;
-                    }
-                    ////
-
-                    ///// permanentDistrictComboBox
-                    if (permanentDistrictComboBox.Text == "")
-                    {
-                        permanentDistrictComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.DistrictId = ((District)permanentDistrictComboBox.SelectedItem).Id;
-                    }
-                    ////
-
-                    //////Bangla Permanent
-                    _studentInfo.BanglaPermanentHouserNo = banglaPermanentHouserNoTextBox.Text;
-                    _studentInfo.BanglaPermanentRoadNo = banglaPermanentRoadNoTextBox.Text;
-                    _studentInfo.BanglaPermanentBlock = banglaPermanentBlockTextBox.Text;
-                    _studentInfo.BanglaPermanentSector = banglaPermanentSectorTextBox.Text;
-
-
-                    ////// present address
-                    _studentInfo.PresentHouserNo = presentHouserNoTextBox.Text;
-                    _studentInfo.PresentRoadNo = presentRoadNoTextBox.Text;
-                    _studentInfo.PresentBlock = presentBlockTextBox.Text;
-                    _studentInfo.PresentSector = presentSectorTextBox.Text;
-
-                    ///// presentPostComboBox
-                    if (presentPostComboBox.Text == "")
-                    {
-                        presentPostComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.PostId = ((Post)presentPostComboBox.SelectedItem).Id;
-                    }
-                    ////
-
-                    ///// presentThanaComboBox
-                    if (presentThanaComboBox.Text == "")
-                    {
-                        presentThanaComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.ThanaId = ((Thana)presentThanaComboBox.SelectedItem).Id;
-                    }
-                    ////
-
-                    ///// presentDistrictComboBox
-                    if (presentDistrictComboBox.Text == "")
-                    {
-                        presentDistrictComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.DistrictId = ((District)presentDistrictComboBox.SelectedItem).Id;
-                    }
-                    ////
-
-                    //// bangla present
-                    _studentInfo.BanglaPresentHouserNo = banglapresentHouserNoTextBox.Text;
-                    _studentInfo.BanglaPresentRoadNo = banglaPresentRoadNoTextBox.Text;
-                    _studentInfo.BanglaPresentBlock = banglaPresentBlockTextBox.Text;
-                    _studentInfo.BanglaPresentSector = banglaPresentSectorTextBox.Text;
-
-
-                    //Guardian Info
-
-                    _studentInfo.GuardianName = guardianNameTextbox.Text;
-                    _studentInfo.BanglaGuardianName = banglaGuardianNameTextbox.Text;
-                    _studentInfo.GuardianMobileNo = guardianMobileNoTextbox.Text;
-                    _studentInfo.GuardianEmail = guardianEmailTextBox.Text;
-
-                    ///Guardian Address
-                    _studentInfo.GuardianHouserNo = guardianHouserNoTextBox.Text;
-                    _studentInfo.GuardianRoadNo = guardianRoadNoTextBox.Text;
-                    _studentInfo.GuardianBlock = guardianBlockTextBox.Text;
-                    _studentInfo.GuardianSector = guardianSectorTextBox.Text;
-
-                    ///// guardianPostComboBox
-                    if (guardianPostComboBox.Text == "")
-                    {
-                        guardianPostComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.PostId = ((Post)guardianPostComboBox.SelectedItem).Id;
-                    }
-                    ////
-
-                    ///// guardianThanaComboBox
-                    if (guardianThanaComboBox.Text == "")
-                    {
-                        guardianThanaComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.ThanaId = ((Thana)guardianThanaComboBox.SelectedItem).Id;
-                        //_studentInfo.GuardianThana = guardianThanaComboBox.Text;
-                    }
-                    ////
-                    ///// guardianDistrictComboBox
-                    if (guardianDistrictComboBox.Text == "")
-                    {
-                        guardianDistrictComboBox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.DistrictId = ((District)guardianDistrictComboBox.SelectedItem).Id;
-                        //_studentInfo.GuardianDistrict = guardianDistrictComboBox.Text;
-                    }
-                    ////
-
-
-                    //Bangla Guardian Info
-
-                    _studentInfo.BanglaGuardianHouserNo = banglaGuardianHouserNoTextBox.Text;
-                    _studentInfo.BanglaGuardianRoadNo = banglaGuardianRoadNoTextBox.Text;
-                    _studentInfo.BanglaGuardianBlock = banglaGuardianBlockTextBox.Text;
-                    _studentInfo.BanglaGuardianSector = banglaGuardianSectorTextBox.Text;
-
-
-                    ////Accadamic info
-                    /////
-                    _studentInfo.AccadamicInfo_ExamNme = examNameCombobox.Text;
-                    _studentInfo.AccadamicInfo_Group = groupNameCombobox.Text;
-                    _studentInfo.AccadamicInfo_Board = boardCombobox.Text;
-                    _studentInfo.AccadamicInfo_SchoolName = schoolNameTextbox.Text;
-                    if (rollNoTextbox.Text == "")
-                    {
-                        rollNoTextbox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.AccadamicInfo_RollNo = Convert.ToInt32(rollNoTextbox.Text);
-                    }
-                    /////
-                    //
-                    if (registrationNoTextbox.Text == "")
-                    {
-                        registrationNoTextbox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.AccadamicInfo_RegistrationNo = Convert.ToInt32(registrationNoTextbox.Text);
-                    }
-                    ////
-                    //
-                    if (passingYearTextbox.Text == "")
-                    {
-                        passingYearTextbox.Text = null;
-                    }
-                    else
-                    {
-                        _studentInfo.AccadamicInfo_PassingYear = Convert.ToInt32(passingYearTextbox.Text);
-                    }
-
-                    _studentInfo.AccadamicInfo_GPA = gpaTextbox.Text;
-
-                    studentInfoManager.UpdateInfo(_studentInfo);
-                    LoadAllStudentInfo();
-                    MessageBox.Show("Data Update Successfully");
-                    finishButton.Content = "Finish";
-                    ClearAllStudentInfo();
-
-
-                }
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
+            
 
 
 
@@ -1692,12 +1844,7 @@ namespace SIPI_SL.UI.Admission
             departmentCombobox.Text = "";
             accademicYearTextBox.Text = "";
             batchCombobox.Text = "";
-            banglaProgramCombobox.Text = "";
-            banglaSessionTextBox.Text = "";
-            banglaCampusCombobox.Text = "";
-            banglaDepartmentCombobox.Text = "";
-            banglaAccademicYearTextBox.Text = "";
-            banglaBatchCombobox.Text = "";
+        
         }
         private void ClearPersonalInfo()
         {
@@ -1714,11 +1861,7 @@ namespace SIPI_SL.UI.Admission
             othersInformationTextBox.Text = "";
             //imgMemberPhoto.;
             banglaApplicantNameTextBox.Text = "";
-            banglaMaleRadioButton.IsChecked = false;
-            banglaFemaleRadioButton.IsChecked = false;
-            banglaNationalityTextBox.Text = "";
-            banglaReligionCombobox.Text = "";
-            banglaDateOfbirth.SelectedDate = DateTime.Now;
+          
             banglaInterestTextBox.Text = "";
             banglaOthersInformationTextBox.Text = "";
         }
@@ -1736,10 +1879,10 @@ namespace SIPI_SL.UI.Admission
 
             banglaFathersNameTextBox.Text = "";
             banglaMothersNameTextBox.Text = "";
-            banglaFreedomFighterYesRadioButton.IsChecked = false;
-            banglaFreedomFighterNoRadioButton.IsChecked = false;
-            banglaTribalYesRadioButton.IsChecked = false;
-            banglaTribalNoRadioButton.IsChecked = false;
+            //banglaFreedomFighterYesRadioButton.IsChecked = false;
+            //banglaFreedomFighterNoRadioButton.IsChecked = false;
+            //banglaTribalYesRadioButton.IsChecked = false;
+            //banglaTribalNoRadioButton.IsChecked = false;
 
 
         }
@@ -1791,9 +1934,9 @@ namespace SIPI_SL.UI.Admission
             banglaGuardianRoadNoTextBox.Text = "";
             banglaGuardianBlockTextBox.Text = "";
             banglaGuardianSectorTextBox.Text = "";
-            banglaGuardianPostComboBox.Text = "";
-            banglaGuardianThanaComboBox.Text = "";
-            banglaGuardianDistrictComboBox.Text = "";
+            ////banglaGuardianPostComboBox.Text = "";
+            //banglaGuardianThanaComboBox.Text = "";
+            //banglaGuardianDistrictComboBox.Text = "";
         }
         private void ClearAccadamicInfo()
         {
@@ -1875,18 +2018,7 @@ namespace SIPI_SL.UI.Admission
                     }
 
                 }
-                for (int i = 0; i < banglaProgramCombobox.Items.Count; i++)
-                {
-                    SIPI_Program prog = (SIPI_Program)banglaProgramCombobox.Items[i];
-                    if (_studentInfo.ProgramId == prog.Id)
-                    {
-                        banglaProgramCombobox.SelectedIndex = i;
-                        break;
-
-                    }
-
-                }
-
+              
                 sessionTextBox.Text = _studentInfo.Session;
                 /////FOR CAMPUS COMBOBOX
 
@@ -1902,17 +2034,7 @@ namespace SIPI_SL.UI.Admission
 
                 }
 
-                for (int i = 0; i < banglaCampusCombobox.Items.Count; i++)
-                {
-                    Campus camp = (Campus)banglaCampusCombobox.Items[i];
-                    if (_studentInfo.CampusId == camp.Id)
-                    {
-                        banglaCampusCombobox.SelectedIndex = i;
-                        break;
-
-                    }
-
-                }
+            
 
                 /////FOR DEARTMENT COMBOBOX
 
@@ -1927,20 +2049,8 @@ namespace SIPI_SL.UI.Admission
                     }
                 }
 
-                for (int i = 0; i < banglaDepartmentCombobox.Items.Count; i++)
-                {
-                    SIPI_Department department = (SIPI_Department)banglaDepartmentCombobox.Items[i];
-                    if (_studentInfo.DepartmentId == department.Id)
-                    {
-                        banglaDepartmentCombobox.SelectedIndex = i;
-                        break;
-
-                    }
-
-                }
 
                 accademicYearTextBox.Text = _studentInfo.AccadamicYear;
-                banglaSessionTextBox.Text = _studentInfo.BanglaSession;
                 //banglaAccademicYearTextBox = _studentInfo.BanglaAccadamicYear;
 
                 ///// FOR Batch COMBOBOX
@@ -1956,17 +2066,7 @@ namespace SIPI_SL.UI.Admission
                     }
 
                 }
-                for (int i = 0; i < banglaBatchCombobox.Items.Count; i++)
-                {
-                    Batch batch = (Batch)banglaBatchCombobox.Items[i];
-                    if (_studentInfo.BatchId == batch.Id)
-                    {
-                        banglaBatchCombobox.SelectedIndex = i;
-                        break;
-
-                    }
-
-                }
+              
 
 
                 applicantNameTextBox.Text = _studentInfo.ApplicantName;
@@ -1986,18 +2086,7 @@ namespace SIPI_SL.UI.Admission
 
                 }
 
-                ////bangla Gender
-
-                if (_studentInfo.Gender == "Male")
-                {
-                    banglaMaleRadioButton.IsChecked = true;
-
-                }
-                if (_studentInfo.Gender == "Female")
-                {
-                    banglaFemaleRadioButton.IsChecked = true;
-
-                }
+               
                 //dateOfBirth.Text = DateTime.Parse(_studentInfo.DateOfBirth);
                 nationalityTextBox.Text = _studentInfo.Nationality;
                 /////FOR BLOODGROUP CMB
@@ -2024,21 +2113,12 @@ namespace SIPI_SL.UI.Admission
                     }
 
                 }
-                for (int i = 0; i < banglaReligionCombobox.Items.Count; i++)
-                {
-                    Religion religion = (Religion)banglaReligionCombobox.Items[i];
-                    if (_studentInfo.ReligionId == religion.Id)
-                    {
-                        banglaReligionCombobox.SelectedIndex = i;
-                        break;
-                    }
-                }
+             
 
                 interestTextBox.Text = _studentInfo.Interest;
                 othersInformationTextBox.Text = _studentInfo.OthersInfo;
                 banglaApplicantNameTextBox.Text = _studentInfo.BanglaApplicantName;
                 ///bangla gender
-                banglaNationalityTextBox.Text = _studentInfo.BanglaNationality;
                 ///bangla date of birth
 
                 banglaInterestTextBox.Text = _studentInfo.BanglaInterest;
@@ -2075,29 +2155,29 @@ namespace SIPI_SL.UI.Admission
 
                 banglaFathersNameTextBox.Text = _studentInfo.BanglaFatherName;
                 banglaMothersNameTextBox.Text = _studentInfo.BanglaMotherName;
-                //bangla freedomFighterNoRadioButton
-                if (_studentInfo.BanglaFreedomFighter == true)
-                {
+                ////bangla freedomFighterNoRadioButton
+                //if (_studentInfo.BanglaFreedomFighter == true)
+                //{
 
-                    banglaFreedomFighterYesRadioButton.IsChecked = true;
+                //    banglaFreedomFighterYesRadioButton.IsChecked = true;
 
-                }
-                if (_studentInfo.BanglaFreedomFighter == false)
-                {
-                    banglaFreedomFighterNoRadioButton.IsChecked = true;
+                //}
+                //if (_studentInfo.BanglaFreedomFighter == false)
+                //{
+                //    banglaFreedomFighterNoRadioButton.IsChecked = true;
 
-                }
+                //}
                 //bangla tribalNoRadioButton
-                if (_studentInfo.BanglaTribal == true)
-                {
+                //if (_studentInfo.BanglaTribal == true)
+                //{
 
-                    banglaTribalYesRadioButton.IsChecked = true;
+                //    banglaTribalYesRadioButton.IsChecked = true;
 
-                }
-                if (_studentInfo.BanglaTribal == false)
-                {
-                    banglaTribalNoRadioButton.IsChecked = true;
-                }
+                //}
+                //if (_studentInfo.BanglaTribal == false)
+                //{
+                //    banglaTribalNoRadioButton.IsChecked = true;
+                //}
 
                 ///////////////////////address
                 //(int)_studentInfo.PostId;
@@ -2248,35 +2328,35 @@ namespace SIPI_SL.UI.Admission
                 banglaGuardianBlockTextBox.Text = _studentInfo.BanglaGuardianBlock;
                 banglaGuardianSectorTextBox.Text = _studentInfo.BanglaGuardianSector;
                 //// FOR ADDRESS POST
-                for (int i = 0; i < banglaGuardianPostComboBox.Items.Count; i++)
-                {
-                    Post post = (Post)banglaGuardianPostComboBox.Items[i];
-                    if (_studentInfo.GuardianPost == post.Id)
-                    {
-                        banglaGuardianPostComboBox.SelectedIndex = i;
-                        break;
-                    }
-                }
+                //for (int i = 0; i < banglaGuardianPostComboBox.Items.Count; i++)
+                //{
+                //    Post post = (Post)banglaGuardianPostComboBox.Items[i];
+                //    if (_studentInfo.GuardianPost == post.Id)
+                //    {
+                //        banglaGuardianPostComboBox.SelectedIndex = i;
+                //        break;
+                //    }
+                //}
                 //// FOR ADDRESS THANA
-                for (int i = 0; i < banglaGuardianThanaComboBox.Items.Count; i++)
-                {
-                    Thana thana = (Thana)banglaGuardianThanaComboBox.Items[i];
-                    if (_studentInfo.GuardianThana == thana.Id)
-                    {
-                        banglaGuardianThanaComboBox.SelectedIndex = i;
-                        break;
-                    }
-                }
-                //// FOR ADDRESS DISTRICT
-                for (int i = 0; i < banglaGuardianDistrictComboBox.Items.Count; i++)
-                {
-                    District district = (District)banglaGuardianDistrictComboBox.Items[i];
-                    if (_studentInfo.GuardianDistrict == district.Id)
-                    {
-                        banglaGuardianDistrictComboBox.SelectedIndex = i;
-                        break;
-                    }
-                }
+                //for (int i = 0; i < banglaGuardianThanaComboBox.Items.Count; i++)
+                //{
+                //    Thana thana = (Thana)banglaGuardianThanaComboBox.Items[i];
+                //    if (_studentInfo.GuardianThana == thana.Id)
+                //    {
+                //        banglaGuardianThanaComboBox.SelectedIndex = i;
+                //        break;
+                //    }
+                //}
+                ////// FOR ADDRESS DISTRICT
+                //for (int i = 0; i < banglaGuardianDistrictComboBox.Items.Count; i++)
+                //{
+                //    District district = (District)banglaGuardianDistrictComboBox.Items[i];
+                //    if (_studentInfo.GuardianDistrict == district.Id)
+                //    {
+                //        banglaGuardianDistrictComboBox.SelectedIndex = i;
+                //        break;
+                //    }
+                //}
 
 
                 //////Accadamic Info
@@ -2412,15 +2492,15 @@ namespace SIPI_SL.UI.Admission
 
         }
 
-        private void NextFamiltInfoButton(object sender, RoutedEventArgs e)
-        {
-            familyContactInfoTab.SelectedIndex++;
-        }
+        //private void NextFamiltInfoButton(object sender, RoutedEventArgs e)
+        //{
+        //    familyContactInfoTab.SelectedIndex++;
+        //}
 
-        private void previousFamilyInfoTab(object sender, RoutedEventArgs e)
-        {
-            familyContactInfoTab.SelectedIndex--;
-        }
+        //private void previousFamilyInfoTab(object sender, RoutedEventArgs e)
+        //{
+        //    familyContactInfoTab.SelectedIndex--;
+        //}
 
         private void ClearButtonAccadamic(object sender, RoutedEventArgs e)
         {
@@ -2536,15 +2616,15 @@ namespace SIPI_SL.UI.Admission
             LoadGuardianPostComboBox(0);
         }
 
-        private void banglaGuardianDistrictComboBox_DropDownClosed(object sender, EventArgs e)
-        {
-            LoadBanglaGuardianThanaComboBox(0);
-        }
+        //private void banglaGuardianDistrictComboBox_DropDownClosed(object sender, EventArgs e)
+        //{
+        //    LoadBanglaGuardianThanaComboBox(0);
+        //}
 
-        private void banglaGuardianThanaComboBox_DropDownClosed(object sender, EventArgs e)
-        {
-            LoadBanglaGuardianPostComboBox(0);
-        }
+        //private void banglaGuardianThanaComboBox_DropDownClosed(object sender, EventArgs e)
+        //{
+        //    LoadBanglaGuardianPostComboBox(0);
+        //}
 
 
         private void ViewStudent(string className)
@@ -2687,9 +2767,9 @@ namespace SIPI_SL.UI.Admission
             guardianThanaComboBox.SelectedIndex = permanentThanaComboBox.SelectedIndex;
             guardianDistrictComboBox.SelectedIndex = permanentDistrictComboBox.SelectedIndex;
 
-            banglaGuardianPostComboBox.SelectedIndex = permanentPostComboBox.SelectedIndex;
-            banglaGuardianThanaComboBox.SelectedIndex = permanentThanaComboBox.SelectedIndex;
-            banglaGuardianDistrictComboBox.SelectedIndex = permanentDistrictComboBox.SelectedIndex;
+            //banglaGuardianPostComboBox.SelectedIndex = permanentPostComboBox.SelectedIndex;
+            //banglaGuardianThanaComboBox.SelectedIndex = permanentThanaComboBox.SelectedIndex;
+            //banglaGuardianDistrictComboBox.SelectedIndex = permanentDistrictComboBox.SelectedIndex;
 
             motherChickBox.IsChecked = false;
         }
@@ -2714,9 +2794,9 @@ namespace SIPI_SL.UI.Admission
             guardianThanaComboBox.SelectedIndex = permanentThanaComboBox.SelectedIndex;
             guardianDistrictComboBox.SelectedIndex = permanentDistrictComboBox.SelectedIndex;
 
-            banglaGuardianPostComboBox.SelectedIndex = permanentPostComboBox.SelectedIndex;
-            banglaGuardianThanaComboBox.SelectedIndex = permanentThanaComboBox.SelectedIndex;
-            banglaGuardianDistrictComboBox.SelectedIndex = permanentDistrictComboBox.SelectedIndex;
+            //banglaGuardianPostComboBox.SelectedIndex = permanentPostComboBox.SelectedIndex;
+            //banglaGuardianThanaComboBox.SelectedIndex = permanentThanaComboBox.SelectedIndex;
+            //banglaGuardianDistrictComboBox.SelectedIndex = permanentDistrictComboBox.SelectedIndex;
 
             guardianHouserNoTextBox.Text = permanentHouserNoTextBox.Text;
             guardianRoadNoTextBox.Text = permanentRoadNoTextBox.Text;
@@ -2728,6 +2808,16 @@ namespace SIPI_SL.UI.Admission
 
             fatherChickBox.IsChecked = false;
         }
+
+   
+
+        
+
+       
+
+       
+
+       
 
 
 

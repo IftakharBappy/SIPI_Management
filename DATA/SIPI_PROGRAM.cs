@@ -19,6 +19,7 @@ namespace DATA
             this.ADMISSIONINFOes = new HashSet<ADMISSIONINFO>();
             this.BOOKS_DETAILS = new HashSet<BOOKS_DETAILS>();
             this.COURSEs = new HashSet<COURSE>();
+            this.COURSE_ENTRY = new HashSet<COURSE_ENTRY>();
             this.CREATE_ROUTINE = new HashSet<CREATE_ROUTINE>();
             this.SIPI_DEPARTMENT = new HashSet<SIPI_DEPARTMENT>();
         }
@@ -31,6 +32,7 @@ namespace DATA
         public virtual ICollection<ADMISSIONINFO> ADMISSIONINFOes { get; set; }
         public virtual ICollection<BOOKS_DETAILS> BOOKS_DETAILS { get; set; }
         public virtual ICollection<COURSE> COURSEs { get; set; }
+        public virtual ICollection<COURSE_ENTRY> COURSE_ENTRY { get; set; }
         public virtual ICollection<CREATE_ROUTINE> CREATE_ROUTINE { get; set; }
         public virtual ICollection<SIPI_DEPARTMENT> SIPI_DEPARTMENT { get; set; }
     }

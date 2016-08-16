@@ -20,8 +20,12 @@ namespace DATA
             this.BOOKS_DETAILS = new HashSet<BOOKS_DETAILS>();
             this.COURSEs = new HashSet<COURSE>();
             this.COURSE_ASSIGN_TO_STUDENT = new HashSet<COURSE_ASSIGN_TO_STUDENT>();
+            this.COURSE_ENTRY = new HashSet<COURSE_ENTRY>();
             this.CREATE_ROUTINE = new HashSet<CREATE_ROUTINE>();
+            this.FEES_ASSIGN_BY_CLASS = new HashSet<FEES_ASSIGN_BY_CLASS>();
             this.FEESSETUPs = new HashSet<FEESSETUP>();
+            this.SCHOOL_FEES_COLLECTION = new HashSet<SCHOOL_FEES_COLLECTION>();
+            this.SCHOOL_MARKS_DISTRIBUTION = new HashSet<SCHOOL_MARKS_DISTRIBUTION>();
             this.STUDENT_ATTENDENCE = new HashSet<STUDENT_ATTENDENCE>();
             this.STUDENT_RESULT = new HashSet<STUDENT_RESULT>();
             this.TEACHERs = new HashSet<TEACHER>();
@@ -39,8 +43,12 @@ namespace DATA
         public virtual ICollection<BOOKS_DETAILS> BOOKS_DETAILS { get; set; }
         public virtual ICollection<COURSE> COURSEs { get; set; }
         public virtual ICollection<COURSE_ASSIGN_TO_STUDENT> COURSE_ASSIGN_TO_STUDENT { get; set; }
+        public virtual ICollection<COURSE_ENTRY> COURSE_ENTRY { get; set; }
         public virtual ICollection<CREATE_ROUTINE> CREATE_ROUTINE { get; set; }
+        public virtual ICollection<FEES_ASSIGN_BY_CLASS> FEES_ASSIGN_BY_CLASS { get; set; }
         public virtual ICollection<FEESSETUP> FEESSETUPs { get; set; }
+        public virtual ICollection<SCHOOL_FEES_COLLECTION> SCHOOL_FEES_COLLECTION { get; set; }
+        public virtual ICollection<SCHOOL_MARKS_DISTRIBUTION> SCHOOL_MARKS_DISTRIBUTION { get; set; }
         public virtual SIPI_PROGRAM SIPI_PROGRAM { get; set; }
         public virtual ICollection<STUDENT_ATTENDENCE> STUDENT_ATTENDENCE { get; set; }
         public virtual ICollection<STUDENT_RESULT> STUDENT_RESULT { get; set; }

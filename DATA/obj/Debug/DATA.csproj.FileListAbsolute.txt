@@ -69,3 +69,10 @@ D:\SIPI_Management\DATA\bin\Debug\EntityFramework.dll
 D:\SIPI_Management\DATA\bin\Debug\EntityFramework.xml
 D:\SIPI_Management\DATA\obj\Debug\DATA.dll
 D:\SIPI_Management\DATA\obj\Debug\DATA.pdb
+E:\SIPI_Management\DATA\bin\Debug\DATA.dll.config
+E:\SIPI_Management\DATA\bin\Debug\DATA.dll
+E:\SIPI_Management\DATA\bin\Debug\DATA.pdb
+E:\SIPI_Management\DATA\bin\Debug\EntityFramework.dll
+E:\SIPI_Management\DATA\bin\Debug\EntityFramework.xml
+E:\SIPI_Management\DATA\obj\Debug\DATA.dll
+E:\SIPI_Management\DATA\obj\Debug\DATA.pdb

@@ -125,7 +125,24 @@ namespace DAL.Admission
 
             return sipi_departmentList;
         }
+        public List<SIPI_Department> GetAll_SIPIDepartmentNA()
+        {
+            datacontextObj = new SIPIDBEntities();
+            List<SIPI_Department> sipi_departmentList = new List<SIPI_Department>();
 
+            foreach (var p in (from j in datacontextObj.SIPI_DEPARTMENT select j).Distinct())
+            {
+                if (p.SIPI_DepartmentName == "N/A")
+                {
+                    SIPI_Department sIpi_DepartmentObj = new SIPI_Department();
+
+                    sIpi_DepartmentObj.SIPI_DepartmentName = p.SIPI_DepartmentName;
+                    sIpi_DepartmentObj.Id = p.Id;
+                    sipi_departmentList.Add(sIpi_DepartmentObj);
+                }
+            }
+            return sipi_departmentList;
+        }
         public void DeleteSIPI_Deprtment(SIPI_Department _sIPI_DepartmentObj)
         {
             SIPI_DEPARTMENT sipi_department = datacontextObj.SIPI_DEPARTMENT.First(c => c.Id == _sIPI_DepartmentObj.Id);

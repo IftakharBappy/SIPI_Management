@@ -44,6 +44,7 @@ namespace DATA
         public DbSet<COMPANY_SETUP> COMPANY_SETUP { get; set; }
         public DbSet<COURSE> COURSEs { get; set; }
         public DbSet<COURSE_ASSIGN_TO_STUDENT> COURSE_ASSIGN_TO_STUDENT { get; set; }
+        public DbSet<COURSE_ENTRY> COURSE_ENTRY { get; set; }
         public DbSet<CREATE_ROUTINE> CREATE_ROUTINE { get; set; }
         public DbSet<CUSTOMER_EMPLOYEE_SETUP> CUSTOMER_EMPLOYEE_SETUP { get; set; }
         public DbSet<DAY> DAYs { get; set; }
@@ -52,6 +53,7 @@ namespace DATA
         public DbSet<DEPRICIATION> DEPRICIATIONs { get; set; }
         public DbSet<DEPRICIATION_SETUP> DEPRICIATION_SETUP { get; set; }
         public DbSet<DISTRICT> DISTRICTs { get; set; }
+        public DbSet<FEES_ASSIGN_BY_CLASS> FEES_ASSIGN_BY_CLASS { get; set; }
         public DbSet<FEESDETAIL> FEESDETAILS { get; set; }
         public DbSet<FEESSETUP> FEESSETUPs { get; set; }
         public DbSet<FISCAL_YEAR> FISCAL_YEAR { get; set; }
@@ -86,6 +88,7 @@ namespace DATA
         public DbSet<PIS_tblDivision> PIS_tblDivision { get; set; }
         public DbSet<PIS_tblEmpAssignment> PIS_tblEmpAssignment { get; set; }
         public DbSet<PIS_tblEmpEducationInfo> PIS_tblEmpEducationInfo { get; set; }
+        public DbSet<PIS_tblEmpFamily> PIS_tblEmpFamily { get; set; }
         public DbSet<PIS_tblEmployeeGenInfo> PIS_tblEmployeeGenInfo { get; set; }
         public DbSet<PIS_tblGender> PIS_tblGender { get; set; }
         public DbSet<PIS_tblGradeInfo> PIS_tblGradeInfo { get; set; }
@@ -99,6 +102,8 @@ namespace DATA
         public DbSet<RELIGION> RELIGIONs { get; set; }
         public DbSet<ROLEWISE_MENU> ROLEWISE_MENU { get; set; }
         public DbSet<ROUTINEGROUP> ROUTINEGROUPs { get; set; }
+        public DbSet<SCHOOL_FEES_COLLECTION> SCHOOL_FEES_COLLECTION { get; set; }
+        public DbSet<SCHOOL_MARKS_DISTRIBUTION> SCHOOL_MARKS_DISTRIBUTION { get; set; }
         public DbSet<SEMESTER> SEMESTERs { get; set; }
         public DbSet<SIPI_DEPARTMENT> SIPI_DEPARTMENT { get; set; }
         public DbSet<SIPI_PROGRAM> SIPI_PROGRAM { get; set; }
@@ -107,11 +112,11 @@ namespace DATA
         public DbSet<STUDENT_RESULT> STUDENT_RESULT { get; set; }
         public DbSet<STUDENTFEE> STUDENTFEES { get; set; }
         public DbSet<STUDENTFEESCOLLECTION> STUDENTFEESCOLLECTIONs { get; set; }
-        public DbSet<sysdiagram> sysdiagrams { get; set; }
         public DbSet<tblCfgCommon> tblCfgCommons { get; set; }
         public DbSet<tblCfgCommonType> tblCfgCommonTypes { get; set; }
         public DbSet<tblFactory> tblFactories { get; set; }
         public DbSet<TEACHER> TEACHERs { get; set; }
+        public DbSet<TEMPORARY_DATA_SET> TEMPORARY_DATA_SET { get; set; }
         public DbSet<test_district> test_district { get; set; }
         public DbSet<THANA> THANAs { get; set; }
         public DbSet<USER> USERs { get; set; }

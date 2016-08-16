@@ -28,6 +28,10 @@ namespace BLL.Admission
         {
             return sIPI_ProgramGetwayobj.GetAll_SIPIDepartment();
         }
+        public List<SIPI_Department> GetAll_SIPIDepartmentNA()
+        {
+            return sIPI_ProgramGetwayobj.GetAll_SIPIDepartmentNA();
+        }
 
         public void DeleteSIPI_Deprtment(SIPI_Department _sIPI_DepartmentObj)
         {

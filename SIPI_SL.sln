@@ -17,6 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTILITY", "UTILITY\UTILITY.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DATADBML", "DATADBML\DATADBML.csproj", "{54B06F41-1161-40E0-AC9E-59C63E437D07}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{73E60286-0DB9-4841-8D13-1EFFF6EA348B}"
+	ProjectSection(SolutionItems) = preProject
+		SPIPI_NEW_TABLES.sql = SPIPI_NEW_TABLES.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

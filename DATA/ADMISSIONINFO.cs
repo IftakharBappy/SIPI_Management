@@ -18,12 +18,16 @@ namespace DATA
         {
             this.BOOK_ISSUE = new HashSet<BOOK_ISSUE>();
             this.COURSE_ASSIGN_TO_STUDENT = new HashSet<COURSE_ASSIGN_TO_STUDENT>();
+            this.SCHOOL_FEES_COLLECTION = new HashSet<SCHOOL_FEES_COLLECTION>();
+            this.SCHOOL_MARKS_DISTRIBUTION = new HashSet<SCHOOL_MARKS_DISTRIBUTION>();
             this.STUDENT_ATTENDENCE = new HashSet<STUDENT_ATTENDENCE>();
             this.STUDENT_RESULT = new HashSet<STUDENT_RESULT>();
             this.STUDENTFEESCOLLECTIONs = new HashSet<STUDENTFEESCOLLECTION>();
         }
     
+        public string StudentStatus { get; set; }
         public int Id { get; set; }
+        public string FathersMonthlyIncome { get; set; }
         public string StudentID { get; set; }
         public Nullable<int> ProgramId { get; set; }
         public Nullable<int> DepartmentId { get; set; }
@@ -144,6 +148,8 @@ namespace DATA
         public virtual THANA THANA2 { get; set; }
         public virtual ICollection<BOOK_ISSUE> BOOK_ISSUE { get; set; }
         public virtual ICollection<COURSE_ASSIGN_TO_STUDENT> COURSE_ASSIGN_TO_STUDENT { get; set; }
+        public virtual ICollection<SCHOOL_FEES_COLLECTION> SCHOOL_FEES_COLLECTION { get; set; }
+        public virtual ICollection<SCHOOL_MARKS_DISTRIBUTION> SCHOOL_MARKS_DISTRIBUTION { get; set; }
         public virtual ICollection<STUDENT_ATTENDENCE> STUDENT_ATTENDENCE { get; set; }
         public virtual ICollection<STUDENT_RESULT> STUDENT_RESULT { get; set; }
         public virtual ICollection<STUDENTFEESCOLLECTION> STUDENTFEESCOLLECTIONs { get; set; }

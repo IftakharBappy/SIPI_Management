@@ -30,3 +30,7 @@ D:\SIPI_Management\UTILITY\bin\Debug\UTILITY.dll
 D:\SIPI_Management\UTILITY\bin\Debug\UTILITY.pdb
 D:\SIPI_Management\UTILITY\obj\Debug\UTILITY.dll
 D:\SIPI_Management\UTILITY\obj\Debug\UTILITY.pdb
+E:\SIPI_Management\UTILITY\bin\Debug\UTILITY.dll
+E:\SIPI_Management\UTILITY\bin\Debug\UTILITY.pdb
+E:\SIPI_Management\UTILITY\obj\Debug\UTILITY.dll
+E:\SIPI_Management\UTILITY\obj\Debug\UTILITY.pdb

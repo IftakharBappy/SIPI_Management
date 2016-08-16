@@ -69,3 +69,6 @@ D:\SIPI_Management\BLL\bin\Release\EntityFramework.xml
 D:\SIPI_Management\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
 D:\SIPI_Management\BLL\obj\Release\BLL.dll
 D:\SIPI_Management\BLL\obj\Release\BLL.pdb
+E:\SIPI_Management\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+E:\SIPI_Management\BLL\obj\Release\BLL.dll
+E:\SIPI_Management\BLL\obj\Release\BLL.pdb

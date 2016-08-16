@@ -26,7 +26,7 @@ namespace DAL.AttendenceSystem
                     CampusId = item.CampusId,
                     StudentPKId = item.StudentPKId,
                     Date = item.Date,
-                    Year = item.Year,
+                    Year = item.Year.ToString(),
                     Status = item.Status,
                 };
                 datacontextObj.STUDENT_ATTENDENCE.Add(newStudentAttendence);
@@ -55,7 +55,7 @@ namespace DAL.AttendenceSystem
                 createStudentAttendence.DepartmentName = p.SIPI_DEPARTMENT.SIPI_DepartmentName;
                 createStudentAttendence.SemesterNo = p.SEMESTER.SemesterNo;
                 createStudentAttendence.Date = p.Date;
-                createStudentAttendence.Year = (int)p.Year;
+                createStudentAttendence.Year = Convert.ToInt32(p.Year);
                 createStudentAttendence.Status = p.Status;
                 createStudentAttendence.CampusName = p.CAMPUSINFO.CampusName;
                 studentInfoList.Add(createStudentAttendence);
@@ -77,7 +77,7 @@ namespace DAL.AttendenceSystem
                 createStudentAttendence.DepartmentName = p.SIPI_DEPARTMENT.SIPI_DepartmentName;
                 createStudentAttendence.SemesterNo = p.SEMESTER.SemesterNo;
                 createStudentAttendence.Date = p.Date;
-                createStudentAttendence.Year = (int)p.Year;
+                createStudentAttendence.Year = Convert.ToInt32(p.Year);
                 createStudentAttendence.Status = p.Status;
                 createStudentAttendence.CampusName = p.CAMPUSINFO.CampusName;
                 attendenceList.Add(createStudentAttendence);

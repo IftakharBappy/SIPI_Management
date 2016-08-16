@@ -16,12 +16,17 @@ namespace DATA
     {
         public FEESDETAIL()
         {
+            this.FEES_ASSIGN_BY_CLASS = new HashSet<FEES_ASSIGN_BY_CLASS>();
+            this.SCHOOL_FEES_COLLECTION = new HashSet<SCHOOL_FEES_COLLECTION>();
             this.STUDENTFEES = new HashSet<STUDENTFEE>();
         }
     
         public int Id { get; set; }
         public string Name { get; set; }
+        public string BanglaFeesItem { get; set; }
     
+        public virtual ICollection<FEES_ASSIGN_BY_CLASS> FEES_ASSIGN_BY_CLASS { get; set; }
+        public virtual ICollection<SCHOOL_FEES_COLLECTION> SCHOOL_FEES_COLLECTION { get; set; }
         public virtual ICollection<STUDENTFEE> STUDENTFEES { get; set; }
     }
 }

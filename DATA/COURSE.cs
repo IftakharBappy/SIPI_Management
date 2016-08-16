@@ -25,6 +25,7 @@ namespace DATA
             this.CREATE_ROUTINE5 = new HashSet<CREATE_ROUTINE>();
             this.CREATE_ROUTINE6 = new HashSet<CREATE_ROUTINE>();
             this.CREATE_ROUTINE7 = new HashSet<CREATE_ROUTINE>();
+            this.STUDENT_ATTENDENCE = new HashSet<STUDENT_ATTENDENCE>();
             this.STUDENT_RESULT = new HashSet<STUDENT_RESULT>();
         }
     
@@ -56,6 +57,7 @@ namespace DATA
         public virtual ICollection<CREATE_ROUTINE> CREATE_ROUTINE5 { get; set; }
         public virtual ICollection<CREATE_ROUTINE> CREATE_ROUTINE6 { get; set; }
         public virtual ICollection<CREATE_ROUTINE> CREATE_ROUTINE7 { get; set; }
+        public virtual ICollection<STUDENT_ATTENDENCE> STUDENT_ATTENDENCE { get; set; }
         public virtual ICollection<STUDENT_RESULT> STUDENT_RESULT { get; set; }
     }
 }

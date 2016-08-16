@@ -116,6 +116,7 @@
     <Compile Include="Report\Fees\RStudentFees.cs" />
     <Compile Include="ResultManagement\MarksDistribution.cs" />
     <Compile Include="ResultManagement\StudentResult.cs" />
+    <Compile Include="SetupClass\TemporaryDataSet.cs" />
     <Compile Include="StudentManagement\ClassPeriod.cs" />
     <Compile Include="StudentManagement\ClassRoutineGroup.cs" />
     <Compile Include="StudentManagement\Course.cs" />

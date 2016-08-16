@@ -19,3 +19,7 @@ D:\SIPI_Management\UTILITY\bin\Release\UTILITY.dll
 D:\SIPI_Management\UTILITY\bin\Release\UTILITY.pdb
 D:\SIPI_Management\UTILITY\obj\Release\UTILITY.dll
 D:\SIPI_Management\UTILITY\obj\Release\UTILITY.pdb
+E:\SIPI_Management\UTILITY\bin\Release\UTILITY.dll
+E:\SIPI_Management\UTILITY\bin\Release\UTILITY.pdb
+E:\SIPI_Management\UTILITY\obj\Release\UTILITY.dll
+E:\SIPI_Management\UTILITY\obj\Release\UTILITY.pdb

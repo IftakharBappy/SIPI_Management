@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\SIPI_Management\SIPI_SL\obj\Debug\
+E:\SIPI_Management\SIPI_SL\obj\Debug\
 SIPI_SL
 none
 false
 DEBUG;TRACE
-D:\SIPI_Management\SIPI_SL\App.xaml
+E:\SIPI_Management\SIPI_SL\App.xaml
 95-2127321819
 
-124-835187896
-43-834530535
+124-860987891
+43550212560
 LoginUI.xaml;MainWindow.xaml;Report\UI\Admission\StudentAdmissionReport.xaml;Report\UI\AttendenceSystem\AttendenceSystemReport.xaml;Report\UI\CourseManagement\CourseReportUI.xaml;Report\UI\ReportViewerUI.xaml;Report\UI\ResultManagement\ResultManagementReportUI.xaml;Report\UI\Routine\RoutineReposrt.xaml;Report\UI\StudentFees\FeesCollectionHistoryUI.xaml;Resources\ButtonDictionary.xaml;Resources\ComboBoxDictionary.xaml;Resources\DataGridDictionary.xaml;Resources\FormDictionary.xaml;Resources\GroupBoxDictionary.xaml;Resources\ListViewDictionary.xaml;Resources\TabItemDictionary.xaml;Resources\TextBoxDictionary.xaml;SplashWindow.xaml;TESTUI.xaml;UI\Admission\AdmissionDashBoard.xaml;UI\Admission\AdmissionOfficeUI.xaml;UI\Admission\BatchUI.xaml;UI\Admission\BloodGroupUI.xaml;UI\Admission\Campus.xaml;UI\Admission\DepartmentUI.xaml;UI\Admission\DistrictUI.xaml;UI\Admission\MonthlyPayment.xaml;UI\Admission\PostUI.xaml;UI\Admission\ProgramUI.xaml;UI\Admission\ReligionUI.xaml;UI\Admission\SIPI_DepartmentUI.xaml;UI\Admission\SIPI_ProgramUI.xaml;UI\Admission\StudentAdmissionInformation.xaml;UI\Admission\StudentInfoViewUI.xaml;UI\Admission\ThanaUI.xaml;UI\Admission\ViewAllStudent.xaml;UI\AttendenceSystem\AttendenceSystemDashBoardUI.xaml;UI\AttendenceSystem\StudentAttendenceUI.xaml;UI\Fees\AssignFeesToStudentUI.xaml;UI\Fees\FeesCollectionUI.xaml;UI\Fees\FeesDashBoardUI.xaml;UI\Fees\FeesDetailsUI.xaml;UI\Fees\FeesDiscountUI.xaml;UI\Fees\SetupUpFeesUI.xaml;UI\Fees\StudentListUI.xaml;UI\InventoryManagement\BrandCategoryUI.xaml;UI\InventoryManagement\BrandNameEntryUI.xaml;UI\InventoryManagement\InventoryListUI.xaml;UI\InventoryManagement\InventoryManagementDashBoardUI.xaml;UI\InventoryManagement\InventoryReportUI.xaml;UI\InventoryManagement\ProductMasterEntry.xaml;UI\InventoryManagement\PurchaseEntryUI.xaml;UI\InventoryManagement\StockOutUI.xaml;UI\InventoryManagement\UnitTypeDetailsUI.xaml;UI\LibraryManagement\BookEntry.xaml;UI\LibraryManagement\BookIssue.xaml;UI\LibraryManagement\BookPickerUI.xaml;UI\LibraryManagement\BookReturnUI.xaml;UI\LibraryManagement\LibraryMamagementDashBoardUI.xaml;UI\Login\GroupSetupUI.xaml;UI\Login\MenuPermissionUI.xaml;UI\Login\ModulePermissionUI.xaml;UI\Login\SecurityDashBoardUI.xaml;UI\Login\UserSetUpUI.xaml;UI\PIS\CategoryEmployeeUI.xaml;UI\PIS\CategorySalaryUI.xaml;UI\PIS\CategoryUI.xaml;UI\PIS\DepartmentUI.xaml;UI\PIS\EmployeeInfoUI.xaml;UI\PIS\GradeUI.xaml;UI\PIS\PISDashBoardUI.xaml;UI\PIS\SectionUI.xaml;UI\ReportManager\ReportDashBoard.xaml;UI\ResultManagement\CourseAssignToStudentUI.xaml;UI\ResultManagement\CourseAssignToTracherUI.xaml;UI\ResultManagement\MarksDistributionToStudentUI.xaml;UI\ResultManagement\ResultManagementDeshBoard.xaml;UI\ScholarshipManagement\AccademicScholarshipApplicationUI.xaml;UI\ScholarshipManagement\OldScholarsListUI.xaml;UI\ScholarshipManagement\OtherScholarshipScoreUI.xaml;UI\ScholarshipManagement\OthersScholarshipApplicationUI.xaml;UI\ScholarshipManagement\ScholarshipCriteriaUI.xaml;UI\ScholarshipManagement\ScholarshipMamagementDashBoardUI.xaml;UI\ScholarshipManagement\ScholarshipScoreProvideUI.xaml;UI\ScholarshipManagement\SelectedScholarsListUI.xaml;UI\SMSManagement\SMSManagementDeshboard.xaml;UI\StudentManagement\AssignTeacherUI.xaml;UI\StudentManagement\ClassPeriodUI.xaml;UI\StudentManagement\ClassRoutineCreateUI.xaml;UI\StudentManagement\CourseDashBoardUI.xaml;UI\StudentManagement\CourseUI.xaml;UI\StudentManagement\DayUI.xaml;UI\StudentManagement\SemesterUI.xaml;UI\StudentManagement\StudentManagementMainUI.xaml;UI\TeacherManagement\TeacherInfoUI.xaml;
 
 False

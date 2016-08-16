@@ -27,8 +27,10 @@ namespace BLL.Admission
         {
             return sIPI_ProgramGatewayobj.GetAllSIPI_Program();
         }
-
-
+        public List<SIPI_Program> GetAllSIPI_ProgramNA()
+        {
+            return sIPI_ProgramGatewayobj.GetAllSIPI_ProgramNA();
+        }
 
         public void DeleteSipiProgram(SIPI_Program _sIPI_ProgramObj)
         {

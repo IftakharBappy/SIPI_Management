@@ -99,6 +99,9 @@
     <Compile Include="COURSE_ASSIGN_TO_STUDENT.cs">
       <DependentUpon>SIPIDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="COURSE_ENTRY.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="CREATE_ROUTINE.cs">
       <DependentUpon>SIPIDBModel.tt</DependentUpon>
     </Compile>
@@ -127,6 +130,9 @@
       <DependentUpon>SIPIDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="FEESSETUP.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FEES_ASSIGN_BY_CLASS.cs">
       <DependentUpon>SIPIDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="FISCAL_YEAR.cs">
@@ -228,6 +234,9 @@
     <Compile Include="PIS_tblEmpEducationInfo.cs">
       <DependentUpon>SIPIDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="PIS_tblEmpFamily.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="PIS_tblEmployeeGenInfo.cs">
       <DependentUpon>SIPIDBModel.tt</DependentUpon>
     </Compile>
@@ -266,6 +275,12 @@
       <DependentUpon>SIPIDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ROUTINEGROUP.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_FEES_COLLECTION.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MARKS_DISTRIBUTION.cs">
       <DependentUpon>SIPIDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SEMESTER.cs">
@@ -370,9 +385,6 @@
     <Compile Include="STUDENT_RESULT.cs">
       <DependentUpon>SIPIDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>SIPIDBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="tblCfgCommon.cs">
       <DependentUpon>SIPIDBModel.tt</DependentUpon>
     </Compile>
@@ -383,6 +395,9 @@
       <DependentUpon>SIPIDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TEACHER.cs">
+      <DependentUpon>SIPIDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TEMPORARY_DATA_SET.cs">
       <DependentUpon>SIPIDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="test_district.cs">

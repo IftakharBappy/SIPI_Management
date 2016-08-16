@@ -109,7 +109,9 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
+          <Property Name="StudentStatus" Type="varchar" MaxLength="50" />
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FathersMonthlyIncome" Type="varchar" MaxLength="50" />
           <Property Name="StudentID" Type="varchar" MaxLength="50" />
           <Property Name="ProgramId" Type="int" />
           <Property Name="DepartmentId" Type="int" />
@@ -367,6 +369,19 @@
           <Property Name="PreStudentPracticalTheoryMarksFinalExam" Type="decimal" Precision="18" Scale="0" />
           <Property Name="TotalMarks" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
+        <EntityType Name="COURSE_ENTRY">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lavle" Type="int" />
+          <Property Name="Class" Type="int" />
+          <Property Name="Term" Type="varchar" MaxLength="50" />
+          <Property Name="CourseName" Type="varchar" MaxLength="50" />
+          <Property Name="BanglaCourseName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Code" Type="varchar" MaxLength="50" />
+          <Property Name="Marks" Type="int" />
+        </EntityType>
         <EntityType Name="CREATE_ROUTINE">
           <Key>
             <PropertyRef Name="Id" />
@@ -486,12 +501,27 @@
           <Property Name="DistrictName" Type="varchar" MaxLength="50" />
           <Property Name="BanglaDistrict" Type="nvarchar" MaxLength="200" />
         </EntityType>
+        <EntityType Name="FEES_ASSIGN_BY_CLASS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BnglaClassName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ClassName" Type="varchar" MaxLength="50" />
+          <Property Name="ClassId" Type="int" />
+          <Property Name="Year" Type="int" />
+          <Property Name="FeesDetailsItemName" Type="varchar" MaxLength="50" />
+          <Property Name="FeesDetailsId" Type="int" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="Total" Type="int" />
+        </EntityType>
         <EntityType Name="FEESDETAILS">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="BanglaFeesItem" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="FEESSETUP">
           <Key>
@@ -929,6 +959,22 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
           <Property Name="GEmpEduResultID" Type="uniqueidentifier" Nullable="false" />
           <Property Name="GEmpEduBoardID" Type="uniqueidentifier" />
         </EntityType>
+        <EntityType Name="PIS_tblEmpFamily">
+          <Key>
+            <PropertyRef Name="GEmpFamilyID" />
+          </Key>
+          <Property Name="GEmpFamilyID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="GEmployeeGenInfoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="GEmpFamilyType" Type="uniqueidentifier" />
+          <Property Name="StrEmpFamilyMemberName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="dtEmpFamilyBirthDate" Type="datetime" />
+          <Property Name="intEmpFamilyGender" Type="int" Nullable="false" />
+          <Property Name="GEmpFamilyEduDegreeID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="GEmpFamilyProfession" Type="uniqueidentifier" />
+          <Property Name="intEmpFamilyBloodGroup" Type="int" />
+          <Property Name="intNominee" Type="int" />
+          <Property Name="numShare" Type="numeric" Precision="18" Scale="2" />
+        </EntityType>
         <EntityType Name="PIS_tblEmployeeGenInfo">
           <Key>
             <PropertyRef Name="GEmployeeGenInfoID" />
@@ -1118,6 +1164,52 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
           <Property Name="DepartmentId" Type="int" />
           <Property Name="SemesterId" Type="int" />
         </EntityType>
+        <EntityType Name="SCHOOL_FEES_COLLECTION">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FeesItemId" Type="int" />
+          <Property Name="FeesItemTitel" Type="varchar" MaxLength="50" />
+          <Property Name="FeesItemTitelBangla" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateOfFeesCollection" Type="date" />
+          <Property Name="Year" Type="int" />
+          <Property Name="ClassId" Type="int" />
+          <Property Name="ClassName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TotalBySlip" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="PaySlipNo" Type="int" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="StudentId" Type="int" />
+          <Property Name="StudentName" Type="varchar" MaxLength="50" />
+          <Property Name="StudentNameBangla" Type="nvarchar" MaxLength="50" />
+          <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="SCHOOL_MARKS_DISTRIBUTION">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClassId" Type="int" />
+          <Property Name="ClassName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Section" Type="nvarchar" MaxLength="50" />
+          <Property Name="TermId" Type="int" />
+          <Property Name="TermName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CourseName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CourseId" Type="int" />
+          <Property Name="Theory" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="MCQ" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Practical" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Grade" Type="nvarchar" MaxLength="50" />
+          <Property Name="GradePoint" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Year" Type="int" />
+          <Property Name="StudentPKId" Type="int" />
+          <Property Name="StudentName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FullMarks" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
         <EntityType Name="SEMESTER">
           <Key>
             <PropertyRef Name="Id" />
@@ -1156,9 +1248,10 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
           <Property Name="DepartmentId" Type="int" Nullable="false" />
           <Property Name="CampusId" Type="int" Nullable="false" />
           <Property Name="SemesterId" Type="int" Nullable="false" />
-          <Property Name="Year" Type="int" />
+          <Property Name="Year" Type="varchar" MaxLength="50" />
           <Property Name="Date" Type="datetime" Nullable="false" />
           <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="CourseId" Type="int" />
         </EntityType>
         <EntityType Name="STUDENT_CURRENT_SEMESTER_STATUS">
           <Key>
@@ -1216,16 +1309,6 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
           <Property Name="DueAmount" Type="int" />
           <Property Name="ReceiveDate" Type="datetime" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
         <EntityType Name="tblCfgCommon">
           <Key>
             <PropertyRef Name="GCfgCommonID" />
@@ -1279,6 +1362,13 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
           <Property Name="TeacherName" Type="varchar" MaxLength="50" />
           <Property Name="DepartmentId" Type="int" />
           <Property Name="CampusId" Type="int" />
+        </EntityType>
+        <EntityType Name="TEMPORARY_DATA_SET">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SESSION" Type="varchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="test_district">
           <Key>
@@ -1629,6 +1719,30 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
             </Principal>
             <Dependent Role="COURSE_ASSIGN_TO_STUDENT">
               <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COURSE_ENTRY_SIPI_DEPARTMENT">
+          <End Role="SIPI_DEPARTMENT" Type="Self.SIPI_DEPARTMENT" Multiplicity="0..1" />
+          <End Role="COURSE_ENTRY" Type="Self.COURSE_ENTRY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SIPI_DEPARTMENT">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="COURSE_ENTRY">
+              <PropertyRef Name="Class" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COURSE_ENTRY_SIPI_PROGRAM">
+          <End Role="SIPI_PROGRAM" Type="Self.SIPI_PROGRAM" Multiplicity="0..1" />
+          <End Role="COURSE_ENTRY" Type="Self.COURSE_ENTRY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SIPI_PROGRAM">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="COURSE_ENTRY">
+              <PropertyRef Name="Lavle" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2028,6 +2142,30 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_FEES_ASSIGN_BY_CLASS_FEESDETAILS">
+          <End Role="FEESDETAILS" Type="Self.FEESDETAILS" Multiplicity="0..1" />
+          <End Role="FEES_ASSIGN_BY_CLASS" Type="Self.FEES_ASSIGN_BY_CLASS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FEESDETAILS">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FEES_ASSIGN_BY_CLASS">
+              <PropertyRef Name="FeesDetailsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FEES_ASSIGN_BY_CLASS_SIPI_DEPARTMENT">
+          <End Role="SIPI_DEPARTMENT" Type="Self.SIPI_DEPARTMENT" Multiplicity="0..1" />
+          <End Role="FEES_ASSIGN_BY_CLASS" Type="Self.FEES_ASSIGN_BY_CLASS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SIPI_DEPARTMENT">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FEES_ASSIGN_BY_CLASS">
+              <PropertyRef Name="ClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_FEESSETUP_CAMPUSINFO">
           <End Role="CAMPUSINFO" Type="Self.CAMPUSINFO" Multiplicity="1" />
           <End Role="FEESSETUP" Type="Self.FEESSETUP" Multiplicity="*" />
@@ -2308,6 +2446,90 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_SCHOOL_FEES_COLLECTION_ADMISSIONINFO">
+          <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="0..1" />
+          <End Role="SCHOOL_FEES_COLLECTION" Type="Self.SCHOOL_FEES_COLLECTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ADMISSIONINFO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SCHOOL_FEES_COLLECTION">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SCHOOL_FEES_COLLECTION_FEESDETAILS">
+          <End Role="FEESDETAILS" Type="Self.FEESDETAILS" Multiplicity="0..1" />
+          <End Role="SCHOOL_FEES_COLLECTION" Type="Self.SCHOOL_FEES_COLLECTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FEESDETAILS">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SCHOOL_FEES_COLLECTION">
+              <PropertyRef Name="FeesItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SCHOOL_FEES_COLLECTION_SIPI_DEPARTMENT">
+          <End Role="SIPI_DEPARTMENT" Type="Self.SIPI_DEPARTMENT" Multiplicity="0..1" />
+          <End Role="SCHOOL_FEES_COLLECTION" Type="Self.SCHOOL_FEES_COLLECTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SIPI_DEPARTMENT">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SCHOOL_FEES_COLLECTION">
+              <PropertyRef Name="ClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SCHOOL_MARKS_DISTRIBUTION_ADMISSIONINFO">
+          <End Role="ADMISSIONINFO" Type="Self.ADMISSIONINFO" Multiplicity="0..1" />
+          <End Role="SCHOOL_MARKS_DISTRIBUTION" Type="Self.SCHOOL_MARKS_DISTRIBUTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ADMISSIONINFO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SCHOOL_MARKS_DISTRIBUTION">
+              <PropertyRef Name="StudentPKId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SCHOOL_MARKS_DISTRIBUTION_COURSE_ENTRY">
+          <End Role="COURSE_ENTRY" Type="Self.COURSE_ENTRY" Multiplicity="0..1" />
+          <End Role="SCHOOL_MARKS_DISTRIBUTION" Type="Self.SCHOOL_MARKS_DISTRIBUTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSE_ENTRY">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SCHOOL_MARKS_DISTRIBUTION">
+              <PropertyRef Name="CourseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SCHOOL_MARKS_DISTRIBUTION_SEMESTER">
+          <End Role="SEMESTER" Type="Self.SEMESTER" Multiplicity="0..1" />
+          <End Role="SCHOOL_MARKS_DISTRIBUTION" Type="Self.SCHOOL_MARKS_DISTRIBUTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEMESTER">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SCHOOL_MARKS_DISTRIBUTION">
+              <PropertyRef Name="TermId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SCHOOL_MARKS_DISTRIBUTION_SIPI_DEPARTMENT">
+          <End Role="SIPI_DEPARTMENT" Type="Self.SIPI_DEPARTMENT" Multiplicity="0..1" />
+          <End Role="SCHOOL_MARKS_DISTRIBUTION" Type="Self.SCHOOL_MARKS_DISTRIBUTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SIPI_DEPARTMENT">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SCHOOL_MARKS_DISTRIBUTION">
+              <PropertyRef Name="ClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_SIPI_DEPARTMENT_SIPI_PROGRAM">
           <End Role="SIPI_PROGRAM" Type="Self.SIPI_PROGRAM" Multiplicity="0..1" />
           <End Role="SIPI_DEPARTMENT" Type="Self.SIPI_DEPARTMENT" Multiplicity="*" />
@@ -2341,6 +2563,18 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
             </Principal>
             <Dependent Role="STUDENT_ATTENDENCE">
               <PropertyRef Name="CampusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STUDENT_ATTENDENCE_COURSE">
+          <End Role="COURSE" Type="Self.COURSE" Multiplicity="0..1" />
+          <End Role="STUDENT_ATTENDENCE" Type="Self.STUDENT_ATTENDENCE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="STUDENT_ATTENDENCE">
+              <PropertyRef Name="CourseId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2514,17 +2748,10 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="SP_ACCOUNT_STATEMENT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="accountId" Type="bigint" Mode="In" />
           <Parameter Name="fromDate" Type="date" Mode="In" />
           <Parameter Name="toDate" Type="date" Mode="In" />
-        </Function>
-        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
         </Function>
         <Function Name="SP_BANK_STATEMENT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="accountId" Type="bigint" Mode="In" />
@@ -2534,12 +2761,6 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
         <Function Name="SP_CHART_OF_ACCOUNT_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="CHART_ACC_ID" Type="bigint" Mode="In" />
           <Parameter Name="CHART_ACC_STATUS" Type="varchar" Mode="In" />
-        </Function>
-        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
         </Function>
         <Function Name="SP_CURRENT_BALANCE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="pJV_ACCOUNT_ID" Type="bigint" Mode="In" />
@@ -2566,10 +2787,6 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
           <Parameter Name="Journal_Date" Type="date" Mode="In" />
         </Function>
         <Function Name="SP_DELETE_DEPRICIATION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
         <Function Name="SP_GET_ALL_DEPRICIATION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SP_GET_DEPRICIATION_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SP_GET_DEPRICIATION_DATE_WISE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -2584,14 +2801,6 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
         <Function Name="SP_HEADER_ACC_NAME" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SP_HEADER_STATEMENT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="accountId" Type="bigint" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
         </Function>
         <Function Name="SP_INCOME_STATEMENT_FINAL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="FisStartDate" Type="date" Mode="In" />
@@ -2609,11 +2818,6 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
           <Parameter Name="pFromDate" Type="date" Mode="In" />
           <Parameter Name="pToDate" Type="date" Mode="In" />
           <Parameter Name="pParentType" Type="varchar" Mode="In" />
-        </Function>
-        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="SP_TOTAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="From_Date" Type="date" Mode="In" />
@@ -2647,7 +2851,6 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
           <Parameter Name="FiscalStartDate" Type="date" Mode="In" />
           <Parameter Name="pJD_DATE" Type="date" Mode="In" />
         </Function>
-        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="Student_Money_Receipt_Report" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="StudentId" Type="int" Mode="In" />
           <Parameter Name="semesterId" Type="int" Mode="In" />
@@ -2678,6 +2881,7 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
           <EntitySet Name="COMPANY_SETUP" EntityType="Self.COMPANY_SETUP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="COURSE" EntityType="Self.COURSE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="COURSE_ASSIGN_TO_STUDENT" EntityType="Self.COURSE_ASSIGN_TO_STUDENT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COURSE_ENTRY" EntityType="Self.COURSE_ENTRY" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CREATE_ROUTINE" EntityType="Self.CREATE_ROUTINE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CUSTOMER_EMPLOYEE_SETUP" EntityType="Self.CUSTOMER_EMPLOYEE_SETUP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DAY" EntityType="Self.DAY" Schema="dbo" store:Type="Tables" />
@@ -2686,6 +2890,7 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
           <EntitySet Name="DEPRICIATION" EntityType="Self.DEPRICIATION" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DEPRICIATION_SETUP" EntityType="Self.DEPRICIATION_SETUP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DISTRICT" EntityType="Self.DISTRICT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FEES_ASSIGN_BY_CLASS" EntityType="Self.FEES_ASSIGN_BY_CLASS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FEESDETAILS" EntityType="Self.FEESDETAILS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FEESSETUP" EntityType="Self.FEESSETUP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FISCAL_YEAR" EntityType="Self.FISCAL_YEAR" Schema="dbo" store:Type="Tables" />
@@ -2720,6 +2925,7 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
           <EntitySet Name="PIS_tblDivision" EntityType="Self.PIS_tblDivision" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PIS_tblEmpAssignment" EntityType="Self.PIS_tblEmpAssignment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PIS_tblEmpEducationInfo" EntityType="Self.PIS_tblEmpEducationInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PIS_tblEmpFamily" EntityType="Self.PIS_tblEmpFamily" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PIS_tblEmployeeGenInfo" EntityType="Self.PIS_tblEmployeeGenInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PIS_tblGender" EntityType="Self.PIS_tblGender" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PIS_tblGradeInfo" EntityType="Self.PIS_tblGradeInfo" Schema="dbo" store:Type="Tables" />
@@ -2733,6 +2939,8 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
           <EntitySet Name="RELIGION" EntityType="Self.RELIGION" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ROLEWISE_MENU" EntityType="Self.ROLEWISE_MENU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ROUTINEGROUP" EntityType="Self.ROUTINEGROUP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SCHOOL_FEES_COLLECTION" EntityType="Self.SCHOOL_FEES_COLLECTION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SCHOOL_MARKS_DISTRIBUTION" EntityType="Self.SCHOOL_MARKS_DISTRIBUTION" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SEMESTER" EntityType="Self.SEMESTER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SIPI_DEPARTMENT" EntityType="Self.SIPI_DEPARTMENT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SIPI_PROGRAM" EntityType="Self.SIPI_PROGRAM" Schema="dbo" store:Type="Tables" />
@@ -2741,11 +2949,11 @@ warning 6002: The table/view 'SIPIDB.dbo.PIS_EMPLOYEE_INFO' does not have a prim
           <EntitySet Name="STUDENT_RESULT" EntityType="Self.STUDENT_RESULT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="STUDENTFEES" EntityType="Self.STUDENTFEES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="STUDENTFEESCOLLECTION" EntityType="Self.STUDENTFEESCOLLECTION" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblCfgCommon" EntityType="Self.tblCfgCommon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblCfgCommonType" EntityType="Self.tblCfgCommonType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblFactory" EntityType="Self.tblFactory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TEACHER" EntityType="Self.TEACHER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TEMPORARY_DATA_SET" EntityType="Self.TEMPORARY_DATA_SET" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="test_district" EntityType="Self.test_district" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="THANA" EntityType="Self.THANA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="USER" EntityType="Self.USER" Schema="dbo" store:Type="Tables" />
@@ -2928,6 +3136,14 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
             <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
             <End Role="COURSE_ASSIGN_TO_STUDENT" EntitySet="COURSE_ASSIGN_TO_STUDENT" />
           </AssociationSet>
+          <AssociationSet Name="FK_COURSE_ENTRY_SIPI_DEPARTMENT" Association="Self.FK_COURSE_ENTRY_SIPI_DEPARTMENT">
+            <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+            <End Role="COURSE_ENTRY" EntitySet="COURSE_ENTRY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COURSE_ENTRY_SIPI_PROGRAM" Association="Self.FK_COURSE_ENTRY_SIPI_PROGRAM">
+            <End Role="SIPI_PROGRAM" EntitySet="SIPI_PROGRAM" />
+            <End Role="COURSE_ENTRY" EntitySet="COURSE_ENTRY" />
+          </AssociationSet>
           <AssociationSet Name="FK_COURSE_PROGRAM" Association="Self.FK_COURSE_PROGRAM">
             <End Role="SIPI_PROGRAM" EntitySet="SIPI_PROGRAM" />
             <End Role="COURSE" EntitySet="COURSE" />
@@ -3060,6 +3276,14 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
             <End Role="CHART_ACCOUNT" EntitySet="CHART_ACCOUNT" />
             <End Role="DEPRICIATION_SETUP" EntitySet="DEPRICIATION_SETUP" />
           </AssociationSet>
+          <AssociationSet Name="FK_FEES_ASSIGN_BY_CLASS_FEESDETAILS" Association="Self.FK_FEES_ASSIGN_BY_CLASS_FEESDETAILS">
+            <End Role="FEESDETAILS" EntitySet="FEESDETAILS" />
+            <End Role="FEES_ASSIGN_BY_CLASS" EntitySet="FEES_ASSIGN_BY_CLASS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FEES_ASSIGN_BY_CLASS_SIPI_DEPARTMENT" Association="Self.FK_FEES_ASSIGN_BY_CLASS_SIPI_DEPARTMENT">
+            <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+            <End Role="FEES_ASSIGN_BY_CLASS" EntitySet="FEES_ASSIGN_BY_CLASS" />
+          </AssociationSet>
           <AssociationSet Name="FK_FEESSETUP_CAMPUSINFO" Association="Self.FK_FEESSETUP_CAMPUSINFO">
             <End Role="CAMPUSINFO" EntitySet="CAMPUSINFO" />
             <End Role="FEESSETUP" EntitySet="FEESSETUP" />
@@ -3152,6 +3376,34 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
             <End Role="SEMESTER" EntitySet="SEMESTER" />
             <End Role="ROUTINEGROUP" EntitySet="ROUTINEGROUP" />
           </AssociationSet>
+          <AssociationSet Name="FK_SCHOOL_FEES_COLLECTION_ADMISSIONINFO" Association="Self.FK_SCHOOL_FEES_COLLECTION_ADMISSIONINFO">
+            <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+            <End Role="SCHOOL_FEES_COLLECTION" EntitySet="SCHOOL_FEES_COLLECTION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SCHOOL_FEES_COLLECTION_FEESDETAILS" Association="Self.FK_SCHOOL_FEES_COLLECTION_FEESDETAILS">
+            <End Role="FEESDETAILS" EntitySet="FEESDETAILS" />
+            <End Role="SCHOOL_FEES_COLLECTION" EntitySet="SCHOOL_FEES_COLLECTION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SCHOOL_FEES_COLLECTION_SIPI_DEPARTMENT" Association="Self.FK_SCHOOL_FEES_COLLECTION_SIPI_DEPARTMENT">
+            <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+            <End Role="SCHOOL_FEES_COLLECTION" EntitySet="SCHOOL_FEES_COLLECTION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SCHOOL_MARKS_DISTRIBUTION_ADMISSIONINFO" Association="Self.FK_SCHOOL_MARKS_DISTRIBUTION_ADMISSIONINFO">
+            <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFO" />
+            <End Role="SCHOOL_MARKS_DISTRIBUTION" EntitySet="SCHOOL_MARKS_DISTRIBUTION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SCHOOL_MARKS_DISTRIBUTION_COURSE_ENTRY" Association="Self.FK_SCHOOL_MARKS_DISTRIBUTION_COURSE_ENTRY">
+            <End Role="COURSE_ENTRY" EntitySet="COURSE_ENTRY" />
+            <End Role="SCHOOL_MARKS_DISTRIBUTION" EntitySet="SCHOOL_MARKS_DISTRIBUTION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SCHOOL_MARKS_DISTRIBUTION_SEMESTER" Association="Self.FK_SCHOOL_MARKS_DISTRIBUTION_SEMESTER">
+            <End Role="SEMESTER" EntitySet="SEMESTER" />
+            <End Role="SCHOOL_MARKS_DISTRIBUTION" EntitySet="SCHOOL_MARKS_DISTRIBUTION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SCHOOL_MARKS_DISTRIBUTION_SIPI_DEPARTMENT" Association="Self.FK_SCHOOL_MARKS_DISTRIBUTION_SIPI_DEPARTMENT">
+            <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+            <End Role="SCHOOL_MARKS_DISTRIBUTION" EntitySet="SCHOOL_MARKS_DISTRIBUTION" />
+          </AssociationSet>
           <AssociationSet Name="FK_SIPI_DEPARTMENT_SIPI_PROGRAM" Association="Self.FK_SIPI_DEPARTMENT_SIPI_PROGRAM">
             <End Role="SIPI_PROGRAM" EntitySet="SIPI_PROGRAM" />
             <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
@@ -3162,6 +3414,10 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           </AssociationSet>
           <AssociationSet Name="FK_STUDENT_ATTENDENCE_CAMPUSINFO" Association="Self.FK_STUDENT_ATTENDENCE_CAMPUSINFO">
             <End Role="CAMPUSINFO" EntitySet="CAMPUSINFO" />
+            <End Role="STUDENT_ATTENDENCE" EntitySet="STUDENT_ATTENDENCE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STUDENT_ATTENDENCE_COURSE" Association="Self.FK_STUDENT_ATTENDENCE_COURSE">
+            <End Role="COURSE" EntitySet="COURSE" />
             <End Role="STUDENT_ATTENDENCE" EntitySet="STUDENT_ATTENDENCE" />
           </AssociationSet>
           <AssociationSet Name="FK_STUDENT_ATTENDENCE_SEMESTER" Association="Self.FK_STUDENT_ATTENDENCE_SEMESTER">
@@ -3388,6 +3644,7 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <EntitySet Name="COMPANY_SETUP" EntityType="SIPIDBModel.COMPANY_SETUP" />
           <EntitySet Name="COURSEs" EntityType="SIPIDBModel.COURSE" />
           <EntitySet Name="COURSE_ASSIGN_TO_STUDENT" EntityType="SIPIDBModel.COURSE_ASSIGN_TO_STUDENT" />
+          <EntitySet Name="COURSE_ENTRY" EntityType="SIPIDBModel.COURSE_ENTRY" />
           <EntitySet Name="CREATE_ROUTINE" EntityType="SIPIDBModel.CREATE_ROUTINE" />
           <EntitySet Name="CUSTOMER_EMPLOYEE_SETUP" EntityType="SIPIDBModel.CUSTOMER_EMPLOYEE_SETUP" />
           <EntitySet Name="DAYs" EntityType="SIPIDBModel.DAY" />
@@ -3396,6 +3653,7 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <EntitySet Name="DEPRICIATIONs" EntityType="SIPIDBModel.DEPRICIATION" />
           <EntitySet Name="DEPRICIATION_SETUP" EntityType="SIPIDBModel.DEPRICIATION_SETUP" />
           <EntitySet Name="DISTRICTs" EntityType="SIPIDBModel.DISTRICT" />
+          <EntitySet Name="FEES_ASSIGN_BY_CLASS" EntityType="SIPIDBModel.FEES_ASSIGN_BY_CLASS" />
           <EntitySet Name="FEESDETAILS" EntityType="SIPIDBModel.FEESDETAIL" />
           <EntitySet Name="FEESSETUPs" EntityType="SIPIDBModel.FEESSETUP" />
           <EntitySet Name="FISCAL_YEAR" EntityType="SIPIDBModel.FISCAL_YEAR" />
@@ -3430,6 +3688,7 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <EntitySet Name="PIS_tblDivision" EntityType="SIPIDBModel.PIS_tblDivision" />
           <EntitySet Name="PIS_tblEmpAssignment" EntityType="SIPIDBModel.PIS_tblEmpAssignment" />
           <EntitySet Name="PIS_tblEmpEducationInfo" EntityType="SIPIDBModel.PIS_tblEmpEducationInfo" />
+          <EntitySet Name="PIS_tblEmpFamily" EntityType="SIPIDBModel.PIS_tblEmpFamily" />
           <EntitySet Name="PIS_tblEmployeeGenInfo" EntityType="SIPIDBModel.PIS_tblEmployeeGenInfo" />
           <EntitySet Name="PIS_tblGender" EntityType="SIPIDBModel.PIS_tblGender" />
           <EntitySet Name="PIS_tblGradeInfo" EntityType="SIPIDBModel.PIS_tblGradeInfo" />
@@ -3443,6 +3702,8 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <EntitySet Name="RELIGIONs" EntityType="SIPIDBModel.RELIGION" />
           <EntitySet Name="ROLEWISE_MENU" EntityType="SIPIDBModel.ROLEWISE_MENU" />
           <EntitySet Name="ROUTINEGROUPs" EntityType="SIPIDBModel.ROUTINEGROUP" />
+          <EntitySet Name="SCHOOL_FEES_COLLECTION" EntityType="SIPIDBModel.SCHOOL_FEES_COLLECTION" />
+          <EntitySet Name="SCHOOL_MARKS_DISTRIBUTION" EntityType="SIPIDBModel.SCHOOL_MARKS_DISTRIBUTION" />
           <EntitySet Name="SEMESTERs" EntityType="SIPIDBModel.SEMESTER" />
           <EntitySet Name="SIPI_DEPARTMENT" EntityType="SIPIDBModel.SIPI_DEPARTMENT" />
           <EntitySet Name="SIPI_PROGRAM" EntityType="SIPIDBModel.SIPI_PROGRAM" />
@@ -3451,11 +3712,11 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <EntitySet Name="STUDENT_RESULT" EntityType="SIPIDBModel.STUDENT_RESULT" />
           <EntitySet Name="STUDENTFEES" EntityType="SIPIDBModel.STUDENTFEE" />
           <EntitySet Name="STUDENTFEESCOLLECTIONs" EntityType="SIPIDBModel.STUDENTFEESCOLLECTION" />
-          <EntitySet Name="sysdiagrams" EntityType="SIPIDBModel.sysdiagram" />
           <EntitySet Name="tblCfgCommons" EntityType="SIPIDBModel.tblCfgCommon" />
           <EntitySet Name="tblCfgCommonTypes" EntityType="SIPIDBModel.tblCfgCommonType" />
           <EntitySet Name="tblFactories" EntityType="SIPIDBModel.tblFactory" />
           <EntitySet Name="TEACHERs" EntityType="SIPIDBModel.TEACHER" />
+          <EntitySet Name="TEMPORARY_DATA_SET" EntityType="SIPIDBModel.TEMPORARY_DATA_SET" />
           <EntitySet Name="test_district" EntityType="SIPIDBModel.test_district" />
           <EntitySet Name="THANAs" EntityType="SIPIDBModel.THANA" />
           <EntitySet Name="USERs" EntityType="SIPIDBModel.USER" />
@@ -3533,6 +3794,14 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <AssociationSet Name="FK_COURSE_ASSIGN_TO_STUDENT_ADMISSIONINFO" Association="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_ADMISSIONINFO">
             <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFOes" />
             <End Role="COURSE_ASSIGN_TO_STUDENT" EntitySet="COURSE_ASSIGN_TO_STUDENT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SCHOOL_FEES_COLLECTION_ADMISSIONINFO" Association="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_ADMISSIONINFO">
+            <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFOes" />
+            <End Role="SCHOOL_FEES_COLLECTION" EntitySet="SCHOOL_FEES_COLLECTION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SCHOOL_MARKS_DISTRIBUTION_ADMISSIONINFO" Association="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_ADMISSIONINFO">
+            <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFOes" />
+            <End Role="SCHOOL_MARKS_DISTRIBUTION" EntitySet="SCHOOL_MARKS_DISTRIBUTION" />
           </AssociationSet>
           <AssociationSet Name="FK_STUDENT_ATTENDENCE_ADMISSIONINFO" Association="SIPIDBModel.FK_STUDENT_ATTENDENCE_ADMISSIONINFO">
             <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFOes" />
@@ -3686,6 +3955,10 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
             <End Role="COURSE" EntitySet="COURSEs" />
             <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
           </AssociationSet>
+          <AssociationSet Name="FK_STUDENT_ATTENDENCE_COURSE" Association="SIPIDBModel.FK_STUDENT_ATTENDENCE_COURSE">
+            <End Role="COURSE" EntitySet="COURSEs" />
+            <End Role="STUDENT_ATTENDENCE" EntitySet="STUDENT_ATTENDENCE" />
+          </AssociationSet>
           <AssociationSet Name="FK_STUDENT_RESULT_COURSE" Association="SIPIDBModel.FK_STUDENT_RESULT_COURSE">
             <End Role="COURSE" EntitySet="COURSEs" />
             <End Role="STUDENT_RESULT" EntitySet="STUDENT_RESULT" />
@@ -3697,6 +3970,18 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <AssociationSet Name="FK_COURSE_ASSIGN_TO_STUDENT_SIPI_DEPARTMENT" Association="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_SIPI_DEPARTMENT">
             <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
             <End Role="COURSE_ASSIGN_TO_STUDENT" EntitySet="COURSE_ASSIGN_TO_STUDENT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COURSE_ENTRY_SIPI_DEPARTMENT" Association="SIPIDBModel.FK_COURSE_ENTRY_SIPI_DEPARTMENT">
+            <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+            <End Role="COURSE_ENTRY" EntitySet="COURSE_ENTRY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COURSE_ENTRY_SIPI_PROGRAM" Association="SIPIDBModel.FK_COURSE_ENTRY_SIPI_PROGRAM">
+            <End Role="SIPI_PROGRAM" EntitySet="SIPI_PROGRAM" />
+            <End Role="COURSE_ENTRY" EntitySet="COURSE_ENTRY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SCHOOL_MARKS_DISTRIBUTION_COURSE_ENTRY" Association="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_COURSE_ENTRY">
+            <End Role="COURSE_ENTRY" EntitySet="COURSE_ENTRY" />
+            <End Role="SCHOOL_MARKS_DISTRIBUTION" EntitySet="SCHOOL_MARKS_DISTRIBUTION" />
           </AssociationSet>
           <AssociationSet Name="FK_CREATE_ROUTINE_SEMESTER" Association="SIPIDBModel.FK_CREATE_ROUTINE_SEMESTER">
             <End Role="SEMESTER" EntitySet="SEMESTERs" />
@@ -3757,6 +4042,18 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <AssociationSet Name="FK_THANA_DISTRICT" Association="SIPIDBModel.FK_THANA_DISTRICT">
             <End Role="DISTRICT" EntitySet="DISTRICTs" />
             <End Role="THANA" EntitySet="THANAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FEES_ASSIGN_BY_CLASS_FEESDETAILS" Association="SIPIDBModel.FK_FEES_ASSIGN_BY_CLASS_FEESDETAILS">
+            <End Role="FEESDETAIL" EntitySet="FEESDETAILS" />
+            <End Role="FEES_ASSIGN_BY_CLASS" EntitySet="FEES_ASSIGN_BY_CLASS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FEES_ASSIGN_BY_CLASS_SIPI_DEPARTMENT" Association="SIPIDBModel.FK_FEES_ASSIGN_BY_CLASS_SIPI_DEPARTMENT">
+            <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+            <End Role="FEES_ASSIGN_BY_CLASS" EntitySet="FEES_ASSIGN_BY_CLASS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SCHOOL_FEES_COLLECTION_FEESDETAILS" Association="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_FEESDETAILS">
+            <End Role="FEESDETAIL" EntitySet="FEESDETAILS" />
+            <End Role="SCHOOL_FEES_COLLECTION" EntitySet="SCHOOL_FEES_COLLECTION" />
           </AssociationSet>
           <AssociationSet Name="FK_STUDENTFEES_FEESDETAILS" Association="SIPIDBModel.FK_STUDENTFEES_FEESDETAILS">
             <End Role="FEESDETAIL" EntitySet="FEESDETAILS" />
@@ -3821,6 +4118,18 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <AssociationSet Name="FK_ROUTINEGROUP_SEMESTER" Association="SIPIDBModel.FK_ROUTINEGROUP_SEMESTER">
             <End Role="SEMESTER" EntitySet="SEMESTERs" />
             <End Role="ROUTINEGROUP" EntitySet="ROUTINEGROUPs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SCHOOL_FEES_COLLECTION_SIPI_DEPARTMENT" Association="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_SIPI_DEPARTMENT">
+            <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+            <End Role="SCHOOL_FEES_COLLECTION" EntitySet="SCHOOL_FEES_COLLECTION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SCHOOL_MARKS_DISTRIBUTION_SEMESTER" Association="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_SEMESTER">
+            <End Role="SEMESTER" EntitySet="SEMESTERs" />
+            <End Role="SCHOOL_MARKS_DISTRIBUTION" EntitySet="SCHOOL_MARKS_DISTRIBUTION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SCHOOL_MARKS_DISTRIBUTION_SIPI_DEPARTMENT" Association="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_SIPI_DEPARTMENT">
+            <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+            <End Role="SCHOOL_MARKS_DISTRIBUTION" EntitySet="SCHOOL_MARKS_DISTRIBUTION" />
           </AssociationSet>
           <AssociationSet Name="FK_STUDENT_ATTENDENCE_SEMESTER" Association="SIPIDBModel.FK_STUDENT_ATTENDENCE_SEMESTER">
             <End Role="SEMESTER" EntitySet="SEMESTERs" />
@@ -4149,7 +4458,9 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <Key>
             <PropertyRef Name="Id" />
           </Key>
+          <Property Name="StudentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FathersMonthlyIncome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="StudentID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ProgramId" Type="Int32" />
           <Property Name="DepartmentId" Type="Int32" />
@@ -4269,6 +4580,8 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <NavigationProperty Name="THANA2" Relationship="SIPIDBModel.FK_ADMISSIONINFO_THANA" FromRole="ADMISSIONINFO" ToRole="THANA" />
           <NavigationProperty Name="BOOK_ISSUE" Relationship="SIPIDBModel.FK_BOOK_ISSUE_ADMISSIONINFO" FromRole="ADMISSIONINFO" ToRole="BOOK_ISSUE" />
           <NavigationProperty Name="COURSE_ASSIGN_TO_STUDENT" Relationship="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_ADMISSIONINFO" FromRole="ADMISSIONINFO" ToRole="COURSE_ASSIGN_TO_STUDENT" />
+          <NavigationProperty Name="SCHOOL_FEES_COLLECTION" Relationship="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_ADMISSIONINFO" FromRole="ADMISSIONINFO" ToRole="SCHOOL_FEES_COLLECTION" />
+          <NavigationProperty Name="SCHOOL_MARKS_DISTRIBUTION" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_ADMISSIONINFO" FromRole="ADMISSIONINFO" ToRole="SCHOOL_MARKS_DISTRIBUTION" />
           <NavigationProperty Name="STUDENT_ATTENDENCE" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_ADMISSIONINFO" FromRole="ADMISSIONINFO" ToRole="STUDENT_ATTENDENCE" />
           <NavigationProperty Name="STUDENT_RESULT" Relationship="SIPIDBModel.FK_STUDENT_RESULT_ADMISSIONINFO" FromRole="ADMISSIONINFO" ToRole="STUDENT_RESULT" />
           <NavigationProperty Name="STUDENTFEESCOLLECTIONs" Relationship="SIPIDBModel.FK_STUDENTFEESCOLLECTION_ADMISSIONINFO" FromRole="ADMISSIONINFO" ToRole="STUDENTFEESCOLLECTION" />
@@ -4454,6 +4767,7 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <NavigationProperty Name="CREATE_ROUTINE5" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_COURSE5" FromRole="COURSE" ToRole="CREATE_ROUTINE" />
           <NavigationProperty Name="CREATE_ROUTINE6" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_COURSE6" FromRole="COURSE" ToRole="CREATE_ROUTINE" />
           <NavigationProperty Name="CREATE_ROUTINE7" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_COURSE7" FromRole="COURSE" ToRole="CREATE_ROUTINE" />
+          <NavigationProperty Name="STUDENT_ATTENDENCE" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_COURSE" FromRole="COURSE" ToRole="STUDENT_ATTENDENCE" />
           <NavigationProperty Name="STUDENT_RESULT" Relationship="SIPIDBModel.FK_STUDENT_RESULT_COURSE" FromRole="COURSE" ToRole="STUDENT_RESULT" />
         </EntityType>
         <EntityType Name="COURSE_ASSIGN_TO_STUDENT">
@@ -4474,6 +4788,22 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <NavigationProperty Name="COURSE" Relationship="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_COURSE" FromRole="COURSE_ASSIGN_TO_STUDENT" ToRole="COURSE" />
           <NavigationProperty Name="SEMESTER" Relationship="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_SEMESTER" FromRole="COURSE_ASSIGN_TO_STUDENT" ToRole="SEMESTER" />
           <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_SIPI_DEPARTMENT" FromRole="COURSE_ASSIGN_TO_STUDENT" ToRole="SIPI_DEPARTMENT" />
+        </EntityType>
+        <EntityType Name="COURSE_ENTRY">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lavle" Type="Int32" />
+          <Property Name="Class" Type="Int32" />
+          <Property Name="Term" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CourseName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BanglaCourseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Marks" Type="Int32" />
+          <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_COURSE_ENTRY_SIPI_DEPARTMENT" FromRole="COURSE_ENTRY" ToRole="SIPI_DEPARTMENT" />
+          <NavigationProperty Name="SIPI_PROGRAM" Relationship="SIPIDBModel.FK_COURSE_ENTRY_SIPI_PROGRAM" FromRole="COURSE_ENTRY" ToRole="SIPI_PROGRAM" />
+          <NavigationProperty Name="SCHOOL_MARKS_DISTRIBUTION" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_COURSE_ENTRY" FromRole="COURSE_ENTRY" ToRole="SCHOOL_MARKS_DISTRIBUTION" />
         </EntityType>
         <EntityType Name="CREATE_ROUTINE">
           <Key>
@@ -4631,12 +4961,31 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <NavigationProperty Name="POSTs" Relationship="SIPIDBModel.FK_POST_DISTRICT" FromRole="DISTRICT" ToRole="POST" />
           <NavigationProperty Name="THANAs" Relationship="SIPIDBModel.FK_THANA_DISTRICT" FromRole="DISTRICT" ToRole="THANA" />
         </EntityType>
+        <EntityType Name="FEES_ASSIGN_BY_CLASS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BnglaClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ClassId" Type="Int32" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="FeesDetailsItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FeesDetailsId" Type="Int32" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="Total" Type="Int32" />
+          <NavigationProperty Name="FEESDETAIL" Relationship="SIPIDBModel.FK_FEES_ASSIGN_BY_CLASS_FEESDETAILS" FromRole="FEES_ASSIGN_BY_CLASS" ToRole="FEESDETAIL" />
+          <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_FEES_ASSIGN_BY_CLASS_SIPI_DEPARTMENT" FromRole="FEES_ASSIGN_BY_CLASS" ToRole="SIPI_DEPARTMENT" />
+        </EntityType>
         <EntityType Name="FEESDETAIL">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BanglaFeesItem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="FEES_ASSIGN_BY_CLASS" Relationship="SIPIDBModel.FK_FEES_ASSIGN_BY_CLASS_FEESDETAILS" FromRole="FEESDETAIL" ToRole="FEES_ASSIGN_BY_CLASS" />
+          <NavigationProperty Name="SCHOOL_FEES_COLLECTION" Relationship="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_FEESDETAILS" FromRole="FEESDETAIL" ToRole="SCHOOL_FEES_COLLECTION" />
           <NavigationProperty Name="STUDENTFEES" Relationship="SIPIDBModel.FK_STUDENTFEES_FEESDETAILS" FromRole="FEESDETAIL" ToRole="STUDENTFEE" />
         </EntityType>
         <EntityType Name="FEESSETUP">
@@ -5017,6 +5366,22 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <Property Name="GEmpEduResultID" Type="Guid" Nullable="false" />
           <Property Name="GEmpEduBoardID" Type="Guid" />
         </EntityType>
+        <EntityType Name="PIS_tblEmpFamily">
+          <Key>
+            <PropertyRef Name="GEmpFamilyID" />
+          </Key>
+          <Property Name="GEmpFamilyID" Type="Guid" Nullable="false" />
+          <Property Name="GEmployeeGenInfoID" Type="Guid" Nullable="false" />
+          <Property Name="GEmpFamilyType" Type="Guid" />
+          <Property Name="StrEmpFamilyMemberName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="dtEmpFamilyBirthDate" Type="DateTime" Precision="3" />
+          <Property Name="intEmpFamilyGender" Type="Int32" Nullable="false" />
+          <Property Name="GEmpFamilyEduDegreeID" Type="Guid" Nullable="false" />
+          <Property Name="GEmpFamilyProfession" Type="Guid" />
+          <Property Name="intEmpFamilyBloodGroup" Type="Int32" />
+          <Property Name="intNominee" Type="Int32" />
+          <Property Name="numShare" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
         <EntityType Name="PIS_tblEmployeeGenInfo">
           <Key>
             <PropertyRef Name="GEmployeeGenInfoID" />
@@ -5219,6 +5584,59 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <NavigationProperty Name="PROGRAM" Relationship="SIPIDBModel.FK_ROUTINEGROUP_PROGRAM" FromRole="ROUTINEGROUP" ToRole="PROGRAM" />
           <NavigationProperty Name="SEMESTER" Relationship="SIPIDBModel.FK_ROUTINEGROUP_SEMESTER" FromRole="ROUTINEGROUP" ToRole="SEMESTER" />
         </EntityType>
+        <EntityType Name="SCHOOL_FEES_COLLECTION">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FeesItemId" Type="Int32" />
+          <Property Name="FeesItemTitel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FeesItemTitelBangla" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfFeesCollection" Type="DateTime" Precision="0" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="ClassId" Type="Int32" />
+          <Property Name="ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TotalBySlip" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PaySlipNo" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StudentId" Type="Int32" />
+          <Property Name="StudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StudentNameBangla" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="ADMISSIONINFO" Relationship="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_ADMISSIONINFO" FromRole="SCHOOL_FEES_COLLECTION" ToRole="ADMISSIONINFO" />
+          <NavigationProperty Name="FEESDETAIL" Relationship="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_FEESDETAILS" FromRole="SCHOOL_FEES_COLLECTION" ToRole="FEESDETAIL" />
+          <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_SIPI_DEPARTMENT" FromRole="SCHOOL_FEES_COLLECTION" ToRole="SIPI_DEPARTMENT" />
+        </EntityType>
+        <EntityType Name="SCHOOL_MARKS_DISTRIBUTION">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClassId" Type="Int32" />
+          <Property Name="ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Section" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TermId" Type="Int32" />
+          <Property Name="TermName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CourseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CourseId" Type="Int32" />
+          <Property Name="Theory" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="MCQ" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Practical" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Total" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Grade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GradePoint" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="StudentPKId" Type="Int32" />
+          <Property Name="StudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FullMarks" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="ADMISSIONINFO" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_ADMISSIONINFO" FromRole="SCHOOL_MARKS_DISTRIBUTION" ToRole="ADMISSIONINFO" />
+          <NavigationProperty Name="COURSE_ENTRY" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_COURSE_ENTRY" FromRole="SCHOOL_MARKS_DISTRIBUTION" ToRole="COURSE_ENTRY" />
+          <NavigationProperty Name="SEMESTER" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_SEMESTER" FromRole="SCHOOL_MARKS_DISTRIBUTION" ToRole="SEMESTER" />
+          <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_SIPI_DEPARTMENT" FromRole="SCHOOL_MARKS_DISTRIBUTION" ToRole="SIPI_DEPARTMENT" />
+        </EntityType>
         <EntityType Name="SEMESTER">
           <Key>
             <PropertyRef Name="Id" />
@@ -5232,6 +5650,7 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <NavigationProperty Name="CREATE_ROUTINE" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_SEMESTER" FromRole="SEMESTER" ToRole="CREATE_ROUTINE" />
           <NavigationProperty Name="FEESSETUPs" Relationship="SIPIDBModel.FK_FEESSETUP_SEMESTER" FromRole="SEMESTER" ToRole="FEESSETUP" />
           <NavigationProperty Name="ROUTINEGROUPs" Relationship="SIPIDBModel.FK_ROUTINEGROUP_SEMESTER" FromRole="SEMESTER" ToRole="ROUTINEGROUP" />
+          <NavigationProperty Name="SCHOOL_MARKS_DISTRIBUTION" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_SEMESTER" FromRole="SEMESTER" ToRole="SCHOOL_MARKS_DISTRIBUTION" />
           <NavigationProperty Name="STUDENT_ATTENDENCE" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_SEMESTER" FromRole="SEMESTER" ToRole="STUDENT_ATTENDENCE" />
           <NavigationProperty Name="STUDENT_CURRENT_SEMESTER_STATUS" Relationship="SIPIDBModel.FK_STUDENT_CURRENT_SEMESTER_STATUS_STUDENT_CURRENT_SEMESTER_STATUS" FromRole="SEMESTER" ToRole="STUDENT_CURRENT_SEMESTER_STATUS" />
           <NavigationProperty Name="STUDENT_RESULT" Relationship="SIPIDBModel.FK_STUDENT_RESULT_SEMESTER" FromRole="SEMESTER" ToRole="STUDENT_RESULT" />
@@ -5252,8 +5671,12 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <NavigationProperty Name="BOOKS_DETAILS" Relationship="SIPIDBModel.FK_BOOKS_DETAILS_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="BOOKS_DETAILS" />
           <NavigationProperty Name="COURSEs" Relationship="SIPIDBModel.FK_COURSE_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="COURSE" />
           <NavigationProperty Name="COURSE_ASSIGN_TO_STUDENT" Relationship="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="COURSE_ASSIGN_TO_STUDENT" />
+          <NavigationProperty Name="COURSE_ENTRY" Relationship="SIPIDBModel.FK_COURSE_ENTRY_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="COURSE_ENTRY" />
           <NavigationProperty Name="CREATE_ROUTINE" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="CREATE_ROUTINE" />
+          <NavigationProperty Name="FEES_ASSIGN_BY_CLASS" Relationship="SIPIDBModel.FK_FEES_ASSIGN_BY_CLASS_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="FEES_ASSIGN_BY_CLASS" />
           <NavigationProperty Name="FEESSETUPs" Relationship="SIPIDBModel.FK_FEESSETUP_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="FEESSETUP" />
+          <NavigationProperty Name="SCHOOL_FEES_COLLECTION" Relationship="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="SCHOOL_FEES_COLLECTION" />
+          <NavigationProperty Name="SCHOOL_MARKS_DISTRIBUTION" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="SCHOOL_MARKS_DISTRIBUTION" />
           <NavigationProperty Name="SIPI_PROGRAM" Relationship="SIPIDBModel.FK_SIPI_DEPARTMENT_SIPI_PROGRAM" FromRole="SIPI_DEPARTMENT" ToRole="SIPI_PROGRAM" />
           <NavigationProperty Name="STUDENT_ATTENDENCE" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="STUDENT_ATTENDENCE" />
           <NavigationProperty Name="STUDENT_RESULT" Relationship="SIPIDBModel.FK_STUDENT_RESULT_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="STUDENT_RESULT" />
@@ -5270,6 +5693,7 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <NavigationProperty Name="ADMISSIONINFOes" Relationship="SIPIDBModel.FK_ADMISSIONINFO_SIPI_PROGRAM" FromRole="SIPI_PROGRAM" ToRole="ADMISSIONINFO" />
           <NavigationProperty Name="BOOKS_DETAILS" Relationship="SIPIDBModel.FK_BOOKS_DETAILS_SIPI_PROGRAM" FromRole="SIPI_PROGRAM" ToRole="BOOKS_DETAILS" />
           <NavigationProperty Name="COURSEs" Relationship="SIPIDBModel.FK_COURSE_PROGRAM" FromRole="SIPI_PROGRAM" ToRole="COURSE" />
+          <NavigationProperty Name="COURSE_ENTRY" Relationship="SIPIDBModel.FK_COURSE_ENTRY_SIPI_PROGRAM" FromRole="SIPI_PROGRAM" ToRole="COURSE_ENTRY" />
           <NavigationProperty Name="CREATE_ROUTINE" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_SIPI_PROGRAM" FromRole="SIPI_PROGRAM" ToRole="CREATE_ROUTINE" />
           <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_SIPI_DEPARTMENT_SIPI_PROGRAM" FromRole="SIPI_PROGRAM" ToRole="SIPI_DEPARTMENT" />
         </EntityType>
@@ -5282,11 +5706,13 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <Property Name="DepartmentId" Type="Int32" Nullable="false" />
           <Property Name="CampusId" Type="Int32" Nullable="false" />
           <Property Name="SemesterId" Type="Int32" Nullable="false" />
-          <Property Name="Year" Type="Int32" />
+          <Property Name="Year" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CourseId" Type="Int32" />
           <NavigationProperty Name="ADMISSIONINFO" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_ADMISSIONINFO" FromRole="STUDENT_ATTENDENCE" ToRole="ADMISSIONINFO" />
           <NavigationProperty Name="CAMPUSINFO" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_CAMPUSINFO" FromRole="STUDENT_ATTENDENCE" ToRole="CAMPUSINFO" />
+          <NavigationProperty Name="COURSE" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_COURSE" FromRole="STUDENT_ATTENDENCE" ToRole="COURSE" />
           <NavigationProperty Name="SEMESTER" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_SEMESTER" FromRole="STUDENT_ATTENDENCE" ToRole="SEMESTER" />
           <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_SIPI_DEPARTMENT" FromRole="STUDENT_ATTENDENCE" ToRole="SIPI_DEPARTMENT" />
         </EntityType>
@@ -5354,16 +5780,6 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <NavigationProperty Name="ADMISSIONINFO" Relationship="SIPIDBModel.FK_STUDENTFEESCOLLECTION_ADMISSIONINFO" FromRole="STUDENTFEESCOLLECTION" ToRole="ADMISSIONINFO" />
           <NavigationProperty Name="SEMESTER" Relationship="SIPIDBModel.FK_STUDENTFEESCOLLECTION_SEMESTER" FromRole="STUDENTFEESCOLLECTION" ToRole="SEMESTER" />
         </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <EntityType Name="tblCfgCommon">
           <Key>
             <PropertyRef Name="GCfgCommonID" />
@@ -5427,6 +5843,13 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <NavigationProperty Name="CREATE_ROUTINE6" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_TEACHER6" FromRole="TEACHER" ToRole="CREATE_ROUTINE" />
           <NavigationProperty Name="CREATE_ROUTINE7" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_TEACHER7" FromRole="TEACHER" ToRole="CREATE_ROUTINE" />
           <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_TEACHER_SIPI_DEPARTMENT" FromRole="TEACHER" ToRole="SIPI_DEPARTMENT" />
+        </EntityType>
+        <EntityType Name="TEMPORARY_DATA_SET">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SESSION" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="test_district">
           <Key>
@@ -5769,6 +6192,30 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
             </Principal>
             <Dependent Role="COURSE_ASSIGN_TO_STUDENT">
               <PropertyRef Name="StudentPkId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SCHOOL_FEES_COLLECTION_ADMISSIONINFO">
+          <End Type="SIPIDBModel.ADMISSIONINFO" Role="ADMISSIONINFO" Multiplicity="0..1" />
+          <End Type="SIPIDBModel.SCHOOL_FEES_COLLECTION" Role="SCHOOL_FEES_COLLECTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ADMISSIONINFO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SCHOOL_FEES_COLLECTION">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SCHOOL_MARKS_DISTRIBUTION_ADMISSIONINFO">
+          <End Type="SIPIDBModel.ADMISSIONINFO" Role="ADMISSIONINFO" Multiplicity="0..1" />
+          <End Type="SIPIDBModel.SCHOOL_MARKS_DISTRIBUTION" Role="SCHOOL_MARKS_DISTRIBUTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ADMISSIONINFO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SCHOOL_MARKS_DISTRIBUTION">
+              <PropertyRef Name="StudentPKId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -6228,6 +6675,18 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_STUDENT_ATTENDENCE_COURSE">
+          <End Type="SIPIDBModel.COURSE" Role="COURSE" Multiplicity="0..1" />
+          <End Type="SIPIDBModel.STUDENT_ATTENDENCE" Role="STUDENT_ATTENDENCE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="STUDENT_ATTENDENCE">
+              <PropertyRef Name="CourseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_STUDENT_RESULT_COURSE">
           <End Type="SIPIDBModel.COURSE" Role="COURSE" Multiplicity="1" />
           <End Type="SIPIDBModel.STUDENT_RESULT" Role="STUDENT_RESULT" Multiplicity="*" />
@@ -6261,6 +6720,42 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
             </Principal>
             <Dependent Role="COURSE_ASSIGN_TO_STUDENT">
               <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COURSE_ENTRY_SIPI_DEPARTMENT">
+          <End Type="SIPIDBModel.SIPI_DEPARTMENT" Role="SIPI_DEPARTMENT" Multiplicity="0..1" />
+          <End Type="SIPIDBModel.COURSE_ENTRY" Role="COURSE_ENTRY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SIPI_DEPARTMENT">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="COURSE_ENTRY">
+              <PropertyRef Name="Class" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COURSE_ENTRY_SIPI_PROGRAM">
+          <End Type="SIPIDBModel.SIPI_PROGRAM" Role="SIPI_PROGRAM" Multiplicity="0..1" />
+          <End Type="SIPIDBModel.COURSE_ENTRY" Role="COURSE_ENTRY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SIPI_PROGRAM">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="COURSE_ENTRY">
+              <PropertyRef Name="Lavle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SCHOOL_MARKS_DISTRIBUTION_COURSE_ENTRY">
+          <End Type="SIPIDBModel.COURSE_ENTRY" Role="COURSE_ENTRY" Multiplicity="0..1" />
+          <End Type="SIPIDBModel.SCHOOL_MARKS_DISTRIBUTION" Role="SCHOOL_MARKS_DISTRIBUTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSE_ENTRY">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SCHOOL_MARKS_DISTRIBUTION">
+              <PropertyRef Name="CourseId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -6441,6 +6936,42 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
             </Principal>
             <Dependent Role="THANA">
               <PropertyRef Name="DistrictId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FEES_ASSIGN_BY_CLASS_FEESDETAILS">
+          <End Type="SIPIDBModel.FEESDETAIL" Role="FEESDETAIL" Multiplicity="0..1" />
+          <End Type="SIPIDBModel.FEES_ASSIGN_BY_CLASS" Role="FEES_ASSIGN_BY_CLASS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FEESDETAIL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FEES_ASSIGN_BY_CLASS">
+              <PropertyRef Name="FeesDetailsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FEES_ASSIGN_BY_CLASS_SIPI_DEPARTMENT">
+          <End Type="SIPIDBModel.SIPI_DEPARTMENT" Role="SIPI_DEPARTMENT" Multiplicity="0..1" />
+          <End Type="SIPIDBModel.FEES_ASSIGN_BY_CLASS" Role="FEES_ASSIGN_BY_CLASS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SIPI_DEPARTMENT">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FEES_ASSIGN_BY_CLASS">
+              <PropertyRef Name="ClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SCHOOL_FEES_COLLECTION_FEESDETAILS">
+          <End Type="SIPIDBModel.FEESDETAIL" Role="FEESDETAIL" Multiplicity="0..1" />
+          <End Type="SIPIDBModel.SCHOOL_FEES_COLLECTION" Role="SCHOOL_FEES_COLLECTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FEESDETAIL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SCHOOL_FEES_COLLECTION">
+              <PropertyRef Name="FeesItemId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -6640,6 +7171,42 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_SCHOOL_FEES_COLLECTION_SIPI_DEPARTMENT">
+          <End Type="SIPIDBModel.SIPI_DEPARTMENT" Role="SIPI_DEPARTMENT" Multiplicity="0..1" />
+          <End Type="SIPIDBModel.SCHOOL_FEES_COLLECTION" Role="SCHOOL_FEES_COLLECTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SIPI_DEPARTMENT">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SCHOOL_FEES_COLLECTION">
+              <PropertyRef Name="ClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SCHOOL_MARKS_DISTRIBUTION_SEMESTER">
+          <End Type="SIPIDBModel.SEMESTER" Role="SEMESTER" Multiplicity="0..1" />
+          <End Type="SIPIDBModel.SCHOOL_MARKS_DISTRIBUTION" Role="SCHOOL_MARKS_DISTRIBUTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEMESTER">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SCHOOL_MARKS_DISTRIBUTION">
+              <PropertyRef Name="TermId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SCHOOL_MARKS_DISTRIBUTION_SIPI_DEPARTMENT">
+          <End Type="SIPIDBModel.SIPI_DEPARTMENT" Role="SIPI_DEPARTMENT" Multiplicity="0..1" />
+          <End Type="SIPIDBModel.SCHOOL_MARKS_DISTRIBUTION" Role="SCHOOL_MARKS_DISTRIBUTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SIPI_DEPARTMENT">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SCHOOL_MARKS_DISTRIBUTION">
+              <PropertyRef Name="ClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_STUDENT_ATTENDENCE_SEMESTER">
           <End Type="SIPIDBModel.SEMESTER" Role="SEMESTER" Multiplicity="1" />
           <End Type="SIPIDBModel.STUDENT_ATTENDENCE" Role="STUDENT_ATTENDENCE" Multiplicity="*" />
@@ -6779,7 +7346,6 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SIPIDBModel.Store.sp_alterdiagram" />
           <FunctionImportMapping FunctionImportName="SP_BANK_STATEMENT" FunctionName="SIPIDBModel.Store.SP_BANK_STATEMENT">
             <ResultMapping>
               <ComplexTypeMapping TypeName="SIPIDBModel.SP_BANK_STATEMENT_Result">
@@ -6804,7 +7370,6 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="SP_CHART_OF_ACCOUNT_UPDATE" FunctionName="SIPIDBModel.Store.SP_CHART_OF_ACCOUNT_UPDATE" />
-          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SIPIDBModel.Store.sp_creatediagram" />
           <FunctionImportMapping FunctionImportName="SP_CURRENT_BALANCE" FunctionName="SIPIDBModel.Store.SP_CURRENT_BALANCE">
             <ResultMapping>
               <ComplexTypeMapping TypeName="SIPIDBModel.SP_CURRENT_BALANCE_Result">
@@ -6872,7 +7437,6 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="SP_DELETE_DEPRICIATION" FunctionName="SIPIDBModel.Store.SP_DELETE_DEPRICIATION" />
-          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SIPIDBModel.Store.sp_dropdiagram" />
           <FunctionImportMapping FunctionImportName="SP_GET_ALL_DEPRICIATION" FunctionName="SIPIDBModel.Store.SP_GET_ALL_DEPRICIATION">
             <ResultMapping>
               <ComplexTypeMapping TypeName="SIPIDBModel.SP_GET_ALL_DEPRICIATION_Result">
@@ -6950,25 +7514,6 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SIPIDBModel.Store.sp_helpdiagramdefinition">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="SIPIDBModel.sp_helpdiagramdefinition_Result">
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SIPIDBModel.Store.sp_helpdiagrams">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="SIPIDBModel.sp_helpdiagrams_Result">
-                <ScalarProperty Name="Database" ColumnName="Database" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Owner" ColumnName="Owner" />
-                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="SP_INCOME_STATEMENT_FINAL" FunctionName="SIPIDBModel.Store.SP_INCOME_STATEMENT_FINAL">
             <ResultMapping>
               <ComplexTypeMapping TypeName="SIPIDBModel.SP_INCOME_STATEMENT_FINAL_Result">
@@ -7007,7 +7552,6 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SIPIDBModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="SP_TOTAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" FunctionName="SIPIDBModel.Store.SP_TOTAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" />
           <FunctionImportMapping FunctionImportName="SP_TOTAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BY_DATE" FunctionName="SIPIDBModel.Store.SP_TOTAL_CONTRA_VOUCHER_FOR_DAY_BOOK_BY_DATE" />
           <FunctionImportMapping FunctionImportName="SP_TOTAL_DEPOSIT_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" FunctionName="SIPIDBModel.Store.SP_TOTAL_DEPOSIT_VOUCHER_FOR_DAY_BOOK_BETWEEN_DATE" />
@@ -7027,7 +7571,6 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SIPIDBModel.Store.sp_upgraddiagrams" />
           <FunctionImportMapping FunctionImportName="Student_Money_Receipt_Report" FunctionName="SIPIDBModel.Store.Student_Money_Receipt_Report">
             <ResultMapping>
               <ComplexTypeMapping TypeName="SIPIDBModel.Student_Money_Receipt_Report_Result">
@@ -7251,7 +7794,9 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
                 <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
                 <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
                 <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="FathersMonthlyIncome" ColumnName="FathersMonthlyIncome" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="StudentStatus" ColumnName="StudentStatus" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -7423,6 +7968,20 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="COURSE_ENTRY">
+            <EntityTypeMapping TypeName="SIPIDBModel.COURSE_ENTRY">
+              <MappingFragment StoreEntitySet="COURSE_ENTRY">
+                <ScalarProperty Name="Marks" ColumnName="Marks" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="BanglaCourseName" ColumnName="BanglaCourseName" />
+                <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+                <ScalarProperty Name="Term" ColumnName="Term" />
+                <ScalarProperty Name="Class" ColumnName="Class" />
+                <ScalarProperty Name="Lavle" ColumnName="Lavle" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="CREATE_ROUTINE">
             <EntityTypeMapping TypeName="SIPIDBModel.CREATE_ROUTINE">
               <MappingFragment StoreEntitySet="CREATE_ROUTINE">
@@ -7550,9 +8109,25 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="FEES_ASSIGN_BY_CLASS">
+            <EntityTypeMapping TypeName="SIPIDBModel.FEES_ASSIGN_BY_CLASS">
+              <MappingFragment StoreEntitySet="FEES_ASSIGN_BY_CLASS">
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="FeesDetailsId" ColumnName="FeesDetailsId" />
+                <ScalarProperty Name="FeesDetailsItemName" ColumnName="FeesDetailsItemName" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="BnglaClassName" ColumnName="BnglaClassName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="FEESDETAILS">
             <EntityTypeMapping TypeName="SIPIDBModel.FEESDETAIL">
               <MappingFragment StoreEntitySet="FEESDETAILS">
+                <ScalarProperty Name="BanglaFeesItem" ColumnName="BanglaFeesItem" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
@@ -7946,6 +8521,23 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="PIS_tblEmpFamily">
+            <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblEmpFamily">
+              <MappingFragment StoreEntitySet="PIS_tblEmpFamily">
+                <ScalarProperty Name="numShare" ColumnName="numShare" />
+                <ScalarProperty Name="intNominee" ColumnName="intNominee" />
+                <ScalarProperty Name="intEmpFamilyBloodGroup" ColumnName="intEmpFamilyBloodGroup" />
+                <ScalarProperty Name="GEmpFamilyProfession" ColumnName="GEmpFamilyProfession" />
+                <ScalarProperty Name="GEmpFamilyEduDegreeID" ColumnName="GEmpFamilyEduDegreeID" />
+                <ScalarProperty Name="intEmpFamilyGender" ColumnName="intEmpFamilyGender" />
+                <ScalarProperty Name="dtEmpFamilyBirthDate" ColumnName="dtEmpFamilyBirthDate" />
+                <ScalarProperty Name="StrEmpFamilyMemberName" ColumnName="StrEmpFamilyMemberName" />
+                <ScalarProperty Name="GEmpFamilyType" ColumnName="GEmpFamilyType" />
+                <ScalarProperty Name="GEmployeeGenInfoID" ColumnName="GEmployeeGenInfoID" />
+                <ScalarProperty Name="GEmpFamilyID" ColumnName="GEmpFamilyID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="PIS_tblEmployeeGenInfo">
             <EntityTypeMapping TypeName="SIPIDBModel.PIS_tblEmployeeGenInfo">
               <MappingFragment StoreEntitySet="PIS_tblEmployeeGenInfo">
@@ -8148,6 +8740,54 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="SCHOOL_FEES_COLLECTION">
+            <EntityTypeMapping TypeName="SIPIDBModel.SCHOOL_FEES_COLLECTION">
+              <MappingFragment StoreEntitySet="SCHOOL_FEES_COLLECTION">
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="StudentNameBangla" ColumnName="StudentNameBangla" />
+                <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PaySlipNo" ColumnName="PaySlipNo" />
+                <ScalarProperty Name="TotalBySlip" ColumnName="TotalBySlip" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="DateOfFeesCollection" ColumnName="DateOfFeesCollection" />
+                <ScalarProperty Name="FeesItemTitelBangla" ColumnName="FeesItemTitelBangla" />
+                <ScalarProperty Name="FeesItemTitel" ColumnName="FeesItemTitel" />
+                <ScalarProperty Name="FeesItemId" ColumnName="FeesItemId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCHOOL_MARKS_DISTRIBUTION">
+            <EntityTypeMapping TypeName="SIPIDBModel.SCHOOL_MARKS_DISTRIBUTION">
+              <MappingFragment StoreEntitySet="SCHOOL_MARKS_DISTRIBUTION">
+                <ScalarProperty Name="FullMarks" ColumnName="FullMarks" />
+                <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+                <ScalarProperty Name="StudentPKId" ColumnName="StudentPKId" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="GradePoint" ColumnName="GradePoint" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Practical" ColumnName="Practical" />
+                <ScalarProperty Name="MCQ" ColumnName="MCQ" />
+                <ScalarProperty Name="Theory" ColumnName="Theory" />
+                <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+                <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+                <ScalarProperty Name="TermName" ColumnName="TermName" />
+                <ScalarProperty Name="TermId" ColumnName="TermId" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="SEMESTERs">
             <EntityTypeMapping TypeName="SIPIDBModel.SEMESTER">
               <MappingFragment StoreEntitySet="SEMESTER">
@@ -8183,6 +8823,7 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
           <EntitySetMapping Name="STUDENT_ATTENDENCE">
             <EntityTypeMapping TypeName="SIPIDBModel.STUDENT_ATTENDENCE">
               <MappingFragment StoreEntitySet="STUDENT_ATTENDENCE">
+                <ScalarProperty Name="CourseId" ColumnName="CourseId" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Year" ColumnName="Year" />
@@ -8254,17 +8895,6 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="SIPIDBModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="definition" ColumnName="definition" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="name" ColumnName="name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tblCfgCommons">
             <EntityTypeMapping TypeName="SIPIDBModel.tblCfgCommon">
               <MappingFragment StoreEntitySet="tblCfgCommon">
@@ -8320,6 +8950,14 @@ FROM [dbo].[PIS_EMPLOYEE_INFO] AS [PIS_EMPLOYEE_INFO]</DefiningQuery>
                 <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
                 <ScalarProperty Name="TeacherName" ColumnName="TeacherName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TEMPORARY_DATA_SET">
+            <EntityTypeMapping TypeName="SIPIDBModel.TEMPORARY_DATA_SET">
+              <MappingFragment StoreEntitySet="TEMPORARY_DATA_SET">
+                <ScalarProperty Name="SESSION" ColumnName="SESSION" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

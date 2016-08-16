@@ -22,6 +22,7 @@ namespace DATA
             this.CREATE_ROUTINE = new HashSet<CREATE_ROUTINE>();
             this.FEESSETUPs = new HashSet<FEESSETUP>();
             this.ROUTINEGROUPs = new HashSet<ROUTINEGROUP>();
+            this.SCHOOL_MARKS_DISTRIBUTION = new HashSet<SCHOOL_MARKS_DISTRIBUTION>();
             this.STUDENT_ATTENDENCE = new HashSet<STUDENT_ATTENDENCE>();
             this.STUDENT_CURRENT_SEMESTER_STATUS = new HashSet<STUDENT_CURRENT_SEMESTER_STATUS>();
             this.STUDENT_RESULT = new HashSet<STUDENT_RESULT>();
@@ -38,6 +39,7 @@ namespace DATA
         public virtual ICollection<CREATE_ROUTINE> CREATE_ROUTINE { get; set; }
         public virtual ICollection<FEESSETUP> FEESSETUPs { get; set; }
         public virtual ICollection<ROUTINEGROUP> ROUTINEGROUPs { get; set; }
+        public virtual ICollection<SCHOOL_MARKS_DISTRIBUTION> SCHOOL_MARKS_DISTRIBUTION { get; set; }
         public virtual ICollection<STUDENT_ATTENDENCE> STUDENT_ATTENDENCE { get; set; }
         public virtual ICollection<STUDENT_CURRENT_SEMESTER_STATUS> STUDENT_CURRENT_SEMESTER_STATUS { get; set; }
         public virtual ICollection<STUDENT_RESULT> STUDENT_RESULT { get; set; }

@@ -80,6 +80,7 @@
     <Compile Include="PIS\SectionBAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultManagement\StudentResultManager.cs" />
+    <Compile Include="SetupClass\TemporaryDataSetManager.cs" />
     <Compile Include="StudentManagement\ClassPeriodManager.cs" />
     <Compile Include="StudentManagement\ClassRoutineCreateManager.cs" />
     <Compile Include="StudentManagement\ClassRoutineGroupManager.cs" />

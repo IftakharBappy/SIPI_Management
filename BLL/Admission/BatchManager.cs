@@ -35,5 +35,10 @@ namespace BLL.Admission
             batchGetway.UpdateBatch(_batchObj);
 
         }
+
+        public List<Batch> GetAllBatchNA()
+        {
+            return batchGetway.GetAllBatchNA();
+        }
     }
 }

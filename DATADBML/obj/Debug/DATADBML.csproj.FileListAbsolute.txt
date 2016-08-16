@@ -78,3 +78,11 @@ D:\SIPI_Management\DATADBML\bin\Debug\ENTITY.pdb
 D:\SIPI_Management\DATADBML\obj\Debug\DATADBML.csprojResolveAssemblyReference.cache
 D:\SIPI_Management\DATADBML\obj\Debug\DATADBML.dll
 D:\SIPI_Management\DATADBML\obj\Debug\DATADBML.pdb
+E:\SIPI_Management\DATADBML\bin\Debug\DATADBML.dll.config
+E:\SIPI_Management\DATADBML\bin\Debug\DATADBML.dll
+E:\SIPI_Management\DATADBML\bin\Debug\DATADBML.pdb
+E:\SIPI_Management\DATADBML\bin\Debug\ENTITY.dll
+E:\SIPI_Management\DATADBML\bin\Debug\ENTITY.pdb
+E:\SIPI_Management\DATADBML\obj\Debug\DATADBML.csprojResolveAssemblyReference.cache
+E:\SIPI_Management\DATADBML\obj\Debug\DATADBML.dll
+E:\SIPI_Management\DATADBML\obj\Debug\DATADBML.pdb

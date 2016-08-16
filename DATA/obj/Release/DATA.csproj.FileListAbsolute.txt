@@ -37,3 +37,11 @@ D:\SIPI_Management\DATA\bin\Release\EntityFramework.xml
 D:\SIPI_Management\DATA\obj\Release\DATA.csprojResolveAssemblyReference.cache
 D:\SIPI_Management\DATA\obj\Release\DATA.dll
 D:\SIPI_Management\DATA\obj\Release\DATA.pdb
+E:\SIPI_Management\DATA\bin\Release\DATA.dll.config
+E:\SIPI_Management\DATA\bin\Release\DATA.dll
+E:\SIPI_Management\DATA\bin\Release\DATA.pdb
+E:\SIPI_Management\DATA\bin\Release\EntityFramework.dll
+E:\SIPI_Management\DATA\bin\Release\EntityFramework.xml
+E:\SIPI_Management\DATA\obj\Release\DATA.csprojResolveAssemblyReference.cache
+E:\SIPI_Management\DATA\obj\Release\DATA.dll
+E:\SIPI_Management\DATA\obj\Release\DATA.pdb

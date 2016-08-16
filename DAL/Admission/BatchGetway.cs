@@ -62,5 +62,27 @@ namespace DAL.Admission
             
 
         }
+
+        public List<Batch> GetAllBatchNA()
+        {
+            datacontextObj = new SIPIDBEntities();
+            List<Batch> batchList = new List<Batch>();
+
+            foreach (var p in (from j in datacontextObj.BATCHes select new { j.ID, j.BatchNo, j.Year, j.BanglaBatch }).Distinct())
+            {
+                Batch batchObj = new Batch();
+                if (p.BanglaBatch == "N/A")
+                {
+                    batchObj.Id = p.ID;
+                    batchObj.BatchNo = p.BatchNo;
+                    batchObj.Year = Convert.ToInt16(p.Year);
+                    batchObj.BanglaBatch = p.BanglaBatch;
+                    batchList.Add(batchObj);
+                }
+               
+            }
+
+            return batchList;
+        }
     }
 }

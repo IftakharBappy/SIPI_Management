@@ -5,96 +5,101 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="d69ebc4632b446339defdbf7d3e73b5e" Name="Diagram1" ZoomLevel="34">
-        <EntityTypeShape EntityType="SIPIDBModel.ACCOUNT_TYPE" Width="1.5" PointX="7.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.ADD_STUDENT" Width="1.5" PointX="18.75" PointY="8.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.ADMISSIONINFO" Width="1.5" PointX="6" PointY="14.5" />
-        <EntityTypeShape EntityType="SIPIDBModel.ADMISSIONOFFICE" Width="1.5" PointX="6" PointY="42.625" />
-        <EntityTypeShape EntityType="SIPIDBModel.ALL_ACCOUNT_TYPE" Width="1.5" PointX="0.75" PointY="7.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.BALANCE_SHEET_CONFIGURE" Width="1.5" PointX="16" PointY="2.125" />
-        <EntityTypeShape EntityType="SIPIDBModel.BATCH" Width="1.5" PointX="3.75" PointY="8.125" />
-        <EntityTypeShape EntityType="SIPIDBModel.BLOODGROUP" Width="1.5" PointX="7.75" PointY="3.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.BOOK_ISSUE" Width="1.5" PointX="11.25" PointY="21.125" />
-        <EntityTypeShape EntityType="SIPIDBModel.BOOKS_DETAILS" Width="1.5" PointX="9" PointY="15.125" />
-        <EntityTypeShape EntityType="SIPIDBModel.CAMPUSINFO" Width="1.5" PointX="3.75" PointY="41.875" />
-        <EntityTypeShape EntityType="SIPIDBModel.CHART_ACCOUNT" Width="1.5" PointX="13.75" PointY="12.375" />
-        <EntityTypeShape EntityType="SIPIDBModel.CLASSPERIOD" Width="1.5" PointX="9" PointY="39.125" />
-        <EntityTypeShape EntityType="SIPIDBModel.COMPANY_SETUP" Width="1.5" PointX="9.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.COURSE" Width="1.5" PointX="3" PointY="29.625" />
-        <EntityTypeShape EntityType="SIPIDBModel.COURSE_ASSIGN_TO_STUDENT" Width="1.5" PointX="8.25" PointY="20" />
-        <EntityTypeShape EntityType="SIPIDBModel.CREATE_ROUTINE" Width="1.5" PointX="11.25" PointY="29.5" />
-        <EntityTypeShape EntityType="SIPIDBModel.CUSTOMER_EMPLOYEE_SETUP" Width="1.5" PointX="16" PointY="20.375" />
-        <EntityTypeShape EntityType="SIPIDBModel.DAY" Width="1.5" PointX="10.75" PointY="4.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.DEPARTMENT" Width="1.5" PointX="0.75" PointY="16.375" />
-        <EntityTypeShape EntityType="SIPIDBModel.DEPOSIT_PAYMENT" Width="1.5" PointX="16" PointY="12" />
-        <EntityTypeShape EntityType="SIPIDBModel.DEPRICIATION" Width="1.5" PointX="5.75" PointY="10.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.DEPRICIATION_SETUP" Width="1.5" PointX="16" PointY="17.125" />
-        <EntityTypeShape EntityType="SIPIDBModel.DISTRICT" Width="1.5" PointX="3.75" PointY="45.875" />
-        <EntityTypeShape EntityType="SIPIDBModel.FEESDETAIL" Width="1.5" PointX="5.75" PointY="7.125" />
-        <EntityTypeShape EntityType="SIPIDBModel.FEESSETUP" Width="1.5" PointX="3" PointY="25.25" />
-        <EntityTypeShape EntityType="SIPIDBModel.FISCAL_YEAR" Width="1.5" PointX="10.75" PointY="7.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.GS_tblCategory" Width="1.5" PointX="7.75" PointY="10.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.INCOME_SHEET_CONFIGURE" Width="1.5" PointX="16" PointY="9.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_BRAND_CATEGORY" Width="1.5" PointX="21" PointY="5.875" />
-        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_BRAND_NAME" Width="1.5" PointX="18.75" PointY="5.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Width="1.5" PointX="23.25" PointY="5" />
-        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_PURCHAGE_DETAILS" Width="1.5" PointX="25.5" PointY="4.875" />
-        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_PURCHASE_ENTRY" Width="1.5" PointX="11.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_STOCK_OUT" Width="1.5" PointX="25.5" PointY="9.375" />
-        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_STOCKOUT_DETAILS" Width="1.5" PointX="25.5" PointY="1.375" />
-        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_UNIT_TYPE" Width="1.5" PointX="21" PointY="2.875" />
-        <EntityTypeShape EntityType="SIPIDBModel.JOURNAL_TRANSACTION_TYPE" Width="1.5" PointX="9.75" PointY="11.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.JOURNAL_VOUCHAR" Width="1.5" PointX="16" PointY="23.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.LMS_tblCompany" Width="1.5" PointX="12.75" PointY="4.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.MEMBER_ACC_TYPE" Width="1.5" PointX="16" PointY="4.5" />
-        <EntityTypeShape EntityType="SIPIDBModel.MEMBER_ASSIGN" Width="1.5" PointX="16" PointY="7" />
-        <EntityTypeShape EntityType="SIPIDBModel.MEMBER_INFO" Width="1.5" PointX="20.75" PointY="9.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.MODULE_PERMISSION" Width="1.5" PointX="3" PointY="1.5" />
-        <EntityTypeShape EntityType="SIPIDBModel.ONLINEDEPARTMENT" Width="1.5" PointX="12.75" PointY="8.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.ONLINEEXAM" Width="1.5" PointX="18.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.ORGANIZATION_INFO" Width="1.5" PointX="20.75" PointY="16.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblBloodGroup" Width="1.5" PointX="11.75" PointY="18.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblCategory" Width="1.5" PointX="20.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblCategoryEmp" Width="1.5" PointX="20.75" PointY="19.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblCategorySalary" Width="1.5" PointX="22.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblCountry" Width="1.5" PointX="22.75" PointY="9.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblDepartment" Width="1.5" PointX="22.75" PointY="12.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblDesignationInfo" Width="1.5" PointX="22.75" PointY="15.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblDistrictInfo" Width="1.5" PointX="22.75" PointY="18.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblDivision" Width="1.5" PointX="20.75" PointY="22.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblEmpAssignment" Width="1.5" PointX="22.75" PointY="21.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblEmpEducationInfo" Width="1.5" PointX="24.75" PointY="13.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblEmployeeGenInfo" Width="1.5" PointX="24.75" PointY="17.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblGender" Width="1.5" PointX="20.75" PointY="25.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblGradeInfo" Width="1.5" PointX="26.75" PointY="13.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblJobStatus" Width="1.5" PointX="26.75" PointY="16.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblMaritalStatus" Width="1.5" PointX="26.75" PointY="19.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblReligion" Width="1.5" PointX="26.75" PointY="22.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblSection" Width="1.5" PointX="26.75" PointY="25.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblWorkTimeScheduleSetup" Width="1.5" PointX="27.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.POST" Width="1.5" PointX="3.75" PointY="11.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PROGRAM" Width="1.5" PointX="0.75" PointY="20.25" />
-        <EntityTypeShape EntityType="SIPIDBModel.RELIGION" Width="1.5" PointX="3.75" PointY="49.25" />
-        <EntityTypeShape EntityType="SIPIDBModel.ROLEWISE_MENU" Width="1.5" PointX="5.25" PointY="1.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.ROUTINEGROUP" Width="1.5" PointX="3" PointY="21.625" />
-        <EntityTypeShape EntityType="SIPIDBModel.SEMESTER" Width="1.5" PointX="0.75" PointY="25.125" />
-        <EntityTypeShape EntityType="SIPIDBModel.SIPI_DEPARTMENT" Width="1.5" PointX="3.75" PointY="36.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.SIPI_PROGRAM" Width="1.5" PointX="3.75" PointY="17.625" />
-        <EntityTypeShape EntityType="SIPIDBModel.STUDENT_ATTENDENCE" Width="1.5" PointX="8.25" PointY="25.25" />
-        <EntityTypeShape EntityType="SIPIDBModel.STUDENT_CURRENT_SEMESTER_STATUS" Width="1.5" PointX="3" PointY="65.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.STUDENT_RESULT" Width="1.5" PointX="8.25" PointY="29.875" />
-        <EntityTypeShape EntityType="SIPIDBModel.STUDENTFEE" Width="1.5" PointX="8" PointY="6" />
-        <EntityTypeShape EntityType="SIPIDBModel.STUDENTFEESCOLLECTION" Width="1.5" PointX="11.25" PointY="25.375" />
-        <EntityTypeShape EntityType="SIPIDBModel.sysdiagram" Width="1.5" PointX="27.75" PointY="5.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.tblCfgCommon" Width="1.5" PointX="27.75" PointY="8.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.tblCfgCommonType" Width="1.5" PointX="28.75" PointY="11.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.tblFactory" Width="1.5" PointX="13.75" PointY="28.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.TEACHER" Width="1.5" PointX="9" PointY="34.625" />
-        <EntityTypeShape EntityType="SIPIDBModel.test_district" Width="1.5" PointX="28.75" PointY="14.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.THANA" Width="1.5" PointX="1.5" PointY="11.875" />
-        <EntityTypeShape EntityType="SIPIDBModel.USER" Width="1.5" PointX="3" PointY="4.25" />
-        <EntityTypeShape EntityType="SIPIDBModel.USER_GROUP" Width="1.5" PointX="0.75" PointY="2.875" />
-        <EntityTypeShape EntityType="SIPIDBModel.YEAR" Width="1.5" PointX="15.75" PointY="28.75" />
-        <EntityTypeShape EntityType="SIPIDBModel.PIS_EMPLOYEE_INFO" Width="1.5" PointX="28.75" PointY="17.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.ACCOUNT_TYPE" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.ADD_STUDENT" Width="1.5" PointX="24.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.ADMISSIONINFO" Width="1.5" PointX="9" PointY="18.5" />
+        <EntityTypeShape EntityType="SIPIDBModel.ADMISSIONOFFICE" Width="1.5" PointX="9" PointY="15.875" />
+        <EntityTypeShape EntityType="SIPIDBModel.ALL_ACCOUNT_TYPE" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.BALANCE_SHEET_CONFIGURE" Width="1.5" PointX="22" PointY="17.625" />
+        <EntityTypeShape EntityType="SIPIDBModel.BATCH" Width="1.5" PointX="6.75" PointY="45.125" />
+        <EntityTypeShape EntityType="SIPIDBModel.BLOODGROUP" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.BOOK_ISSUE" Width="1.5" PointX="14.25" PointY="24.5" />
+        <EntityTypeShape EntityType="SIPIDBModel.BOOKS_DETAILS" Width="1.5" PointX="12" PointY="19.5" />
+        <EntityTypeShape EntityType="SIPIDBModel.CAMPUSINFO" Width="1.5" PointX="6.75" PointY="21.125" />
+        <EntityTypeShape EntityType="SIPIDBModel.CHART_ACCOUNT" Width="1.5" PointX="19.75" PointY="12.375" />
+        <EntityTypeShape EntityType="SIPIDBModel.CLASSPERIOD" Width="1.5" PointX="15" PointY="17.375" />
+        <EntityTypeShape EntityType="SIPIDBModel.COMPANY_SETUP" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.COURSE" Width="1.5" PointX="6" PointY="27.875" />
+        <EntityTypeShape EntityType="SIPIDBModel.COURSE_ASSIGN_TO_STUDENT" Width="1.5" PointX="11.25" PointY="29.375" />
+        <EntityTypeShape EntityType="SIPIDBModel.COURSE_ENTRY" Width="1.5" PointX="15" PointY="38.625" />
+        <EntityTypeShape EntityType="SIPIDBModel.CREATE_ROUTINE" Width="1.5" PointX="17.25" PointY="15.125" />
+        <EntityTypeShape EntityType="SIPIDBModel.CUSTOMER_EMPLOYEE_SETUP" Width="1.5" PointX="22" PointY="14.375" />
+        <EntityTypeShape EntityType="SIPIDBModel.DAY" Width="1.5" PointX="2.75" PointY="9.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.DEPARTMENT" Width="1.5" PointX="0.75" PointY="20.625" />
+        <EntityTypeShape EntityType="SIPIDBModel.DEPOSIT_PAYMENT" Width="1.5" PointX="22" PointY="20" />
+        <EntityTypeShape EntityType="SIPIDBModel.DEPRICIATION" Width="1.5" PointX="4.75" PointY="9.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.DEPRICIATION_SETUP" Width="1.5" PointX="22" PointY="25" />
+        <EntityTypeShape EntityType="SIPIDBModel.DISTRICT" Width="1.5" PointX="6.75" PointY="15.125" />
+        <EntityTypeShape EntityType="SIPIDBModel.FEES_ASSIGN_BY_CLASS" Width="1.5" PointX="11.25" PointY="39.875" />
+        <EntityTypeShape EntityType="SIPIDBModel.FEESDETAIL" Width="1.5" PointX="9" PointY="45.125" />
+        <EntityTypeShape EntityType="SIPIDBModel.FEESSETUP" Width="1.5" PointX="3" PointY="29.625" />
+        <EntityTypeShape EntityType="SIPIDBModel.FISCAL_YEAR" Width="1.5" PointX="9.75" PointY="7.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.GS_tblCategory" Width="1.5" PointX="11.75" PointY="7.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.INCOME_SHEET_CONFIGURE" Width="1.5" PointX="22" PointY="12" />
+        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_BRAND_CATEGORY" Width="1.5" PointX="3" PointY="5.875" />
+        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_BRAND_NAME" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_PRODUCT_MASTER_ENTRY_INVENTORY" Width="1.5" PointX="5.25" PointY="5" />
+        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_PURCHAGE_DETAILS" Width="1.5" PointX="7.5" PointY="4.875" />
+        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_PURCHASE_ENTRY" Width="1.5" PointX="9.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_STOCK_OUT" Width="1.5" PointX="7.5" PointY="9.375" />
+        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_STOCKOUT_DETAILS" Width="1.5" PointX="7.5" PointY="1.375" />
+        <EntityTypeShape EntityType="SIPIDBModel.INVENTORY_UNIT_TYPE" Width="1.5" PointX="3" PointY="2.875" />
+        <EntityTypeShape EntityType="SIPIDBModel.JOURNAL_TRANSACTION_TYPE" Width="1.5" PointX="11.75" PointY="10.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.JOURNAL_VOUCHAR" Width="1.5" PointX="22" PointY="7.375" />
+        <EntityTypeShape EntityType="SIPIDBModel.LMS_tblCompany" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.MEMBER_ACC_TYPE" Width="1.5" PointX="22" PointY="4.875" />
+        <EntityTypeShape EntityType="SIPIDBModel.MEMBER_ASSIGN" Width="1.5" PointX="22" PointY="2.125" />
+        <EntityTypeShape EntityType="SIPIDBModel.MEMBER_INFO" Width="1.5" PointX="2.75" PointY="13.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.MODULE_PERMISSION" Width="1.5" PointX="12" PointY="1.5" />
+        <EntityTypeShape EntityType="SIPIDBModel.ONLINEDEPARTMENT" Width="1.5" PointX="13.75" PointY="7.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.ONLINEEXAM" Width="1.5" PointX="11.75" PointY="13.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.ORGANIZATION_INFO" Width="1.5" PointX="15.75" PointY="5.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblBloodGroup" Width="1.5" PointX="15.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblCategory" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblCategoryEmp" Width="1.5" PointX="11.75" PointY="16.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblCategorySalary" Width="1.5" PointX="17.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblCountry" Width="1.5" PointX="17.75" PointY="6.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblDepartment" Width="1.5" PointX="17.75" PointY="9.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblDesignationInfo" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblDistrictInfo" Width="1.5" PointX="2.75" PointY="20.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblDivision" Width="1.5" PointX="2.75" PointY="23.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblEmpAssignment" Width="1.5" PointX="24.75" PointY="19.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblEmpEducationInfo" Width="1.5" PointX="24.75" PointY="23.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblEmpFamily" Width="1.5" PointX="26.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblEmployeeGenInfo" Width="1.5" PointX="26.75" PointY="4.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblGender" Width="1.5" PointX="5.75" PointY="25.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblGradeInfo" Width="1.5" PointX="26.75" PointY="20.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblJobStatus" Width="1.5" PointX="26.75" PointY="23.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblMaritalStatus" Width="1.5" PointX="26.75" PointY="26.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblReligion" Width="1.5" PointX="28.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblSection" Width="1.5" PointX="28.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_tblWorkTimeScheduleSetup" Width="1.5" PointX="28.75" PointY="6.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.POST" Width="1.5" PointX="6.75" PointY="41.25" />
+        <EntityTypeShape EntityType="SIPIDBModel.PROGRAM" Width="1.5" PointX="0.75" PointY="24.625" />
+        <EntityTypeShape EntityType="SIPIDBModel.RELIGION" Width="1.5" PointX="6.75" PointY="18.625" />
+        <EntityTypeShape EntityType="SIPIDBModel.ROLEWISE_MENU" Width="1.5" PointX="14.25" PointY="1.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.ROUTINEGROUP" Width="1.5" PointX="3" PointY="25.875" />
+        <EntityTypeShape EntityType="SIPIDBModel.SCHOOL_FEES_COLLECTION" Width="1.5" PointX="11.25" PointY="33.875" />
+        <EntityTypeShape EntityType="SIPIDBModel.SCHOOL_MARKS_DISTRIBUTION" Width="1.5" PointX="17.25" PointY="28.375" />
+        <EntityTypeShape EntityType="SIPIDBModel.SEMESTER" Width="1.5" PointX="0.75" PointY="29.375" />
+        <EntityTypeShape EntityType="SIPIDBModel.SIPI_DEPARTMENT" Width="1.5" PointX="6.75" PointY="35.5" />
+        <EntityTypeShape EntityType="SIPIDBModel.SIPI_PROGRAM" Width="1.5" PointX="6.75" PointY="47.875" />
+        <EntityTypeShape EntityType="SIPIDBModel.STUDENT_ATTENDENCE" Width="1.5" PointX="14.25" PointY="29.375" />
+        <EntityTypeShape EntityType="SIPIDBModel.STUDENT_CURRENT_SEMESTER_STATUS" Width="1.5" PointX="3" PointY="67.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.STUDENT_RESULT" Width="1.5" PointX="11.25" PointY="24.25" />
+        <EntityTypeShape EntityType="SIPIDBModel.STUDENTFEE" Width="1.5" PointX="11.25" PointY="44.25" />
+        <EntityTypeShape EntityType="SIPIDBModel.STUDENTFEESCOLLECTION" Width="1.5" PointX="14.25" PointY="34.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.tblCfgCommon" Width="1.5" PointX="28.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.tblCfgCommonType" Width="1.5" PointX="28.75" PointY="14.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.tblFactory" Width="1.5" PointX="28.75" PointY="17.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.TEACHER" Width="1.5" PointX="15" PointY="12.375" />
+        <EntityTypeShape EntityType="SIPIDBModel.TEMPORARY_DATA_SET" Width="1.5" PointX="19.75" PointY="28.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.test_district" Width="1.5" PointX="21.75" PointY="28.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.THANA" Width="1.5" PointX="4.5" PointY="41.5" />
+        <EntityTypeShape EntityType="SIPIDBModel.USER" Width="1.5" PointX="12" PointY="4.25" />
+        <EntityTypeShape EntityType="SIPIDBModel.USER_GROUP" Width="1.5" PointX="9.75" PointY="2.875" />
+        <EntityTypeShape EntityType="SIPIDBModel.YEAR" Width="1.5" PointX="28.75" PointY="23.75" />
+        <EntityTypeShape EntityType="SIPIDBModel.PIS_EMPLOYEE_INFO" Width="1.5" PointX="23.75" PointY="28.75" />
         <AssociationConnector Association="SIPIDBModel.FK_ADMISSIONINFO_BATCH" />
         <AssociationConnector Association="SIPIDBModel.FK_ADMISSIONINFO_CAMPUSINFO" />
         <AssociationConnector Association="SIPIDBModel.FK_ADMISSIONINFO_CAMPUSINFO_CAMPUS" />
@@ -113,6 +118,8 @@
         <AssociationConnector Association="SIPIDBModel.FK_ADMISSIONINFO_THANA" />
         <AssociationConnector Association="SIPIDBModel.FK_BOOK_ISSUE_ADMISSIONINFO" />
         <AssociationConnector Association="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_ADMISSIONINFO" />
+        <AssociationConnector Association="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_ADMISSIONINFO" />
+        <AssociationConnector Association="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_ADMISSIONINFO" />
         <AssociationConnector Association="SIPIDBModel.FK_STUDENT_ATTENDENCE_ADMISSIONINFO" />
         <AssociationConnector Association="SIPIDBModel.FK_STUDENT_RESULT_ADMISSIONINFO" />
         <AssociationConnector Association="SIPIDBModel.FK_STUDENTFEESCOLLECTION_ADMISSIONINFO" />
@@ -151,9 +158,13 @@
         <AssociationConnector Association="SIPIDBModel.FK_CREATE_ROUTINE_COURSE5" />
         <AssociationConnector Association="SIPIDBModel.FK_CREATE_ROUTINE_COURSE6" />
         <AssociationConnector Association="SIPIDBModel.FK_CREATE_ROUTINE_COURSE7" />
+        <AssociationConnector Association="SIPIDBModel.FK_STUDENT_ATTENDENCE_COURSE" />
         <AssociationConnector Association="SIPIDBModel.FK_STUDENT_RESULT_COURSE" />
         <AssociationConnector Association="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_SEMESTER" />
         <AssociationConnector Association="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_SIPI_DEPARTMENT" />
+        <AssociationConnector Association="SIPIDBModel.FK_COURSE_ENTRY_SIPI_DEPARTMENT" />
+        <AssociationConnector Association="SIPIDBModel.FK_COURSE_ENTRY_SIPI_PROGRAM" />
+        <AssociationConnector Association="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_COURSE_ENTRY" />
         <AssociationConnector Association="SIPIDBModel.FK_CREATE_ROUTINE_SEMESTER" />
         <AssociationConnector Association="SIPIDBModel.FK_CREATE_ROUTINE_SIPI_DEPARTMENT" />
         <AssociationConnector Association="SIPIDBModel.FK_CREATE_ROUTINE_SIPI_PROGRAM" />
@@ -169,6 +180,9 @@
         <AssociationConnector Association="SIPIDBModel.FK_ROUTINEGROUP_DEPARTMENT" />
         <AssociationConnector Association="SIPIDBModel.FK_POST_DISTRICT" />
         <AssociationConnector Association="SIPIDBModel.FK_THANA_DISTRICT" />
+        <AssociationConnector Association="SIPIDBModel.FK_FEES_ASSIGN_BY_CLASS_FEESDETAILS" />
+        <AssociationConnector Association="SIPIDBModel.FK_FEES_ASSIGN_BY_CLASS_SIPI_DEPARTMENT" />
+        <AssociationConnector Association="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_FEESDETAILS" />
         <AssociationConnector Association="SIPIDBModel.FK_STUDENTFEES_FEESDETAILS" />
         <AssociationConnector Association="SIPIDBModel.FK_FEESSETUP_SEMESTER" />
         <AssociationConnector Association="SIPIDBModel.FK_FEESSETUP_SIPI_DEPARTMENT" />
@@ -185,6 +199,9 @@
         <AssociationConnector Association="SIPIDBModel.FK_ROUTINEGROUP_PROGRAM" />
         <AssociationConnector Association="SIPIDBModel.FK_ROLEWISE_MENU_USER_GROUP" />
         <AssociationConnector Association="SIPIDBModel.FK_ROUTINEGROUP_SEMESTER" />
+        <AssociationConnector Association="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_SIPI_DEPARTMENT" />
+        <AssociationConnector Association="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_SEMESTER" />
+        <AssociationConnector Association="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_SIPI_DEPARTMENT" />
         <AssociationConnector Association="SIPIDBModel.FK_STUDENT_ATTENDENCE_SEMESTER" />
         <AssociationConnector Association="SIPIDBModel.FK_STUDENT_CURRENT_SEMESTER_STATUS_STUDENT_CURRENT_SEMESTER_STATUS" />
         <AssociationConnector Association="SIPIDBModel.FK_STUDENT_RESULT_SEMESTER" />

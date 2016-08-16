@@ -163,6 +163,7 @@
     <EntitySet Name="COMPANY_SETUP" EntityType="SIPIDBModel.COMPANY_SETUP" />
     <EntitySet Name="COURSEs" EntityType="SIPIDBModel.COURSE" />
     <EntitySet Name="COURSE_ASSIGN_TO_STUDENT" EntityType="SIPIDBModel.COURSE_ASSIGN_TO_STUDENT" />
+    <EntitySet Name="COURSE_ENTRY" EntityType="SIPIDBModel.COURSE_ENTRY" />
     <EntitySet Name="CREATE_ROUTINE" EntityType="SIPIDBModel.CREATE_ROUTINE" />
     <EntitySet Name="CUSTOMER_EMPLOYEE_SETUP" EntityType="SIPIDBModel.CUSTOMER_EMPLOYEE_SETUP" />
     <EntitySet Name="DAYs" EntityType="SIPIDBModel.DAY" />
@@ -171,6 +172,7 @@
     <EntitySet Name="DEPRICIATIONs" EntityType="SIPIDBModel.DEPRICIATION" />
     <EntitySet Name="DEPRICIATION_SETUP" EntityType="SIPIDBModel.DEPRICIATION_SETUP" />
     <EntitySet Name="DISTRICTs" EntityType="SIPIDBModel.DISTRICT" />
+    <EntitySet Name="FEES_ASSIGN_BY_CLASS" EntityType="SIPIDBModel.FEES_ASSIGN_BY_CLASS" />
     <EntitySet Name="FEESDETAILS" EntityType="SIPIDBModel.FEESDETAIL" />
     <EntitySet Name="FEESSETUPs" EntityType="SIPIDBModel.FEESSETUP" />
     <EntitySet Name="FISCAL_YEAR" EntityType="SIPIDBModel.FISCAL_YEAR" />
@@ -205,6 +207,7 @@
     <EntitySet Name="PIS_tblDivision" EntityType="SIPIDBModel.PIS_tblDivision" />
     <EntitySet Name="PIS_tblEmpAssignment" EntityType="SIPIDBModel.PIS_tblEmpAssignment" />
     <EntitySet Name="PIS_tblEmpEducationInfo" EntityType="SIPIDBModel.PIS_tblEmpEducationInfo" />
+    <EntitySet Name="PIS_tblEmpFamily" EntityType="SIPIDBModel.PIS_tblEmpFamily" />
     <EntitySet Name="PIS_tblEmployeeGenInfo" EntityType="SIPIDBModel.PIS_tblEmployeeGenInfo" />
     <EntitySet Name="PIS_tblGender" EntityType="SIPIDBModel.PIS_tblGender" />
     <EntitySet Name="PIS_tblGradeInfo" EntityType="SIPIDBModel.PIS_tblGradeInfo" />
@@ -218,6 +221,8 @@
     <EntitySet Name="RELIGIONs" EntityType="SIPIDBModel.RELIGION" />
     <EntitySet Name="ROLEWISE_MENU" EntityType="SIPIDBModel.ROLEWISE_MENU" />
     <EntitySet Name="ROUTINEGROUPs" EntityType="SIPIDBModel.ROUTINEGROUP" />
+    <EntitySet Name="SCHOOL_FEES_COLLECTION" EntityType="SIPIDBModel.SCHOOL_FEES_COLLECTION" />
+    <EntitySet Name="SCHOOL_MARKS_DISTRIBUTION" EntityType="SIPIDBModel.SCHOOL_MARKS_DISTRIBUTION" />
     <EntitySet Name="SEMESTERs" EntityType="SIPIDBModel.SEMESTER" />
     <EntitySet Name="SIPI_DEPARTMENT" EntityType="SIPIDBModel.SIPI_DEPARTMENT" />
     <EntitySet Name="SIPI_PROGRAM" EntityType="SIPIDBModel.SIPI_PROGRAM" />
@@ -226,11 +231,11 @@
     <EntitySet Name="STUDENT_RESULT" EntityType="SIPIDBModel.STUDENT_RESULT" />
     <EntitySet Name="STUDENTFEES" EntityType="SIPIDBModel.STUDENTFEE" />
     <EntitySet Name="STUDENTFEESCOLLECTIONs" EntityType="SIPIDBModel.STUDENTFEESCOLLECTION" />
-    <EntitySet Name="sysdiagrams" EntityType="SIPIDBModel.sysdiagram" />
     <EntitySet Name="tblCfgCommons" EntityType="SIPIDBModel.tblCfgCommon" />
     <EntitySet Name="tblCfgCommonTypes" EntityType="SIPIDBModel.tblCfgCommonType" />
     <EntitySet Name="tblFactories" EntityType="SIPIDBModel.tblFactory" />
     <EntitySet Name="TEACHERs" EntityType="SIPIDBModel.TEACHER" />
+    <EntitySet Name="TEMPORARY_DATA_SET" EntityType="SIPIDBModel.TEMPORARY_DATA_SET" />
     <EntitySet Name="test_district" EntityType="SIPIDBModel.test_district" />
     <EntitySet Name="THANAs" EntityType="SIPIDBModel.THANA" />
     <EntitySet Name="USERs" EntityType="SIPIDBModel.USER" />
@@ -308,6 +313,14 @@
     <AssociationSet Name="FK_COURSE_ASSIGN_TO_STUDENT_ADMISSIONINFO" Association="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_ADMISSIONINFO">
       <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFOes" />
       <End Role="COURSE_ASSIGN_TO_STUDENT" EntitySet="COURSE_ASSIGN_TO_STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCHOOL_FEES_COLLECTION_ADMISSIONINFO" Association="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_ADMISSIONINFO">
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFOes" />
+      <End Role="SCHOOL_FEES_COLLECTION" EntitySet="SCHOOL_FEES_COLLECTION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCHOOL_MARKS_DISTRIBUTION_ADMISSIONINFO" Association="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_ADMISSIONINFO">
+      <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFOes" />
+      <End Role="SCHOOL_MARKS_DISTRIBUTION" EntitySet="SCHOOL_MARKS_DISTRIBUTION" />
     </AssociationSet>
     <AssociationSet Name="FK_STUDENT_ATTENDENCE_ADMISSIONINFO" Association="SIPIDBModel.FK_STUDENT_ATTENDENCE_ADMISSIONINFO">
       <End Role="ADMISSIONINFO" EntitySet="ADMISSIONINFOes" />
@@ -461,6 +474,10 @@
       <End Role="COURSE" EntitySet="COURSEs" />
       <End Role="CREATE_ROUTINE" EntitySet="CREATE_ROUTINE" />
     </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_ATTENDENCE_COURSE" Association="SIPIDBModel.FK_STUDENT_ATTENDENCE_COURSE">
+      <End Role="COURSE" EntitySet="COURSEs" />
+      <End Role="STUDENT_ATTENDENCE" EntitySet="STUDENT_ATTENDENCE" />
+    </AssociationSet>
     <AssociationSet Name="FK_STUDENT_RESULT_COURSE" Association="SIPIDBModel.FK_STUDENT_RESULT_COURSE">
       <End Role="COURSE" EntitySet="COURSEs" />
       <End Role="STUDENT_RESULT" EntitySet="STUDENT_RESULT" />
@@ -472,6 +489,18 @@
     <AssociationSet Name="FK_COURSE_ASSIGN_TO_STUDENT_SIPI_DEPARTMENT" Association="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_SIPI_DEPARTMENT">
       <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
       <End Role="COURSE_ASSIGN_TO_STUDENT" EntitySet="COURSE_ASSIGN_TO_STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COURSE_ENTRY_SIPI_DEPARTMENT" Association="SIPIDBModel.FK_COURSE_ENTRY_SIPI_DEPARTMENT">
+      <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+      <End Role="COURSE_ENTRY" EntitySet="COURSE_ENTRY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COURSE_ENTRY_SIPI_PROGRAM" Association="SIPIDBModel.FK_COURSE_ENTRY_SIPI_PROGRAM">
+      <End Role="SIPI_PROGRAM" EntitySet="SIPI_PROGRAM" />
+      <End Role="COURSE_ENTRY" EntitySet="COURSE_ENTRY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCHOOL_MARKS_DISTRIBUTION_COURSE_ENTRY" Association="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_COURSE_ENTRY">
+      <End Role="COURSE_ENTRY" EntitySet="COURSE_ENTRY" />
+      <End Role="SCHOOL_MARKS_DISTRIBUTION" EntitySet="SCHOOL_MARKS_DISTRIBUTION" />
     </AssociationSet>
     <AssociationSet Name="FK_CREATE_ROUTINE_SEMESTER" Association="SIPIDBModel.FK_CREATE_ROUTINE_SEMESTER">
       <End Role="SEMESTER" EntitySet="SEMESTERs" />
@@ -532,6 +561,18 @@
     <AssociationSet Name="FK_THANA_DISTRICT" Association="SIPIDBModel.FK_THANA_DISTRICT">
       <End Role="DISTRICT" EntitySet="DISTRICTs" />
       <End Role="THANA" EntitySet="THANAs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FEES_ASSIGN_BY_CLASS_FEESDETAILS" Association="SIPIDBModel.FK_FEES_ASSIGN_BY_CLASS_FEESDETAILS">
+      <End Role="FEESDETAIL" EntitySet="FEESDETAILS" />
+      <End Role="FEES_ASSIGN_BY_CLASS" EntitySet="FEES_ASSIGN_BY_CLASS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FEES_ASSIGN_BY_CLASS_SIPI_DEPARTMENT" Association="SIPIDBModel.FK_FEES_ASSIGN_BY_CLASS_SIPI_DEPARTMENT">
+      <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+      <End Role="FEES_ASSIGN_BY_CLASS" EntitySet="FEES_ASSIGN_BY_CLASS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCHOOL_FEES_COLLECTION_FEESDETAILS" Association="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_FEESDETAILS">
+      <End Role="FEESDETAIL" EntitySet="FEESDETAILS" />
+      <End Role="SCHOOL_FEES_COLLECTION" EntitySet="SCHOOL_FEES_COLLECTION" />
     </AssociationSet>
     <AssociationSet Name="FK_STUDENTFEES_FEESDETAILS" Association="SIPIDBModel.FK_STUDENTFEES_FEESDETAILS">
       <End Role="FEESDETAIL" EntitySet="FEESDETAILS" />
@@ -596,6 +637,18 @@
     <AssociationSet Name="FK_ROUTINEGROUP_SEMESTER" Association="SIPIDBModel.FK_ROUTINEGROUP_SEMESTER">
       <End Role="SEMESTER" EntitySet="SEMESTERs" />
       <End Role="ROUTINEGROUP" EntitySet="ROUTINEGROUPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCHOOL_FEES_COLLECTION_SIPI_DEPARTMENT" Association="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_SIPI_DEPARTMENT">
+      <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+      <End Role="SCHOOL_FEES_COLLECTION" EntitySet="SCHOOL_FEES_COLLECTION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCHOOL_MARKS_DISTRIBUTION_SEMESTER" Association="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_SEMESTER">
+      <End Role="SEMESTER" EntitySet="SEMESTERs" />
+      <End Role="SCHOOL_MARKS_DISTRIBUTION" EntitySet="SCHOOL_MARKS_DISTRIBUTION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCHOOL_MARKS_DISTRIBUTION_SIPI_DEPARTMENT" Association="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_SIPI_DEPARTMENT">
+      <End Role="SIPI_DEPARTMENT" EntitySet="SIPI_DEPARTMENT" />
+      <End Role="SCHOOL_MARKS_DISTRIBUTION" EntitySet="SCHOOL_MARKS_DISTRIBUTION" />
     </AssociationSet>
     <AssociationSet Name="FK_STUDENT_ATTENDENCE_SEMESTER" Association="SIPIDBModel.FK_STUDENT_ATTENDENCE_SEMESTER">
       <End Role="SEMESTER" EntitySet="SEMESTERs" />
@@ -924,7 +977,9 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
+    <Property Name="StudentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FathersMonthlyIncome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="StudentID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ProgramId" Type="Int32" />
     <Property Name="DepartmentId" Type="Int32" />
@@ -1044,6 +1099,8 @@
     <NavigationProperty Name="THANA2" Relationship="SIPIDBModel.FK_ADMISSIONINFO_THANA" FromRole="ADMISSIONINFO" ToRole="THANA" />
     <NavigationProperty Name="BOOK_ISSUE" Relationship="SIPIDBModel.FK_BOOK_ISSUE_ADMISSIONINFO" FromRole="ADMISSIONINFO" ToRole="BOOK_ISSUE" />
     <NavigationProperty Name="COURSE_ASSIGN_TO_STUDENT" Relationship="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_ADMISSIONINFO" FromRole="ADMISSIONINFO" ToRole="COURSE_ASSIGN_TO_STUDENT" />
+    <NavigationProperty Name="SCHOOL_FEES_COLLECTION" Relationship="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_ADMISSIONINFO" FromRole="ADMISSIONINFO" ToRole="SCHOOL_FEES_COLLECTION" />
+    <NavigationProperty Name="SCHOOL_MARKS_DISTRIBUTION" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_ADMISSIONINFO" FromRole="ADMISSIONINFO" ToRole="SCHOOL_MARKS_DISTRIBUTION" />
     <NavigationProperty Name="STUDENT_ATTENDENCE" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_ADMISSIONINFO" FromRole="ADMISSIONINFO" ToRole="STUDENT_ATTENDENCE" />
     <NavigationProperty Name="STUDENT_RESULT" Relationship="SIPIDBModel.FK_STUDENT_RESULT_ADMISSIONINFO" FromRole="ADMISSIONINFO" ToRole="STUDENT_RESULT" />
     <NavigationProperty Name="STUDENTFEESCOLLECTIONs" Relationship="SIPIDBModel.FK_STUDENTFEESCOLLECTION_ADMISSIONINFO" FromRole="ADMISSIONINFO" ToRole="STUDENTFEESCOLLECTION" />
@@ -1229,6 +1286,7 @@
     <NavigationProperty Name="CREATE_ROUTINE5" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_COURSE5" FromRole="COURSE" ToRole="CREATE_ROUTINE" />
     <NavigationProperty Name="CREATE_ROUTINE6" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_COURSE6" FromRole="COURSE" ToRole="CREATE_ROUTINE" />
     <NavigationProperty Name="CREATE_ROUTINE7" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_COURSE7" FromRole="COURSE" ToRole="CREATE_ROUTINE" />
+    <NavigationProperty Name="STUDENT_ATTENDENCE" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_COURSE" FromRole="COURSE" ToRole="STUDENT_ATTENDENCE" />
     <NavigationProperty Name="STUDENT_RESULT" Relationship="SIPIDBModel.FK_STUDENT_RESULT_COURSE" FromRole="COURSE" ToRole="STUDENT_RESULT" />
   </EntityType>
   <EntityType Name="COURSE_ASSIGN_TO_STUDENT">
@@ -1249,6 +1307,22 @@
     <NavigationProperty Name="COURSE" Relationship="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_COURSE" FromRole="COURSE_ASSIGN_TO_STUDENT" ToRole="COURSE" />
     <NavigationProperty Name="SEMESTER" Relationship="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_SEMESTER" FromRole="COURSE_ASSIGN_TO_STUDENT" ToRole="SEMESTER" />
     <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_SIPI_DEPARTMENT" FromRole="COURSE_ASSIGN_TO_STUDENT" ToRole="SIPI_DEPARTMENT" />
+  </EntityType>
+  <EntityType Name="COURSE_ENTRY">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Lavle" Type="Int32" />
+    <Property Name="Class" Type="Int32" />
+    <Property Name="Term" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CourseName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BanglaCourseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Marks" Type="Int32" />
+    <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_COURSE_ENTRY_SIPI_DEPARTMENT" FromRole="COURSE_ENTRY" ToRole="SIPI_DEPARTMENT" />
+    <NavigationProperty Name="SIPI_PROGRAM" Relationship="SIPIDBModel.FK_COURSE_ENTRY_SIPI_PROGRAM" FromRole="COURSE_ENTRY" ToRole="SIPI_PROGRAM" />
+    <NavigationProperty Name="SCHOOL_MARKS_DISTRIBUTION" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_COURSE_ENTRY" FromRole="COURSE_ENTRY" ToRole="SCHOOL_MARKS_DISTRIBUTION" />
   </EntityType>
   <EntityType Name="CREATE_ROUTINE">
     <Key>
@@ -1406,12 +1480,31 @@
     <NavigationProperty Name="POSTs" Relationship="SIPIDBModel.FK_POST_DISTRICT" FromRole="DISTRICT" ToRole="POST" />
     <NavigationProperty Name="THANAs" Relationship="SIPIDBModel.FK_THANA_DISTRICT" FromRole="DISTRICT" ToRole="THANA" />
   </EntityType>
+  <EntityType Name="FEES_ASSIGN_BY_CLASS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BnglaClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClassId" Type="Int32" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="FeesDetailsItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FeesDetailsId" Type="Int32" />
+    <Property Name="Amount" Type="Int32" />
+    <Property Name="Total" Type="Int32" />
+    <NavigationProperty Name="FEESDETAIL" Relationship="SIPIDBModel.FK_FEES_ASSIGN_BY_CLASS_FEESDETAILS" FromRole="FEES_ASSIGN_BY_CLASS" ToRole="FEESDETAIL" />
+    <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_FEES_ASSIGN_BY_CLASS_SIPI_DEPARTMENT" FromRole="FEES_ASSIGN_BY_CLASS" ToRole="SIPI_DEPARTMENT" />
+  </EntityType>
   <EntityType Name="FEESDETAIL">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BanglaFeesItem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="FEES_ASSIGN_BY_CLASS" Relationship="SIPIDBModel.FK_FEES_ASSIGN_BY_CLASS_FEESDETAILS" FromRole="FEESDETAIL" ToRole="FEES_ASSIGN_BY_CLASS" />
+    <NavigationProperty Name="SCHOOL_FEES_COLLECTION" Relationship="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_FEESDETAILS" FromRole="FEESDETAIL" ToRole="SCHOOL_FEES_COLLECTION" />
     <NavigationProperty Name="STUDENTFEES" Relationship="SIPIDBModel.FK_STUDENTFEES_FEESDETAILS" FromRole="FEESDETAIL" ToRole="STUDENTFEE" />
   </EntityType>
   <EntityType Name="FEESSETUP">
@@ -1792,6 +1885,22 @@
     <Property Name="GEmpEduResultID" Type="Guid" Nullable="false" />
     <Property Name="GEmpEduBoardID" Type="Guid" />
   </EntityType>
+  <EntityType Name="PIS_tblEmpFamily">
+    <Key>
+      <PropertyRef Name="GEmpFamilyID" />
+    </Key>
+    <Property Name="GEmpFamilyID" Type="Guid" Nullable="false" />
+    <Property Name="GEmployeeGenInfoID" Type="Guid" Nullable="false" />
+    <Property Name="GEmpFamilyType" Type="Guid" />
+    <Property Name="StrEmpFamilyMemberName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="dtEmpFamilyBirthDate" Type="DateTime" Precision="3" />
+    <Property Name="intEmpFamilyGender" Type="Int32" Nullable="false" />
+    <Property Name="GEmpFamilyEduDegreeID" Type="Guid" Nullable="false" />
+    <Property Name="GEmpFamilyProfession" Type="Guid" />
+    <Property Name="intEmpFamilyBloodGroup" Type="Int32" />
+    <Property Name="intNominee" Type="Int32" />
+    <Property Name="numShare" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
   <EntityType Name="PIS_tblEmployeeGenInfo">
     <Key>
       <PropertyRef Name="GEmployeeGenInfoID" />
@@ -1994,6 +2103,59 @@
     <NavigationProperty Name="PROGRAM" Relationship="SIPIDBModel.FK_ROUTINEGROUP_PROGRAM" FromRole="ROUTINEGROUP" ToRole="PROGRAM" />
     <NavigationProperty Name="SEMESTER" Relationship="SIPIDBModel.FK_ROUTINEGROUP_SEMESTER" FromRole="ROUTINEGROUP" ToRole="SEMESTER" />
   </EntityType>
+  <EntityType Name="SCHOOL_FEES_COLLECTION">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FeesItemId" Type="Int32" />
+    <Property Name="FeesItemTitel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FeesItemTitelBangla" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfFeesCollection" Type="DateTime" Precision="0" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="ClassId" Type="Int32" />
+    <Property Name="ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TotalBySlip" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PaySlipNo" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StudentId" Type="Int32" />
+    <Property Name="StudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StudentNameBangla" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="ADMISSIONINFO" Relationship="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_ADMISSIONINFO" FromRole="SCHOOL_FEES_COLLECTION" ToRole="ADMISSIONINFO" />
+    <NavigationProperty Name="FEESDETAIL" Relationship="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_FEESDETAILS" FromRole="SCHOOL_FEES_COLLECTION" ToRole="FEESDETAIL" />
+    <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_SIPI_DEPARTMENT" FromRole="SCHOOL_FEES_COLLECTION" ToRole="SIPI_DEPARTMENT" />
+  </EntityType>
+  <EntityType Name="SCHOOL_MARKS_DISTRIBUTION">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClassId" Type="Int32" />
+    <Property Name="ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TermId" Type="Int32" />
+    <Property Name="TermName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CourseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CourseId" Type="Int32" />
+    <Property Name="Theory" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MCQ" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Practical" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Total" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Grade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GradePoint" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="StudentPKId" Type="Int32" />
+    <Property Name="StudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FullMarks" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="ADMISSIONINFO" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_ADMISSIONINFO" FromRole="SCHOOL_MARKS_DISTRIBUTION" ToRole="ADMISSIONINFO" />
+    <NavigationProperty Name="COURSE_ENTRY" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_COURSE_ENTRY" FromRole="SCHOOL_MARKS_DISTRIBUTION" ToRole="COURSE_ENTRY" />
+    <NavigationProperty Name="SEMESTER" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_SEMESTER" FromRole="SCHOOL_MARKS_DISTRIBUTION" ToRole="SEMESTER" />
+    <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_SIPI_DEPARTMENT" FromRole="SCHOOL_MARKS_DISTRIBUTION" ToRole="SIPI_DEPARTMENT" />
+  </EntityType>
   <EntityType Name="SEMESTER">
     <Key>
       <PropertyRef Name="Id" />
@@ -2007,6 +2169,7 @@
     <NavigationProperty Name="CREATE_ROUTINE" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_SEMESTER" FromRole="SEMESTER" ToRole="CREATE_ROUTINE" />
     <NavigationProperty Name="FEESSETUPs" Relationship="SIPIDBModel.FK_FEESSETUP_SEMESTER" FromRole="SEMESTER" ToRole="FEESSETUP" />
     <NavigationProperty Name="ROUTINEGROUPs" Relationship="SIPIDBModel.FK_ROUTINEGROUP_SEMESTER" FromRole="SEMESTER" ToRole="ROUTINEGROUP" />
+    <NavigationProperty Name="SCHOOL_MARKS_DISTRIBUTION" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_SEMESTER" FromRole="SEMESTER" ToRole="SCHOOL_MARKS_DISTRIBUTION" />
     <NavigationProperty Name="STUDENT_ATTENDENCE" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_SEMESTER" FromRole="SEMESTER" ToRole="STUDENT_ATTENDENCE" />
     <NavigationProperty Name="STUDENT_CURRENT_SEMESTER_STATUS" Relationship="SIPIDBModel.FK_STUDENT_CURRENT_SEMESTER_STATUS_STUDENT_CURRENT_SEMESTER_STATUS" FromRole="SEMESTER" ToRole="STUDENT_CURRENT_SEMESTER_STATUS" />
     <NavigationProperty Name="STUDENT_RESULT" Relationship="SIPIDBModel.FK_STUDENT_RESULT_SEMESTER" FromRole="SEMESTER" ToRole="STUDENT_RESULT" />
@@ -2027,8 +2190,12 @@
     <NavigationProperty Name="BOOKS_DETAILS" Relationship="SIPIDBModel.FK_BOOKS_DETAILS_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="BOOKS_DETAILS" />
     <NavigationProperty Name="COURSEs" Relationship="SIPIDBModel.FK_COURSE_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="COURSE" />
     <NavigationProperty Name="COURSE_ASSIGN_TO_STUDENT" Relationship="SIPIDBModel.FK_COURSE_ASSIGN_TO_STUDENT_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="COURSE_ASSIGN_TO_STUDENT" />
+    <NavigationProperty Name="COURSE_ENTRY" Relationship="SIPIDBModel.FK_COURSE_ENTRY_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="COURSE_ENTRY" />
     <NavigationProperty Name="CREATE_ROUTINE" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="CREATE_ROUTINE" />
+    <NavigationProperty Name="FEES_ASSIGN_BY_CLASS" Relationship="SIPIDBModel.FK_FEES_ASSIGN_BY_CLASS_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="FEES_ASSIGN_BY_CLASS" />
     <NavigationProperty Name="FEESSETUPs" Relationship="SIPIDBModel.FK_FEESSETUP_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="FEESSETUP" />
+    <NavigationProperty Name="SCHOOL_FEES_COLLECTION" Relationship="SIPIDBModel.FK_SCHOOL_FEES_COLLECTION_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="SCHOOL_FEES_COLLECTION" />
+    <NavigationProperty Name="SCHOOL_MARKS_DISTRIBUTION" Relationship="SIPIDBModel.FK_SCHOOL_MARKS_DISTRIBUTION_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="SCHOOL_MARKS_DISTRIBUTION" />
     <NavigationProperty Name="SIPI_PROGRAM" Relationship="SIPIDBModel.FK_SIPI_DEPARTMENT_SIPI_PROGRAM" FromRole="SIPI_DEPARTMENT" ToRole="SIPI_PROGRAM" />
     <NavigationProperty Name="STUDENT_ATTENDENCE" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="STUDENT_ATTENDENCE" />
     <NavigationProperty Name="STUDENT_RESULT" Relationship="SIPIDBModel.FK_STUDENT_RESULT_SIPI_DEPARTMENT" FromRole="SIPI_DEPARTMENT" ToRole="STUDENT_RESULT" />
@@ -2045,6 +2212,7 @@
     <NavigationProperty Name="ADMISSIONINFOes" Relationship="SIPIDBModel.FK_ADMISSIONINFO_SIPI_PROGRAM" FromRole="SIPI_PROGRAM" ToRole="ADMISSIONINFO" />
     <NavigationProperty Name="BOOKS_DETAILS" Relationship="SIPIDBModel.FK_BOOKS_DETAILS_SIPI_PROGRAM" FromRole="SIPI_PROGRAM" ToRole="BOOKS_DETAILS" />
     <NavigationProperty Name="COURSEs" Relationship="SIPIDBModel.FK_COURSE_PROGRAM" FromRole="SIPI_PROGRAM" ToRole="COURSE" />
+    <NavigationProperty Name="COURSE_ENTRY" Relationship="SIPIDBModel.FK_COURSE_ENTRY_SIPI_PROGRAM" FromRole="SIPI_PROGRAM" ToRole="COURSE_ENTRY" />
     <NavigationProperty Name="CREATE_ROUTINE" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_SIPI_PROGRAM" FromRole="SIPI_PROGRAM" ToRole="CREATE_ROUTINE" />
     <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_SIPI_DEPARTMENT_SIPI_PROGRAM" FromRole="SIPI_PROGRAM" ToRole="SIPI_DEPARTMENT" />
   </EntityType>
@@ -2057,11 +2225,13 @@
     <Property Name="DepartmentId" Type="Int32" Nullable="false" />
     <Property Name="CampusId" Type="Int32" Nullable="false" />
     <Property Name="SemesterId" Type="Int32" Nullable="false" />
-    <Property Name="Year" Type="Int32" />
+    <Property Name="Year" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CourseId" Type="Int32" />
     <NavigationProperty Name="ADMISSIONINFO" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_ADMISSIONINFO" FromRole="STUDENT_ATTENDENCE" ToRole="ADMISSIONINFO" />
     <NavigationProperty Name="CAMPUSINFO" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_CAMPUSINFO" FromRole="STUDENT_ATTENDENCE" ToRole="CAMPUSINFO" />
+    <NavigationProperty Name="COURSE" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_COURSE" FromRole="STUDENT_ATTENDENCE" ToRole="COURSE" />
     <NavigationProperty Name="SEMESTER" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_SEMESTER" FromRole="STUDENT_ATTENDENCE" ToRole="SEMESTER" />
     <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_STUDENT_ATTENDENCE_SIPI_DEPARTMENT" FromRole="STUDENT_ATTENDENCE" ToRole="SIPI_DEPARTMENT" />
   </EntityType>
@@ -2129,16 +2299,6 @@
     <NavigationProperty Name="ADMISSIONINFO" Relationship="SIPIDBModel.FK_STUDENTFEESCOLLECTION_ADMISSIONINFO" FromRole="STUDENTFEESCOLLECTION" ToRole="ADMISSIONINFO" />
     <NavigationProperty Name="SEMESTER" Relationship="SIPIDBModel.FK_STUDENTFEESCOLLECTION_SEMESTER" FromRole="STUDENTFEESCOLLECTION" ToRole="SEMESTER" />
   </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <EntityType Name="tblCfgCommon">
     <Key>
       <PropertyRef Name="GCfgCommonID" />
@@ -2202,6 +2362,13 @@
     <NavigationProperty Name="CREATE_ROUTINE6" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_TEACHER6" FromRole="TEACHER" ToRole="CREATE_ROUTINE" />
     <NavigationProperty Name="CREATE_ROUTINE7" Relationship="SIPIDBModel.FK_CREATE_ROUTINE_TEACHER7" FromRole="TEACHER" ToRole="CREATE_ROUTINE" />
     <NavigationProperty Name="SIPI_DEPARTMENT" Relationship="SIPIDBModel.FK_TEACHER_SIPI_DEPARTMENT" FromRole="TEACHER" ToRole="SIPI_DEPARTMENT" />
+  </EntityType>
+  <EntityType Name="TEMPORARY_DATA_SET">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SESSION" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="test_district">
     <Key>
@@ -2544,6 +2711,30 @@
       </Principal>
       <Dependent Role="COURSE_ASSIGN_TO_STUDENT">
         <PropertyRef Name="StudentPkId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCHOOL_FEES_COLLECTION_ADMISSIONINFO">
+    <End Type="SIPIDBModel.ADMISSIONINFO" Role="ADMISSIONINFO" Multiplicity="0..1" />
+    <End Type="SIPIDBModel.SCHOOL_FEES_COLLECTION" Role="SCHOOL_FEES_COLLECTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMISSIONINFO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SCHOOL_FEES_COLLECTION">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCHOOL_MARKS_DISTRIBUTION_ADMISSIONINFO">
+    <End Type="SIPIDBModel.ADMISSIONINFO" Role="ADMISSIONINFO" Multiplicity="0..1" />
+    <End Type="SIPIDBModel.SCHOOL_MARKS_DISTRIBUTION" Role="SCHOOL_MARKS_DISTRIBUTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMISSIONINFO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SCHOOL_MARKS_DISTRIBUTION">
+        <PropertyRef Name="StudentPKId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -3003,6 +3194,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_STUDENT_ATTENDENCE_COURSE">
+    <End Type="SIPIDBModel.COURSE" Role="COURSE" Multiplicity="0..1" />
+    <End Type="SIPIDBModel.STUDENT_ATTENDENCE" Role="STUDENT_ATTENDENCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURSE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="STUDENT_ATTENDENCE">
+        <PropertyRef Name="CourseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_STUDENT_RESULT_COURSE">
     <End Type="SIPIDBModel.COURSE" Role="COURSE" Multiplicity="1" />
     <End Type="SIPIDBModel.STUDENT_RESULT" Role="STUDENT_RESULT" Multiplicity="*" />
@@ -3036,6 +3239,42 @@
       </Principal>
       <Dependent Role="COURSE_ASSIGN_TO_STUDENT">
         <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COURSE_ENTRY_SIPI_DEPARTMENT">
+    <End Type="SIPIDBModel.SIPI_DEPARTMENT" Role="SIPI_DEPARTMENT" Multiplicity="0..1" />
+    <End Type="SIPIDBModel.COURSE_ENTRY" Role="COURSE_ENTRY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_DEPARTMENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="COURSE_ENTRY">
+        <PropertyRef Name="Class" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COURSE_ENTRY_SIPI_PROGRAM">
+    <End Type="SIPIDBModel.SIPI_PROGRAM" Role="SIPI_PROGRAM" Multiplicity="0..1" />
+    <End Type="SIPIDBModel.COURSE_ENTRY" Role="COURSE_ENTRY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_PROGRAM">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="COURSE_ENTRY">
+        <PropertyRef Name="Lavle" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCHOOL_MARKS_DISTRIBUTION_COURSE_ENTRY">
+    <End Type="SIPIDBModel.COURSE_ENTRY" Role="COURSE_ENTRY" Multiplicity="0..1" />
+    <End Type="SIPIDBModel.SCHOOL_MARKS_DISTRIBUTION" Role="SCHOOL_MARKS_DISTRIBUTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURSE_ENTRY">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SCHOOL_MARKS_DISTRIBUTION">
+        <PropertyRef Name="CourseId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -3216,6 +3455,42 @@
       </Principal>
       <Dependent Role="THANA">
         <PropertyRef Name="DistrictId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FEES_ASSIGN_BY_CLASS_FEESDETAILS">
+    <End Type="SIPIDBModel.FEESDETAIL" Role="FEESDETAIL" Multiplicity="0..1" />
+    <End Type="SIPIDBModel.FEES_ASSIGN_BY_CLASS" Role="FEES_ASSIGN_BY_CLASS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FEESDETAIL">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FEES_ASSIGN_BY_CLASS">
+        <PropertyRef Name="FeesDetailsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FEES_ASSIGN_BY_CLASS_SIPI_DEPARTMENT">
+    <End Type="SIPIDBModel.SIPI_DEPARTMENT" Role="SIPI_DEPARTMENT" Multiplicity="0..1" />
+    <End Type="SIPIDBModel.FEES_ASSIGN_BY_CLASS" Role="FEES_ASSIGN_BY_CLASS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_DEPARTMENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FEES_ASSIGN_BY_CLASS">
+        <PropertyRef Name="ClassId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCHOOL_FEES_COLLECTION_FEESDETAILS">
+    <End Type="SIPIDBModel.FEESDETAIL" Role="FEESDETAIL" Multiplicity="0..1" />
+    <End Type="SIPIDBModel.SCHOOL_FEES_COLLECTION" Role="SCHOOL_FEES_COLLECTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FEESDETAIL">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SCHOOL_FEES_COLLECTION">
+        <PropertyRef Name="FeesItemId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -3412,6 +3687,42 @@
       </Principal>
       <Dependent Role="ROUTINEGROUP">
         <PropertyRef Name="SemesterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCHOOL_FEES_COLLECTION_SIPI_DEPARTMENT">
+    <End Type="SIPIDBModel.SIPI_DEPARTMENT" Role="SIPI_DEPARTMENT" Multiplicity="0..1" />
+    <End Type="SIPIDBModel.SCHOOL_FEES_COLLECTION" Role="SCHOOL_FEES_COLLECTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_DEPARTMENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SCHOOL_FEES_COLLECTION">
+        <PropertyRef Name="ClassId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCHOOL_MARKS_DISTRIBUTION_SEMESTER">
+    <End Type="SIPIDBModel.SEMESTER" Role="SEMESTER" Multiplicity="0..1" />
+    <End Type="SIPIDBModel.SCHOOL_MARKS_DISTRIBUTION" Role="SCHOOL_MARKS_DISTRIBUTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEMESTER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SCHOOL_MARKS_DISTRIBUTION">
+        <PropertyRef Name="TermId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCHOOL_MARKS_DISTRIBUTION_SIPI_DEPARTMENT">
+    <End Type="SIPIDBModel.SIPI_DEPARTMENT" Role="SIPI_DEPARTMENT" Multiplicity="0..1" />
+    <End Type="SIPIDBModel.SCHOOL_MARKS_DISTRIBUTION" Role="SCHOOL_MARKS_DISTRIBUTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPI_DEPARTMENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SCHOOL_MARKS_DISTRIBUTION">
+        <PropertyRef Name="ClassId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
