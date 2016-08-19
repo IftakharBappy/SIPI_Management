@@ -70,6 +70,7 @@ namespace SIPI_SL.UI.Admission
 
         private void nextButton()
         {
+            mainTab.SelectedIndex++;
             saveButton.Content = "Next";
             if (mainTab.SelectedIndex == 0)
             {
@@ -93,11 +94,6 @@ namespace SIPI_SL.UI.Admission
         }
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
-            if (saveButton.Content == "Next")
-            {
-                mainTab.SelectedIndex++;
-            }
-
             _studentInfo = new StudentInfo();
 
             try
@@ -955,7 +951,26 @@ namespace SIPI_SL.UI.Admission
         }
         private void mainTab_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            nextButton();
+            //nextButton();
+            if (mainTab.SelectedIndex == 0)
+            {
+                saveButton.Content = "Next";
+                backButton.Visibility = Visibility.Hidden;
+            }
+            if (mainTab.SelectedIndex == 1)
+            {
+                saveButton.Content = "Next";
+                backButton.Visibility = Visibility.Visible;
+                backButton.Content = "Previous";
+
+            }
+            if (mainTab.SelectedIndex == 2)
+            {
+                saveButton.Content = "Save";
+                backButton.Visibility = Visibility.Visible;
+                backButton.Content = "Previous";
+
+            }  
         }
         public void LoadAllUIData()
         {
