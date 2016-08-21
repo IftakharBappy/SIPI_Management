@@ -14,11 +14,11 @@
                 <Grid VerticalAlignment="Stretch" Margin="0,27,0,0">
                     <GroupBox Header="Program Information" FontWeight="Thin" Background="White" Margin="60,10,0,0" HorizontalAlignment="Left" Width="306" Height="496" VerticalAlignment="Top" >
                         <Grid>
-                            <Label Content="Program" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Height="33" Width="117" RenderTransformOrigin="-0.85,-1.907"/>
-                            <ComboBox HorizontalAlignment="Left" Name="programCombobox" Margin="10,34,0,0" VerticalAlignment="Top" Width="270"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
-                            <Label Content="Department" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Height="33" Width="117" RenderTransformOrigin="-0.85,-1.907"/>
+                            <Label Name="programeName" Content="Program" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Height="33" Width="270" RenderTransformOrigin="-0.85,-1.907"/>
+                            <ComboBox SelectionChanged="programCombobox_SelectionChanged" HorizontalAlignment="Left" Name="programCombobox" Margin="10,34,0,0" VerticalAlignment="Top" Width="270"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
+                            <Label Name="departmentLab" Content="Department" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Height="33" Width="270" RenderTransformOrigin="-0.85,-1.907"/>
 
-                            <ComboBox HorizontalAlignment="Left" Name="departmentCombobox" Margin="10,100,0,0" VerticalAlignment="Top" Width="270"  Style="{StaticResource ComboBoxBGYellowGreen}">
+                            <ComboBox HorizontalAlignment="Left" SelectionChanged="departmentCombobox_SelectionChanged" Name="departmentCombobox" Margin="10,100,0,0" VerticalAlignment="Top" Width="270"  Style="{StaticResource ComboBoxBGYellowGreen}">
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
@@ -48,7 +48,7 @@
                     </GroupBox>
                     <GroupBox Header="Personal Information" FontWeight="Thin" Background="White" Margin="371,10,0,0" HorizontalAlignment="Left" Width="580" Height="496" VerticalAlignment="Top" >
                         <Grid>
-                            <Label Content="Applicant Name" HorizontalAlignment="Left" Margin="14,10,0,0" VerticalAlignment="Top" Height="25" Width="120" RenderTransformOrigin="-0.85,-1.907"/>
+                            <Label Name="applicantNameCon" Content="Applicant Name" HorizontalAlignment="Left" Margin="14,10,0,0" VerticalAlignment="Top" Height="25" Width="269" RenderTransformOrigin="-0.85,-1.907"/>
                             <Label Content="প্রার্থীর নাম" HorizontalAlignment="Left" Margin="288,12,0,0" VerticalAlignment="Top" Height="22" Width="122" RenderTransformOrigin="-0.85,-1.907"/>
 
                             <Label Content="Religion " HorizontalAlignment="Left" Margin="290,197,0,0" VerticalAlignment="Top" Height="30" Width="120" RenderTransformOrigin="-0.85,-1.907"/>
@@ -57,12 +57,12 @@
                             <Label Content="Email" HorizontalAlignment="Left" Margin="15,139,0,0" VerticalAlignment="Top" Height="24" Width="120" RenderTransformOrigin="-0.85,-1.907"/>
                             <Label Content="Nationality " HorizontalAlignment="Left" Margin="290,71,0,0" VerticalAlignment="Top" Height="34" Width="120" RenderTransformOrigin="-0.85,-1.907"/>
                             <Label Content="Date of Birth" HorizontalAlignment="Left" Margin="17,399,0,0" VerticalAlignment="Top" Height="32" Width="120" RenderTransformOrigin="-0.85,-1.907"/>
-                            <Label Content="Mobile Number" HorizontalAlignment="Left" Margin="15,74,0,0" VerticalAlignment="Top" Height="31" Width="120" RenderTransformOrigin="-0.85,-1.907"/>
+                            <Label Name="mobileNumber" Content="Mobile Number" HorizontalAlignment="Left" Margin="15,74,0,0" VerticalAlignment="Top" Height="31" Width="268" RenderTransformOrigin="-0.85,-1.907"/>
 
-                            <TextBox Margin="14,35,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="270" RenderTransformOrigin="-0.85,-1.907" Name="applicantNameTextBox"/>
+                            <TextBox Margin="14,35,0,0" TextChanged="applicantNameTextBox_TextChanged" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="270" RenderTransformOrigin="-0.85,-1.907" Name="applicantNameTextBox"/>
                             <TextBox Margin="289,34,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="270" RenderTransformOrigin="-0.85,-1.907" Name="banglaApplicantNameTextBox"/>
 
-                            <TextBox Margin="15,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="270" RenderTransformOrigin="-0.85,-1.907" Name="applicantmobileNumberTextBox"/>
+                            <TextBox TextChanged="applicantmobileNumberTextBox_TextChanged" Margin="15,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="270" RenderTransformOrigin="-0.85,-1.907" Name="applicantmobileNumberTextBox"/>
                             <TextBox Margin="15,168,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="270" RenderTransformOrigin="-0.85,-1.907" Name="emailTextBox"/>
                             <GroupBox Header="Gender" HorizontalAlignment="Left" Margin="14,207,0,0" VerticalAlignment="Top" Height="59" Width="270">
                                 <Grid>
