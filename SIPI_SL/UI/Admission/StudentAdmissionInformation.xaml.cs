@@ -97,6 +97,7 @@ namespace SIPI_SL.UI.Admission
 
             try
             {
+               
                 #region Finish Click event
                 if (saveButton.Content.ToString() == "Save")
                 {
@@ -941,7 +942,21 @@ namespace SIPI_SL.UI.Admission
 
                 MessageBox.Show(ex.Message);
             }
-            nextButton();
+            if (saveButton.Content.ToString() == "Next" && mainTab.SelectedIndex == 0)
+            {
+                programComboboxValid();
+                departmentComboboxValid();
+                applicantNameTextBoxValidate();
+                applicantmobileNumberValidate();
+                if (programCombobox.SelectedIndex != -1 
+                    && departmentCombobox.SelectedIndex != -1 
+                    && applicantNameTextBox.Text != ""
+                    && applicantmobileNumberTextBox.Text != "")
+                    {
+                        nextButton();
+                    }
+            }
+           
 
         }
         private void backButton_Click(object sender, RoutedEventArgs e)
@@ -3129,18 +3144,15 @@ namespace SIPI_SL.UI.Admission
         }
        
         #region validation
-            private void validationCheck(TextBox textbox, Label lable, bool validstatus, string labledefaultContent)
+            private void validationCheck(TextBox textbox, Label lable, string isnullLable, string labledefaultContent)
             {
 
-
-                if (textbox.Text == "" && validstatus == false)
+                if (textbox.Text == "")
                 {
                     textbox.BorderThickness = new Thickness(2.0);
                     textbox.BorderBrush = Brushes.Red;
-                    lable.Content += " can not Empty";
+                    lable.Content = isnullLable;
                     lable.Foreground = Brushes.Red;
-                    validstatus = true;
-
                 }
                 else
                 {
@@ -3148,12 +3160,11 @@ namespace SIPI_SL.UI.Admission
                     textbox.BorderBrush = Brushes.DarkGray;
                     lable.Foreground = Brushes.Black;
                     lable.Content = labledefaultContent;
-                    validstatus = false;
                 }
             }
             private void validationCheckCombobox(ComboBox combobox, Label lable, string lableContent)
             {
-                if (combobox.SelectedIndex == 0)
+                if (combobox.SelectedIndex == -1)
                 {
                     lable.Content += " not selected";
                     lable.Foreground = Brushes.Red;
@@ -3173,31 +3184,31 @@ namespace SIPI_SL.UI.Admission
             }
         #endregion
         #region applicantNameTextBox validation
-            bool applicantNameTextBox_validate_empty = false;
-             private void applicantNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
-                {
-                    string labledefaultContent = "Applicant Name";
-                    validationCheck(applicantNameTextBox, applicantNameCon, applicantNameTextBox_validate_empty ,labledefaultContent);
-                }
+        private void applicantNameTextBoxValidate()
+        {
+            string labledefaultContent = "Applicant Name";
+            string isnullLable = "Applicant Name Can not be Empty";
+            validationCheck(applicantNameTextBox, applicantNameCon, isnullLable, labledefaultContent);
+        }
+        private void applicantNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            applicantNameTextBoxValidate();
+        }
         #endregion
         #region mobileNumberTextBox validate
-             bool mobileNumberTextBox_validate_empty = false;
-             private void applicantmobileNumberTextBox_TextChanged(object sender, TextChangedEventArgs e)
-             {
-                 string labledefaultContent = "Mobile Number";
-                 validationCheck(applicantmobileNumberTextBox, mobileNumber, mobileNumberTextBox_validate_empty, labledefaultContent);
-             }
+        private void applicantmobileNumberValidate()
+        {
+             string labledefaultContent = "Mobile Number";
+             string isnullLable = "Mobile Number Can not be Empty";
+             validationCheck(applicantmobileNumberTextBox, mobileNumber, isnullLable, labledefaultContent);
+        }
+        private void applicantmobileNumberTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            applicantmobileNumberValidate();
+        }
          #endregion
 
-            private void programCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-            {
-                programComboboxValid();
-            }
-            private void departmentCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-            {
-                departmentComboboxValid();
-            }
-
+            
             private void programComboboxValid()
             {
                 var combobox = programCombobox;
@@ -3216,6 +3227,6 @@ namespace SIPI_SL.UI.Admission
           
            
             
-
+         
     }
 }

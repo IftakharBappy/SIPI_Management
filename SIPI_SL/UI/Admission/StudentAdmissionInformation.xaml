@@ -15,10 +15,10 @@
                     <GroupBox Header="Program Information" FontWeight="Thin" Background="White" Margin="60,10,0,0" HorizontalAlignment="Left" Width="306" Height="496" VerticalAlignment="Top" >
                         <Grid>
                             <Label Name="programeName" Content="Program" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Height="33" Width="270" RenderTransformOrigin="-0.85,-1.907"/>
-                            <ComboBox SelectionChanged="programCombobox_SelectionChanged" HorizontalAlignment="Left" Name="programCombobox" Margin="10,34,0,0" VerticalAlignment="Top" Width="270"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
+                            <ComboBox  HorizontalAlignment="Left" Name="programCombobox" Margin="10,34,0,0" VerticalAlignment="Top" Width="270"  Style="{StaticResource ComboBoxBGYellowGreen}"/>
                             <Label Name="departmentLab" Content="Department" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Height="33" Width="270" RenderTransformOrigin="-0.85,-1.907"/>
 
-                            <ComboBox HorizontalAlignment="Left" SelectionChanged="departmentCombobox_SelectionChanged" Name="departmentCombobox" Margin="10,100,0,0" VerticalAlignment="Top" Width="270"  Style="{StaticResource ComboBoxBGYellowGreen}">
+                            <ComboBox HorizontalAlignment="Left"  Name="departmentCombobox" Margin="10,100,0,0" VerticalAlignment="Top" Width="270"  Style="{StaticResource ComboBoxBGYellowGreen}">
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
