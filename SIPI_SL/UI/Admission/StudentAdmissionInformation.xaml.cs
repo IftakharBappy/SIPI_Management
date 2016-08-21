@@ -2,6 +2,7 @@
 using BLL.SetupClass;
 using ENTITY.Admission;
 using ENTITY.SetupClass;
+using ENTITY.Validations;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -62,9 +63,7 @@ namespace SIPI_SL.UI.Admission
         {
             InitializeComponent();
             LoadAllUIData();
-            //datetest.DisplayMode = CalendarMode.Year;
-            //datetest.DisplayDate = datetest.DisplayDate.Year.ToString();
-            //datetest.DisplayMode = Microsoft.Windows.Controls.CalendarMode.Year;
+            
             nextButton();
         }
 
@@ -98,6 +97,7 @@ namespace SIPI_SL.UI.Admission
 
             try
             {
+               
                 #region Finish Click event
                 if (saveButton.Content.ToString() == "Save")
                 {
@@ -942,7 +942,21 @@ namespace SIPI_SL.UI.Admission
 
                 MessageBox.Show(ex.Message);
             }
-            nextButton();
+            if (saveButton.Content.ToString() == "Next" && mainTab.SelectedIndex == 0)
+            {
+                programComboboxValid();
+                departmentComboboxValid();
+                applicantNameTextBoxValidate();
+                applicantmobileNumberValidate();
+                if (programCombobox.SelectedIndex != -1 
+                    && departmentCombobox.SelectedIndex != -1 
+                    && applicantNameTextBox.Text != ""
+                    && applicantmobileNumberTextBox.Text != "")
+                    {
+                        nextButton();
+                    }
+            }
+           
 
         }
         private void backButton_Click(object sender, RoutedEventArgs e)
@@ -974,50 +988,355 @@ namespace SIPI_SL.UI.Admission
         }
         public void LoadAllUIData()
         {
-            //LoadAllStudentInfo();
-
             LoadDepartmentComboBox();
-            //LoadBanglaDepartmentComboBox();
-
             LoadProgramComboBox();
-            //LoadBanglaProgramComboBox();
             LoadsessionTextBox();
             LoadCampusComboBox();
-            //LoadBanglaCampusComboBox();
-
             LoadBatchComboBox();
-            //LoadBanglaBatchComboBox();
-
             LoadBloodGroupComboBox();
             LoadReligionComboBox();
+            dateOfBirth.SelectedDate = DateTime.Now;
+            LoadAllPostComboBox(-1);
+            LoadallThanaComboBox(-1);
+            LoadAllDistrictComboBox();
 
-            LoadPermanentDistrictComboBox();
 
+            //LoadAllStudentInfo();
+            //LoadBanglaDepartmentComboBox();
+            //LoadBanglaProgramComboBox();
+            //LoadBanglaCampusComboBox();
+            //LoadBanglaBatchComboBox();
             //LoadPermanentPostComboBox(-1);
-
             //LoadPermanentThanaComboBox(-1);
             ////LoadPermanentThanaComboBox();
             //LoadPresentPostComboBox(-1);
-
             //LoadPresentThanaComboBox(-1);
-
-
-            LoadPresentDistrictComboBox();
-
             //LoadGuardianThanaComboBox(-1);
             //LoadBanglaGuardianThanaComboBox(-1);,
-
             //LoadBanglaGuardianDistrictComboBox();
-            LoadGuardianDistrictComboBox();
-
             //LoadGuardianPostComboBox(-1); 
             //LoadBanglaGuardianPostComboBox(-1);
-            dateOfBirth.SelectedDate = DateTime.Now;
             //banglaDateOfbirth.SelectedDate = DateTime.Now;
         }
-
-        TemporaryDataSetManager _temporaryDataSetManagerObj = new TemporaryDataSetManager();
+         TemporaryDataSetManager _temporaryDataSetManagerObj = new TemporaryDataSetManager();
         List<TemporaryDataSet> _temporaryDataSetList;
+        private void LoadAllDistrictComboBox()
+        {
+            _districtList = new List<District>();
+            _districtList = districtManagerobj.GetAllDistrict();
+
+            //permanentDistrictComboBox.Items.Clear();
+            foreach (District district in _districtList)
+            {
+                permanentDistrictComboBox.ItemsSource = _districtList;
+                presentDistrictComboBox.ItemsSource = _districtList;
+                guardianDistrictComboBox.ItemsSource = _districtList;
+                for (int i = 0; i < permanentDistrictComboBox.Items.Count; i++)
+                {
+                    District permanentDistrictObj = (District)permanentDistrictComboBox.Items[i];
+                    if (permanentDistrictObj.DistrictName == "N/A")
+                    {
+                        permanentDistrictComboBox.SelectedIndex = i;
+                        break;
+                    }
+                    permanentDistrictComboBox.DisplayMemberPath = "DistrictName";
+                } 
+                //presentDistrictComboBox
+                for (int i = 0; i < presentDistrictComboBox.Items.Count; i++)
+                {
+                    District presentDistrictObj = (District)presentDistrictComboBox.Items[i];
+                    if (presentDistrictObj.DistrictName == "N/A")
+                    {
+                        presentDistrictComboBox.SelectedIndex = i;
+                        break;
+                    }
+                    presentDistrictComboBox.DisplayMemberPath = "DistrictName";
+                }
+               //guardianDistrictComboBox
+                for (int i = 0; i < guardianDistrictComboBox.Items.Count; i++)
+                {
+                    District guardianDistrictObj = (District)guardianDistrictComboBox.Items[i];
+                    if (guardianDistrictObj.DistrictName == "N/A")
+                    {
+                        guardianDistrictComboBox.SelectedIndex = i;
+                        break;
+                    }
+                    guardianDistrictComboBox.DisplayMemberPath = "DistrictName";
+                }
+            }
+             
+        }
+        private void LoadAllPostComboBox(int p)
+        {
+            _postList = new List<Post>();
+            _postList = postManagerObj.LoadAllPost(p);
+            #region presentPostComboBox
+            if (p == -1)
+            {
+                foreach (Post post in _postList)
+                {
+                    presentPostComboBox.ItemsSource = _postList;
+                    for (int i = 0; i < presentPostComboBox.Items.Count; i++)
+                    {
+                        Post postObj = (Post)presentPostComboBox.Items[i];
+                        if (postObj.PostName == "N/A")
+                        {
+                            presentPostComboBox.SelectedIndex = i;
+                            break;
+                        }
+                        presentPostComboBox.DisplayMemberPath = "PostName";
+                    }
+                }
+
+            }
+
+            else
+            {
+                try
+                {
+                    Thana thana = presentThanaComboBox.SelectedItem as Thana;
+                    //_postList = postManagerObj.LoadAllPost(thana.Id);
+
+                    foreach (Post post in _postList)
+                    {
+                        if (post.ThanaId == thana.Id)
+                        {
+                            presentPostComboBox.ItemsSource = _postList;
+                        }
+                    }
+                    presentPostComboBox.DisplayMemberPath = "PostName";
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please Select Product Category", "Confirmation");
+                }
+
+            }
+            #endregion
+            #region permanentPostComboBox
+            if (p == -1)
+            {
+                foreach (Post post in _postList)
+                {
+                    permanentPostComboBox.ItemsSource = _postList;
+                    for (int i = 0; i < permanentPostComboBox.Items.Count; i++)
+                    {
+                        Post postObj = (Post)permanentPostComboBox.Items[i];
+                        if (postObj.PostName == "N/A")
+                        {
+                            permanentPostComboBox.SelectedIndex = i;
+                            break;
+                        }
+                        permanentPostComboBox.DisplayMemberPath = "PostName";
+                    }
+                }
+
+            }
+
+            else
+            {
+                try
+                {
+                    Thana thana = permanentThanaComboBox.SelectedItem as Thana;
+                    foreach (Post post in _postList)
+                    {
+                        if (post.ThanaId == post.ThanaId)
+                        {
+                            permanentPostComboBox.ItemsSource = _postList;
+                        }
+                    }
+                    permanentPostComboBox.DisplayMemberPath = "PostName";
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please Select Product Category", "Confirmation");
+                }
+
+            }
+            
+            #endregion
+            #region guardianPostComboBox
+            if (p == -1)
+            {
+                foreach (Post post in _postList)
+                {
+                    guardianPostComboBox.ItemsSource = _postList;
+                    for (int i = 0; i < guardianPostComboBox.Items.Count; i++)
+                    {
+                        Post postObj = (Post)guardianPostComboBox.Items[i];
+                        if (postObj.PostName == "N/A")
+                        {
+                            guardianPostComboBox.SelectedIndex = i;
+                            break;
+                        }
+                        guardianPostComboBox.DisplayMemberPath = "PostName";
+                    }
+                }
+
+            }
+            else
+            {
+                try
+                {
+                    Thana thana = guardianPostComboBox.SelectedItem as Thana;
+                    foreach (Post post in _postList)
+                    {
+                        if (post.ThanaId == post.ThanaId)
+                        {
+                            guardianPostComboBox.ItemsSource = _postList;
+                        }
+                    }
+                    guardianPostComboBox.DisplayMemberPath = "PostName";
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please Select Product Category", "Confirmation");
+                }
+
+            }
+
+            #endregion
+        }
+        private void LoadallThanaComboBox(int p)
+        {
+            _thanaList = new List<Thana>();
+            _thanaList = thanaManagerObj.LoadAllThana(p);
+
+            #region presentThanaComboBox
+            if (p == -1)
+            {
+                foreach (Thana thana in _thanaList)
+                {
+                    presentThanaComboBox.ItemsSource = _thanaList;
+                    for (int i = 0; i < presentThanaComboBox.Items.Count; i++)
+                    {
+                        Thana thanaObj = (Thana)presentThanaComboBox.Items[i];
+                        if (thanaObj.ThanaName == "N/A")
+                        {
+                            presentThanaComboBox.SelectedIndex = i;
+                            break;
+                        }
+                        presentThanaComboBox.DisplayMemberPath = "ThanaName";
+                    }
+                }
+
+            }
+
+            else
+            {
+                try
+                {
+                    District district = presentDistrictComboBox.SelectedItem as District;
+
+                    foreach (Thana thana in _thanaList)
+                    {
+                        if (thana.DistrictId == district.Id)
+                        {
+                            presentThanaComboBox.ItemsSource = _thanaList;
+                        }
+                    }
+                    presentThanaComboBox.DisplayMemberPath = "ThanaName";
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please Select Product Category", "Confirmation");
+                }
+
+            }
+            #endregion
+            #region permanentThanaComboBox
+            if (p == -1)
+            {
+                foreach (Thana thana in _thanaList)
+                {
+                    permanentThanaComboBox.ItemsSource = _thanaList;
+                    for (int i = 0; i < permanentThanaComboBox.Items.Count; i++)
+                    {
+                        Thana thanaObj = (Thana)permanentThanaComboBox.Items[i];
+                        if (thanaObj.ThanaName == "N/A")
+                        {
+                            permanentThanaComboBox.SelectedIndex = i;
+                            break;
+                        }
+                        permanentThanaComboBox.DisplayMemberPath = "ThanaName";
+                    }
+                }
+
+            }
+
+            else
+            {
+                try
+                {
+                    District district = permanentDistrictComboBox.SelectedItem as District;
+
+                    foreach (Thana thana in _thanaList)
+                    {
+                        if (thana.DistrictId == district.Id)
+                        {
+                            permanentThanaComboBox.ItemsSource = _thanaList;
+                        }
+                    }
+                    permanentThanaComboBox.DisplayMemberPath = "ThanaName";
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please Select Product Category", "Confirmation");
+                }
+
+            }
+            #endregion
+            #region guardianThanaComboBox
+            if (p == -1)
+            {
+                foreach (Thana thana in _thanaList)
+                {
+                    guardianThanaComboBox.ItemsSource = _thanaList;
+                    for (int i = 0; i < guardianThanaComboBox.Items.Count; i++)
+                    {
+                        Thana thanaObj = (Thana)guardianThanaComboBox.Items[i];
+                        if (thanaObj.ThanaName == "N/A")
+                        {
+                            guardianThanaComboBox.SelectedIndex = i;
+                            break;
+                        }
+                        guardianThanaComboBox.DisplayMemberPath = "ThanaName";
+                    }
+                }
+
+            }
+
+            else
+            {
+                try
+                {
+                    District district = guardianDistrictComboBox.SelectedItem as District;
+
+                    foreach (Thana thana in _thanaList)
+                    {
+                        if (thana.DistrictId == district.Id)
+                        {
+                            guardianThanaComboBox.ItemsSource = _thanaList;
+                        }
+                    }
+                    guardianThanaComboBox.DisplayMemberPath = "ThanaName";
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please Select Product Category", "Confirmation");
+                }
+
+            }
+            #endregion
+          
+        }
+      
         private void LoadsessionTextBox()
         {
             sessionTextBox.SelectedIndex = -1;
@@ -1221,7 +1540,7 @@ namespace SIPI_SL.UI.Admission
 
             }
         }
-
+      
         private void LoadPresentPostComboBox(int p)
         {
 
@@ -2823,19 +3142,91 @@ namespace SIPI_SL.UI.Admission
 
             fatherChickBox.IsChecked = false;
         }
-
-   
-
-        
-
        
+        #region validation
+            private void validationCheck(TextBox textbox, Label lable, string isnullLable, string labledefaultContent)
+            {
 
-       
+                if (textbox.Text == "")
+                {
+                    textbox.BorderThickness = new Thickness(2.0);
+                    textbox.BorderBrush = Brushes.Red;
+                    lable.Content = isnullLable;
+                    lable.Foreground = Brushes.Red;
+                }
+                else
+                {
+                    textbox.BorderThickness = new Thickness(1.0);
+                    textbox.BorderBrush = Brushes.DarkGray;
+                    lable.Foreground = Brushes.Black;
+                    lable.Content = labledefaultContent;
+                }
+            }
+            private void validationCheckCombobox(ComboBox combobox, Label lable, string lableContent)
+            {
+                if (combobox.SelectedIndex == -1)
+                {
+                    lable.Content += " not selected";
+                    lable.Foreground = Brushes.Red;
 
-       
+                    combobox.BorderThickness = new Thickness(2.0);
+                    combobox.BorderBrush = Brushes.Red;
+                }
+                else
+                {
+                    combobox.BorderThickness = new Thickness(1.0);
+                    combobox.BorderBrush = Brushes.DarkGray;
+                    lable.Content = lableContent;
+                    lable.Foreground = Brushes.Black;
 
 
+                }
+            }
+        #endregion
+        #region applicantNameTextBox validation
+        private void applicantNameTextBoxValidate()
+        {
+            string labledefaultContent = "Applicant Name";
+            string isnullLable = "Applicant Name Can not be Empty";
+            validationCheck(applicantNameTextBox, applicantNameCon, isnullLable, labledefaultContent);
+        }
+        private void applicantNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            applicantNameTextBoxValidate();
+        }
+        #endregion
+        #region mobileNumberTextBox validate
+        private void applicantmobileNumberValidate()
+        {
+             string labledefaultContent = "Mobile Number";
+             string isnullLable = "Mobile Number Can not be Empty";
+             validationCheck(applicantmobileNumberTextBox, mobileNumber, isnullLable, labledefaultContent);
+        }
+        private void applicantmobileNumberTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            applicantmobileNumberValidate();
+        }
+         #endregion
 
+            
+            private void programComboboxValid()
+            {
+                var combobox = programCombobox;
+                var lable = programeName;
+                string lableContent = "Program";
+                validationCheckCombobox(combobox, lable, lableContent);
+            }
+            private void departmentComboboxValid()
+            {
+                var combobox = departmentCombobox;
+                var lable = departmentLab;
+                string lableContent = "Department";
+                validationCheckCombobox(combobox, lable, lableContent);
+            }
 
+          
+           
+            
+         
     }
 }

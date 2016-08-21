@@ -152,6 +152,17 @@ namespace ENTITY.Validations
 
             return isStrictMatch;
         }
+        public static bool IsEmpty(string empty)
+        {
+
+            string patternStrict = "";
+
+            Regex reStrict = new Regex(patternStrict);
+
+            bool isStrictMatch = reStrict.IsMatch(empty);
+
+            return isStrictMatch;
+        }
 
 
         public static bool IsValidTime(string thetime)
@@ -161,5 +172,6 @@ namespace ENTITY.Validations
 
             return checktime.IsMatch(thetime);
         }
+
     }
 }
