@@ -551,7 +551,11 @@ namespace SIPI_SL.UI.Admission
                     _studentInfo.StudentID = sub + ((SIPI_Department)departmentCombobox.SelectedItem).SIPI_DepartmentCode + threeDigit;
                     #endregion
 
-                    studentInfoManager.SaveStudentInfo(_studentInfo);
+                    //studentInfoManager.SaveStudentInfo(_studentInfo);
+                    //int admissionId =   studentInfoManager.SaveStudentInfo(_studentInfo);
+
+                    studentInfoList = studentInfoManager.GetAStudentInfo(_studentInfo);
+                   
                     #region Message box
                     string message = "Student Admission Successfull" +
                        Environment.NewLine + "This Student ID IS :  " + _studentInfo.StudentID +
@@ -562,7 +566,8 @@ namespace SIPI_SL.UI.Admission
                     MessageBox.Show(message, caption, buttons, icon);
                     #endregion
 
-                    LoadAllStudentInfo();
+                    //LoadAllStudentInfo();
+                    LoadNewStudentInfo(studentInfoList);
                     ClearAllStudentInfo();
 
                 }
@@ -958,6 +963,19 @@ namespace SIPI_SL.UI.Admission
             }
            
 
+        }
+
+        private void LoadNewStudentInfo(List<StudentInfo> studentInfoList)
+        {
+            
+            if (studentInfoList.Count > 0)
+            {
+                foreach (var item in studentInfoList)
+                {
+                    studentInofListView.Items.Add(item);
+                }
+
+            }
         }
         private void backButton_Click(object sender, RoutedEventArgs e)
         {

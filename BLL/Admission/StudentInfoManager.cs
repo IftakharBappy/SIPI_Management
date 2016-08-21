@@ -96,5 +96,11 @@ namespace BLL.Admission
             studentInfoGetway.UpdateSemesterStatus(_studentResultObj);
             
         }
+         
+
+        public List<StudentInfo> GetAStudentInfo(StudentInfo _studentInfo)
+        {
+            return studentInfoGetway.GetAStudentInfo(_studentInfo);
+        }
     }
 }
