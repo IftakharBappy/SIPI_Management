@@ -17,10 +17,11 @@ namespace DAL.Admission
         int id = 0;
         public void SaveStudentInfo(StudentInfo _studentInfo)
         {
+            //datacontextObj = new SIPIDBEntities();
+
 
             try
             {
-                datacontextObj = new SIPIDBEntities();
                 var newStudentInfo = new ADMISSIONINFO
                 {
                      
@@ -1679,6 +1680,437 @@ namespace DAL.Admission
             var studentInfo = datacontextObj.ADMISSIONINFOes.First(c => c.Id == _studentResultObj.StudentPKId);
             studentInfo.CurrentSemester = _studentResultObj.SemesterId;
             datacontextObj.SaveChanges();
+        }
+
+        public List<StudentInfo> GetAStudentInfo(StudentInfo _studentInfo)
+        {
+            try
+            {
+                #region MyRegion
+                var newStudentInfo = new ADMISSIONINFO
+                {
+
+                    ///////////////////// It is working////////////////
+
+                    ProgramId = _studentInfo.ProgramId,
+                    Session = _studentInfo.Session,
+                    StudentID = _studentInfo.StudentID,
+                    CampusId = _studentInfo.CampusId,
+                    DepartmentId = _studentInfo.DepartmentId,
+                    AccadamicYear = _studentInfo.AccadamicYear,
+                    //AccadamicYear = Convert.ToInt16(_studentInfo.AccadamicYear), //problem is here
+                    BatchId = _studentInfo.BatchId,
+                    BanglaSession = _studentInfo.BanglaSession,
+                    BanglaAccadamicYear = _studentInfo.BanglaAccadamicYear,
+
+
+                    //// 2nd tab
+                    Student_Photo = _studentInfo.Student_Photo,
+                    Student_Signature = _studentInfo.Student_Signature,
+
+                    ApplicantName = _studentInfo.ApplicantName,
+                    MobileNo = _studentInfo.MobileNo,
+                    Email = _studentInfo.Email,
+                    Gender = _studentInfo.Gender,
+                    DateOfBirth = _studentInfo.DateOfBirth,
+
+                    Nationality = _studentInfo.Nationality,
+                    BloodGroup = _studentInfo.BloodGroupId,
+                    ReligionId = _studentInfo.ReligionId,
+                    Interest = _studentInfo.Interest,
+                    OthersInfo = _studentInfo.OthersInfo,
+
+                    BanglaApplicantName = _studentInfo.BanglaApplicantName,
+                    BanglaGender = _studentInfo.BanglaGender,
+                    BanglaDateOfBirth = _studentInfo.BanglaDateOfBirth,
+                    BanglaNationality = _studentInfo.BanglaNationality,
+                    BanglaInterest = _studentInfo.BanglaInterest,
+                    BanglaOthersInfo = _studentInfo.OthersInfo,
+
+                    //// 3rd tab
+                    //// sub tab 1st
+                    FatherName = _studentInfo.FatherName,
+                    MotherName = _studentInfo.MotherName,
+                    FreedomFighter = _studentInfo.FreedomFighter,
+                    Tribal = _studentInfo.Tribal,
+                    FathersMobileNo = _studentInfo.FathersMobileNo,
+                    MothersMobileNo = _studentInfo.MothersMobileNo,
+                    TelephoneNo = _studentInfo.TelephoneNo,
+                    BanglaFatherName = _studentInfo.BanglaFatherName,
+                    BanglaMotherName = _studentInfo.BanglaMotherName,
+                    BanglaFreedomFighter = _studentInfo.BanglaFreedomFighter,
+                    BanglaTribal = _studentInfo.BanglaTribal,
+
+                    //// sub tab 2nd
+                    //////////////////English address////////////////
+                    /////Permanent/////
+                    PermanentHouserNo = _studentInfo.PermanentHouserNo,
+                    PermanentRoadNo = _studentInfo.PermanentRoadNo,
+                    PermanentBlock = _studentInfo.PermanentBlock,
+                    PermanentSector = _studentInfo.PermanentSector,
+                    PermanentPostId = _studentInfo.PermanentPost,
+                    PermanentThanaId = _studentInfo.PermanentThana,
+                    PermanentDistrictid = _studentInfo.PermanentDistrict,
+                    //////Bangla Permanent
+                    BanglaPermanentHouserNo = _studentInfo.BanglaPermanentHouserNo,
+                    BanglaPermanentRoadNo = _studentInfo.BanglaPermanentRoadNo,
+                    BanglaPermanentBlock = _studentInfo.BanglaPermanentBlock,
+                    BanglaPermanentSector = _studentInfo.BanglaPermanentSector,
+
+                    ///////Present Address/////
+                    PresentHouserNo = _studentInfo.PresentHouserNo,
+                    PresentRoadNo = _studentInfo.PresentRoadNo,
+                    PresentBlock = _studentInfo.PresentBlock,
+                    PresentSector = _studentInfo.PresentSector,
+                    PresentPostId = _studentInfo.PresentPost,
+                    PresentThanaId = _studentInfo.PresentThana,
+                    PresentDistrictId = _studentInfo.PresentDistrict,
+
+                    // Bangla Present Address
+                    BanglaPresentHouserNo = _studentInfo.BanglaPresentHouserNo,
+                    BanglaPresentRoadNo = _studentInfo.BanglaPresentRoadNo,
+                    BanglaPresentBlock = _studentInfo.BanglaPresentBlock,
+                    BanglaPresentSector = _studentInfo.BanglaPresentSector,
+                    ////                
+                    ////// Guardian info
+                    GuardianName = _studentInfo.GuardianName,
+                    GuardianMobileNo = _studentInfo.GuardianMobileNo,
+                    GuardianEmail = _studentInfo.GuardianEmail,
+                    //////address Guardian /////
+                    GuardianHouserNo = _studentInfo.GuardianHouserNo,
+                    GuardianRoadNo = _studentInfo.GuardianRoadNo,
+                    GuardianBlock = _studentInfo.GuardianBlock,
+                    GuardianSector = _studentInfo.GuardianSector,
+
+                    GuardianPostId = _studentInfo.GuardianPost,
+                    GuardianThanaId = _studentInfo.GuardianThana,
+                    GuardianDistrictId = _studentInfo.GuardianDistrict,
+
+                    ///// bangla Guardian address/////
+                    BanglaGuardianName = _studentInfo.BanglaGuardianName,
+                    BanglaGuardianHouserNo = _studentInfo.GuardianHouserNo,
+                    BanglaGuardianRoadNo = _studentInfo.GuardianRoadNo,
+                    BanglaGuardianBlock = _studentInfo.BanglaGuardianBlock,
+                    BanglaGuardianSector = _studentInfo.BanglaGuardianSector,
+
+                    //accadamic info
+                    AccadamicInfo_ExamNme = _studentInfo.AccadamicInfo_ExamNme,
+                    AccadamicInfo_Group = _studentInfo.AccadamicInfo_Group,
+                    AccadamicInfo_Board = _studentInfo.AccadamicInfo_Board,
+                    AccadamicInfo_GPA = _studentInfo.AccadamicInfo_GPA,
+                    AccadamicInfo_SchoolName = _studentInfo.AccadamicInfo_SchoolName,
+                    AccadamicInfo_RollNo = _studentInfo.AccadamicInfo_RollNo,
+                    AccadamicInfo_RegistrationNo = _studentInfo.AccadamicInfo_RegistrationNo,
+                    AccadamicInfo_PassingYear = _studentInfo.AccadamicInfo_PassingYear,
+                    CurrentSemester = 19,   ///19 means "1st" semester
+
+                };
+                datacontextObj.ADMISSIONINFOes.Add(newStudentInfo);
+                datacontextObj.SaveChanges();
+                id = newStudentInfo.Id;
+                SaveStudentFeesInfo(id, _studentInfo);
+                //SaveStudentCurrentSemester(id);
+                #endregion
+                #region Return
+                List<StudentInfo> studentInfoList = new List<StudentInfo>();
+
+                foreach (var p in (from j in datacontextObj.ADMISSIONINFOes
+                                   where j.Id.Equals(id)
+                                   select j).Distinct())
+                {
+                    StudentInfo studentInfo = new StudentInfo();
+                    studentInfo.Id = p.Id;
+                    studentInfo.StudentID = p.StudentID;
+                    studentInfo.ProgramId = p.ProgramId;
+                    studentInfo.ProgramName = p.SIPI_PROGRAM.SIPI_ProgramName;
+                    studentInfo.DepartmentId = p.DepartmentId;
+                    studentInfo.DepartmentName = p.SIPI_DEPARTMENT.SIPI_DepartmentName;
+                    studentInfo.CampusId = p.CampusId;
+                    studentInfo.CampusName = p.CAMPUSINFO.CampusName;
+
+                    studentInfo.Session = p.Session;
+                    studentInfo.BatchId = p.BatchId;
+                    studentInfo.AccadamicYear = p.AccadamicYear;
+                    studentInfo.BanglaSession = p.BanglaSession;
+                    //studentInfo.BanglaAccadamicYear = p.BanglaAccadamicYear;
+                    studentInfo.Student_Photo = p.Student_Photo;
+                    studentInfo.Student_Signature = p.Student_Signature;
+                    studentInfo.ApplicantName = p.ApplicantName;
+                    studentInfo.MobileNo = p.MobileNo;
+                    studentInfo.Email = p.Email;
+                    studentInfo.Gender = p.Gender;
+                    studentInfo.DateOfBirth = Convert.ToDateTime(p.DateOfBirth);
+                    studentInfo.Nationality = p.Nationality;
+                    studentInfo.BloodGroupId = p.BloodGroup;
+                    studentInfo.ReligionId = p.ReligionId;
+                    studentInfo.BanglaReligion = p.RELIGION.BanglaReligion;
+                    studentInfo.Interest = p.Interest;
+                    studentInfo.OthersInfo = p.OthersInfo;
+                    studentInfo.BanglaApplicantName = p.BanglaApplicantName;
+                    studentInfo.BanglaNationality = p.BanglaNationality;
+                    studentInfo.BanglaDateOfBirth = Convert.ToDateTime(p.BanglaDateOfBirth);
+                    studentInfo.BanglaInterest = p.BanglaInterest;
+                    studentInfo.BanglaOthersInfo = p.BanglaOthersInfo;
+
+
+                    studentInfo.FatherName = p.FatherName;
+                    studentInfo.MotherName = p.MotherName;
+                    studentInfo.FreedomFighter = p.FreedomFighter;
+                    studentInfo.Tribal = p.Tribal;
+
+                    studentInfo.FathersMobileNo = p.FathersMobileNo;
+                    studentInfo.MothersMobileNo = p.MothersMobileNo;
+                    studentInfo.TelephoneNo = p.TelephoneNo;
+                    studentInfo.BanglaFatherName = p.BanglaFatherName;
+                    studentInfo.BanglaMotherName = p.BanglaMotherName;
+                    studentInfo.BanglaFreedomFighter = p.BanglaFreedomFighter;
+                    studentInfo.BanglaTribal = p.BanglaTribal;
+
+                    ///address
+                    ///
+
+                    studentInfo.PermanentHouserNo = p.PermanentHouserNo;
+                    studentInfo.PermanentRoadNo = p.PermanentRoadNo;
+                    studentInfo.PermanentBlock = p.PermanentBlock;
+                    studentInfo.PermanentSector = p.PermanentSector;
+
+                    studentInfo.PermanentPost = p.PermanentPostId;
+                    studentInfo.PermanentPostName = p.POST.PostName;
+                    studentInfo.BanglaPermanentPost = p.POST.BanglaPostName;
+
+                    studentInfo.PermanentThana = p.PermanentThanaId;
+                    studentInfo.PermanentThanaName = p.THANA.ThanaName;
+                    studentInfo.BanglaPermanentThana = p.THANA.BanglaThanaName;
+
+                    studentInfo.PermanentDistrict = p.PermanentDistrictid;
+                    studentInfo.PermanentDistrictName = p.DISTRICT.DistrictName;
+                    studentInfo.BanglaPermanentDistrict = p.DISTRICT.BanglaDistrict;
+                    ////bangla
+                    ////
+                    studentInfo.BanglaPermanentHouserNo = p.BanglaPermanentHouserNo;
+                    studentInfo.BanglaPermanentRoadNo = p.BanglaPermanentRoadNo;
+                    studentInfo.BanglaPermanentBlock = p.BanglaPermanentBlock;
+                    studentInfo.BanglaPermanentSector = p.BanglaPermanentSector;
+
+                    studentInfo.PresentHouserNo = p.PresentHouserNo;
+                    studentInfo.PresentRoadNo = p.PresentRoadNo;
+                    studentInfo.PresentBlock = p.PresentBlock;
+                    studentInfo.PresentSector = p.PresentSector;
+
+                    studentInfo.PresentPost = p.PresentPostId;
+                    studentInfo.PresentPostName = p.POST.PostName;
+                    studentInfo.BanglaPresentPost = p.POST.BanglaPostName;
+
+                    studentInfo.PresentThana = p.PresentThanaId;
+                    studentInfo.PresentThanaName = p.THANA.ThanaName;
+                    studentInfo.BanglaPresentThana = p.THANA.BanglaThanaName;
+
+                    studentInfo.PresentDistrict = p.PresentDistrictId;
+                    studentInfo.PresentDistrictName = p.DISTRICT.DistrictName;
+                    studentInfo.BanglaPresentDistrict = p.DISTRICT.BanglaDistrict;
+
+                    ///bangla
+                    ///
+                    studentInfo.BanglaPresentHouserNo = p.BanglaPresentHouserNo;
+                    studentInfo.BanglaPresentRoadNo = p.BanglaPresentRoadNo;
+                    studentInfo.BanglaPresentBlock = p.BanglaPresentBlock;
+                    studentInfo.BanglaPresentSector = p.BanglaPresentSector;
+
+                    studentInfo.GuardianPost = p.GuardianPostId;
+                    studentInfo.GuardianThana = p.GuardianThanaId;
+                    studentInfo.GuardianDistrict = p.GuardianDistrictId;
+
+                    studentInfo.GuardianName = p.GuardianName;
+                    studentInfo.GuardianMobileNo = p.GuardianMobileNo;
+                    studentInfo.GuardianEmail = p.GuardianEmail;
+
+                    studentInfo.GuardianHouserNo = p.GuardianHouserNo;
+                    studentInfo.GuardianRoadNo = p.GuardianRoadNo;
+                    studentInfo.GuardianBlock = p.GuardianBlock;
+                    studentInfo.GuardianSector = p.GuardianSector;
+                    ///bangla
+                    ///
+                    studentInfo.BanglaGuardianName = p.BanglaGuardianName;
+                    studentInfo.BanglaGuardianHouserNo = p.BanglaGuardianHouserNo;
+                    studentInfo.BanglaGuardianRoadNo = p.BanglaGuardianRoadNo;
+                    studentInfo.BanglaGuardianBlock = p.BanglaGuardianBlock;
+                    studentInfo.BanglaGuardianSector = p.BanglaGuardianSector;
+
+                    /////accadamic info
+                    studentInfo.AccadamicInfo_ExamNme = p.AccadamicInfo_ExamNme;
+                    studentInfo.AccadamicInfo_Board = p.AccadamicInfo_Board;
+                    studentInfo.AccadamicInfo_Group = p.AccadamicInfo_Group;
+                    studentInfo.AccadamicInfo_SchoolName = p.AccadamicInfo_SchoolName;
+                    studentInfo.AccadamicInfo_RollNo = p.AccadamicInfo_RollNo;
+                    studentInfo.AccadamicInfo_RegistrationNo = p.AccadamicInfo_RegistrationNo;
+                    studentInfo.AccadamicInfo_PassingYear = p.AccadamicInfo_PassingYear;
+                    studentInfo.AccadamicInfo_GPA = p.AccadamicInfo_GPA;
+                    studentInfo.Semester = p.SEMESTER.Id;
+                    studentInfo.SemesterNo = p.SEMESTER.SemesterNo;
+
+                    studentInfoList.Add(studentInfo);
+                }
+                return studentInfoList;
+                #endregion
+                
+            }
+            catch (DbEntityValidationException e)
+            {
+                foreach (var eve in e.EntityValidationErrors)
+                {
+
+                    //Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                    //    eve.Entry.Entity.GetType().Name, eve.Entry.State);
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                            ve.PropertyName, ve.ErrorMessage);
+                    }
+                }
+                throw;
+            }
+            #region Return
+            List<StudentInfo> studentInfoListOne = new List<StudentInfo>();
+
+            foreach (var p in (from j in datacontextObj.ADMISSIONINFOes
+                               where j.Id.Equals(id) 
+                               select j).Distinct())
+            {
+                StudentInfo studentInfoOne = new StudentInfo();
+                studentInfoOne.Id = p.Id;
+                studentInfoOne.StudentID = p.StudentID;
+                studentInfoOne.ProgramId = p.ProgramId;
+                studentInfoOne.ProgramName = p.SIPI_PROGRAM.SIPI_ProgramName;
+                studentInfoOne.DepartmentId = p.DepartmentId;
+                studentInfoOne.DepartmentName = p.SIPI_DEPARTMENT.SIPI_DepartmentName;
+                studentInfoOne.CampusId = p.CampusId;
+                studentInfoOne.CampusName = p.CAMPUSINFO.CampusName;
+
+                studentInfoOne.Session = p.Session;
+                studentInfoOne.BatchId = p.BatchId;
+                studentInfoOne.AccadamicYear = p.AccadamicYear;
+                studentInfoOne.BanglaSession = p.BanglaSession;
+                //studentInfoOne.BanglaAccadamicYear = p.BanglaAccadamicYear;
+                studentInfoOne.Student_Photo = p.Student_Photo;
+                studentInfoOne.Student_Signature = p.Student_Signature;
+                studentInfoOne.ApplicantName = p.ApplicantName;
+                studentInfoOne.MobileNo = p.MobileNo;
+                studentInfoOne.Email = p.Email;
+                studentInfoOne.Gender = p.Gender;
+                studentInfoOne.DateOfBirth = Convert.ToDateTime(p.DateOfBirth);
+                studentInfoOne.Nationality = p.Nationality;
+                studentInfoOne.BloodGroupId = p.BloodGroup;
+                studentInfoOne.ReligionId = p.ReligionId;
+                studentInfoOne.BanglaReligion = p.RELIGION.BanglaReligion;
+                studentInfoOne.Interest = p.Interest;
+                studentInfoOne.OthersInfo = p.OthersInfo;
+                studentInfoOne.BanglaApplicantName = p.BanglaApplicantName;
+                studentInfoOne.BanglaNationality = p.BanglaNationality;
+                studentInfoOne.BanglaDateOfBirth = Convert.ToDateTime(p.BanglaDateOfBirth);
+                studentInfoOne.BanglaInterest = p.BanglaInterest;
+                studentInfoOne.BanglaOthersInfo = p.BanglaOthersInfo;
+
+
+                studentInfoOne.FatherName = p.FatherName;
+                studentInfoOne.MotherName = p.MotherName;
+                studentInfoOne.FreedomFighter = p.FreedomFighter;
+                studentInfoOne.Tribal = p.Tribal;
+
+                studentInfoOne.FathersMobileNo = p.FathersMobileNo;
+                studentInfoOne.MothersMobileNo = p.MothersMobileNo;
+                studentInfoOne.TelephoneNo = p.TelephoneNo;
+                studentInfoOne.BanglaFatherName = p.BanglaFatherName;
+                studentInfoOne.BanglaMotherName = p.BanglaMotherName;
+                studentInfoOne.BanglaFreedomFighter = p.BanglaFreedomFighter;
+                studentInfoOne.BanglaTribal = p.BanglaTribal;
+
+                ///address
+                ///
+
+                studentInfoOne.PermanentHouserNo = p.PermanentHouserNo;
+                studentInfoOne.PermanentRoadNo = p.PermanentRoadNo;
+                studentInfoOne.PermanentBlock = p.PermanentBlock;
+                studentInfoOne.PermanentSector = p.PermanentSector;
+
+                studentInfoOne.PermanentPost = p.PermanentPostId;
+                studentInfoOne.PermanentPostName = p.POST.PostName;
+                studentInfoOne.BanglaPermanentPost = p.POST.BanglaPostName;
+
+                studentInfoOne.PermanentThana = p.PermanentThanaId;
+                studentInfoOne.PermanentThanaName = p.THANA.ThanaName;
+                studentInfoOne.BanglaPermanentThana = p.THANA.BanglaThanaName;
+
+                studentInfoOne.PermanentDistrict = p.PermanentDistrictid;
+                studentInfoOne.PermanentDistrictName = p.DISTRICT.DistrictName;
+                studentInfoOne.BanglaPermanentDistrict = p.DISTRICT.BanglaDistrict;
+                ////bangla
+                ////
+                studentInfoOne.BanglaPermanentHouserNo = p.BanglaPermanentHouserNo;
+                studentInfoOne.BanglaPermanentRoadNo = p.BanglaPermanentRoadNo;
+                studentInfoOne.BanglaPermanentBlock = p.BanglaPermanentBlock;
+                studentInfoOne.BanglaPermanentSector = p.BanglaPermanentSector;
+
+                studentInfoOne.PresentHouserNo = p.PresentHouserNo;
+                studentInfoOne.PresentRoadNo = p.PresentRoadNo;
+                studentInfoOne.PresentBlock = p.PresentBlock;
+                studentInfoOne.PresentSector = p.PresentSector;
+
+                studentInfoOne.PresentPost = p.PresentPostId;
+                studentInfoOne.PresentPostName = p.POST.PostName;
+                studentInfoOne.BanglaPresentPost = p.POST.BanglaPostName;
+
+                studentInfoOne.PresentThana = p.PresentThanaId;
+                studentInfoOne.PresentThanaName = p.THANA.ThanaName;
+                studentInfoOne.BanglaPresentThana = p.THANA.BanglaThanaName;
+
+                studentInfoOne.PresentDistrict = p.PresentDistrictId;
+                studentInfoOne.PresentDistrictName = p.DISTRICT.DistrictName;
+                studentInfoOne.BanglaPresentDistrict = p.DISTRICT.BanglaDistrict;
+
+                ///bangla
+                ///
+                studentInfoOne.BanglaPresentHouserNo = p.BanglaPresentHouserNo;
+                studentInfoOne.BanglaPresentRoadNo = p.BanglaPresentRoadNo;
+                studentInfoOne.BanglaPresentBlock = p.BanglaPresentBlock;
+                studentInfoOne.BanglaPresentSector = p.BanglaPresentSector;
+
+                studentInfoOne.GuardianPost = p.GuardianPostId;
+                studentInfoOne.GuardianThana = p.GuardianThanaId;
+                studentInfoOne.GuardianDistrict = p.GuardianDistrictId;
+
+                studentInfoOne.GuardianName = p.GuardianName;
+                studentInfoOne.GuardianMobileNo = p.GuardianMobileNo;
+                studentInfoOne.GuardianEmail = p.GuardianEmail;
+
+                studentInfoOne.GuardianHouserNo = p.GuardianHouserNo;
+                studentInfoOne.GuardianRoadNo = p.GuardianRoadNo;
+                studentInfoOne.GuardianBlock = p.GuardianBlock;
+                studentInfoOne.GuardianSector = p.GuardianSector;
+                ///bangla
+                ///
+                studentInfoOne.BanglaGuardianName = p.BanglaGuardianName;
+                studentInfoOne.BanglaGuardianHouserNo = p.BanglaGuardianHouserNo;
+                studentInfoOne.BanglaGuardianRoadNo = p.BanglaGuardianRoadNo;
+                studentInfoOne.BanglaGuardianBlock = p.BanglaGuardianBlock;
+                studentInfoOne.BanglaGuardianSector = p.BanglaGuardianSector;
+
+                /////accadamic info
+                studentInfoOne.AccadamicInfo_ExamNme = p.AccadamicInfo_ExamNme;
+                studentInfoOne.AccadamicInfo_Board = p.AccadamicInfo_Board;
+                studentInfoOne.AccadamicInfo_Group = p.AccadamicInfo_Group;
+                studentInfoOne.AccadamicInfo_SchoolName = p.AccadamicInfo_SchoolName;
+                studentInfoOne.AccadamicInfo_RollNo = p.AccadamicInfo_RollNo;
+                studentInfoOne.AccadamicInfo_RegistrationNo = p.AccadamicInfo_RegistrationNo;
+                studentInfoOne.AccadamicInfo_PassingYear = p.AccadamicInfo_PassingYear;
+                studentInfoOne.AccadamicInfo_GPA = p.AccadamicInfo_GPA;
+                studentInfoOne.Semester = p.SEMESTER.Id;
+                studentInfoOne.SemesterNo = p.SEMESTER.SemesterNo;
+
+                studentInfoListOne.Add(studentInfoOne);
+            }
+            return studentInfoListOne;
+            #endregion
+            
         }
     }
 }
