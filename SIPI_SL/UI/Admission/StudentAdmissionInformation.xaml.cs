@@ -114,6 +114,8 @@ namespace SIPI_SL.UI.Admission
                             {
                                 _studentInfo.ProgramId = item.Id;
                                 _studentInfo.BanglaProgram = item.Id.ToString();
+
+                               
                             }
                         }
                     }
@@ -673,6 +675,7 @@ namespace SIPI_SL.UI.Admission
                     _studentInfo.Interest = interestTextBox.Text;
                     _studentInfo.OthersInfo = othersInformationTextBox.Text;
                     _studentInfo.BanglaApplicantName = banglaApplicantNameTextBox.Text;
+
                     ////Boolin type here  bangla Gender
                     //if (banglaMaleRadioButton.IsChecked == true)
                     //{
@@ -1291,6 +1294,8 @@ namespace SIPI_SL.UI.Admission
                
             }
 
+             
+  
             else
             {
                 try
